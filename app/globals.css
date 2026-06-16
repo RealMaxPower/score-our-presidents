@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+
+  /* Editorial palette — light mode */
+  --color-cream-50: 250 250 245;
+  --color-cream-100: 249 247 241;
+  --color-cream-200: 241 237 228;
+
+  --color-charcoal-700: 58 58 78;
+  --color-charcoal-900: 26 26 46;
+
+  --color-rust-500: 220 101 22;
+  --color-rust-600: 194 65 12;
+  --color-rust-700: 180 83 9;
+  --color-rust-800: 154 52 18;
+
+  --color-stone-100: 245 245 244;
+  --color-stone-200: 231 229 228;
+  --color-stone-300: 214 211 209;
+  --color-stone-400: 168 162 158;
+  --color-stone-500: 120 113 108;
+  --color-stone-600: 87 83 78;
+  --color-stone-700: 68 64 60;
+
+  /* Good/harm accents — light mode */
+  --color-good-50: 239 246 255;
+  --color-good-500: 59 130 246;
+  --color-good-700: 29 78 216;
+  --color-harm-50: 254 243 199;
+  --color-harm-500: 217 119 6;
+  --color-harm-700: 146 64 14;
+
+  /* Logo strokes — track palette so the mark reads correctly in both modes. */
+  --logo-stroke-vertical: 26 26 46;
+  --logo-stroke-diagonal: 180 83 9;
+
+  /* Divider tint used by .asterisk-divider */
+  --divider-tint: 26 26 46;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  /* Editorial palette — dark mode.
+     cream = page surfaces (now dark), charcoal = ink (now light cream),
+     rust accents are brightened slightly for AA contrast on dark surfaces. */
+  --color-cream-50: 20 20 32;
+  --color-cream-100: 28 28 44;
+  --color-cream-200: 38 38 56;
+
+  --color-charcoal-700: 184 180 196;
+  --color-charcoal-900: 242 238 230;
+
+  --color-rust-500: 234 124 51;
+  --color-rust-600: 224 110 35;
+  --color-rust-700: 215 130 60;
+  --color-rust-800: 197 110 45;
+
+  --color-stone-100: 32 32 46;
+  --color-stone-200: 48 48 64;
+  --color-stone-300: 64 64 86;
+  /* stone-400 lifted from 76→128 so the editorial rank numerals ("01", "02")
+     still read as a muted accent against the navy bg instead of fading out. */
+  --color-stone-400: 128 124 144;
+  --color-stone-500: 168 164 184;
+  --color-stone-600: 188 184 204;
+  --color-stone-700: 210 206 222;
+
+  /* Good/harm accents — dark mode.
+     good-700 lightened (29 78 216 → 125 178 255) so positive scores and bar
+     labels clear AA contrast on navy. harm-700 brightened similarly. The
+     500 variants are tuned so the score bars still look visually weighted. */
+  --color-good-50: 30 58 138;
+  --color-good-500: 96 165 250;
+  --color-good-700: 125 178 255;
+  --color-harm-50: 120 53 15;
+  --color-harm-500: 251 146 60;
+  --color-harm-700: 252 176 90;
+
+  --logo-stroke-vertical: 242 238 230;
+  --logo-stroke-diagonal: 215 130 60;
+
+  --divider-tint: 242 238 230;
+}
+
+@layer base {
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Editorial drop-cap on the hero intro paragraph */
+  .drop-cap::first-letter {
+    font-family: var(--font-display), "Playfair Display", Georgia, serif;
+    color: rgb(var(--color-rust-700));
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.85;
+    padding-right: 0.5rem;
+    padding-top: 0.35rem;
+    font-weight: 700;
+  }
+
+  /* Thin rust underline accent below the H1 */
+  .rust-rule {
+    width: 4rem;
+    height: 2px;
+    background: rgb(var(--color-rust-700));
+    margin: 1.5rem auto 0;
+  }
+
+  /* Asterisk divider used between sections */
+  .asterisk-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(var(--color-rust-700));
+    font-size: 1rem;
+  }
+  .asterisk-divider::before,
+  .asterisk-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgb(var(--divider-tint) / 0.15);
+  }
+}

@@ -1,0 +1,813 @@
+president: lyndon_b_johnson
+display_name: "Lyndon B. Johnson"
+term_start: 1963-11-22
+term_end: 1969-01-20
+party: D
+terms_served: 1_full_plus_partial
+calibration_anchor: false
+spec_version: v1.2
+note: "Spec v1.0 §8 used LBJ as the worked example for the framework. This scoring reflects v1.2 structure (13 categories, 56 sub-criteria) and applies §4.6 multi-attribution and v1.2 §9.4 living-president rules."
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Strong economy with rising inflation late-term. Revenue Act of 1964 tax cuts. War on Poverty expansion. Guns-and-butter fiscal pattern."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 8
+        harm_score: 2
+        notes: "Unemployment fell from 5.5% (Nov 1963) to 3.4% (Jan 1969). Real GDP grew ~5%/year average. Era of peak postwar prosperity."
+        evidence:
+          - citation: "BLS unemployment series 1963-1969; BEA real GDP data"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Unemployment fell to 3.4% by end of term — lowest of postwar era to that point — alongside ~5%/year real GDP growth."
+            direction: good
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 8
+        harm_score: 1
+        notes: "War on Poverty programs cut poverty rate from 19% (1964) to 12% (1969). Continued Great Compression."
+        evidence:
+          - citation: "Census Bureau poverty data 1963-1969"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal poverty rate fell from ~19% to ~12% across LBJ term, largest single-administration poverty reduction in US history."
+            direction: good
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 3
+        harm_score: 6
+        notes: "Guns-and-butter fiscal expansion. Vietnam War + Great Society without commensurate revenue. Surcharge enacted 1968 belatedly. Debt-to-GDP rose modestly but inflation pressure built."
+        evidence:
+          - citation: "OMB Historical Tables; Revenue and Expenditure Control Act of 1968, Public Law 90-364"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal deficit grew from $5.9B (1964) to $25.2B (1968); 1968 surcharge tax came too late to prevent late-1960s inflation buildup."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 6
+        harm_score: 2
+        notes: "Strong union era continued. Minimum wage increased. Real wages rose strongly. Federal contracting affirmative action."
+        evidence:
+          - citation: "BLS real wages data 1963-1969; Fair Labor Standards Act amendments"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Real median wages grew strongly during LBJ term; minimum wage rose from $1.25 to $1.60/hour."
+            direction: good
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.3 high Cold War. Vietnam War escalation is era-defining harm anchor. Some diplomacy (NPT signed 1968, ABM Treaty negotiations began). Dominican Republic intervention (1965)."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 1
+        harm_score: 10
+        era_context: "E2.3 Cold War — era-defining 10-harm anchor"
+        notes: "Vietnam War escalation from ~16,000 advisors (Nov 1963) to ~537,000 troops (1968). Gulf of Tonkin Resolution (1964) obtained under misleading representations. Defining war-decision failure of 20th century US foreign policy."
+        evidence:
+          - citation: "Gulf of Tonkin Resolution, Public Law 88-408 (1964); Pentagon Papers declassified records"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Gulf of Tonkin Resolution was obtained based on incomplete and partially fabricated reports of attacks on US destroyers; led to escalation from 16,000 to 537,000 US troops in Vietnam."
+            direction: harm
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 5
+        harm_score: 4
+        notes: "NATO held but strained by Vietnam. Allied troop contributions sought (some achieved). Some bilateral damage with allies opposing Vietnam."
+        evidence:
+          - citation: "NATO records 1963-1969; Vietnam allied contributions"
+            source_url: "https://www.nato.int/"
+            source_type: historical_record
+            tier: 2
+            claim: "NATO held through Vietnam-era tensions; alliance relationships strained by US Vietnam priorities."
+            direction: harm
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 3
+        harm_score: 7
+        notes: "Nuclear Non-Proliferation Treaty signed (July 1968). Otherwise diplomacy overshadowed by Vietnam. US international standing collapsed during term."
+        evidence:
+          - citation: "Treaty on the Non-Proliferation of Nuclear Weapons (NPT), opened for signature July 1, 1968"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "NPT signed 1968 became foundational non-proliferation framework; one major diplomatic achievement in a term dominated by Vietnam."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 1
+        harm_score: 9
+        era_context: "E2.3 — Vietnam civilian impact era-10-harm anchor"
+        notes: "Estimated 2 million+ Vietnamese, Lao, Cambodian civilian deaths attributable to war and its expansion. US bombing campaigns (Rolling Thunder, etc.) heaviest in history to that point."
+        evidence:
+          - citation: "Vietnam War civilian casualty estimates (Lewy 1978; Hirschman et al. 1995)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Conservative scholarly estimates of Vietnam War civilian deaths range from 1.5-3 million across Vietnam, Laos, and Cambodia; LBJ era saw the largest escalation."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.2 Civil Rights Revolution — era-defining 10-good anchor across multiple sub-criteria. Civil Rights Act 1964, Voting Rights Act 1965, Fair Housing Act 1968."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 10
+        harm_score: 0
+        era_context: "E3.2 — era-defining 10-good anchor"
+        notes: "Civil Rights Act of 1964 (Public Law 88-352), Voting Rights Act of 1965 (Public Law 89-110), Fair Housing Act of 1968 (Title VIII Civil Rights Act of 1968). Most consequential civil rights legislation since Reconstruction."
+        evidence:
+          - citation: "Civil Rights Act of 1964 (Public Law 88-352); Voting Rights Act of 1965 (Public Law 89-110); Fair Housing Act 1968 (Public Law 90-284)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Three landmark federal civil rights laws ended Jim Crow legal apparatus and created modern federal anti-discrimination framework; Black voter registration in covered states roughly doubled within five years of VRA."
+            direction: good
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 5
+        harm_score: 1
+        notes: "Civil Rights Act 1964 Title VII included sex discrimination. EEOC enforcement weak initially. Executive Order 11375 (1967) extended affirmative action to women."
+        evidence:
+          - citation: "Civil Rights Act 1964 Title VII; Executive Order 11375 (1967)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Title VII of Civil Rights Act 1964 prohibited sex discrimination in employment; EO 11375 extended federal contracting affirmative action to women."
+            direction: good
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 0
+        harm_score: 2
+        notes: "EO 10450 continued. Era-typical hostility. Stonewall (1969) just after LBJ term."
+        evidence:
+          - citation: "EO 10450 continuation 1963-1969"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 2
+            claim: "Federal anti-LGBTQ employment policy continued throughout LBJ term."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 4
+        harm_score: 1
+        notes: "Vocational Rehabilitation Amendments expanded. Architectural Barriers Act of 1968 (federal building accessibility)."
+        evidence:
+          - citation: "Architectural Barriers Act of 1968, Public Law 90-480"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1968 Act required federally-funded buildings to be accessible; precursor to ADA accessibility standards."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 6
+        harm_score: 3
+        notes: "Indian Civil Rights Act of 1968 extended Bill of Rights protections to tribal governments (controversial). Termination policy continued though slowing."
+        evidence:
+          - citation: "Indian Civil Rights Act, Title II of Civil Rights Act of 1968 (Public Law 90-284)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ICRA extended most Bill of Rights protections to tribal members vis-a-vis tribal governments — contested by some tribes as federal overreach but ended some tribal-government abuses."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.2 Cold War surveillance. FBI surveillance of MLK and civil rights movement under Hoover with LBJ awareness. War-time secrecy on Vietnam."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 4
+        harm_score: 6
+        notes: "Increasing press hostility over Vietnam (credibility gap). FBI surveillance of journalists. Some First Amendment progress via SCOTUS (NYT v. Sullivan 1964)."
+        evidence:
+          - citation: "NYT v. Sullivan, 376 U.S. 254 (1964); LBJ press relations records"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ press relationship deteriorated sharply over Vietnam credibility gap; NYT v. Sullivan strengthened press protections via SCOTUS."
+            direction: good
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 2
+        harm_score: 7
+        notes: "FBI COINTELPRO targeting MLK, civil rights, anti-war movements expanded. LBJ aware of MLK surveillance. NSA Operation Minaret monitoring anti-war activists."
+        evidence:
+          - citation: "Church Committee Report (1976) on COINTELPRO; FBI files on MLK surveillance"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "COINTELPRO and Operation Minaret targeted civil rights and anti-war movements during LBJ term with administration awareness."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 2
+        harm_score: 8
+        notes: "Vietnam War prosecuted under Gulf of Tonkin Resolution rather than declaration. Mass escalation without congressional involvement. Per §4.6 Vietnam primarily at 2.1 but executive restraint secondary."
+        evidence:
+          - citation: "Gulf of Tonkin Resolution authority and Vietnam War prosecution"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ used Gulf of Tonkin Resolution authority to escalate Vietnam without further congressional authorization through 32-fold troop increase."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 2
+        harm_score: 8
+        notes: "FOIA enacted 1966 (LBJ signed grudgingly). BUT: Pentagon Papers documented systematic public deception about Vietnam war progress and decision-making."
+        evidence:
+          - citation: "Freedom of Information Act, Public Law 89-487 (1966); Pentagon Papers (declassified 1971)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ signed FOIA (1966) while simultaneously operating the systematic Vietnam deception documented in Pentagon Papers."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Era-defining 10-good anchor. Medicare and Medicaid 1965, ESEA 1965, Head Start, food stamps expansion, Great Society programs."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 10
+        harm_score: 0
+        era_context: "E5 — era-defining 10-good anchor"
+        notes: "Medicare (Title XVIII) and Medicaid (Title XIX) enacted via Social Security Amendments of 1965. Most consequential US healthcare legislation until ACA (2010)."
+        evidence:
+          - citation: "Social Security Amendments of 1965, Public Law 89-97 (creating Medicare and Medicaid)"
+            source_url: "https://www.ssa.gov/history/"
+            source_type: primary_document
+            tier: 1
+            claim: "Medicare insured ~19 million elderly Americans by end of LBJ term; Medicaid covered ~10 million poor; structures persist 60+ years later as central US health-insurance framework."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 9
+        harm_score: 0
+        notes: "Elementary and Secondary Education Act 1965 — first major federal K-12 funding. Higher Education Act 1965 (Pell-precursor BEOG). Head Start (1965). National Endowment for the Arts and Humanities (1965)."
+        evidence:
+          - citation: "ESEA, Public Law 89-10 (1965); Higher Education Act, Public Law 89-329 (1965)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ESEA and HEA created modern federal K-12 and higher education funding frameworks; Head Start became enduring early childhood education program."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 9
+        harm_score: 0
+        notes: "Food Stamp Act of 1964 made program permanent (was Kennedy pilot). Economic Opportunity Act 1964 (Job Corps, VISTA, Head Start, Community Action). Major welfare state expansion."
+        evidence:
+          - citation: "Food Stamp Act of 1964, Public Law 88-525; Economic Opportunity Act of 1964, Public Law 88-452"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Food Stamp Act and Economic Opportunity Act founded the War on Poverty institutional framework, reducing poverty rate from ~19% to ~12% in 5 years."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 7
+        harm_score: 1
+        notes: "Department of Housing and Urban Development created 1965. Robert Weaver as first HUD Secretary (first African American Cabinet member). Demonstration Cities and Metropolitan Development Act 1966."
+        evidence:
+          - citation: "Department of Housing and Urban Development Act, Public Law 89-174 (1965)"
+            source_url: "https://www.hud.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Cabinet-level HUD established under LBJ; first Cabinet-level African American (Weaver) appointed simultaneously."
+            direction: good
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.1 → E6.2 transition. Wilderness Act 1964. Lady Bird Beautification movement. Pre-EPA environmental legislation expansion."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 0
+        harm_score: 0
+        notes: "N/A per era E6.1."
+        evidence: []
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 7
+        harm_score: 0
+        era_context: "E6.1 → E6.2 transition"
+        notes: "Air Quality Act 1967. Water Quality Act 1965. Major federal environmental regulation framework expanding."
+        evidence:
+          - citation: "Air Quality Act of 1967, Public Law 90-148; Water Quality Act of 1965, Public Law 89-234"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Air Quality Act 1967 and Water Quality Act 1965 expanded federal pollution-regulation authority preceding 1970 EPA creation."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 7
+        harm_score: 1
+        notes: "Wilderness Act of 1964 — landmark conservation law. National Trails System Act 1968. Wild and Scenic Rivers Act 1968."
+        evidence:
+          - citation: "Wilderness Act of 1964, Public Law 88-577; Wild and Scenic Rivers Act of 1968, Public Law 90-542"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Wilderness Act established federal wilderness preservation system, designating 9.1 million acres immediately and creating framework for subsequent expansion to ~110 million acres."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 6
+        harm_score: 1
+        notes: "Endangered Species Preservation Act 1966 (ESA precursor). Estuary Protection Act 1968."
+        evidence:
+          - citation: "Endangered Species Preservation Act of 1966, Public Law 89-669"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1966 Act first federal endangered-species legislation; precursor to Nixon-era ESA 1973."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Vietnam catastrophic crisis-management failure. Civil rights crises managed well. 1968 (Tet, MLK and RFK assassinations) overwhelmed administration."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 7
+        harm_score: 4
+        notes: "Civil rights legislation rapid post-Kennedy assassination. War on Poverty fast launch. Vietnam decision-making fast but poor."
+        evidence:
+          - citation: "Civil Rights Act 1964 enacted within 8 months of Kennedy assassination"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ used post-Kennedy national moment to enact long-stalled civil rights legislation within 8 months of inauguration."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 7
+        harm_score: 6
+        notes: "Domestic legislative effectiveness extraordinary. Vietnam war prosecution ineffective. 1968 urban riots inadequately addressed."
+        evidence:
+          - citation: "Great Society legislative record 1964-1968; Vietnam War outcomes"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "LBJ's domestic legislative output is the largest of any modern president; foreign-policy execution was the failure mode."
+            direction: good
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 2
+        harm_score: 8
+        era_context: "Pentagon Papers era — credibility gap defining"
+        notes: "Vietnam 'credibility gap' — public statements diverged systematically from internal assessments. Tet Offensive (January 1968) shattered remaining public trust."
+        evidence:
+          - citation: "Pentagon Papers Vietnam War records (declassified 1971)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Pentagon Papers documented systematic divergence between LBJ-era public Vietnam assessments and internal pessimistic analysis; 'credibility gap' entered political vocabulary."
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 5
+        harm_score: 6
+        notes: "Civil rights crises substantially resolved legislatively. Vietnam left unresolved at term end (Paris talks just beginning)."
+        evidence:
+          - citation: "March 31, 1968 LBJ withdrawal announcement; Paris Peace Talks initiation"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "LBJ left office with Vietnam War unresolved despite negotiation initiation; Paris talks continued under Nixon for 5 more years."
+            direction: harm
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Walter Jenkins arrest (1964). Bobby Baker scandal. Fortas judicial scandal. Generally cleaner than predecessors and successors but not spotless. Withdrew from 1968 race."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 4
+        harm_score: 5
+        notes: "Bobby Baker (LBJ Senate aide) financial scandals during LBJ Senate tenure continued investigation in office. Some personal financial irregularities. Crude personal conduct documented in tapes."
+        evidence:
+          - citation: "Bobby Baker investigation 1963-1966; LBJ White House tapes (declassified)"
+            source_url: "https://www.lbjlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bobby Baker investigation produced shadow over LBJ administration; LBJ tapes revealed often-crude private conduct contrasting with public presidency."
+            direction: harm
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 5
+        harm_score: 4
+        notes: "Walter Jenkins (chief of staff) resigned after morals arrest (October 1964). Fortas SCOTUS judicial-ethics scandal emerged (1968-69, post-term)."
+        evidence:
+          - citation: "Walter Jenkins arrest record October 7, 1964; Abe Fortas SCOTUS resignation May 1969"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Walter Jenkins resignation and Fortas scandal were the two principal administration-ethics events of LBJ era."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 7
+        harm_score: 3
+        notes: "Withdrew from 1968 race (March 31, 1968) restoring 2-term norm voluntarily despite eligibility. Generally respected institutional norms despite Vietnam expansion."
+        evidence:
+          - citation: "LBJ withdrawal announcement, March 31, 1968"
+            source_url: "https://www.lbjlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ withdrew from 1968 reelection campaign citing Vietnam burdens; restored two-term limit norm voluntarily."
+            direction: good
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 6
+        harm_score: 3
+        notes: "Thurgood Marshall (first African American SCOTUS justice). Abe Fortas (later disgraced). Both qualified but Fortas ethical issues."
+        evidence:
+          - citation: "Marshall confirmation October 1967; Fortas as Associate Justice 1965-1969"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Marshall as first African American SCOTUS justice was historic appointment; Fortas was distinguished jurist who resigned over ethics issues."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 3
+        harm_score: 5
+        notes: "Fortas elevation to Chief Justice (1968) failed amid ethics revelations. Fortas-Wolfson Foundation payments scandal. Selection process compromised."
+        evidence:
+          - citation: "Fortas Chief Justice nomination withdrawal October 1968; subsequent resignation May 1969"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Fortas elevation to CJ withdrawn after Wolfson Foundation payments emerged; subsequent resignation from Court was first justice to resign under ethics pressure."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 6
+        harm_score: 3
+        notes: "Appointees fit Warren Court activist majority on civil rights and criminal procedure; Marshall and Fortas both reliably progressive votes."
+        evidence:
+          - citation: "Warren Court late-period jurisprudence"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "LBJ appointees Marshall and Fortas supported Warren Court's civil rights and criminal procedure activism."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 4
+        harm_score: 4
+        notes: "Marshall confirmation contentious but successful. Fortas elevation collapse signaled emerging hostile-confirmation era."
+        evidence:
+          - citation: "Marshall confirmation August 1967 (69-11); Fortas CJ withdrawal October 1968"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Marshall confirmation faced Southern Democratic opposition but succeeded; Fortas withdrawal initiated era of failed SCOTUS confirmations."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "VRA 1965 transformative for voting access. Massive polarization rising from Vietnam + civil rights backlash. 1968 was peak political violence year."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 10
+        harm_score: 0
+        era_context: "E9.1 — era-defining 10-good anchor"
+        notes: "Voting Rights Act of 1965 — most consequential voting-rights legislation in US history. Black voter registration in covered states doubled within five years."
+        evidence:
+          - citation: "Voting Rights Act of 1965, Public Law 89-110"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "VRA banned literacy tests and authorized federal voting registrars; Black voter registration in covered Southern states rose from ~29% (1965) to ~62% (1969)."
+            direction: good
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 3
+        harm_score: 7
+        notes: "Severely deteriorated over Vietnam credibility gap. LBJ personally combative with press. Walter Cronkite's February 1968 Vietnam editorial pivotal."
+        evidence:
+          - citation: "Walter Cronkite CBS Vietnam editorial February 27, 1968"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Cronkite's editorial that Vietnam was 'mired in stalemate' was personally cited by LBJ as evidence he had lost mainstream America; press relationship was severely damaged by Vietnam credibility gap."
+            direction: harm
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 4
+        harm_score: 7
+        notes: "1968 peak political violence year: MLK assassination (April), RFK assassination (June), DNC convention violence (August), urban riots. Federal response mixed."
+        evidence:
+          - citation: "MLK assassination April 4, 1968; RFK assassination June 5, 1968; 1968 DNC violence August 1968"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "1968 saw concurrent assassinations of MLK and RFK plus widespread urban unrest and convention violence — peak political-violence year of modern era."
+            direction: harm
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 4
+        harm_score: 6
+        notes: "Vietnam-era polarization built. Southern Democratic break with national party (Wallace 1968). Beginning of post-New-Deal-coalition collapse."
+        evidence:
+          - citation: "1968 election analysis; George Wallace third-party candidacy"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Wallace's 1968 third-party candidacy won 13% of vote, signaling Southern Democratic break from national party that accelerated under Nixon's Southern Strategy."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Great Society programs (Medicare, Medicaid, VRA, ESEA) endure. Vietnam-era trust decline endures. War on Poverty institutional framework endures."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 9
+        harm_score: 0
+        notes: "Medicare, Medicaid, VRA, CRA64, ESEA, Head Start, Food Stamps, Wilderness Act — all operational 60 years later. Among the highest durability scores across all presidents."
+        evidence:
+          - citation: "Continuous operation of Great Society programs 1965-present"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Great Society institutional architecture remains operational 60 years later: Medicare covering 65M+ Americans, Medicaid 90M+, VRA continued enforcement framework, ESEA reauthorized as ESSA."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 2
+        harm_score: 6
+        notes: "Vietnam credibility gap launched permanent decline in public trust. War Powers framework strained, eventually corrected by 1973 Act. Surveillance-era precedents."
+        evidence:
+          - citation: "Pew Research trust-in-government time series; Vietnam-era inflection"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "US public trust in government fell from ~75% (1964) to ~52% (1969) during LBJ term, beginning the long decline that has never fully recovered."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 7
+        harm_score: 7
+        notes: "Civil rights legacy transformed US demographics and politics. Boomer generation defined by Vietnam draft and protest. Polarization Boomer-era inflection."
+        evidence:
+          - citation: "Standard generational political-science scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "LBJ era simultaneously created the modern multiracial democratic framework and the polarization patterns that defined Baby Boom political identity."
+            direction: good
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 1
+        harm_score: 8
+        notes: "Vietnam War shaped US foreign policy for 50+ years (Vietnam Syndrome through Iraq War debate). Cambodian destabilization. NPT framework durable as positive."
+        evidence:
+          - citation: "Vietnam Syndrome political-science scholarship; subsequent US foreign-policy debate"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Vietnam War shaped US foreign policy debates for 50+ years, with 'Vietnam Syndrome' affecting use-of-force decisions through Iraq War era."
+            direction: harm
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.1 Mid-century formal. Towering personality. Crude private conduct documented on tapes. Public dignity maintained except crude press conferences."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 4
+        harm_score: 5
+        notes: "Public dignity inconsistent. Famously crude private behavior (tapes, 'Johnson Treatment' physical intimidation). Withdrew with dignity (March 1968)."
+        evidence:
+          - citation: "LBJ tapes (declassified); contemporary press coverage"
+            source_url: "https://www.lbjlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ tapes revealed extensive crude private conduct; public dignity inconsistent though March 31 withdrawal speech was dignified."
+            direction: harm
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 5
+        harm_score: 4
+        notes: "'We Shall Overcome' speech (March 1965) era-defining oratory. Vietnam rhetoric increasingly defensive. Crude private rhetoric documented."
+        evidence:
+          - citation: "LBJ Voting Rights Act speech, March 15, 1965; 'We Shall Overcome' rhetoric"
+            source_url: "https://www.lbjlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "LBJ's 'We Shall Overcome' speech rallying Congress behind VRA is among the most-cited civil rights speeches of any president."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 6
+        harm_score: 3
+        notes: "Generally respected ceremonial duties. Crude private behavior in informal settings. Sworn in on Air Force One (1963) handled with dignity."
+        evidence:
+          - citation: "LBJ inauguration on Air Force One, November 22, 1963"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "LBJ swearing-in on Air Force One after Kennedy assassination handled with appropriate ceremonial dignity."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 4
+        harm_score: 5
+        notes: "Modeled aggressive legislative-mover presidency. Crude personal conduct revealed posthumously contrasted with public presidency."
+        evidence:
+          - citation: "Caro 'The Years of Lyndon Johnson' biographical series"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Caro biography documents LBJ's complex legacy of legislative effectiveness alongside problematic personal-conduct patterns."
+            direction: harm
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "Vietnam destroyed approval. Civil rights legislation transformed populace experience. Withdrew with low approval."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 5
+        harm_score: 5
+        notes: "Started high (post-Kennedy assassination). Vietnam, 1968 violence destroyed morale. End-of-term Gallup ~49%."
+        evidence:
+          - citation: "Gallup approval ratings 1963-1969"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "LBJ approval ranged from 80% peak (early 1964) to 35% (late 1967); ended at ~49% — substantial deterioration from peak."
+            direction: harm
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 4
+        harm_score: 7
+        notes: "Civil rights legislation cohesive long-term, divisive short-term (Southern Democratic break). Vietnam protest polarization. 1968 fracture peak."
+        evidence:
+          - citation: "1968 cultural-political fracture; Wallace third-party candidacy"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "LBJ era saw the most dramatic social-political fracture in modern US history outside the Civil War: civil rights backlash, Vietnam protests, generational divides, urban riots."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 2
+        harm_score: 8
+        notes: "Vietnam War collapsed US international standing. Allied opposition increased. Soviet/PRC propaganda gains."
+        evidence:
+          - citation: "Contemporary international press coverage of Vietnam; UN debates"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "US international standing fell substantially during LBJ term as Vietnam War prosecution alienated allies and provided propaganda material for adversaries."
+            direction: harm
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 2
+        harm_score: 8
+        notes: "Strongly negative globally during Vietnam War. European public anti-war. Civil rights legacy positive but overshadowed."
+        evidence:
+          - citation: "Pew Research historical international polling; USIA surveys 1965-1968"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Foreign-public sentiment toward US deteriorated sharply during LBJ term, with Vietnam War the principal driver across Western European and global publics."
+            direction: harm
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Hart-Celler Act of 1965 — era-defining immigration policy. Ended national-origins quota system."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 9
+        harm_score: 1
+        era_context: "E13 — era-defining immigration reform"
+        notes: "Immigration and Nationality Act of 1965 (Hart-Celler) ended national-origins quota system, established family-reunification and skills-based preference categories. Most consequential immigration reform since 1924."
+        evidence:
+          - citation: "Immigration and Nationality Act of 1965 (Hart-Celler), Public Law 89-236"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Hart-Celler Act eliminated discriminatory national-origins quotas in place since 1924; fundamentally reshaped US immigration patterns and demographic future."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 4
+        harm_score: 3
+        notes: "Bracero Program ended (December 1964). Hart-Celler imposed Western Hemisphere caps for first time, contributing to subsequent undocumented migration patterns."
+        evidence:
+          - citation: "Bracero Program termination December 31, 1964; Hart-Celler Western Hemisphere cap"
+            source_url: "https://www.uscis.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "End of Bracero Program plus Hart-Celler Western Hemisphere caps shifted Mexican labor migration from legal to unauthorized patterns that continued for 50+ years."
+            direction: harm
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 6
+        harm_score: 2
+        notes: "Hart-Celler created seventh preference for refugees. Cuban Adjustment Act 1966 created path to permanent residency for Cuban refugees."
+        evidence:
+          - citation: "Cuban Adjustment Act of 1966, Public Law 89-732"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Cuban Adjustment Act established the unique Cuban-refugee permanent-residency framework continuing today."
+            direction: good
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 7
+        harm_score: 2
+        notes: "Hart-Celler initiated dramatic demographic shift in subsequent decades: Asian and Latin American immigration grew substantially; foreign-born share began rising from 1970 low."
+        evidence:
+          - citation: "Census foreign-born population data 1965-2020; Hart-Celler demographic-impact scholarship"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Hart-Celler Act produced 50-year demographic transformation: foreign-born share rose from ~5% (1965) to ~14% (2020); Asian and Latin American shares grew substantially."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 5.4
+  harm_average_across_categories: 4.0
+  net_average_across_categories: 1.4
+  high_good_sub_criteria_count: 5   # 3.1 CRA/VRA/FHA; 5.1 Medicare/Medicaid; 5.2 education; 5.3 War on Poverty; 9.1 VRA; 10.1 durability; 13.1 Hart-Celler
+  high_harm_sub_criteria_count: 5   # 2.1 Vietnam; 2.4 civilian impact; 4.4 transparency; 10.4 geopolitical; 12.3/12.4 international
+  era_contexts_invoked: ["E2.3", "E3.2", "E4.2", "E6.1", "E6.2", "E9.1", "E11.1", "E13"]
+  pattern_notes: "LBJ is the framework's other 'high variance both directions' test alongside Nixon. Civil rights and welfare-state legacy among highest of any president; Vietnam among most damaging. Lens divergence should be substantial: Progressive ranks high (3.1, 5.1-5.3, 13.1 dominant); Realist ranks low (Vietnam dominant); Conservative mixed (welfare expansion negative, civil rights legacy contested)."

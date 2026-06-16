@@ -1,0 +1,51 @@
+name: CI
+
+# Runs on PRs and pushes to main. No secrets are used or required — every
+# check here is hermetic. Deployment is handled separately by Vercel's git
+# integration, so this workflow intentionally does NOT deploy or hold tokens.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least privilege: jobs only need to read the checked-out code.
+permissions:
+  contents: read
+
+# Cancel superseded runs on the same ref (e.g. rapid pushes to a PR).
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  node:
+    name: Lint, typecheck & test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Test
+        run: pnpm test
+
+  rankings:
+    name: Verify rankings integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: pip install pyyaml
+      - name: Recompute lens-weighted rankings
+        run: python3 scripts/compute_rankings.py

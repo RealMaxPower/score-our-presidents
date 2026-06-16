@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you cite this dataset or its methodology, please cite it as below."
+type: dataset
+title: "The Presidential Scoring Framework"
+abstract: >-
+  A reproducible editorial framework for scoring US presidencies on 13 categories
+  and 56 sub-criteria, with per-president evidence YAMLs, era-anchored
+  calibration, and a published lens-weighting system for value-pluralist
+  re-ranking. The framework spec and methodology are licensed CC BY-SA 4.0; the
+  scoring evidence is licensed CC BY 4.0; the site source code is licensed MIT.
+  See the README License section for the per-scope license assignment.
+authors:
+  - family-names: Cahill
+    given-names: Marshall
+    email: contact@scoreourpresidents.org
+keywords:
+  - presidential rankings
+  - political science
+  - editorial methodology
+  - open data
+  - reproducibility
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+version: "1.2"
+date-released: "2026-05-11"
+# Update this once the public repository URL is set:
+repository-code: "https://github.com/RealMaxPower/score-our-presidents"
+url: "https://presidential-scoring.org"

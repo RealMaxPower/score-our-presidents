@@ -1,0 +1,899 @@
+president: ronald_reagan
+display_name: "Ronald Reagan"
+term_start: 1981-01-20
+term_end: 1989-01-20
+party: R
+terms_served: 2
+calibration_anchor: true
+anchor_status: draft_pending_external_review
+spec_version: v1.2
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Reaganomics: tax cuts (ERTA 1981, TRA 1986), deregulation, increased defense spending. 1981-82 recession was worst since Great Depression; 1983-89 expansion was strongest postwar. Inequality began rising; debt tripled. Most contested economic legacy of the modern era."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 6
+        harm_score: 4
+        low_confidence: false
+        notes: "1981-82 recession: unemployment peaked at 10.8% (December 1982), worst since Great Depression. Recovery 1983-89: 16 million jobs added; unemployment fell to 5.4% (1989). Real GDP grew ~3.5%/year average across expansion years."
+        evidence:
+          - citation: "BLS unemployment time series 1981-1989; BEA real GDP growth data"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Severe 1981-82 recession (unemployment peak 10.8%) followed by 84-month expansion adding 16 million jobs and reducing unemployment to 5.4% by end of term."
+            direction: good
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "Top marginal tax rate cut from 70% (1980) to 28% (1988). Top 1% income share began its sustained rise (~10% in 1980 to ~14% by 1988). End of the Great Compression."
+        evidence:
+          - citation: "Piketty & Saez income share data; CBO 'Trends in the Distribution of Household Income' historical analysis"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "Top 1% household income share rose from ~10% (1980) to ~14% (1988) under Reagan, ending the Great Compression era and beginning the modern inequality trend that continued through subsequent administrations."
+            direction: harm
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 2
+        harm_score: 7
+        low_confidence: false
+        notes: "Federal debt nearly tripled: ~$994B (1981) to ~$2.85T (1989). Annual deficits ran ~3-6% of GDP throughout term. Largest peacetime fiscal expansion to that point in US history."
+        evidence:
+          - citation: "OMB Historical Tables, Table 7.1 Federal Debt; CBO historical revenue/outlay tables"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal debt rose from ~$994 billion to ~$2.85 trillion under Reagan; debt-to-GDP rose from ~33% to ~52% — largest peacetime debt expansion since WWII."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "PATCO firing (August 1981) broke air traffic controllers' strike, fired 11,345 employees, decertified union. Set precedent for aggressive private-sector union breaking. Union density fell from 23% (1981) to 17% (1989). Real wages flat for non-supervisory workers."
+        evidence:
+          - citation: "PATCO strike and firing, August 5, 1981; BLS union membership statistics"
+            source_url: "https://www.bls.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan fired 11,345 air traffic controllers and decertified their union; this action is widely cited as the inflection point for declining US union density across all sectors."
+            direction: harm
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.3 late Cold War, transitioning toward E2.4 unipolar moment. Cold War endgame is era-defining good. INF Treaty (1987), Reagan-Gorbachev summits, 'tear down this wall.' BUT: Beirut barracks bombing (1983), Iran-Contra, Central American civil war support, US support for Iraq in Iran-Iraq War."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 7
+        harm_score: 4
+        low_confidence: false
+        era_context: "E2.3 late Cold War"
+        notes: "No major war initiated. Grenada invasion (October 1983) small-scale. Libya bombing (April 1986). Lebanon Marine deployment (1982-84) ended after Beirut barracks bombing. Cold War endgame negotiated successfully."
+        evidence:
+          - citation: "Intermediate-Range Nuclear Forces Treaty (December 8, 1987); Reagan-Gorbachev summits records"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "INF Treaty was the first agreement to eliminate an entire class of nuclear weapons; framework for the Cold War's peaceful end despite intense early-term confrontation."
+            direction: good
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "NATO solidified during Pershing II deployment crisis (1983). Reagan-Thatcher special relationship. Reagan-Gorbachev relationship innovated superpower diplomacy. Some tensions with allies over SDI."
+        evidence:
+          - citation: "Pershing II deployment 1983; Reagan-Thatcher correspondence (declassified)"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan held NATO together through Pershing II controversy (1983) and built personal relationships with both Thatcher and Gorbachev that shaped Cold War endgame."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Berlin Wall speech (June 1987). Reykjavik Summit (October 1986) nearly achieved abolition of nuclear weapons. INF Treaty. 'Evil Empire' speech (March 1983) provocative but combined with willingness to negotiate."
+        evidence:
+          - citation: "Reagan Brandenburg Gate speech, June 12, 1987; Reykjavik Summit transcripts (declassified)"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan's rhetorical clarity combined with willingness to negotiate produced the most consequential US-Soviet diplomatic engagement since the early Cold War."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 3
+        harm_score: 7
+        low_confidence: false
+        era_context: "E2.3 — Central American civil wars are principal harm vector"
+        notes: "US support for Salvadoran government (death squads), Nicaraguan Contras, Guatemalan government (genocide-era Ríos Montt), Iraq in Iran-Iraq War (chemical-weapons era). Direct Central American civilian casualties: 75,000+ El Salvador, 200,000+ Guatemala over 1980s civil wars."
+        evidence:
+          - citation: "UN Truth Commission for El Salvador (1993); Guatemalan CEH Truth Commission (1999); Iran-Contra investigations"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "UN and Guatemalan truth commissions documented mass civilian casualties (75,000+ El Salvador; 200,000+ Guatemala) during 1980s civil wars with substantial US support to forces responsible; Iran-Contra extended US Nicaragua intervention contrary to congressional Boland Amendment."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.3 Consolidation. DOJ Civil Rights Division weakened. Vetoed Civil Rights Restoration Act (1988, overridden). Tried to restore tax-exempt status for segregated schools (Bob Jones). HIV/AIDS response was catastrophic harm to LGBTQ Americans."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 2
+        harm_score: 6
+        low_confidence: false
+        era_context: "E3.3 Consolidation"
+        notes: "Attempted to restore tax-exempt status for racially segregated Bob Jones University (Supreme Court ruled against, 8-1). Vetoed Civil Rights Restoration Act of 1987 (overridden 1988). Cut DOJ Civil Rights Division enforcement budget. Opposed extending Voting Rights Act before signing weakened version (1982)."
+        evidence:
+          - citation: "Bob Jones University v. United States, 461 U.S. 574 (1983); Civil Rights Restoration Act of 1987, Public Law 100-259, passed over veto"
+            source_url: "https://supreme.justia.com/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan administration intervened to support tax-exempt status for segregated Bob Jones University and Goldsboro Christian Schools; SCOTUS rejected administration position 8-1. Civil Rights Restoration Act vetoed by Reagan was overridden by Congress 73-24 in Senate, 292-133 in House."
+            direction: harm
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 4
+        harm_score: 3
+        low_confidence: false
+        notes: "Sandra Day O'Connor appointment (1981) — first woman on Supreme Court. Otherwise opposed Equal Rights Amendment (ERA expired 1982). Cut Title IX enforcement."
+        evidence:
+          - citation: "Sandra Day O'Connor confirmation, September 1981; ERA ratification deadline expiration June 30, 1982"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan's O'Connor appointment broke a 192-year gender barrier on SCOTUS; the administration simultaneously opposed Equal Rights Amendment ratification."
+            direction: good
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 0
+        harm_score: 9
+        low_confidence: false
+        era_context: "E3.3 — HIV/AIDS era-defining 10-harm anchor"
+        notes: "Did not publicly mention AIDS until September 1985, four years after first cases identified. By his first public mention, 12,000+ Americans had already died of AIDS. Surgeon General Koop's prevention report (1986) opposed by administration. Cumulative AIDS deaths during Reagan presidency: ~60,000+. Federal LGBTQ employment ban (EO 10450) continued."
+        evidence:
+          - citation: "CDC HIV/AIDS Surveillance Reports 1981-1989; Reagan press conference records (first AIDS mention September 17, 1985)"
+            source_url: "https://www.cdc.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Reagan did not publicly address AIDS until September 1985 (~4.5 years after first CDC reports and 12,000+ deaths); cumulative US AIDS deaths during his term reached approximately 60,000 with the federal response systematically delayed."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 4
+        harm_score: 2
+        low_confidence: false
+        notes: "Rehab Act continued enforcement. ADA development began under Reagan administration (signed by GHW Bush 1990). Social Security disability program cuts attempted 1981-82, partially reversed."
+        evidence:
+          - citation: "Social Security Disability Benefits Reform Act of 1984, Public Law 98-460"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1984 Disability Benefits Reform Act reversed several Reagan-era SSDI eligibility cuts that had removed hundreds of thousands of disabled Americans from benefits."
+            direction: harm
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 4
+        harm_score: 3
+        low_confidence: true
+        notes: "Tribal Self-Determination framework continued. Reagan administration tribal trust fund mismanagement contributed to later Cobell v. Salazar litigation. American Indian Religious Freedom Act enforced weakly."
+        evidence:
+          - citation: "Cobell v. Salazar trust accounting case origins; Indian Mineral Development Act of 1982"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 2
+            claim: "Reagan administration's mismanagement of Indian Trust Fund accounts contributed to subsequent Cobell class action that resulted in $3.4 billion settlement (2009) for systemic federal accounting failures."
+            direction: harm
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.2 Cold War surveillance late. Iran-Contra was the defining executive-restraint failure. Signing statement expansion. War on Drugs sentencing law expansion."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 5
+        harm_score: 3
+        low_confidence: false
+        notes: "Generally tolerated critical press. Iran-Contra exposed via press. FCC Fairness Doctrine repeal (1987) had long-term consequences for media polarization."
+        evidence:
+          - citation: "FCC Fairness Doctrine repeal, August 1987 (Mark Fowler FCC)"
+            source_url: "https://www.fcc.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "FCC repeal of Fairness Doctrine in 1987 ended the requirement for broadcast political balance, enabling subsequent partisan talk radio and cable news ecosystem."
+            direction: harm
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "War on Drugs expanded federal surveillance and search authority. Anti-Drug Abuse Acts 1986, 1988. Civil asset forfeiture expanded. FISA continued. CIA expansion under Casey."
+        evidence:
+          - citation: "Anti-Drug Abuse Act of 1986, Public Law 99-570; Anti-Drug Abuse Act of 1988, Public Law 100-690"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan-era anti-drug legislation established mandatory minimum sentences, expanded civil asset forfeiture, and increased federal law enforcement surveillance authority — foundations of mass-incarceration era."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 2
+        harm_score: 8
+        low_confidence: false
+        notes: "Iran-Contra (1985-1987) violated Boland Amendment statutory prohibition on Contra aid. Signing statements expanded as tool for selective non-enforcement of law. Bork unitary executive theory advanced in administration."
+        evidence:
+          - citation: "Tower Commission Report (February 1987); Iran-Contra Independent Counsel final report (Walsh 1993)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Iran-Contra Affair involved selling arms to Iran in violation of US embargo and diverting proceeds to Nicaraguan Contras in violation of Boland Amendment; multiple senior administration officials convicted (later pardoned by GHW Bush)."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "Iran-Contra cover-up included document destruction by Oliver North. Executive Order 12356 (1982) expanded classification authority. FOIA enforcement weakened."
+        evidence:
+          - citation: "Executive Order 12356, April 2, 1982 (national security information classification); Tower Commission findings on document destruction"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EO 12356 expanded classification authority and removed prior administration's balance-test for declassification; Iran-Contra investigation revealed extensive document destruction by NSC staff."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Major welfare-state retrenchment. HIV/AIDS response was the era-defining public health failure. Homelessness rose dramatically as federal housing funding cut 75%. Social Security 1983 amendments extended solvency."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 2
+        harm_score: 7
+        low_confidence: false
+        era_context: "AIDS crisis as primary harm vector"
+        notes: "HIV/AIDS response delay was catastrophic — see 3.3. Public health budget cuts. Medicare DRG payment system introduced 1983 (lasting reform). EMTALA (1986) created emergency-care obligation. Mental health institutional capacity continued declining (CMHCs underfunded)."
+        evidence:
+          - citation: "Emergency Medical Treatment and Active Labor Act (EMTALA), 1986; Social Security Amendments of 1983 (DRG system)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EMTALA established uncompensated emergency-care obligation that became foundational element of US healthcare system; AIDS funding was systematically underprovided despite mounting crisis."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "A Nation at Risk report (April 1983) galvanized national education reform discussion without producing federal action. Department of Education survived administration attempts to abolish. Federal education funding cut substantially."
+        evidence:
+          - citation: "A Nation at Risk report, National Commission on Excellence in Education (April 1983)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "A Nation at Risk was a landmark report on US K-12 education quality; the Reagan administration commissioned it but did not pursue substantial federal education reform in response."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "OBRA 1981 cut AFDC eligibility, food stamps, school lunch. Mental Health Block Grant Act 1981 ended CMHC Act, reducing federal mental-health spending. Social Security 1983 Amendments (Greenspan Commission) extended solvency."
+        evidence:
+          - citation: "Omnibus Budget Reconciliation Act of 1981, Public Law 97-35; Social Security Amendments of 1983, Public Law 98-21"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "OBRA 1981 cut AFDC by ~$1B/year and removed several hundred thousand families from welfare rolls; Social Security 1983 Amendments raised retirement age, increased payroll tax to extend program solvency."
+            direction: harm
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 1
+        harm_score: 8
+        low_confidence: false
+        notes: "HUD budget cut from $33B (1981) to $14B (1989) — federal housing funding cut ~75% in real terms. Homelessness rose dramatically (estimated ~250K in 1981 to 500K-1M by 1989). HUD scandal (Pierce) emerged late."
+        evidence:
+          - citation: "HUD budget data 1981-1989; Burt, 'America's Homeless' (Urban Institute 1992)"
+            source_url: "https://www.hud.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal housing budget cut approximately 75% in real terms during Reagan years; homelessness as a visible federal-policy concern emerged directly from these cuts combined with deinstitutionalization."
+            direction: harm
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.2 Modern environmental, transitioning to E6.3 climate-aware near end. Gorsuch and Watt era was peak environmental rollback. EPA scandal (Lavelle). Major harm anchor for environmental category."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 2
+        harm_score: 5
+        low_confidence: false
+        era_context: "E6.2 → E6.3 transition — Hansen testimony June 1988"
+        notes: "Hansen Senate testimony June 1988 marked emerging climate awareness. Reagan administration generally skeptical. Did sign Montreal Protocol on ozone (1987) — major environmental success but separate from climate."
+        evidence:
+          - citation: "Montreal Protocol on Substances that Deplete the Ozone Layer (September 16, 1987); Hansen Senate testimony June 23, 1988"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan signed Montreal Protocol restricting ozone-depleting chemicals — among the most successful international environmental treaties; on emerging climate awareness, administration response was minimal."
+            direction: good
+            verification_status: pending
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 2
+        harm_score: 7
+        low_confidence: false
+        era_context: "E6.2 — major rollback anchor"
+        notes: "Anne Gorsuch EPA administrator (1981-83) attempted to dismantle EPA enforcement. Rita Lavelle (Superfund) convicted of perjury. EPA enforcement actions fell ~75% in early term. Acid rain legislation blocked for years."
+        evidence:
+          - citation: "House Subcommittee on Investigations EPA hearings (1982-1983); Gorsuch resignation (March 1983)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EPA Administrator Anne Gorsuch resigned amid contempt-of-Congress finding for refusing to provide Superfund documents; Asst. Administrator Rita Lavelle convicted of perjury; era-defining environmental enforcement collapse."
+            direction: harm
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 2
+        harm_score: 6
+        low_confidence: false
+        notes: "James Watt Interior Secretary (1981-83) pushed leasing of public lands to energy and mining industries. Tried to weaken Wilderness Act. Wilderness designations slowed. Sagebrush Rebellion alignment."
+        evidence:
+          - citation: "James Watt resignation October 1983; Interior Department leasing data 1981-1988"
+            source_url: "https://www.doi.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Watt era at Interior Department dramatically expanded fossil fuel leasing on public lands and resisted new wilderness designations; major shift in federal public-lands posture."
+            direction: harm
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "ESA enforcement weakened. CITES participation maintained. Some species protection actions but overall enforcement budget cut."
+        evidence:
+          - citation: "USFWS ESA listing and enforcement data 1981-1989"
+            source_url: "https://www.fws.gov/"
+            source_type: statistic
+            tier: 2
+            claim: "ESA species listings continued at slower pace under Reagan than under predecessors; enforcement budget reductions affected critical habitat designation and recovery plans."
+            direction: harm
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Cold War endgame managed effectively. AIDS crisis catastrophically mishandled. Iran-Contra crisis exposed systemic problem. Beirut barracks bombing (1983) and subsequent withdrawal."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        notes: "Reagan recession response moderate (Volcker monetary policy was Fed's). AIDS response criminally slow (4+ year delay before public mention). Iran-Contra crisis response — extensive denial. Hinckley shooting (March 1981) personal recovery quick."
+        evidence:
+          - citation: "Reagan public-mention chronology of AIDS (first September 17, 1985); CDC HIV/AIDS Surveillance Reports"
+            source_url: "https://www.cdc.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "AIDS crisis response was systematically delayed by approximately 4.5 years from first CDC alerts to first public presidential mention."
+            direction: harm
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 5
+        harm_score: 5
+        low_confidence: false
+        notes: "Cold War end effective. AIDS catastrophic failure. Iran-Contra catastrophic failure. Beirut bombing response (withdrawal February 1984) realistic. Grenada invasion militarily successful."
+        evidence:
+          - citation: "Beirut barracks bombing October 23, 1983; US withdrawal from Lebanon February 1984"
+            source_url: "https://www.usmcu.edu/"
+            source_type: historical_record
+            tier: 1
+            claim: "241 US Marines killed in Beirut barracks bombing October 1983; Reagan ordered withdrawal four months later — reasonable response but defining setback in Reagan-era foreign policy."
+            direction: harm
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "Iran-Contra denials and 'I don't recall' testimony. AIDS silence. Reagan personal style was sincere but administration mishandled multiple crises."
+        evidence:
+          - citation: "Reagan testimony to Tower Commission (1986-1987); 'I don't recall' frequency in transcripts"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan repeatedly denied recall during Iran-Contra investigations; administration's public statements on the affair diverged substantially from documented facts subsequently revealed."
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 5
+        harm_score: 5
+        low_confidence: false
+        notes: "Cold War ended (largely under Bush 41). AIDS unaddressed left massive long-term death and trauma. Iran-Contra norm-erosion damage persistent. Central American instability continued."
+        evidence:
+          - citation: "AIDS Memorial Quilt establishment 1987; long-term US-AIDS death total"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "AIDS Memorial Quilt founded during Reagan's term as direct response to government inaction; long-term US AIDS deaths reached over 700,000 by 2020."
+            direction: harm
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Iran-Contra was the defining institutional-integrity failure. 138 administration officials investigated, indicted, or convicted across two terms — second-highest in modern presidency (after Nixon). Strong but contested judicial appointments."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "Personally clean. 'I don't recall' Iran-Contra defense raised questions about either honesty or cognitive state. No personal financial impropriety identified."
+        evidence:
+          - citation: "Walsh Independent Counsel final report (1993); standard biographical scholarship"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Walsh Independent Counsel concluded Reagan likely knew of Iran-Contra arms-for-hostages-and-Contras scheme but did not find prosecutable obstruction; his personal involvement vs. plausible deniability remains historically contested."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 2
+        harm_score: 7
+        low_confidence: false
+        notes: "Iran-Contra: Poindexter, North, McFarlane, Weinberger convicted (Bush 41 pardoned all). EPA scandal (Gorsuch, Lavelle). HUD scandal (Pierce). 138 officials investigated, indicted, or convicted — second to Nixon."
+        evidence:
+          - citation: "Brookings Institution tracking of Reagan administration prosecutions; Iran-Contra prosecutions list"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Approximately 138 Reagan administration officials investigated, indicted, or convicted during his term — among the highest scandal counts in modern presidency."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        notes: "Iran-Contra violated Boland Amendment. Signing statement expansion. Some Cold War norm restoration after Nixon-Carter era turbulence. Mixed pattern."
+        evidence:
+          - citation: "Boland Amendment (1982-1984 versions); Reagan signing statements per ABA report"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan administration's NSC staff explicitly violated Boland Amendment prohibition on Contra aid; Reagan issued ~250 signing statements (significant escalation in use)."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Three SCOTUS confirmations: O'Connor, Scalia, Kennedy. Promoted Rehnquist to CJ. Failed nomination: Bork. ~400 lower-court appointments via Federalist Society pipeline established systematic conservative judicial influence."
+        evidence:
+          - citation: "Reagan SCOTUS confirmations 1981-1988; lower-court appointment data via Brookings"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Reagan appointees O'Connor, Scalia, and Kennedy each became consequential SCOTUS justices; Reagan's ~400 federal judicial appointments via Federalist Society pipeline established 40-year conservative judicial movement."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "Federalist Society pipeline established systematic ideological vetting. Bork nomination (1987) prompted era-defining politicized confirmation fight. Ginsburg withdrew over marijuana use. Selection process more ideological than previous eras."
+        evidence:
+          - citation: "Robert Bork nomination June 1987; Senate rejection 42-58 October 1987"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bork nomination triggered the modern era of ideological SCOTUS confirmation politics; phrase 'to be Borked' entered political vocabulary, signaling era-shift."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 5
+        harm_score: 3
+        low_confidence: false
+        notes: "Promoted 'originalist' restraint rhetoric. Scalia/Kennedy/Rehnquist produced mixed activist/restraint outcomes. Originalist movement became long-term conservative judicial framework."
+        evidence:
+          - citation: "Scalia 'A Matter of Interpretation' (1997); Bork 'The Tempting of America' (1990)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Reagan-era originalism movement, embodied in Scalia and theorized by Bork, established the dominant conservative judicial philosophy of the next 40 years."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 4
+        harm_score: 4
+        low_confidence: false
+        notes: "Bork rejection (1987) and politicized confirmation hearings era began. Kennedy confirmed unanimously (1988) as compromise. Lower-court confirmation politics intensified."
+        evidence:
+          - citation: "Bork confirmation hearings September-October 1987; Kennedy unanimous confirmation February 1988"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Reagan era saw transformation of SCOTUS confirmation politics from professional vetting to ideological contestation; Bork hearings are the inflection point."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Era E9.2 Post-Watergate. Reagan-era partisan realignment intensified. Talk radio pre-history. Polarization not yet at modern levels but increasing."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "VRA Amendments of 1982 strengthened sections 2 and 5 (passed under Reagan, signed somewhat reluctantly). DOJ Civil Rights Division voting-rights enforcement weakened. Voter-suppression tactics emerging at state level."
+        evidence:
+          - citation: "Voting Rights Act Amendments of 1982, Public Law 97-205"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1982 VRA Amendments strengthened the law's protections against discriminatory results (not just intent); Reagan signed under congressional pressure after initial reservations."
+            direction: good
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Generally cordial despite Iran-Contra. Press pool restrictions during Grenada (1983) controversial. Strong personal communicator built press-friendly image."
+        evidence:
+          - citation: "Reagan press conference records 1981-1989; Grenada press restrictions controversy"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Reagan held 46 formal press conferences across two terms (fewer than predecessors) but maintained generally favorable press relations through staff management."
+            direction: good
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Survived assassination attempt by John Hinckley Jr. (March 30, 1981). Political violence low overall. Far-right militia movement emerging (FBI Branch Davidian-precursor era)."
+        evidence:
+          - citation: "Hinckley assassination attempt, March 30, 1981; Secret Service Hinckley report"
+            source_url: "https://www.secretservice.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Reagan survived attempted assassination by John Hinckley Jr.; recovery and handling of crisis enhanced his political standing and influenced subsequent gun-control debate (Brady Act 1993)."
+            direction: good
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        notes: "Reagan Democrats realignment continued Southern Strategy. Fairness Doctrine repeal (1987) seeded talk radio era. Cultural-political polarization intensified. Welfare Queen and similar rhetoric polarizing."
+        evidence:
+          - citation: "Fairness Doctrine repeal 1987; Reagan Democrats voter-realignment analysis"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Reagan-era political realignment and the simultaneous Fairness Doctrine repeal seeded the late-20th-century polarized media-political environment."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Reagan revolution: tax-cut framework persists; deregulation philosophy persists; conservative judicial movement transformed jurisprudence; inequality rise begins. Cold War end is major positive long-tail."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 6
+        harm_score: 4
+        low_confidence: false
+        notes: "Tax-cut framework dominant in subsequent decades. Deregulation philosophy persisted. Cold War end shaped subsequent geopolitics. ESA, CWA, CAA survived rollback attempts."
+        evidence:
+          - citation: "TRA 1986 rate structure influence on subsequent tax legislation; deregulatory framework persistence"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Reagan-era tax-cut and deregulation framework dominated subsequent Republican economic policy and shaped Democratic economic policy through the New Democrat era."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 4
+        harm_score: 6
+        low_confidence: false
+        notes: "Iran-Contra norm erosion. Federalist Society judicial pipeline reshaped courts. EPA capture and revolving-door norms began. Decline of administrative-state capacity."
+        evidence:
+          - citation: "Federalist Society growth 1982-present; subsequent SCOTUS appointments via Federalist Society"
+            source_url: "https://fedsoc.org/"
+            source_type: historical_record
+            tier: 1
+            claim: "Federalist Society pipeline established under Reagan administration produced the conservative legal infrastructure that shaped subsequent decades of judicial appointments through 2024."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 4
+        harm_score: 6
+        low_confidence: false
+        notes: "Inequality rise begins (top 1% share doubled 1980-2020). Reagan Democrats realignment shapes US politics. Greed-is-good 1980s defined a generation's cultural moment."
+        evidence:
+          - citation: "Top 1% income share trajectory 1980-2020 (Saez/Piketty); inequality long-trend data"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "US income inequality, top-1% share roughly doubled from ~10% (1980) to ~20% (2020) — the Reagan-era inflection initiated this 40-year trend that has continued under both parties."
+            direction: harm
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 7
+        harm_score: 4
+        low_confidence: false
+        notes: "Cold War ended on Reagan's framework (mostly under Bush 41). BUT: Mujahideen support contributed to Al-Qaeda emergence (Soviet withdrawal 1989). Central American instability and migration patterns connect to 1980s civil wars."
+        evidence:
+          - citation: "Soviet withdrawal from Afghanistan February 1989; Operation Cyclone declassified records on Mujahideen support"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan-era support to Afghan Mujahideen (Operation Cyclone, $20B+ over decade) helped force Soviet withdrawal but also created institutional infrastructure later co-opted by Al-Qaeda — direct line traced by 9/11 Commission."
+            direction: good
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.2 Post-Watergate informal. Reagan modeled telegenic Hollywood-style presidency. 'Tear down this wall' is era-defining oratory. Iran-Contra was the norm-adherence failure rather than personal-decorum failure."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Maintained ceremonial dignity. Post-assassination-attempt grace under pressure ('Honey, I forgot to duck'). Even Iran-Contra denials maintained personal dignity if not institutional accountability."
+        evidence:
+          - citation: "Reagan hospital quote post-Hinckley shooting; Challenger speech January 28, 1986"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan's Challenger disaster speech ('slipped the surly bonds of Earth') and post-Hinckley conduct established the modern model of presidential dignity during personal and national crises."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Master rhetorician. 'Evil Empire,' 'Mr. Gorbachev, tear down this wall,' Challenger speech, 'morning in America.' Some divisive Welfare Queen / Cadillac rhetoric."
+        evidence:
+          - citation: "Reagan speeches: 'Evil Empire' (March 8, 1983); Brandenburg Gate (June 12, 1987); Challenger eulogy (January 28, 1986)"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Reagan rhetorical performance during 8 years produced era-defining presidential addresses combining moral clarity with telegenic delivery."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Strong observance of ceremonial duties. Generally respectful of presidential tradition while adapting communication style."
+        evidence:
+          - citation: "Reagan presidential ceremonial event records 1981-1989"
+            source_url: "https://www.reaganlibrary.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Reagan modernized presidential ceremonial communication for TV era while preserving formal protocol expectations."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "Modeled telegenic-Hollywood-presidency style for subsequent presidents (especially Clinton, Obama). Iran-Contra modeled plausible-deniability strategy. Mixed long-tail."
+        evidence:
+          - citation: "Subsequent presidential communication style scholarship (Greenstein 2009, Skowronek 2008)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Reagan established the modern model of presidential televised communication that subsequent presidents of both parties have followed."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "'Morning in America' — high approval (~63% term average). One of most popular presidents in modern polling. Restored national confidence after Carter-era malaise. Some divisive policy effects on cohesion."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "1984 'Morning in America' campaign defined era of restored national confidence. End-of-term Gallup approval ~63% (one of highest end-of-term ratings since Eisenhower). Olympic-era cultural moment (1984)."
+        evidence:
+          - citation: "Gallup approval ratings 1981-1989; 1984 campaign communications"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Reagan ended his term with 63% Gallup approval — among the highest end-of-term ratings since Eisenhower; consistently high approval despite Iran-Contra and inequality criticisms."
+            direction: good
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Reagan Democrats realignment integrated working-class whites into Republican coalition. Welfare Queen and anti-government rhetoric polarized. Generally maintained cohesion in mainstream of electorate."
+        evidence:
+          - citation: "Reagan Democrats voting analysis; partisan polarization metrics 1980s"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Reagan-era partisan realignment produced relatively stable Republican electoral majority while increasing cultural-political polarization on race and welfare politics."
+            direction: good
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Restored after Carter-era perceptions of weakness. Allies confident in US leadership. Cold War endgame raised standing dramatically. Some standing damage in Latin America from interventions."
+        evidence:
+          - citation: "Pew Global Attitudes (USIA predecessor); contemporary European press"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Reagan restored US international standing among Western allies; standing damaged in Latin American countries with US intervention but improved among NATO allies."
+            direction: good
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 6
+        harm_score: 4
+        low_confidence: false
+        notes: "Strong in UK, West Germany, Japan. Hostile in Central America, parts of Middle East (post-Beirut, Iran-Contra). Mixed in non-aligned world."
+        evidence:
+          - citation: "USIA surveys 1981-1989"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Foreign public sentiment under Reagan varied by region: highly favorable in NATO Western Europe, sharply hostile in Latin American countries affected by US intervention."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Immigration Reform and Control Act (IRCA) 1986 was major bipartisan immigration legislation: legalized ~3 million unauthorized residents, instituted employer sanctions. Mixed outcomes since."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "IRCA 1986 legalized approximately 2.7 million unauthorized residents (largest legalization in US history). Established employer sanctions framework. Bipartisan compromise."
+        evidence:
+          - citation: "Immigration Reform and Control Act of 1986, Public Law 99-603"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "IRCA 1986 legalized approximately 2.7 million unauthorized immigrants under amnesty provisions while establishing employer sanctions framework — largest US legalization program."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 5
+        harm_score: 3
+        low_confidence: false
+        notes: "IRCA established employer sanctions and worksite enforcement framework. Border Patrol expansion modest under Reagan compared to subsequent administrations. No mass deportation operations."
+        evidence:
+          - citation: "IRCA employer sanctions implementation; INS enforcement data 1986-1989"
+            source_url: "https://www.uscis.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "IRCA employer sanctions launched the modern federal interior-enforcement framework; initial Reagan-era enforcement was limited compared to subsequent administrations."
+            direction: good
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "Central American refugees from US-supported civil wars in El Salvador, Guatemala denied asylum at high rates. Sanctuary movement emerged in response. American Baptist Churches v. Thornburgh (1990) settled refugee discrimination claims after Reagan term."
+        evidence:
+          - citation: "American Baptist Churches v. Thornburgh settlement (1990); asylum approval rates for Salvadorans/Guatemalans 1980-1990"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Salvadorans and Guatemalans fleeing US-supported civil wars had asylum approval rates ~2-3% during Reagan years (vs. 60-80% for Iranians, Nicaraguans fleeing leftist governments); ABC v. Thornburgh settled discriminatory adjudication claims."
+            direction: harm
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "IRCA legalization transformed demographic profile of 1980s immigrant cohort. Foreign-born share of US population rose from ~6.2% (1980) to ~7.9% (1990). Labor-market integration of legalized population substantial."
+        evidence:
+          - citation: "1980 and 1990 Census foreign-born population data"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Foreign-born share of US population rose from ~6.2% to ~7.9% during Reagan years, substantially driven by IRCA legalization; began the 40-year rise that reached ~14% by 2024."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 4.7
+  harm_average_across_categories: 4.6
+  net_average_across_categories: 0.1
+  high_good_sub_criteria_count: 5   # 2.2, 2.3 (Cold War endgame); 12.1 morale; 10.4 geopolitical (mixed)
+  high_harm_sub_criteria_count: 6   # 3.3 (HIV/AIDS), 5.4 (housing/homelessness), 4.3 (Iran-Contra), 8.2 (admin ethics), 6.2 (EPA rollback), 1.3 (debt)
+  era_contexts_invoked: ["E2.3", "E3.3", "E4.2", "E6.2", "E6.3", "E8 standard", "E9.2", "E11.2"]
+  cross_attributions_under_4_6:
+    - action: "Iran-Contra Affair"
+      primary: "4.3 (Executive restraint — Boland Amendment violation)"
+      secondary: "8.3 (Norm adherence — distinct mechanism)"
+
+reviewer_notes: |
+  Reagan is the "high lens-spread" anchor — the calibration test that requires the framework
+  to produce dramatically different rankings under different lenses. The scoring pattern shows
+  high good on foreign policy / Cold War endgame (2.2, 2.3 = 8/2) and morale (12.1 = 8/2)
+  alongside high harm on HIV/AIDS (3.3 = 0/9), housing/homelessness (5.4 = 1/8), Iran-Contra
+  (4.3 = 2/8), Central American civil war support (2.4 = 3/7), administration ethics (8.2 = 2/7),
+  and environmental rollback (6.2 = 2/7).
+
+  Expected lens divergence:
+  - Conservative: HIGH (heavy weight on Cold War win + restored morale)
+  - Realist: HIGH (Cold War endgame + alliance management dominant)
+  - Libertarian: MIXED (tax cuts good, but Iran-Contra and surveillance bad)
+  - Classical Liberal: LOW-MID (institutional integrity failures dominant)
+  - Progressive: LOW (HIV/AIDS catastrophe + inequality + environmental rollback dominant)
+  - Communitarian: LOW-MID (housing/homelessness + AIDS catastrophe)
+  - Populist: MIXED-HIGH (tax cuts + Reagan Democrats appeal vs. PATCO firing)
+  - Internationalist: MIXED (Cold War end good, Central American civil wars bad)
+
+  If lens variance for Reagan is not the largest of any anchor, the framework's dual-axis design
+  is not producing the value-pluralism signal that the project's primary insight depends on.

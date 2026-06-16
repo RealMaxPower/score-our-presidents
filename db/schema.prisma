@@ -1,0 +1,520 @@
+// Presidential Scoring Framework — Prisma Schema v1
+// Spec basis: v1.2 spec + Workstream C v1.3 weight revisions
+// Database: PostgreSQL 15+
+// Conventions: UUIDs for primary keys; snake_case table/column names via @map; camelCase in code
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // Pooled connection for app runtime (Neon pooler in prod).
+  url       = env("DATABASE_URL")
+  // Direct (unpooled) connection for `prisma migrate deploy` and any
+  // operation prepared statements / introspection needs. Vercel's Neon
+  // integration provisions this as POSTGRES_URL_NON_POOLING.
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+// ============================================================
+// REFERENCE DATA (loaded via seed)
+// ============================================================
+
+model President {
+  id                String   @id @default(uuid())
+  slug              String   @unique // e.g., "franklin_d_roosevelt"
+  displayName       String   @map("display_name")
+  termStart         DateTime @map("term_start") @db.Date
+  termEnd           DateTime? @map("term_end") @db.Date // null for in-office (Trump T2)
+  party             String   @db.VarChar(2) // "D" or "R"
+  termsServed       String   @map("terms_served") // "1", "2", "1_partial", "2_partial", "in_progress", etc.
+  calibrationAnchor Boolean  @default(false) @map("calibration_anchor")
+  anchorStatus      String?  @map("anchor_status") // "draft_pending_external_review" | "draft_owner_approved" | "reviewed_anchors"
+  inOffice          Boolean  @default(false) @map("in_office")
+
+  // Cat 10 handling per v1.2 §9.4
+  catTenStatus      String   @map("cat_ten_status") // "normal" | "tentative_long_tail" | "insufficient_time_elapsed"
+  partialTermNote   String?  @map("partial_term_note") @db.Text
+
+  // For UI display
+  orderIndex        Int      @map("order_index") // chronological order, 1-16
+
+  expertScores      ExpertScore[]
+  userScores        UserScore[]
+  bookmarks         Bookmark[]
+  aggregateSnapshots AggregateSnapshot[]
+
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@index([calibrationAnchor])
+  @@index([inOffice])
+  @@map("presidents")
+}
+
+model Category {
+  id           String   @id @default(uuid())
+  number       Int      @unique // 1-13
+  name         String
+  description  String?  @db.Text
+  defaultWeight Decimal @map("default_weight") @db.Decimal(5, 2) // percentage 0.00-100.00
+  weightRevisionNote String? @map("weight_revision_note") @db.Text // v1.3 revisions per Workstream C
+  weightSourceTag String? @map("weight_source_tag") // "published_methodology" | "cowork_derived"
+
+  subCriteria  SubCriterion[]
+  lensWeights  LensWeight[]
+  userWeights  UserWeight[]
+  aggregateSnapshots AggregateSnapshot[]
+
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("categories")
+}
+
+model SubCriterion {
+  id          String   @id @default(uuid())
+  number      String   @unique // e.g., "3.1", "8.4", "13.2"
+  categoryId  String   @map("category_id")
+  name        String
+  description String?  @db.Text
+  // Sub-criteria within a category are equal-weighted per v1.2 §4.2
+
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  expertScores ExpertScore[]
+  userScores   UserScore[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@index([categoryId])
+  @@map("sub_criteria")
+}
+
+model LensPreset {
+  id          String   @id @default(uuid())
+  slug        String   @unique // "default" | "progressive" | "classical_liberal" | "conservative" | "libertarian" | "communitarian" | "realist" | "populist" | "internationalist"
+  displayName String   @map("display_name")
+  description String   @db.Text // UI hover text per spec §7
+  orderIndex  Int      @map("order_index") // display order in lens chips
+
+  weights     LensWeight[]
+  aggregateSnapshots AggregateSnapshot[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("lens_presets")
+}
+
+model LensWeight {
+  id           String   @id @default(uuid())
+  lensPresetId String   @map("lens_preset_id")
+  categoryId   String   @map("category_id")
+  weight       Decimal  @db.Decimal(5, 2) // percentage 0.00-100.00
+
+  lensPreset   LensPreset @relation(fields: [lensPresetId], references: [id], onDelete: Cascade)
+  category     Category   @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@unique([lensPresetId, categoryId])
+  @@index([lensPresetId])
+  @@map("lens_weights")
+}
+
+// ============================================================
+// EXPERT SCORING (editorial-team-drafted, owner-approved, externally reviewed)
+// ============================================================
+
+model ExpertScore {
+  id              String   @id @default(uuid())
+  presidentId     String   @map("president_id")
+  subCriterionId  String   @map("sub_criterion_id")
+
+  // Dual-axis scoring per v1.2 §4.1
+  // null when insufficient_time_elapsed (Cat 10 dropped for Trump T2 / Biden)
+  goodScore       Int?     @map("good_score") // 0-10
+  harmScore       Int?     @map("harm_score") // 0-10
+
+  // Confidence and era handling per v1.1 §9.4 / v1.2
+  lowConfidence   Boolean  @default(false) @map("low_confidence")
+  insufficientTimeElapsed Boolean @default(false) @map("insufficient_time_elapsed")
+  tentativeLongTail Boolean @default(false) @map("tentative_long_tail")
+  partialTermLongTail Boolean @default(false) @map("partial_term_long_tail")
+  eraContext      String?  @map("era_context") // e.g., "E3.2 Civil rights revolution"
+
+  // Legal-review §4.3: items materially based on pending litigation are
+  // marked "provisional" — score may change after adjudication.
+  // Null = final (default); "provisional" = pending adjudication.
+  scoreStatus     String?  @map("score_status")
+
+  notes           String   @db.Text // 1-2 sentence summary in scorer's words
+
+  // §4.6 attribution metadata
+  primaryAttributionEvent String? @map("primary_attribution_event") // e.g., "Watergate cover-up"
+  secondaryAttributionEvent String? @map("secondary_attribution_event")
+
+  evidence        Evidence[]
+
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  president       President     @relation(fields: [presidentId], references: [id], onDelete: Cascade)
+  subCriterion    SubCriterion  @relation(fields: [subCriterionId], references: [id], onDelete: Restrict)
+
+  @@unique([presidentId, subCriterionId])
+  @@index([presidentId])
+  @@index([subCriterionId])
+  @@index([lowConfidence])
+  @@index([scoreStatus])
+  @@map("expert_scores")
+}
+
+model Evidence {
+  id              String   @id @default(uuid())
+  expertScoreId   String?  @map("expert_score_id") // null if user-submitted (v2)
+  userScoreId     String?  @map("user_score_id") // null if expert-derived (v1 default)
+
+  // Source info per v1.2 §4.4
+  sourceUrl       String?  @map("source_url") @db.Text
+  citation        String?  @db.Text // canonical citation for pre-internet sources or for fallback
+  sourceType      String   @map("source_type") // "academic" | "journalism" | "primary_document" | "statistic" | "historical_record"
+  tier            Int      @db.SmallInt // 1-4 per v1.2 §9.5
+  claim           String   @db.Text // 1-2 sentences in scorer's words
+  verbatimQuote   String?  @map("verbatim_quote") @db.Text // optional, for primary document quotes per v1.2 §4.4
+  direction       String   @db.VarChar(4) // "good" | "harm"
+
+  // URL verification per Workstream B
+  verificationStatus String  @default("pending") @map("verification_status") // "pending" | "verified" | "failed" | "not_applicable"
+  verifiedAt      DateTime? @map("verified_at")
+
+  expertScore     ExpertScore? @relation(fields: [expertScoreId], references: [id], onDelete: Cascade)
+  userScore       UserScore?   @relation(fields: [userScoreId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@index([expertScoreId])
+  @@index([userScoreId])
+  @@index([tier])
+  @@index([sourceType])
+  @@index([verificationStatus])
+  @@map("evidence")
+}
+
+// ============================================================
+// USER PROFILES AND WEIGHTS (v1.0 ships authentication)
+// ============================================================
+
+model UserProfile {
+  id                String   @id @default(uuid())
+  authId            String   @unique @map("auth_id") // NextAuth.js user ID
+  displayName       String?  @map("display_name")
+  email             String   @unique
+  emailVerified     Boolean  @default(false) @map("email_verified")
+  emailVerifiedAt   DateTime? @map("email_verified_at")
+  accountCreatedAt  DateTime @default(now()) @map("account_created_at")
+  reputationScore   Decimal  @default(1.0) @map("reputation_score") @db.Decimal(5, 2) // 0.00-5.00
+  isAdmin           Boolean  @default(false) @map("is_admin")
+
+  // Privacy / deletion
+  deletedAt         DateTime? @map("deleted_at")
+  deletionRequestedAt DateTime? @map("deletion_requested_at")
+
+  userWeights       UserWeight[]
+  userScores        UserScore[]
+  userVotes         UserVote[]
+  bookmarks         Bookmark[]
+  sessions          UserSession[]
+
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@index([authId])
+  @@index([email])
+  @@index([reputationScore])
+  @@index([deletedAt])
+  @@map("user_profiles")
+}
+
+model UserSession {
+  id                String   @id @default(uuid())
+  userId            String   @map("user_id")
+  sessionToken      String   @unique @map("session_token")
+  expiresAt         DateTime @map("expires_at")
+
+  user              UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@index([sessionToken])
+  @@map("user_sessions")
+}
+
+model UserWeight {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  categoryId  String   @map("category_id")
+  weight      Decimal  @db.Decimal(5, 2) // user's chosen weight; sum across user's 13 categories = 100
+
+  user        UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category    Category    @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@unique([userId, categoryId])
+  @@index([userId])
+  @@map("user_weights")
+}
+
+// ============================================================
+// USER SCORES (v2, included in schema for forward compatibility)
+// ============================================================
+
+model UserScore {
+  id              String   @id @default(uuid())
+  userId          String   @map("user_id")
+  presidentId     String   @map("president_id")
+  subCriterionId  String   @map("sub_criterion_id")
+  goodScore       Int?     @map("good_score")
+  harmScore       Int?     @map("harm_score")
+  notes           String   @db.Text
+
+  // v2 outlier detection
+  outlierFlag     Boolean  @default(false) @map("outlier_flag")
+  reputationWeighted Boolean @default(false) @map("reputation_weighted")
+
+  user            UserProfile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  president       President    @relation(fields: [presidentId], references: [id], onDelete: Cascade)
+  subCriterion    SubCriterion @relation(fields: [subCriterionId], references: [id], onDelete: Restrict)
+
+  evidence        Evidence[]
+
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@unique([userId, presidentId, subCriterionId])
+  @@index([userId])
+  @@index([presidentId])
+  @@index([outlierFlag])
+  @@map("user_scores")
+}
+
+// ============================================================
+// NEXTAUTH.JS V5 (Auth.js) — adapter tables
+// ============================================================
+// These tables are owned by NextAuth's Prisma adapter. Our domain model
+// `UserProfile` is keyed by email and joined at the auth boundary
+// (`lib/auth.ts`) — no FK between the two so adapter migrations stay clean.
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+
+  accounts      Account[]
+  sessions      Session[]
+
+  @@map("auth_users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("auth_accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("auth_sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("auth_verification_tokens")
+}
+
+// ============================================================
+// BOOKMARKS — saved presidents
+// ============================================================
+
+model Bookmark {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  presidentId String   @map("president_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  user        UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  president   President   @relation(fields: [presidentId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, presidentId])
+  @@index([userId])
+  @@map("bookmarks")
+}
+
+// ============================================================
+// USER VOTES — agree/disagree at sub-criterion, category, or president level
+// ============================================================
+
+model UserVote {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  targetType  String   @map("target_type") @db.VarChar(16) // "sub_criterion" | "category" | "president"
+  targetId    String   @map("target_id") // polymorphic FK by targetType (President.id | Category.id | SubCriterion.id)
+  direction   String   @db.VarChar(8) // "agree" | "disagree"
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  user        UserProfile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, targetType, targetId])
+  @@index([targetType, targetId])
+  @@index([userId])
+  @@map("user_votes")
+}
+
+model CommunityScoreSnapshot {
+  id                      String   @id @default(uuid())
+  subCriterionId          String   @map("sub_criterion_id")
+  presidentId             String   @map("president_id")
+  medianGood              Decimal  @map("median_good") @db.Decimal(4, 2)
+  medianHarm              Decimal  @map("median_harm") @db.Decimal(4, 2)
+  netMedian               Decimal  @map("net_median") @db.Decimal(4, 2)
+  contributorCount        Int      @map("contributor_count")
+  reputationWeightedCount Int      @map("reputation_weighted_count")
+  computedAt              DateTime @map("computed_at")
+
+  @@unique([subCriterionId, presidentId])
+  @@index([presidentId])
+  @@map("community_score_snapshots")
+}
+
+// ============================================================
+// AGGREGATES (computed nightly via BullMQ)
+// ============================================================
+
+model AggregateSnapshot {
+  id              String   @id @default(uuid())
+  snapshotDate    DateTime @map("snapshot_date") @db.Date
+
+  // Which lens this snapshot covers (null = Default + user-weighted aggregate)
+  lensPresetId    String?  @map("lens_preset_id")
+
+  presidentId     String   @map("president_id")
+  categoryId      String?  @map("category_id") // null = whole-president aggregate
+
+  // Median + IQR per v1.2 §5.4 (Layer 4)
+  medianGood      Decimal? @map("median_good") @db.Decimal(5, 2)
+  medianHarm      Decimal? @map("median_harm") @db.Decimal(5, 2)
+  iqrGood         Decimal? @map("iqr_good") @db.Decimal(5, 2)
+  iqrHarm         Decimal? @map("iqr_harm") @db.Decimal(5, 2)
+  medianWeightedTotal Decimal? @map("median_weighted_total") @db.Decimal(6, 2)
+  iqrWeightedTotal Decimal? @map("iqr_weighted_total") @db.Decimal(6, 2)
+
+  userCount       Int      @map("user_count")
+  qualifiedUserCount Int   @map("qualified_user_count") // email_verified + account_age_days >= 7
+
+  president       President   @relation(fields: [presidentId], references: [id], onDelete: Cascade)
+  category        Category?   @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  lensPreset      LensPreset? @relation(fields: [lensPresetId], references: [id], onDelete: SetNull)
+
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@unique([snapshotDate, lensPresetId, presidentId, categoryId])
+  @@index([snapshotDate])
+  @@index([presidentId])
+  @@index([lensPresetId])
+  @@map("aggregate_snapshots")
+}
+
+// ============================================================
+// AUDIT AND OPS
+// ============================================================
+
+model SpecVersion {
+  id              String   @id @default(uuid())
+  version         String   @unique // "v1.0", "v1.1", "v1.2", "v1.3"
+  releasedAt      DateTime @map("released_at")
+  description     String   @db.Text
+  isActive        Boolean  @default(false) @map("is_active")
+
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@map("spec_versions")
+}
+
+// SECURITY: when the verification worker that writes to this table is
+// implemented, it MUST validate the target URL with the same public-host
+// check used at write time (`evidenceSourceUrl` / `isPublicHttpUrl` in
+// lib/user-scores.ts). Without that re-check, the worker becomes an SSRF
+// primitive: an attacker who scores a private/loopback URL into Evidence
+// before the write-time check shipped, or finds any other path to insert
+// such a URL, gets the worker to fetch it from inside your network.
+model UrlVerificationLog {
+  id              String   @id @default(uuid())
+  evidenceId      String   @map("evidence_id")
+  checkedAt       DateTime @map("checked_at")
+  statusCode      Int?     @map("status_code")
+  errorMessage    String?  @map("error_message") @db.Text
+  responseTimeMs  Int?     @map("response_time_ms")
+
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@index([evidenceId])
+  @@index([checkedAt])
+  @@map("url_verification_logs")
+}
+
+// Forensics audit trail for sensitive operations. Append-only — never
+// updated or deleted by application code. Read access should be restricted
+// to admin tooling.
+//
+// `actorId` is null when the action is taken by an anonymous request
+// (e.g. failed sign-in attempts). `targetType` + `targetId` identify the
+// affected entity when applicable; both may be null for actor-level events
+// like sign-in. `metadata` carries action-specific structured fields and
+// is JSON-typed for forward compatibility.
+model AuditLog {
+  id          String   @id @default(uuid())
+  occurredAt  DateTime @default(now()) @map("occurred_at")
+  action      String   // e.g. "sign_in.success", "user_score.delete.admin"
+  actorId     String?  @map("actor_id")
+  targetType  String?  @map("target_type")
+  targetId    String?  @map("target_id")
+  ipAddress   String?  @map("ip_address")
+  userAgent   String?  @map("user_agent") @db.Text
+  metadata    Json?
+
+  @@index([occurredAt])
+  @@index([actorId, occurredAt])
+  @@index([action, occurredAt])
+  @@map("audit_logs")
+}

@@ -1,0 +1,859 @@
+president: donald_trump_t2
+display_name: "Donald Trump (T2)"
+term_start: 2025-01-20
+term_end: null
+in_office: true
+party: R
+terms_served: in_progress
+calibration_anchor: false
+spec_version: v1.2
+recency_note: "Currently in office as of scoring date 2026-05-11 (~16 months into term). Per v1.2 §9.4: in office → Cat 10 dropped from weighted total; insufficient_time_elapsed flag set. UI displays 'Partial score — long-tail incomplete.' Lens vectors proportionally renormalize across remaining 12 categories."
+scoring_confidence_note: "Many sub-criteria tagged low_confidence given short observation window (~16 months) and active developments. Scoring reflects documented actions through scoring date; subsequent developments may revise materially. Particular care given political contestation per spec §4.3."
+political_sensitivity_note: "Highest political contestation in scoring set alongside Trump T1. Scored against documented executive actions, court rulings, and reported events; not against partisan framings. Many scores carry low_confidence flag."
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Inherited declining unemployment but persistent cost-of-living concerns. Tariff regime (February-April 2025) major economic intervention. Stock market volatility. Recession concerns mounted Q1-Q2 2025."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 4
+        harm_score: 5
+        low_confidence: true
+        notes: "Inherited 4.1% unemployment. Tariff regime produced supply-chain disruption and stock market volatility. Recession concerns documented through Q2 2025. Specific employment trajectory through 2026 carries uncertainty."
+        evidence:
+          - citation: "BLS unemployment data 2025; stock market response to tariff announcements"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Stock indexes fell substantially following April 2, 2025 'Liberation Day' tariff announcements; subsequent partial reversals; economic-impact analysis ongoing."
+            direction: harm
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 3
+        harm_score: 5
+        low_confidence: true
+        notes: "Tariffs functioned as regressive consumption tax. TCJA extension prioritized. Anti-DEI executive orders affected workforce diversity programs."
+        evidence:
+          - citation: "The Budget Lab at Yale, 'State of U.S. Tariffs' (2025); anti-DEI executive orders"
+            source_url: "https://budgetlab.yale.edu/research/state-us-tariffs-september-26-2025"
+            source_type: academic
+            tier: 1
+            claim: "The Budget Lab at Yale estimated the 2025 tariff regime functioned as a regressive consumption tax costing the average household roughly $1,700–$2,400 per year (an initial April 2025 estimate was $3,800), with low-income households bearing a disproportionate share."
+            direction: harm
+            verification_status: verified
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "TCJA extension proposed (deficit expansion). DOGE federal workforce reduction (revenue impact contested). Tariff revenue partial offset. Net fiscal trajectory contested."
+        evidence:
+          - citation: "Committee for a Responsible Federal Budget, 'TCJA Extension Could Add $4 to $5 Trillion to Deficits' (2025), compiling CBO/JCT estimates; DOGE federal workforce reduction"
+            source_url: "https://www.crfb.org/blogs/tcja-extension-could-add-4-5-trillion-deficits"
+            source_type: academic
+            tier: 1
+            claim: "Extending the TCJA was estimated to add roughly $4–5 trillion to deficits over ten years per CBO/JCT estimates (as compiled by the Committee for a Responsible Federal Budget); DOGE federal workforce reductions had modest fiscal impact relative to that scale."
+            direction: harm
+            verification_status: verified
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 3
+        harm_score: 5
+        low_confidence: true
+        notes: "Federal workforce mass terminations. NLRB weakened. Federal contractor diversity programs eliminated. Manufacturing returns rhetoric vs. tariff disruption."
+        evidence:
+          - citation: "Federal News Network, 'How staffing cuts in 2025 transformed the federal workforce' (Jan 2026); NPR DOGE workforce reporting 2025; NLRB changes"
+            source_url: "https://federalnewsnetwork.com/workforce/2026/01/how-staffing-cuts-in-2025-transformed-the-federal-workforce/"
+            source_type: journalism
+            tier: 1
+            claim: "About 62,500 federal workers were dismissed in the first two months of 2025 and roughly 75,000 accepted the 'Fork in the Road' deferred-resignation offer; by late 2025 governmentwide losses exceeded 300,000 (~13.7% of the workforce) per OPM-based reporting, alongside reduced federal labor enforcement."
+            direction: harm
+            verification_status: verified
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.5 Multipolar contested. Ukraine policy shift (aid paused). Tariff trade wars. NATO friction. Iran posture. Withdrew from Paris and WHO again. Major foreign policy disruption continuing T1 pattern."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 4
+        harm_score: 5
+        low_confidence: true
+        notes: "Ukraine aid paused/conditioned (early 2025). Pressed Ukraine on territorial concessions to Russia. Threatened military action against Mexico for cartels. Possible Iran action. Greenland/Panama Canal annexation rhetoric."
+        evidence:
+          - citation: "2025 Trump–Zelenskyy Oval Office meeting (Feb 28 2025); NPR, 'European leaders renew support for Ukraine' (Mar 1 2025)"
+            source_url: "https://www.npr.org/2025/03/01/g-s1-51506/european-leaders-react-to-zelenskyy-oval-office"
+            source_type: historical_record
+            tier: 1
+            claim: "The Feb 28 2025 Trump–Zelenskyy Oval Office meeting ended in a public diplomatic rupture; US military aid and intelligence-sharing to Ukraine were briefly suspended and resumed on Mar 11 2025; the administration pressed Ukraine toward a territorial settlement with Russia."
+            direction: harm
+            verification_status: verified
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 2
+        harm_score: 8
+        low_confidence: false
+        era_context: "E2.5 — major harm anchor"
+        notes: "Major alliance damage. Threatened to annex Canada/Greenland/Panama Canal. Tariffed allies (Canada, Mexico, EU, Japan). NATO future questioned publicly. Possibly worst alliance management of modern presidency."
+        evidence:
+          - citation: "White House Fact Sheet: Tariffs on Imports from Canada, Mexico and China (Feb 2025); annexation rhetoric reported by NBC News, Jan 7 2025 (https://www.nbcnews.com/politics/donald-trump/trump-suggests-use-military-force-acquire-panama-canal-greenland-econo-rcna186610)"
+            source_url: "https://www.whitehouse.gov/fact-sheets/2025/02/fact-sheet-president-donald-j-trump-imposes-tariffs-on-imports-from-canada-mexico-and-china/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 imposed tariffs on Canada, Mexico, China, and EU early in term; publicly raised possibility of annexing Greenland, Canada (as 51st state), and Panama Canal — unprecedented alliance friction."
+            direction: harm
+            verification_status: verified
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 3
+        harm_score: 7
+        low_confidence: true
+        notes: "Withdrew from Paris Agreement again (Jan 20, 2025). Withdrew from WHO (Jan 20, 2025). USAID dismantled. State Department reorganization. Soft power substantially damaged."
+        evidence:
+          - citation: "EO 14162 'Putting America First in International Environmental Agreements' (Paris withdrawal), Fed. Reg. 2025-02010; EO 14155 'Withdrawing the United States From the World Health Organization', Fed. Reg. 2025-01957 (https://www.federalregister.gov/documents/2025/01/29/2025-01957/withdrawing-the-united-states-from-the-world-health-organization); USAID dismantling Jan-Mar 2025"
+            source_url: "https://www.federalregister.gov/documents/2025/01/30/2025-02010/putting-america-first-in-international-environmental-agreements"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 ordered withdrawal from the Paris Agreement (EO 14162, Jan 20 2025; effective one year after notification per Art. 28) and the WHO (EO 14155, Jan 20 2025; US formally exited Jan 22 2026); USAID substantially dismantled with most programs terminated — major US soft-power retraction."
+            direction: harm
+            verification_status: verified
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "USAID dismantling associated with significant global health impact (PEPFAR partially affected, food assistance cuts). Ukraine reduction associated with battlefield consequences. Specific civilian-impact estimates pending."
+        evidence:
+          - citation: "Boston University School of Public Health, 'Tracking Anticipated Deaths from USAID Funding Cuts' (Nichols et al., 2025 Impact Counter)"
+            source_url: "https://www.bu.edu/sph/news/articles/2025/tracking-anticipated-deaths-from-usaid-funding-cuts/"
+            source_type: academic
+            tier: 1
+            claim: "USAID dismantling (the administration cancelled roughly 83% of USAID contracts) disrupted global health programs including PEPFAR HIV/AIDS treatment and food assistance; a Boston University model (Nichols 'Impact Counter') projected hundreds of thousands of deaths over a year as a result — an estimate, not an observed count."
+            direction: harm
+            verification_status: verified
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.5 Post-Dobbs contested. Major anti-DEI policy. Anti-trans policy. Birthright citizenship EO. Anti-immigrant enforcement. Mass civil-rights enforcement reductions."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 1
+        harm_score: 8
+        low_confidence: false
+        era_context: "E3.5 — major harm anchor"
+        notes: "Anti-DEI executive orders eliminating federal diversity programs. DOJ Civil Rights Division reorganized. Federal contractor diversity requirements eliminated. Anti-Muslim/anti-Hispanic enforcement targeting."
+        evidence:
+          - citation: "Executive Order 14151 (Ending Radical and Wasteful Government DEI Programs) January 20, 2025; EO 14173"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 EO 14151 (Jan 20, 2025) and follow-on orders eliminated federal DEI programs and required reporting on private-sector DEI for federal contractors; substantial civil-rights enforcement reduction."
+            direction: harm
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 1
+        harm_score: 8
+        low_confidence: false
+        notes: "Title IX rule revisions reversing Biden trans protections. Federal abortion-rights enforcement eliminated. Comstock Act revival threats. Anti-DEI affecting women's federal programs."
+        evidence:
+          - citation: "EO 14168 'Defending Women From Gender Ideology Extremism', Fed. Reg. 2025-02090 (Jan 20 2025); EO 'Keeping Men Out of Women's Sports', Fed. Reg. 2025-02513 (Feb 5 2025: https://www.federalregister.gov/documents/2025/02/11/2025-02513/keeping-men-out-of-womens-sports); revocation of Biden reproductive-healthcare access EOs/guidance"
+            source_url: "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
+            source_type: primary_document
+            tier: 1
+            claim: "EO 14168 (Jan 20 2025) redefined 'sex' across federal programs; the administration rescinded Biden-era Title IX guidance protecting transgender students and (via the Feb 2025 'Keeping Men Out of Women's Sports' order) barred transgender women and girls from female sports; it also revoked Biden-era reproductive-healthcare access executive orders and guidance."
+            direction: harm
+            verification_status: verified
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E3.5 — major harm"
+        notes: "Two-sex EO (EO 14168). Trans military ban revived. Federal trans-rights protections eliminated. State-level anti-trans legislation backed federally. Defining anti-LGBTQ administration."
+        evidence:
+          - citation: "EO 14168 'Defending Women From Gender Ideology Extremism', Fed. Reg. 2025-02090 (Jan 20 2025); trans military ban revival (EO 14183, Jan 27 2025)"
+            source_url: "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 EO 14168 (Jan 20, 2025) established federal recognition of only two sexes; revived a transgender military ban (EO 14183); eliminated federal trans-rights protections — in the framework's editorial judgment, the most anti-LGBTQ administration since the modern federal LGBTQ-rights framework began."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 2
+        harm_score: 6
+        low_confidence: true
+        notes: "ADA enforcement reduced. Federal disability programs affected by DOGE cuts. Long COVID recognition reduced."
+        evidence:
+          - citation: "DOJ Civil Rights Division reorganization 2025"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "DOJ Civil Rights Division reorganization reduced ADA and related enforcement capacity early in Trump T2."
+            direction: harm
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 2
+        harm_score: 6
+        low_confidence: true
+        notes: "Reduced tribal consultation. Federal lands policies favoring extraction over tribal interests. Some Trump-era patterns continued."
+        evidence:
+          - citation: "Tribal consultation EO revisions 2025"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Reduced federal tribal consultation framework continuation of Trump T1 pattern."
+            direction: harm
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.5 Post-Snowden. Major rule-of-law breakdown. Court contempt. Schedule F federal workforce politicization. Pardons of January 6 defendants. Defining civil-liberties failure period."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E4.5 — major harm"
+        notes: "AP barred from White House press pool over 'Gulf of America' nomenclature. CBS '60 Minutes' lawsuit. Continued 'enemy of the people' rhetoric. Federal funding contingent on speech compliance threats."
+        evidence:
+          - citation: "AP press pool exclusion Feb 11 2025 (Associated Press v. Budowich); NPR, 'AP sues Trump White House for denying access' (Feb 21 2025); CBS '60 Minutes' lawsuit 2024-2025"
+            source_url: "https://www.npr.org/2025/02/21/nx-s1-5305226/ap-sues-white-house-gulf-of-america-mexico-trump"
+            source_type: journalism
+            tier: 1
+            claim: "AP barred from White House press pool over refusing to use 'Gulf of America' nomenclature (Feb 11 2025); AP sued (Associated Press v. Budowich); a district court later granted a preliminary injunction (Apr 2025), reversed 2-1 by the D.C. Circuit (June 2025). Part of a broader press-intimidation pattern continuing the Trump T1 baseline."
+            direction: harm
+            verification_status: verified
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "Surveillance state continued. ICE surveillance expansion. Federal employee monitoring. Reports of political-target surveillance."
+        evidence:
+          - citation: "ICE enforcement expansion 2025"
+            source_url: "https://www.ice.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "ICE surveillance and enforcement infrastructure substantially expanded for mass deportation operations."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 1
+        harm_score: 10
+        low_confidence: false
+        score_status: provisional
+        era_context: "E4.5 — era-defining 10-harm; defining 21st-century executive overreach"
+        notes: "Multiple federal judges have found that Trump T2 administration actions failed to comply with court orders, including in the Abrego Garcia case (in which the Supreme Court directed the administration to facilitate return) and in litigation over the dismantling of USAID and impoundment of appropriated funds; the administration disputes these characterizations and several matters remain on appeal. Executive Order 14171 (January 20, 2025) revived a Schedule F-style framework for excepting policy-influencing federal positions from competitive-service protections. Substantial congressionally appropriated funds were impounded or repurposed pending litigation."
+        evidence:
+          - citation: "Noem v. Abrego Garcia, No. 24A949 (S. Ct. Apr. 10, 2025); Department of State v. AIDS Vaccine Advocacy Coalition / USAID-related TROs; EO 14171 'Restoring Accountability to Policy-Influencing Positions', Fed. Reg. 2025-02095 (https://www.federalregister.gov/documents/2025/01/31/2025-02095/restoring-accountability-to-policy-influencing-positions-within-the-federal-workforce); GAO Impoundment Control Act determinations 2025"
+            source_url: "https://www.supremecourt.gov/opinions/24pdf/24a949_lkhn.pdf"
+            source_type: primary_document
+            tier: 1
+            claim: "In Noem v. Abrego Garcia (Apr. 10, 2025) the Supreme Court upheld a requirement that the administration 'facilitate' the return of a man it conceded had been improperly removed to El Salvador; several federal district judges found administration actions failed to comply with court orders in that and USAID-related matters, and the administration disputes these characterizations with several matters on appeal. EO 14171 (Jan. 20, 2025) revived a Schedule F-style framework ('Schedule Policy/Career'). The Government Accountability Office issued multiple 2025 determinations that the administration violated the Impoundment Control Act by withholding appropriated funds."
+            direction: harm
+            verification_status: verified
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 2
+        harm_score: 8
+        low_confidence: true
+        score_status: provisional
+        notes: "Reporting on the operations of the Department of Government Efficiency (DOGE) has been limited, and ethics filings for several senior personnel were not public. In March 2025, The Atlantic reported that Defense Secretary Hegseth had discussed Yemen strike plans in a Signal chat that inadvertently included a journalist; the administration disputed the characterization of the material as classified. The administration dismissed approximately seventeen Inspectors General across federal agencies in January–February 2025."
+        evidence:
+          - citation: "Goldberg, J., 'The Trump Administration Accidentally Texted Me Its War Plans,' The Atlantic (March 24, 2025); transcript corroborated by NBC News (Mar 26 2025: https://www.nbcnews.com/politics/trump-administration/atlantic-publishes-full-signal-chat-messages-showing-military-plans-us-rcna198148); IG firings January–February 2025 per congressional correspondence"
+            source_url: "https://www.nbcnews.com/politics/trump-administration/atlantic-publishes-full-signal-chat-messages-showing-military-plans-us-rcna198148"
+            source_type: journalism
+            tier: 2
+            claim: "In March 2025, The Atlantic reported that Defense Secretary Hegseth had discussed Yemen strike plans in a Signal chat that inadvertently included a journalist; the administration disputed the characterization of the material as classified. Approximately seventeen Inspectors General were dismissed in January–February 2025."
+            direction: harm
+            verification_status: verified
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "ACA enforcement reduced. Medicaid threatened (proposed cuts). Public health institutions damaged. RFK Jr at HHS controversial. Major welfare-policy disruption."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "HHS Secretary Robert F. Kennedy Jr. announced revisions to federal vaccine policy guidance in 2025; reporting characterized the changes as a reduction in recommended uptake messaging. HHS reorganization actions in March-April 2025 included staff reductions affecting CDC, FDA, and NIH per department announcements. The Texas Department of State Health Services reported a measles outbreak in 2025 including reported pediatric deaths."
+        evidence:
+          - citation: "HHS reorganization and policy announcements March-April 2025; Texas Department of State Health Services 2025 measles surveillance reporting"
+            source_url: "https://www.dshs.texas.gov/news-alerts/measles-outbreak-2025"
+            source_type: historical_record
+            tier: 1
+            claim: "HHS Secretary Kennedy announced revisions to federal vaccine policy guidance in 2025 characterized in reporting as reductions in uptake messaging. HHS reorganization in March-April 2025 produced staff reductions at CDC, FDA, and NIH. The Texas Department of State Health Services reported a 2025 measles outbreak that included two deaths in unvaccinated school-aged children in the outbreak area (a third measles-related death, an adult, was reported in New Mexico)."
+            direction: harm
+            verification_status: verified
+      - id: "5.2"
+        name: "Education"
+        good_score: 2
+        harm_score: 7
+        low_confidence: false
+        notes: "Department of Education dismantling attempts (cannot abolish without congressional action). Mass layoffs. Title IV programs disrupted. School-choice federal expansion."
+        evidence:
+          - citation: "Department of Education layoffs March 2025; EO 14242 (Department of Education)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Department of Education staff reduced by approximately 50% via layoffs (March 2025); structural elimination requires congressional action; substantial federal education-policy disruption."
+            direction: harm
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 2
+        harm_score: 6
+        low_confidence: true
+        notes: "SNAP work requirements expanded. Medicaid cut proposals. SSI processing delays. Welfare-state retrenchment pattern."
+        evidence:
+          - citation: "House Budget 2025 reconciliation Medicaid cuts"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "House Republican budget proposals 2025 included substantial Medicaid cuts and SNAP restrictions; specific final-form legislation pending."
+            direction: harm
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 2
+        harm_score: 6
+        low_confidence: true
+        notes: "Housing affordability remained elevated. Tariffs raised construction costs. HUD reductions. Modest federal housing response."
+        evidence:
+          - citation: "HUD budget reductions 2025; tariff impact on construction materials"
+            source_url: "https://www.hud.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "HUD substantially reduced; tariff regime raised construction-material costs; housing affordability crisis continued."
+            direction: harm
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.4 Climate-imperative. Major environmental rollback continuing Trump T1 pattern. Paris withdrawal again. EPA gutted. Public lands opened."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E6.4 — era-defining 10-harm for climate"
+        notes: "Withdrew from Paris Agreement again (Jan 20, 2025). EO 14154 'Unleashing American Energy.' Reversed IRA climate provisions. EPA climate science dismantled. Anti-climate-policy administration."
+        evidence:
+          - citation: "Paris Agreement withdrawal EO January 20, 2025; EO 14154 January 20, 2025"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 immediately withdrew from Paris Agreement (Jan 20, 2025); EO 14154 directed reversal of IRA climate spending and fossil-fuel acceleration."
+            direction: harm
+            verification_status: pending
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "EPA enforcement substantially reduced. Methane rule reversals. PFAS rule rollback attempts. Air quality and water-pollution enforcement dismantled."
+        evidence:
+          - citation: "EPA regulatory rollback EOs 2025; EPA staff reductions"
+            source_url: "https://www.epa.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 initiated rollback of Biden-era methane rule, power-plant emissions rule, and PFAS standards; EPA staff reduced substantially."
+            direction: harm
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "ANWR drilling expanded. National monuments under threat. Tongass roadless rule reversed again. Public lands opened to extraction. Drill-baby-drill posture."
+        evidence:
+          - citation: "Public lands extraction EOs 2025"
+            source_url: "https://www.doi.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 expanded ANWR drilling, opened public lands to additional fossil-fuel leasing; major public-lands conservation reversal."
+            direction: harm
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 2
+        harm_score: 6
+        low_confidence: true
+        notes: "ESA enforcement reduced. Migratory Bird Treaty Act enforcement weakened. USFWS reductions."
+        evidence:
+          - citation: "ESA enforcement changes 2025"
+            source_url: "https://www.fws.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "ESA enforcement substantially reduced under Trump T2 continuing T1 pattern."
+            direction: harm
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Multiple self-created crises (tariff war, court conflicts). Inherited stability. LA wildfires (early Jan 2025 transition). Texas measles outbreak. Generally crisis-creating rather than crisis-managing."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "Self-created crises responded to via reversals (tariff pauses). Measles outbreaks slow federal response. LA wildfires response politicized."
+        evidence:
+          - citation: "April 2025 tariff back-and-forth; LA wildfires response coordination concerns"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 tariff regime announced and partially paused/reversed within weeks; LA wildfires response politicized over California disaster aid threats."
+            direction: harm
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "Stock market volatility post-tariff. Manufacturing reshoring intent vs supply-chain disruption. Federal workforce reduction proceeding but legally contested."
+        evidence:
+          - citation: "Stock market and economic indicators 2025"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 2
+            claim: "Trump T2 tariff regime produced stock market volatility and economic uncertainty; effectiveness of policy goals contested."
+            direction: harm
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "Continuing E7 era-defining 10-harm anchor pattern from T1"
+        notes: "Independent fact-checking organizations including PolitiFact, FactCheck.org, and (where active) the Washington Post Fact Checker rated numerous Trump T2 public statements as false or misleading by their published methodologies. Administration statements on the Hegseth/Signal episode (sub-criterion 4.4) initially denied the disclosure of operational material before The Atlantic's publication; statements characterizing tariff-related cost effects were contradicted by analyses from major banks and the CBO."
+        evidence:
+          - citation: "PolitiFact, FactCheck.org, Washington Post Fact Checker ratings of Trump T2 statements 2025; Atlantic reporting on Hegseth/Signal (March 2025); CBO analyses of tariff-related cost effects 2025"
+            source_url: "canonical"
+            source_type: journalism
+            tier: 2
+            claim: "Independent fact-checking organizations rated numerous Trump T2 public statements as false or misleading by their published methodologies. Administration statements on the Hegseth/Signal episode initially denied the disclosure of operational material before reporting publication."
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "Most actions producing new crises (tariff, alliance damage, constitutional crisis). Long-term resolution unclear given short time window."
+        evidence:
+          - citation: "Trump T2 actions producing ongoing crises 2025"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 actions primarily creating rather than resolving crises in observed window; assessment of long-term resolution pending."
+            direction: harm
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Continuing T1 patterns. Mass pardons. Court contempt. DOJ politicization. Schedule F revival. SCOTUS appointments may follow. Major institutional damage continuing."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Trump entered the second term as the first US president to take office following a felony conviction (People v. Trump, N.Y. Sup. Ct. May 30, 2024 — 34 counts of falsifying business records; on appeal as of the scoring date). The Supreme Court's decision in Trump v. United States, 603 U.S. ___ (2024), set out an immunity framework for official acts that has shaped subsequent litigation. Separately, ethics watchdogs including CREW and POGO raised conflict-of-interest concerns regarding the Trump Organization's continued operations and cryptocurrency-related ventures (including the $TRUMP and Melania Trump meme coins); these characterizations are contested by the administration."
+        evidence:
+          - citation: "People v. Trump (N.Y. Sup. Ct.) — 34-count conviction May 30, 2024 (Manhattan DA: https://manhattanda.org/d-a-bragg-announces-34-count-felony-trial-conviction-of-donald-j-trump/), unconditional discharge at sentencing Jan 10 2025, notice of appeal filed Jan 29 2025; Trump v. United States, 603 U.S. ___ (2024); CREW and POGO conflict-of-interest filings 2025"
+            source_url: "https://manhattanda.org/d-a-bragg-announces-34-count-felony-trial-conviction-of-donald-j-trump/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump took office as the first US president to do so following a felony conviction (People v. Trump — 34 counts of falsifying business records, May 30, 2024; sentenced to unconditional discharge Jan 10 2025; on appeal). Trump v. United States (2024) set out an immunity framework for official acts. Ethics watchdogs raised concerns regarding Trump Organization conflicts and cryptocurrency-venture activity; the administration disputes these characterizations."
+            direction: harm
+            verification_status: verified
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 1
+        harm_score: 9
+        low_confidence: true
+        notes: "Cabinet appointments characterized in reporting as departing from typical confirmation norms (Hegseth, Patel, RFK Jr., Bondi), with several confirmations on tight margins and contested testimony. Ethics watchdogs including CREW and POGO raised conflict-of-interest concerns regarding Elon Musk's role at DOGE given SpaceX and Tesla federal contracts; the administration disputed these characterizations."
+        evidence:
+          - citation: "Senate confirmation records for Trump T2 Cabinet 2025; CREW and POGO conflict-of-interest filings 2025 regarding DOGE leadership"
+            source_url: "https://www.whitehouse.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 Cabinet included several appointments confirmed on tight margins with contested testimony. Ethics watchdogs (CREW, POGO) raised conflict-of-interest concerns regarding Musk's DOGE role given SpaceX and Tesla federal contracts; the administration disputed these characterizations."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 1
+        harm_score: 10
+        low_confidence: false
+        era_context: "E9.4 — era-defining 10-harm; primary attribution for multiple events"
+        notes: "On January 20, 2025, Trump issued pardons and commutations covering approximately 1,500 January 6 defendants, including individuals convicted of assault on officers and the seditious-conspiracy convicts Stewart Rhodes (Oath Keepers) and Enrique Tarrio (Proud Boys). Critics, including bipartisan former prosecutors and several editorial boards, characterized the pardons as legitimating political violence; the administration framed them as correcting prosecutorial overreach. Subsequent administration actions found by federal courts to fail to comply with court orders, the EO 14171 Schedule F revival, and impoundment of appropriated funds are documented at sub-criteria 4.3 and 13.2."
+        evidence:
+          - citation: "Proclamation on Granting Pardons and Commutation of Sentences for Certain Offenses Relating to the Events at or near the United States Capitol on January 6, 2021 (January 20, 2025); DOJ J6 prosecutions docket"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "On January 20, 2025, Trump pardoned or commuted the sentences of approximately 1,500 January 6 defendants, including individuals convicted of assault on officers and of seditious conspiracy. Critics characterized the pardons as legitimating political violence; the administration framed them as correcting prosecutorial overreach."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 4
+        harm_score: 4
+        low_confidence: true
+        notes: "Federal judicial appointments continuing through term. Quality contested. Federalist Society pipeline. Potential SCOTUS vacancy possible during term."
+        evidence:
+          - citation: "Trump T2 federal judicial nominations 2025"
+            source_url: "https://www.uscourts.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 continuing federal judicial appointment pipeline via Federalist Society; specific quality assessment pending observation window."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 3
+        harm_score: 5
+        low_confidence: true
+        notes: "Selection ethics contested. Federalist Society pipeline. Loyalist-prioritization concerns."
+        evidence:
+          - citation: "Trump T2 judicial selection process 2025"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 judicial selection process emphasizes ideological loyalty assessment; broader assessment pending observation window."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 3
+        harm_score: 4
+        low_confidence: true
+        notes: "Continuing Federalist Society originalism pattern from T1. Outcomes pending."
+        evidence:
+          - citation: "Trump T2 judicial-philosophy framework"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 judicial appointments continue conservative originalist framework from T1 era."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "Tight-margin Cabinet confirmations. Hegseth confirmation 50-50 (VP tiebreaker). Multiple controversies. Continued post-Bork politicization."
+        evidence:
+          - citation: "Hegseth confirmation January 24, 2025 (50-50 VP tiebreaker)"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Hegseth confirmed Secretary of Defense on 50-50 tie broken by Vice President Vance; multiple Cabinet confirmations on similarly narrow margins."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Era E9.4 Norm-erosion — continuing era-defining anchor. Mass J6 pardons. Court defiance. Press intimidation. Democratic backsliding continuing."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "DOJ Civil Rights Division voting enforcement substantially reduced. SAVE Act voting framework. Voter-roll purge support. Continued voting-access restriction posture."
+        evidence:
+          - citation: "DOJ Civil Rights Division reorganization 2025; SAVE Act framework"
+            source_url: "https://www.justice.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "DOJ Civil Rights Division voting enforcement substantially reduced; SAVE Act and similar voter-ID frameworks supported federally; pattern of voting-access restriction."
+            direction: harm
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E9.4 — continuing major harm anchor from T1"
+        notes: "AP excluded from press pool. CBS lawsuit. Continued 'enemy of the people' rhetoric. Pattern of press intimidation continuing T1."
+        evidence:
+          - citation: "AP press pool exclusion Feb 11 2025 (Associated Press v. Budowich); NPR, 'AP sues Trump White House for denying access' (Feb 21 2025)"
+            source_url: "https://www.npr.org/2025/02/21/nx-s1-5305226/ap-sues-white-house-gulf-of-america-mexico-trump"
+            source_type: journalism
+            tier: 1
+            claim: "AP press pool exclusion (Feb 11 2025) over nomenclature disagreement was an unusual access sanction; part of a broader press-relationship pattern continuing the Trump T1 baseline."
+            direction: harm
+            verification_status: verified
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 2
+        harm_score: 8
+        low_confidence: true
+        era_context: "Continuing E9.4 anchor"
+        notes: "See sub-criterion 8.3 for the January 20, 2025 mass pardon of approximately 1,500 January 6 defendants, including the seditious-conspiracy convicts Stewart Rhodes (Oath Keepers) and Enrique Tarrio (Proud Boys); critics characterized the pardons as legitimating political violence, while the administration framed them as correcting prosecutorial overreach. Per §4.6 attribution, the political-violence axis is scored here; the underlying conduct attribution sits at 8.3."
+        evidence:
+          - citation: "Proclamation on Granting Pardons and Commutation of Sentences for Certain Offenses Relating to the Events at or near the United States Capitol on January 6, 2021 (January 20, 2025)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "The January 20, 2025 mass pardon of approximately 1,500 January 6 defendants — including the seditious-conspiracy convicts Stewart Rhodes and Enrique Tarrio — was characterized by critics as legitimating political violence; the administration framed it as correcting prosecutorial overreach."
+            direction: harm
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Continuing maximally polarizing pattern from T1. 'Enemy from within' rhetoric. Anti-judiciary rhetoric. Continued partisan polarization peaks."
+        evidence:
+          - citation: "Trump T2 rhetoric pattern 2025"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 continuing peak-polarization rhetoric from T1; 'enemy from within' framing, judiciary attacks pattern."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Per v1.2 §9.4: In office at scoring date → Cat 10 dropped entirely from weighted total; insufficient_time_elapsed flag set. UI displays 'Partial score — long-tail incomplete.' Lens vectors proportionally renormalize across remaining 12 categories."
+    insufficient_time_elapsed: true
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: null
+        harm_score: null
+        insufficient_time_elapsed: true
+        notes: "In office; cannot score."
+        evidence: []
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: null
+        harm_score: null
+        insufficient_time_elapsed: true
+        notes: "In office; cannot score."
+        evidence: []
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: null
+        harm_score: null
+        insufficient_time_elapsed: true
+        notes: "In office; cannot score."
+        evidence: []
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: null
+        harm_score: null
+        insufficient_time_elapsed: true
+        notes: "In office; cannot score."
+        evidence: []
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.5 Post-Trump baseline — continuing era-defining anchor. Trump T2 IS this era continuing."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E11.5 — continuing era-defining anchor"
+        notes: "Pattern of T1 conduct continuing. Inaugural speech aggressive. Continued public name-calling, profanity, undignified rhetoric."
+        evidence:
+          - citation: "Trump T2 inaugural address January 20, 2025; subsequent conduct patterns"
+            source_url: "https://www.whitehouse.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 inaugural address departed from traditional unifying-inaugural genre; subsequent public conduct continued T1 pattern of undignified rhetoric."
+            direction: harm
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Continuing T1 rhetoric pattern. Tariff war rhetoric. Anti-foreign-leader rhetoric. Anti-judiciary rhetoric. Anti-press rhetoric."
+        evidence:
+          - citation: "Trump T2 public rhetoric pattern 2025"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 rhetorical pattern continuing T1 baseline of personal attacks, profanity, and presidential-norm-breaking discourse."
+            direction: harm
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "Continued tradition-breaking patterns. Pardon ceremony breaks. Refused to attend predecessor inaugurations earlier. Mixed observance of formal duties."
+        evidence:
+          - citation: "Trump T2 ceremonial-conduct records 2025"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Trump T2 ceremonial conduct continues T1 pattern of breaking traditional presidential norms while maintaining minimal required ceremonial functions."
+            direction: harm
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Continuing T1 modeling pattern. Substantially affecting subsequent political behavior. Post-Trump baseline E11.5 era continuing."
+        evidence:
+          - citation: "Trump T2 modeling effects on subsequent political behavior 2025"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Trump T2 conduct continues to define E11.5 Post-Trump baseline era; substantial modeling effects on subsequent political-discourse norms."
+            direction: harm
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "High base support. Strong opposition. End-of-T1-frame approval relatively stable. Polarization continuing. International standing damaged."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        notes: "Polarized approval. Base strongly supportive. Opposition intensely opposed. Mid-term ~45% approval. Tariff/economic concerns rising."
+        evidence:
+          - citation: "Gallup and other approval polling 2025"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Trump T2 approval averaging ~45% across major polling aggregators in early term; partisan gap remained historically wide."
+            direction: harm
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Continuing maximally polarizing pattern from T1. Anti-immigrant operations. Anti-DEI campaigns. Continued cultural-political fracture."
+        evidence:
+          - citation: "Pew partisan polarization research 2025"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "Partisan polarization remained at historic highs during Trump T2 early term; cohesion-damaging policies (mass deportation operations, anti-DEI) continued T1 pattern."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        era_context: "E12 — major harm anchor"
+        notes: "International standing damaged severely. Allied trust collapsed. Pew Global Attitudes substantial declines."
+        evidence:
+          - citation: "Pew Global Attitudes 2025; allied-country polling"
+            source_url: "https://www.pewresearch.org/global/"
+            source_type: statistic
+            tier: 1
+            claim: "US favorability ratings in allied countries (Germany, France, UK, Canada, Japan) fell to historic lows under Trump T2; Canada in particular saw extraordinary anti-US sentiment surge."
+            direction: harm
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Damaged severely in allied populations. Canada hostility unprecedented. Mexico hostility from tariffs/threats. European populations strongly negative."
+        evidence:
+          - citation: "International polling 2025 on Trump T2"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "Trump T2 produced unprecedented declines in foreign-public sentiment toward US in allied populations; Canadian and European anti-US sentiment particularly notable."
+            direction: harm
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Defining policy area. Mass deportation operations. Birthright citizenship EO. Title 42-style enforcement revived. Major immigration enforcement era — continuing T1 escalation."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 1
+        harm_score: 8
+        low_confidence: false
+        notes: "Birthright citizenship EO (struck down). Travel bans expanded. Refugee program effectively suspended (ceiling cut to 7,500 FY 2026). H-1B restrictions. CHNV parole terminated."
+        evidence:
+          - citation: "Executive Order 14160 (Birthright citizenship) January 20, 2025; travel ban Proclamations; refugee ceiling FY 2026"
+            source_url: "https://www.federalregister.gov/documents/2025/01/29/2025-02007/protecting-the-meaning-and-value-of-american-citizenship"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 birthright citizenship order (EO 14160, Jan 20 2025) was blocked by multiple federal courts and has not been enforced; refugee admissions ceiling cut to historic lows; CHNV humanitarian parole terminated; legal immigration framework substantially restricted."
+            direction: harm
+            verification_status: verified
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 1
+        harm_score: 10
+        low_confidence: false
+        score_status: provisional
+        era_context: "E13 — era-defining 10-harm anchor"
+        notes: "Trump T2 transferred some migrants from US detention to El Salvador's CECOT facility under inter-government agreements; in the Abrego Garcia matter the Supreme Court directed the administration to facilitate the return of an individual whose removal a federal court had found to violate a prior immigration order. Plaintiffs and several district courts have characterized these transfers as occurring without adequate process; the administration disputes those characterizations. Reporting describes large-scale enforcement operations and the opening of a Florida detention facility informally known as 'Alligator Alcatraz.' Several enforcement matters remain on appeal."
+        evidence:
+          - citation: "Noem v. Abrego Garcia, No. 24A949 (S. Ct. Apr. 10, 2025); Alien Enemies Act / CECOT deportations and district-court rulings (e.g., CNN, June 4 2025: https://www.cnn.com/2025/06/04/politics/migrants-el-salvador-alien-enemies-act); federal district-court orders in pending enforcement litigation"
+            source_url: "https://www.supremecourt.gov/opinions/24pdf/24a949_lkhn.pdf"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 transferred some migrants from US detention to El Salvador's CECOT facility; in Noem v. Abrego Garcia the Supreme Court directed the administration to facilitate return after a federal court found the removal violated a prior immigration order. Plaintiffs and several district courts characterized the transfers (including under the invoked Alien Enemies Act) as occurring without adequate process; the administration disputes these characterizations."
+            direction: harm
+            verification_status: verified
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Refugee admission ceiling cut to ~7,500 (FY 2026), historic low. Refugee processing suspended early 2025. Asylum at border ended via EO. South African 'refugee' program unusual."
+        evidence:
+          - citation: "Presidential Determination on Refugee Admissions for FY 2026, Fed. Reg. 2025-19752 (Oct 31 2025); asylum EOs January 2025"
+            source_url: "https://www.federalregister.gov/documents/2025/10/31/2025-19752/presidential-determination-on-refugee-admissions-for-fiscal-year-2026"
+            source_type: primary_document
+            tier: 1
+            claim: "Trump T2 refugee admission ceiling set at 7,500 for FY 2026 — lowest in program history; asylum at southern border substantially suspended via executive action."
+            direction: harm
+            verification_status: verified
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 2
+        harm_score: 7
+        low_confidence: true
+        notes: "Foreign-born population declining due to mass deportations. Agricultural and service labor shortages emerging. Demographic transition reversing under enforcement regime."
+        evidence:
+          - citation: "Census foreign-born population data 2025; agricultural labor reports"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Foreign-born population share showing decline during Trump T2 mass deportation operations; agricultural and service-sector labor shortages emerging in affected regions."
+            direction: harm
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 2.0
+  harm_average_across_categories: 7.6
+  net_average_across_categories: -5.6
+  insufficient_time_elapsed: true
+  cat_10_dropped: true
+  pattern_notes: "Trump T2 is the framework's other high-harm contemporary anchor alongside T1. Many sub-criteria carry low_confidence given short observation window. Pattern continues T1 era-defining harms with intensification: 4.3 executive restraint (court defiance, Schedule F), 9.4 polarization, 11.x decorum, 13.x immigration enforcement. Lens divergence expected similar to T1: Conservative and Populist relatively higher (tariffs, immigration enforcement weighted positively); Progressive, Libertarian, Classical Liberal, Internationalist lower (civil rights, civil liberties, alliance management failures dominant). Cat 10 dropped entirely per v1.2 §9.4."

@@ -1,0 +1,802 @@
+president: gerald_ford
+display_name: "Gerald Ford"
+term_start: 1974-08-09
+term_end: 1977-01-20
+party: R
+terms_served: 1_partial
+calibration_anchor: false
+spec_version: v1.2
+note: "Only president never elected to presidency or VP. Inherited post-Watergate institutional damage. 2.4-year term."
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Inherited stagflation. 1973-75 recession at peak of severity. Modest recovery 1976. WIN (Whip Inflation Now) campaign ineffective."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 4
+        harm_score: 5
+        notes: "Unemployment peaked at 9.0% (May 1975). Recovery began 1976. Inflation peaked 12.3% (1974), fell to ~5%."
+        evidence:
+          - citation: "BLS unemployment and CPI data 1974-1977"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Stagflation peaked under Ford with unemployment at 9.0% and inflation at 12.3% in 1974-75; modest recovery 1976."
+            direction: harm
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 5
+        harm_score: 3
+        notes: "Inequality relatively flat. Earned Income Tax Credit enacted (1975) — first refundable tax credit."
+        evidence:
+          - citation: "Tax Reduction Act of 1975, Public Law 94-12 (creating EITC)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EITC enacted under Ford became foundational anti-poverty tax instrument; modest at inception, expanded substantially under Reagan and Clinton."
+            direction: good
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 4
+        harm_score: 4
+        notes: "Deficits remained large from inherited stagflation. Tax Reduction Act 1975 added stimulus."
+        evidence:
+          - citation: "OMB Historical Tables"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 2
+            claim: "Federal deficits remained large under Ford due to recession-era stimulus and continued inflation pressure."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 4
+        harm_score: 4
+        notes: "Real wages stagnant. Unemployment-era labor weakness. ERISA (1974) enacted — major pension protection law."
+        evidence:
+          - citation: "Employee Retirement Income Security Act of 1974, Public Law 93-406"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ERISA established federal pension and benefit protection framework that became foundational for US employer-sponsored retirement system."
+            direction: good
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.3 Cold War. Saigon fell (April 1975). Helsinki Accords (1975). Mayaguez incident (1975). Détente continued."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 5
+        harm_score: 4
+        notes: "Saigon evacuation (April 1975) ended Vietnam War. Mayaguez incident (May 1975) — 41 US deaths to free 39 hostages. No new major wars."
+        evidence:
+          - citation: "Saigon evacuation (Operation Frequent Wind), April 29-30, 1975; Mayaguez incident, May 12-15, 1975"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford executed Saigon evacuation ending US Vietnam involvement; Mayaguez rescue operation lost more Americans (41) than hostages saved (39)."
+            direction: good
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 6
+        harm_score: 2
+        notes: "NATO solid. Helsinki Final Act (August 1975) major European-security framework. Continued detente with USSR."
+        evidence:
+          - citation: "Conference on Security and Cooperation in Europe Final Act, August 1, 1975 (Helsinki Accords)"
+            source_url: "https://www.osce.org/"
+            source_type: primary_document
+            tier: 1
+            claim: "Helsinki Accords established European-security framework including human-rights provisions that subsequent dissidents used to challenge Soviet bloc."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 6
+        harm_score: 2
+        notes: "Helsinki Accords. SALT II framework drafted (signed under Carter). Vladivostok Summit (1974). Kissinger continuity."
+        evidence:
+          - citation: "Vladivostok Summit November 23-24, 1974; SALT II framework"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford-Brezhnev Vladivostok agreement on strategic arms framework set up SALT II that Carter completed."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 4
+        harm_score: 4
+        notes: "Indonesia invasion of East Timor (December 1975) with US approval — massive civilian casualties followed. End of Vietnam War civilian impact (Khmer Rouge takeover April 1975)."
+        evidence:
+          - citation: "Ford-Kissinger-Suharto meeting December 6, 1975 (declassified); East Timor 1975 invasion"
+            source_url: "https://nsarchive.gwu.edu/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford and Kissinger explicitly approved Indonesia's invasion of East Timor on December 6, 1975, leading to estimated 100,000+ Timorese deaths over subsequent occupation."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.3 Consolidation. Continued enforcement of 1960s framework. Modest reforms."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 5
+        harm_score: 2
+        notes: "Continued CRA, VRA enforcement. Voting Rights Act extension 1975 expanded to language minorities."
+        evidence:
+          - citation: "Voting Rights Act Amendments of 1975, Public Law 94-73"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1975 VRA Amendments extended language-minority protections, particularly for Hispanic and Asian American voters."
+            direction: good
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 5
+        harm_score: 2
+        notes: "ERA ratification stalled under Ford. Title IX enforcement continued. Betty Ford openly pro-choice and pro-ERA."
+        evidence:
+          - citation: "Title IX implementation 1974-1977; Betty Ford public advocacy"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Title IX enforcement continued during Ford term; Betty Ford's public advocacy normalized first-lady political voice."
+            direction: good
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 1
+        harm_score: 3
+        notes: "EO 10450 still in force. Era-typical neglect. Some Civil Service Commission guidance softening."
+        evidence:
+          - citation: "Civil Service Commission policy revisions 1975 (Norton v. Macy precedent integration)"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Civil Service Commission softened EO 10450 enforcement somewhat in mid-1970s but federal LGBTQ employment ban remained formally in effect."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 7
+        harm_score: 1
+        notes: "Education for All Handicapped Children Act of 1975 (now IDEA) — landmark disability rights legislation. Section 504 regulations drafted (issued under Carter)."
+        evidence:
+          - citation: "Education for All Handicapped Children Act of 1975, Public Law 94-142"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EAHCA (later IDEA) established federal right to free appropriate public education for disabled children; transformative disability-rights legislation."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 8
+        harm_score: 1
+        notes: "Indian Self-Determination and Education Assistance Act of 1975 (Public Law 93-638). Drafted under Nixon administration; signed by Ford. Ended termination era formally."
+        evidence:
+          - citation: "Indian Self-Determination and Education Assistance Act, Public Law 93-638 (January 1975)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ISDEAA enabled tribes to contract for federal Indian-services programs, formally ending termination era and establishing self-determination framework that continues today."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.2 Cold War surveillance. Significant post-Watergate reforms. Privacy Act 1974, FOIA Amendments 1974 (over Ford's veto). Church Committee investigations."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 6
+        harm_score: 2
+        notes: "Post-Watergate press relations improved. No major press conflicts."
+        evidence:
+          - citation: "Ford-press relations records 1974-1977"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford restored post-Watergate press-presidential cooperation patterns; no major conflicts."
+            direction: good
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 5
+        harm_score: 3
+        notes: "Church Committee (1975-76) exposed FBI/CIA/NSA abuses. Ford administration cooperated. Created Foreign Intelligence Surveillance framework (FISA drafted, enacted 1978 under Carter)."
+        evidence:
+          - citation: "Senate Select Committee to Study Governmental Operations (Church Committee) reports 1975-1976"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Church Committee investigations exposed extensive CIA, FBI, NSA abuses; Ford administration cooperated and initiated reform process leading to FISA 1978."
+            direction: good
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 5
+        harm_score: 4
+        notes: "Post-Watergate restraint era. Vetoed FOIA Amendments (1974) — overridden. War Powers Resolution accepted. Mayaguez unilateral but limited."
+        evidence:
+          - citation: "FOIA Amendments of 1974 enacted over Ford veto, November 1974"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford vetoed FOIA Amendments strengthening the law; Congress overrode the veto; subsequent administration complied with strengthened framework."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 5
+        harm_score: 4
+        notes: "Vetoed FOIA Amendments 1974 (overridden). Privacy Act 1974 signed. Government in the Sunshine Act 1976 signed. Mixed pattern."
+        evidence:
+          - citation: "Privacy Act of 1974, Public Law 93-579; Government in the Sunshine Act, Public Law 94-409 (1976)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford signed multiple post-Watergate transparency reforms including Privacy Act and Sunshine Act; vetoed FOIA Amendments (overridden)."
+            direction: good
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Stagflation-era retrenchment pressure. EAHCA (1975) major disability rights. Swine flu vaccination program (1976) controversial."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 4
+        harm_score: 3
+        notes: "Swine flu vaccination program (1976) controversial — 25 deaths, ~500 Guillain-Barré cases. ESRD Medicare program continued. Modest record."
+        evidence:
+          - citation: "National Swine Flu Immunization Program of 1976"
+            source_url: "https://www.cdc.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Ford's swine flu program vaccinated 40 million Americans before halt due to Guillain-Barré link; became cautionary tale for subsequent public-health programs."
+            direction: harm
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 7
+        harm_score: 1
+        notes: "EAHCA 1975. Education Amendments 1976. Continued Pell Grant expansion."
+        evidence:
+          - citation: "EAHCA Public Law 94-142; Education Amendments 1976 Public Law 94-482"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EAHCA was foundational federal education-for-disabled-children legislation; substantial education investment continued."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 5
+        harm_score: 3
+        notes: "Stagflation-era pressures on welfare programs. Food Stamps reformed. EITC enacted. Modest expansion overall."
+        evidence:
+          - citation: "Tax Reduction Act of 1975 (EITC creation); Food Stamp reforms"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EITC creation was foundational anti-poverty policy innovation though small at inception."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 4
+        harm_score: 3
+        notes: "Section 8 program expansion (drafted Nixon, signed by Ford August 1974). Housing inflation pressures."
+        evidence:
+          - citation: "Housing and Community Development Act of 1974, Public Law 93-383"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford signed Section 8 voucher program one week into his term (originally Nixon-era legislation)."
+            direction: good
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.2 Modern environmental. Modest continued expansion of post-EPA framework."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 0
+        harm_score: 0
+        notes: "N/A per era E6.2 pre-climate-awareness."
+        evidence: []
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 5
+        harm_score: 2
+        notes: "Continued EPA enforcement. Resource Conservation and Recovery Act 1976 (hazardous waste regulation)."
+        evidence:
+          - citation: "Resource Conservation and Recovery Act, Public Law 94-580 (1976)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "RCRA established federal hazardous-waste regulation framework still in effect."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 6
+        harm_score: 1
+        notes: "Federal Land Policy and Management Act 1976 (BLM organic act). National Forest Management Act 1976."
+        evidence:
+          - citation: "Federal Land Policy and Management Act, Public Law 94-579 (1976); National Forest Management Act, Public Law 94-588 (1976)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "FLPMA and NFMA established modern federal land-management framework for BLM and Forest Service lands."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 5
+        harm_score: 1
+        notes: "ESA continued enforcement. Magnuson-Stevens Fishery Conservation Act 1976 established 200-mile EEZ."
+        evidence:
+          - citation: "Magnuson-Stevens Fishery Conservation and Management Act, Public Law 94-265 (1976)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Magnuson-Stevens Act established US 200-mile Exclusive Economic Zone and federal fisheries management framework."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Inherited Nixon resignation crisis. Pardon decision. Stagflation. Vietnam withdrawal. Two assassination attempts."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 6
+        harm_score: 3
+        notes: "Pardon of Nixon (one month into term, September 8, 1974) — fast but politically devastating. Saigon evacuation fast."
+        evidence:
+          - citation: "Proclamation 4311 (Nixon pardon) September 8, 1974"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford pardoned Nixon within one month of taking office; rapid decision aimed at closing Watergate chapter but politically devastating."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 5
+        harm_score: 4
+        notes: "WIN inflation campaign ineffective. Saigon evacuation effective. Pardon controversial."
+        evidence:
+          - citation: "Whip Inflation Now campaign 1974; contemporary press coverage"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "WIN (Whip Inflation Now) campaign was widely criticized as ineffective; inflation continued through Ford term."
+            direction: harm
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 7
+        harm_score: 2
+        notes: "Honest in pardon decision communication despite political cost. Generally direct with public."
+        evidence:
+          - citation: "Ford pardon address September 8, 1974; subsequent congressional testimony"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford publicly defended pardon as in national interest; testified to Congress (October 1974) — first sitting president to testify under oath to Congress."
+            direction: good
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 6
+        harm_score: 4
+        notes: "Watergate chapter closed via pardon (some say prematurely). Vietnam ended. Stagflation passed to Carter unresolved."
+        evidence:
+          - citation: "Nixon pardon historical assessment; subsequent presidential scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Ford pardon of Nixon retrospectively defended by many historians as enabling national focus on other matters, criticized by others as precluding accountability."
+            direction: good
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Restored post-Watergate institutional dignity. Pardon decision norm-controversial. Generally clean administration."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 8
+        harm_score: 1
+        notes: "Personally clean. Modest finances. Most honest presidency since Eisenhower per contemporary assessment."
+        evidence:
+          - citation: "Standard biographical scholarship; contemporary press assessments"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Ford widely considered one of most personally honest presidents of modern era; no personal-ethics scandals during or after term."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 7
+        harm_score: 2
+        notes: "Generally clean administration. Rockefeller wealth disclosure during VP confirmation set new transparency precedent."
+        evidence:
+          - citation: "Nelson Rockefeller VP confirmation records 1974; financial disclosure"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "Rockefeller's financial disclosure during VP confirmation established new transparency precedent for executive-branch appointees."
+            direction: good
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 5
+        harm_score: 4
+        notes: "Pardon of Nixon controversial as institutional-norm issue. Otherwise norm-respecting. Restored Watergate-era constitutional balance."
+        evidence:
+          - citation: "Nixon pardon Proclamation 4311; constitutional analysis"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford's preemptive Nixon pardon was constitutionally legitimate but normatively controversial; contributed to Ford's 1976 defeat."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 7
+        harm_score: 2
+        notes: "One SCOTUS appointment: John Paul Stevens. Stevens became major moderate-then-liberal justice over 35 years. Strong selection."
+        evidence:
+          - citation: "John Paul Stevens confirmation December 1975"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Stevens served on SCOTUS for 35 years (1975-2010) and became major moderate-to-liberal voice; widely regarded as a strong Ford appointment."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 7
+        harm_score: 1
+        notes: "Merit-based selection. AG Edward Levi non-political process."
+        evidence:
+          - citation: "Stevens selection process records (AG Edward Levi)"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Stevens selection conducted via merit-based process led by AG Levi, returning to pre-Nixon-era professional vetting."
+            direction: good
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 5
+        harm_score: 2
+        notes: "Stevens unpredictable jurisprudentially; restraint-or-activist depending on issue. Mixed pattern."
+        evidence:
+          - citation: "Stevens jurisprudential trajectory analysis"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Stevens evolved from moderate Republican appointee to consistent liberal vote; jurisprudential restraint mixed with activism on specific issues."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 8
+        harm_score: 1
+        notes: "Stevens confirmed unanimously 98-0 within 19 days. Pre-modern (pre-Bork) confirmation process."
+        evidence:
+          - citation: "Stevens Senate confirmation December 17, 1975 (98-0)"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Stevens confirmed unanimously and rapidly — last pre-Bork-era SCOTUS confirmation under traditional norms."
+            direction: good
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Restored post-Watergate institutional functioning. Survived two assassination attempts (1975). Lost narrowly 1976."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 6
+        harm_score: 1
+        notes: "Signed VRA Amendments 1975 expanding language-minority protections. Continued federal voting-rights enforcement."
+        evidence:
+          - citation: "VRA Amendments of 1975, Public Law 94-73"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford signed VRA extension expanding protections to language minorities."
+            direction: good
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 6
+        harm_score: 2
+        notes: "Cordial relationship. Saturday Night Live's Chevy Chase Ford caricature became cultural moment without administration response."
+        evidence:
+          - citation: "Ford-press relations 1974-1977; cultural reception"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford maintained dignified response to often-mocking press treatment; restored post-Watergate cooperative norms."
+            direction: good
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 6
+        harm_score: 3
+        notes: "Survived two assassination attempts within 17 days (Sara Jane Moore, Squeaky Fromme, September 1975). Handled with dignity. Era of declining political violence."
+        evidence:
+          - citation: "Ford assassination attempts September 5 and 22, 1975 (Secret Service records)"
+            source_url: "https://www.secretservice.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ford survived assassination attempts by Lynette 'Squeaky' Fromme (September 5, 1975) and Sara Jane Moore (September 22, 1975)."
+            direction: good
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 6
+        harm_score: 3
+        notes: "Generally restorative. Pardon decision polarizing but specific. Lost narrowly 1976 — competitive election."
+        evidence:
+          - citation: "1976 election results; Ford-Carter debates"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford lost 1976 election narrowly (50.1% to 48.0%); election was competitive across both ideological spectrum and regions, suggesting modest polarization."
+            direction: good
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Restoration of post-Watergate institutional norms substantial long-tail good. ISDEAA durable. Helsinki Accords durable. East Timor consequence durable harm."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 7
+        harm_score: 2
+        notes: "ISDEAA, EAHCA, RCRA, FLPMA, Magnuson-Stevens — all operational 50 years later. EITC foundational. Helsinki Accords legacy."
+        evidence:
+          - citation: "Continued operation of Ford-signed legislation 1974-present"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Multiple foundational laws signed in Ford's short term (ISDEAA, EAHCA, ERISA, RCRA, FLPMA, Magnuson-Stevens) remain operational frameworks today."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 6
+        harm_score: 3
+        notes: "Post-Watergate institutional restoration. Pardon precedent debated. Church Committee reforms (FISA, IG framework) durable."
+        evidence:
+          - citation: "Post-Watergate institutional reforms; Church Committee legacy"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Ford-era cooperation with Church Committee enabled the legal-framework reforms (FISA 1978, IG Act 1978) that constrained intelligence-community abuses through subsequent decades."
+            direction: good
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 4
+        harm_score: 3
+        notes: "Modest. Boomers came of age. Vietnam ended ('Vietnam Syndrome' began). Stagflation generational economic experience."
+        evidence:
+          - citation: "Generational political-science scholarship on Vietnam Syndrome"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Vietnam War end under Ford initiated 'Vietnam Syndrome' affecting US foreign-policy decisions for 25+ years."
+            direction: harm
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 5
+        harm_score: 5
+        notes: "Helsinki Accords human-rights provisions enabled Soviet bloc dissident movements. East Timor genocide ~200K dead. Indochinese refugee crisis."
+        evidence:
+          - citation: "Helsinki Watch (later Human Rights Watch) founding 1978; East Timor mortality estimates"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Helsinki Accords' human-rights provisions enabled Soviet bloc dissident movements; East Timor approval led to ~100,000-200,000 Timorese deaths over subsequent decades."
+            direction: harm
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.2 Post-Watergate informal. Restored dignity post-Nixon while accepting post-Watergate informality. Personally modest."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 8
+        harm_score: 1
+        notes: "Restored post-Watergate dignity. Personal humility. Accepted SNL mockery with grace."
+        evidence:
+          - citation: "Ford public conduct records 1974-1977; contemporary press"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Ford restored institutional dignity to the presidency post-Watergate with personal humility and competent public conduct."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 6
+        harm_score: 2
+        notes: "Plain-spoken Midwestern style. 'Our long national nightmare is over' (inauguration speech). Not stylistically gifted but appropriate."
+        evidence:
+          - citation: "Ford inaugural remarks August 9, 1974"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "'Our long national nightmare is over' framed Ford's accession appropriately for the post-Watergate moment."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 7
+        harm_score: 1
+        notes: "Strong observance of ceremonial duties. First-lady role expanded by Betty Ford. Bicentennial celebration (July 1976) appropriately handled."
+        evidence:
+          - citation: "Bicentennial celebration July 4, 1976; Ford speeches"
+            source_url: "https://www.fordlibrarymuseum.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford presided over Bicentennial commemorations with appropriate ceremonial gravity."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 7
+        harm_score: 1
+        notes: "Modeled post-Watergate decency, honesty, modesty. Post-presidential modest retirement."
+        evidence:
+          - citation: "Ford post-presidency conduct 1977-2006"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford's post-presidential conduct continued his pattern of dignified restraint; widely respected across partisan lines."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "Post-Watergate restorative effect on morale but stagflation dragged. Lost 1976 narrowly."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 5
+        harm_score: 3
+        notes: "Restored civic confidence post-Watergate but stagflation and Vietnam end dragged. End-of-term ~53% approval."
+        evidence:
+          - citation: "Gallup approval ratings 1974-1977"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Ford averaged ~47% approval; pardon caused immediate ~20-point drop; ended term ~53%."
+            direction: good
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 6
+        harm_score: 2
+        notes: "Restorative effect on cohesion post-Watergate. Bicentennial unifying. No major divisive policies."
+        evidence:
+          - citation: "1976 Bicentennial commemorations; period civic data"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford era featured Bicentennial-era national unifying moments and post-Watergate institutional restoration."
+            direction: good
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 5
+        harm_score: 3
+        notes: "Vietnam withdrawal completion damaged short-term standing. Helsinki Accords improved. Stagflation reduced economic credibility."
+        evidence:
+          - citation: "International press coverage 1974-1977"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Ford-era US international standing was mixed: restored post-Watergate trust slightly, Vietnam-era damage continued."
+            direction: harm
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 5
+        harm_score: 3
+        notes: "Allied relations restored. Vietnam-era hostility continued in much of world."
+        evidence:
+          - citation: "USIA international polling 1975-1976"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Foreign public sentiment toward US under Ford modestly improved from Vietnam-era lows."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Indochinese refugee resettlement (post-Saigon 1975). Hart-Celler in effect throughout."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 5
+        harm_score: 2
+        notes: "Indochina Migration and Refugee Assistance Act 1975. Hart-Celler continued."
+        evidence:
+          - citation: "Indochina Migration and Refugee Assistance Act of 1975, Public Law 94-23"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1975 Act authorized resettlement and assistance for Vietnamese, Cambodian, Laotian refugees; ~130,000 admitted in first wave."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 4
+        harm_score: 2
+        notes: "Era-typical enforcement. Modest INS activity."
+        evidence:
+          - citation: "INS records 1974-1977"
+            source_url: "https://www.uscis.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Era-typical immigration enforcement during Ford term."
+            direction: good
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 7
+        harm_score: 2
+        notes: "Indochinese refugee admission ~130,000 in first wave. Foundation for subsequent Refugee Act of 1980 (Carter). Strong refugee response."
+        evidence:
+          - citation: "Indochinese refugee admission 1975-1977 (~130,000 admitted)"
+            source_url: "https://www.state.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Indochinese refugee admission under Ford was among the largest emergency US refugee responses; established framework for Carter-era Refugee Act of 1980."
+            direction: good
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 4
+        harm_score: 2
+        notes: "Era-typical. Hart-Celler effects continuing to shape demographic transition."
+        evidence:
+          - citation: "Census demographic data 1970-1980"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "US foreign-born share continued slow rise from 1970 low during Ford term."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 5.5
+  harm_average_across_categories: 2.5
+  net_average_across_categories: 3.0
+  pattern_notes: "Ford is a 'short-term restoration' anchor: post-Watergate institutional repair, moderate competence across most categories, no major harm anchors. East Timor approval is the principal harm outlier. Ford should score moderately well across most lenses without dramatic divergence."

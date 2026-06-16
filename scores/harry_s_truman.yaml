@@ -1,0 +1,874 @@
+president: harry_s_truman
+display_name: "Harry S. Truman"
+term_start: 1945-04-12
+term_end: 1953-01-20
+party: D
+terms_served: 2
+calibration_anchor: true
+anchor_status: draft_pending_external_review
+spec_version: v1.2
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Successful wartime-to-peacetime reconversion; postwar boom; Cold War rearmament. Korean War financed without major fiscal disruption. Taft-Hartley setback to labor passed over Truman's veto."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Reconversion to peacetime produced no major recession; postwar boom set up sustained growth. 1948-49 mild recession; 1953 Korean-mobilization peak."
+        evidence:
+          - citation: "BLS historical unemployment data, 1945-1953; NBER recession dating"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Unemployment averaged 4.0% across Truman's term, with reconversion producing a brief mild recession in 1948-49 but no postwar depression as feared."
+            direction: good
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Continuation of Great Compression. GI Bill participation peaked under Truman; mass middle class formation in progress."
+        evidence:
+          - citation: "Piketty & Saez income data, 1945-1953; VA GI Bill usage statistics"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "Top-decile income share remained at ~33% throughout Truman years; mass GI Bill usage drove unprecedented social mobility."
+            direction: good
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Federal debt fell in nominal terms (~$260B to ~$266B) and dramatically in debt-to-GDP terms (120% to ~70%) during boom years. Korean War partially reversed end-of-term."
+        evidence:
+          - citation: "OMB Historical Tables, Table 7.1"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Debt-to-GDP ratio fell from ~120% (1945) to ~70% (1953), driven by GDP growth rather than debt reduction — exceptional fiscal trajectory."
+            direction: good
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "Taft-Hartley Act (1947) passed over Truman's veto, rolling back Wagner Act protections. Truman opposed but lacked votes. Wage growth strong during boom."
+        evidence:
+          - citation: "Labor Management Relations Act (Taft-Hartley), Public Law 80-101 (1947); Truman veto message June 20, 1947"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman vetoed Taft-Hartley as 'dangerous to the freedom of speech and to our democratic society'; Congress overrode by 68-25 in the Senate."
+            direction: harm
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.2 WWII end → E2.3 Cold War start. Truman defines the early Cold War: containment doctrine, NATO, Marshall Plan, Berlin Airlift, Korean War. Atomic bomb decisions and Korean War civilian impact are the principal harms."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 6
+        harm_score: 6
+        low_confidence: false
+        era_context: "E2.2 WWII end / E2.3 Cold War start"
+        notes: "Decision to use atomic bombs (Hiroshima Aug 6, Nagasaki Aug 9, 1945). Truman Doctrine (1947). Korean War decision (1950) — preserved South Korea. Refused MacArthur's expansion to China; fired MacArthur (1951)."
+        evidence:
+          - citation: "Truman's diary on atomic bomb decision (July 25, 1945); Korean War congressional authorization debate"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman authorized atomic bomb use against Hiroshima and Nagasaki, ending WWII; subsequently committed US forces to Korea without congressional declaration, establishing a precedent for undeclared executive war."
+            direction: harm
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 10
+        harm_score: 1
+        low_confidence: false
+        era_context: "E2.3 Cold War — era-defining 10-good anchor"
+        notes: "NATO (1949), Marshall Plan (1948), Truman Doctrine (1947). Built the entire postwar Western alliance architecture. UN operational under Truman."
+        evidence:
+          - citation: "North Atlantic Treaty, signed April 4, 1949 (12 founding members); Economic Cooperation Act of 1948 (Marshall Plan), Public Law 80-472"
+            source_url: "https://www.nato.int/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's signature on NATO and the Marshall Plan created the institutional architecture of the Western alliance that defined the next 75+ years of US foreign policy."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Berlin Airlift (June 1948-May 1949) — won propaganda victory of early Cold War without escalation. Truman Doctrine framing of free vs. unfree worlds. Recognized Israel (May 1948)."
+        evidence:
+          - citation: "Berlin Airlift operational records, June 1948-May 1949 (USAF historical division)"
+            source_url: "https://www.af.mil/"
+            source_type: historical_record
+            tier: 1
+            claim: "The Berlin Airlift delivered ~2.3 million tons of supplies over 277,000+ flights during Soviet blockade, breaking the blockade without military escalation — defining early-Cold-War soft-power victory."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 2
+        harm_score: 9
+        low_confidence: false
+        era_context: "E2.2/E2.3 — score within era's mass-war norms"
+        notes: "Atomic bombings of Hiroshima (~140,000 deaths) and Nagasaki (~70,000 deaths). Korean War civilian casualties: ~2.5 million across all combatants. Decisions Truman directly authorized."
+        evidence:
+          - citation: "US Strategic Bombing Survey (1946); Korean War casualty estimates (Lewy, 'America in Vietnam' methodology applied to Korea)"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "Approximately 210,000 immediate deaths from atomic bombings (1945) plus 2-3 million Korean War civilian casualties — among the highest civilian-impact totals of any modern presidency."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.1 Pre-Brown. Substantial good for era on racial equity (EO 9981 desegregating military, anti-poll-tax support, 1948 platform civil rights plank). Defining harm: Lavender Scare federal employment purges of gay Americans."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        era_context: "E3.1 Pre-Brown — era-relative strong good"
+        notes: "Executive Order 9981 (1948) desegregated the armed forces. President's Committee on Civil Rights and 'To Secure These Rights' report (1947). Supported anti-poll-tax legislation (failed). Dixiecrat walkout 1948 testified to extent of administration's civil-rights commitment."
+        evidence:
+          - citation: "Executive Order 9981, signed July 26, 1948; To Secure These Rights, President's Committee report (1947)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EO 9981 ordered desegregation of the US armed forces; the first major federal civil rights action since Reconstruction and the institutional precursor to broader 1960s civil rights legislation."
+            direction: good
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 4
+        harm_score: 1
+        low_confidence: true
+        notes: "Era-typical. Post-war pushed women out of wartime workforce. No major federal gender-equity action."
+        evidence:
+          - citation: "May, 'Homeward Bound: American Families in the Cold War Era' (1988)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "The Truman era saw active federal and cultural campaigns to return women to domestic roles after wartime workforce mobilization, era-typical for the period."
+            direction: harm
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 0
+        harm_score: 7
+        low_confidence: false
+        notes: "Lavender Scare (1947-1953) — federal employment purges of suspected gay employees, paralleling McCarthyism. Truman's loyalty program (EO 9835) and State Department actions led to thousands of LGBTQ federal workers fired."
+        evidence:
+          - citation: "Johnson, 'The Lavender Scare: The Cold War Persecution of Gays and Lesbians in the Federal Government' (2004)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Federal employment purges under Truman's loyalty program targeted suspected gay employees alongside suspected communists; an estimated 5,000-10,000 federal workers were fired or forced to resign on sexuality grounds during 1947-1953."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 4
+        harm_score: 1
+        low_confidence: true
+        notes: "Continued GI Bill veteran services. Era-typical. No major disability-rights development."
+        evidence:
+          - citation: "Veterans Administration annual reports, 1945-1953"
+            source_url: "https://www.va.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "VA hospital and rehabilitation services expanded substantially during Truman years to serve millions of returning WWII veterans."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 5
+        harm_score: 3
+        low_confidence: false
+        notes: "Indian Claims Commission Act (1946) — established commission to address treaty violations. BUT: termination policy intellectually launched under Truman administration (Hoover Commission 1947-49 recommended assimilation); formal HCR 108 was Eisenhower 1953."
+        evidence:
+          - citation: "Indian Claims Commission Act, Public Law 79-726 (August 13, 1946); Hoover Commission Task Force on Indian Affairs (1948)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "The Indian Claims Commission opened a 30-year process for tribal nations to seek federal redress for treaty violations; concurrently the administration's policy intellectual framework moved toward the termination doctrine formalized in 1953."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.1 Pre-Cold War → E4.2 Cold War surveillance. Loyalty program (EO 9835) and steel seizure are the defining executive-restraint failures; both contributed to McCarthyism climate."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 3
+        harm_score: 6
+        low_confidence: false
+        era_context: "E4.2 Cold War surveillance starting"
+        notes: "HUAC era began under Truman. Smith Act prosecutions of Communist Party leaders (1949-1957 series). McCarthy's emergence (1950) on Truman's watch though Truman opposed."
+        evidence:
+          - citation: "Dennis v. United States, 341 U.S. 494 (1951) upholding Smith Act prosecutions; HUAC hearings record 1947-1953"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's Justice Department prosecuted Communist Party USA leaders under the Smith Act for advocacy of communist doctrine, establishing post-WWII speech-prosecution precedent."
+            direction: harm
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 1
+        harm_score: 7
+        low_confidence: false
+        notes: "Federal Loyalty Program (EO 9835, 1947) authorized investigations of millions of federal workers. CIA established (1947) — National Security Act. FBI surveillance of activists expanded."
+        evidence:
+          - citation: "Executive Order 9835, signed March 21, 1947 (Federal Loyalty Program); National Security Act of 1947, Public Law 80-253"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's loyalty program ultimately investigated 4.7 million federal employees and fired or pressured ~3,500 to resign; institutional foundation for two decades of Cold War surveillance overreach."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 3
+        harm_score: 7
+        low_confidence: false
+        notes: "Steel seizure (April 1952) — attempted to nationalize steel industry during strike. Supreme Court struck down in Youngstown Sheet & Tube v. Sawyer. Korean War without congressional declaration. Multiple emergency-powers expansions."
+        evidence:
+          - citation: "Youngstown Sheet & Tube Co. v. Sawyer, 343 U.S. 579 (1952); Executive Order 10340 (April 8, 1952)"
+            source_url: "https://supreme.justia.com/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's seizure of US steel mills was struck down 6-3 by the Supreme Court as exceeding executive authority; Youngstown remains the definitive limit on presidential domestic emergency powers."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 3
+        harm_score: 5
+        low_confidence: true
+        notes: "Pre-FOIA. Atomic Energy Act (1946) created extensive classification regime. National Security Act (1947) institutionalized executive-branch secrecy."
+        evidence:
+          - citation: "Atomic Energy Act of 1946, Public Law 79-585; classification system expansion 1946-1953"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Atomic Energy Act established the most extensive peacetime classification regime in US history, with born-secret doctrine for nuclear information."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Fair Deal (1948) extended New Deal philosophy. Universal health insurance proposed but defeated by AMA. Housing Act 1949 was major federal housing investment. Social Security expansion 1950."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 5
+        harm_score: 1
+        low_confidence: false
+        notes: "Proposed national health insurance (November 1945 special message; included in Fair Deal). Defeated by AMA's $5M+ counter-campaign — the first major modern lobbying defeat of a presidential proposal. No major reform enacted."
+        evidence:
+          - citation: "Truman special message to Congress on health, November 19, 1945; Hospital Survey and Construction Act (Hill-Burton), Public Law 79-725 (1946)"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's 1945-1948 national health insurance proposal was the first major federal universal coverage attempt; defeat by AMA campaign set the political template for healthcare reform fights through 2010."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 6
+        harm_score: 1
+        low_confidence: false
+        notes: "GI Bill peak usage during Truman years. President's Commission on Higher Education (1947 Truman Commission) recommended massive expansion of public higher education."
+        evidence:
+          - citation: "Higher Education for American Democracy (Truman Commission report, 6 volumes, 1947-1948)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "The Truman Commission report laid the intellectual foundation for the massive 1950s-60s expansion of public higher education and community colleges."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 8
+        harm_score: 1
+        low_confidence: false
+        notes: "1950 Social Security Amendments — major expansion: increased benefits 77%, added 10 million workers, created disability provisions. Housing Act 1949 funded 810,000 public housing units."
+        evidence:
+          - citation: "Social Security Act Amendments of 1950, Public Law 81-734; Housing Act of 1949, Public Law 81-171"
+            source_url: "https://www.ssa.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1950 amendments expanded Social Security coverage to ~10 million additional workers and increased benefits substantially; Housing Act 1949 authorized 810,000 public housing units (most never built but historic federal commitment)."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Housing Act of 1949 — major federal housing legislation. Continued FHA mortgage expansion with continued redlining. Postwar housing boom enabled by federal underwriting."
+        evidence:
+          - citation: "Housing Act of 1949, Public Law 81-171; FHA underwriting manual continuity"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Housing Act 1949 declared 'a decent home and a suitable living environment for every American family' as national policy; FHA continued explicitly racist underwriting through Truman's term."
+            direction: good
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.1 Pre-environmental. Modest environmental work; first federal water-pollution legislation."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 0
+        harm_score: 0
+        low_confidence: false
+        notes: "N/A per era E6.1."
+        evidence: []
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 5
+        harm_score: 1
+        low_confidence: false
+        notes: "Federal Water Pollution Control Act of 1948 — first federal water-pollution law. Limited authority but established federal role."
+        evidence:
+          - citation: "Federal Water Pollution Control Act, Public Law 80-845 (1948)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "First federal legislation directly addressing water pollution; established federal grants to states for water-pollution research and control."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 5
+        harm_score: 1
+        low_confidence: true
+        notes: "Continued FDR-era conservation programs. Modest park additions. Era-typical."
+        evidence:
+          - citation: "National Park Service additions 1945-1953; Department of the Interior reports"
+            source_url: "https://www.nps.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Park system additions continued at modest pace under Truman; no major new conservation initiatives."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 5
+        harm_score: 1
+        low_confidence: true
+        notes: "Era-typical conservation continued. Fish and Wildlife Service reorganization."
+        evidence:
+          - citation: "Reorganization Plan No. 3 of 1946 establishing US Fish and Wildlife Service"
+            source_url: "https://www.fws.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "1946 reorganization merged Bureau of Fisheries and Bureau of Biological Survey into US Fish and Wildlife Service."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Multiple major crises: reconversion, Berlin Airlift, Soviet atomic bomb (1949), Korean War, MacArthur firing, steel seizure."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Took over April 12, 1945 with no preparation; pivoted within months. Berlin Airlift response within days of blockade. Korean War response within 48 hours."
+        evidence:
+          - citation: "Korean War decision timeline, June 25-27, 1950 (Truman library records)"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Truman committed US naval and air forces to Korea within 48 hours of North Korea's June 25, 1950 invasion; ground forces within 5 days."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "WWII ended successfully; Berlin Airlift won; Marshall Plan effective; Korean War stalemate (preserved South Korea but at high cost)."
+        evidence:
+          - citation: "Marshall Plan economic outcomes (DeLong & Eichengreen, 'The Marshall Plan,' 1993)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Marshall Plan disbursed $13.3B (1948-1951) to 16 European nations, contributing to Western European economic recovery and stabilization."
+            direction: good
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Direct communication style ('the buck stops here'). Korean War communication mixed — initially framed as 'police action' rather than war."
+        evidence:
+          - citation: "Truman 'police action' Korean War characterization, June 1950 press conferences"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman publicly characterized Korean War as a 'police action' rather than war to avoid congressional declaration requirement; semantic choice with long constitutional consequences."
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 6
+        harm_score: 4
+        low_confidence: false
+        notes: "Cold War framework durable. Korean War unresolved at term end (armistice came under Eisenhower). Inflation control mixed."
+        evidence:
+          - citation: "Korean War armistice, July 27, 1953 (Eisenhower term); NSC-68 (April 1950)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman left office with Korean War still in active combat; armistice was negotiated by Eisenhower administration."
+            direction: harm
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Personal ethics strong; administration ethics weak (multiple scandals at end of term). Steel seizure and undeclared Korean War were major norm-adherence failures."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Famously clean personally. 'The buck stops here' desk motto. Modest family finances. No personal financial scandals."
+        evidence:
+          - citation: "McCullough, 'Truman' (1992), standard biographical scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Truman left office with modest personal finances; no contemporary or subsequent scholarship identifies significant personal corruption."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        notes: "Multiple late-term scandals: 'five-percenters' (influence peddling), RFC loan scandals, IRS Bureau of Internal Revenue corruption (166 BIR officials forced out). Truman responded but slowly."
+        evidence:
+          - citation: "Senate Subcommittee on Investigations 'five percenters' hearings (1949-1950); Bureau of Internal Revenue reorganization (1952)"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's late-term saw multiple administration scandals: ~166 IRS officials were removed for corruption, three Cabinet-level aides forced out, contributing substantially to Truman's 22% approval at end of term."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 5
+        harm_score: 5
+        low_confidence: false
+        notes: "Followed 22nd Amendment spirit by declining 1952 race (eligible under grandfather clause). BUT: steel seizure norm violation; Korean War without declaration set major precedent."
+        evidence:
+          - citation: "Truman's withdrawal announcement, March 29, 1952"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman declined to run in 1952 despite being eligible under the 22nd Amendment's grandfather clause, restoring two-term-limit norm voluntarily."
+            direction: good
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 4
+        harm_score: 3
+        low_confidence: false
+        notes: "Four SCOTUS appointments: Burton, Vinson (CJ), Clark, Minton. Generally considered low quality by scholarly rankings; cronyism criticism. Vinson Court was weak between Stone and Warren."
+        evidence:
+          - citation: "Standard SCOTUS scholarship rankings (e.g., Blaustein-Mersky justice ratings); historical assessments of Vinson Court"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: academic
+            tier: 2
+            claim: "Truman's four SCOTUS appointments are typically ranked among the lowest-quality cohorts; all four were personal friends or political allies."
+            direction: harm
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "Vinson (CJ), Clark, Minton all close personal friends of Truman. Selection criteria heavily based on friendship and political reliability rather than judicial qualification."
+        evidence:
+          - citation: "Truman biography on Vinson appointment (McCullough 1992); contemporary press criticism"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Truman's SCOTUS selections were widely criticized at the time and by subsequent scholarship as cronyism; Truman openly valued friendship and reliability over jurisprudential qualifications."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 5
+        harm_score: 3
+        low_confidence: true
+        notes: "Vinson Court was generally restraint-oriented except in Smith Act prosecutions. Steel seizure case (Youngstown) showed Court would constrain executive."
+        evidence:
+          - citation: "Dennis v. United States, 341 U.S. 494 (1951); Youngstown Sheet & Tube Co. v. Sawyer, 343 U.S. 579 (1952)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman appointees in Dennis upheld Smith Act prosecutions (deferential to executive on national security); same justices in Youngstown constrained executive on domestic seizure."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 6
+        harm_score: 2
+        low_confidence: false
+        notes: "Routine confirmations; all four SCOTUS picks confirmed without major Senate conflict. Pre-modern confirmation politics."
+        evidence:
+          - citation: "Senate confirmation votes 1945-1949 for Burton, Vinson, Clark, Minton"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "All four Truman SCOTUS nominees confirmed via standard Senate process with no significant opposition or filibuster."
+            direction: good
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Strong civil-rights leadership accelerated Dixiecrat split. Loyalty program created climate for McCarthyism. 1948 election survived 'whistlestop' campaign against polls."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 6
+        harm_score: 2
+        low_confidence: false
+        notes: "1948 Democratic platform civil rights plank; supported anti-poll-tax legislation; EO 9981 desegregating military advanced voting-rights agenda. Dixiecrat walkout testified to commitment."
+        evidence:
+          - citation: "1948 Democratic Platform civil rights plank; Strom Thurmond Dixiecrat walkout"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "1948 platform's civil rights plank caused Mississippi and Alabama delegations to walk out and form Dixiecrat Party — testifying to the substance of Truman's civil-rights commitments."
+            direction: good
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 5
+        harm_score: 4
+        low_confidence: false
+        notes: "Combative style; 'Give 'em hell' rhetoric. Famous criticism of music critic who panned daughter Margaret's singing. Some press intimidation but no major government action."
+        evidence:
+          - citation: "Truman letter to Washington Post music critic Paul Hume, December 1950"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "Truman's combative public letter threatening Hume after a negative review of his daughter's vocal performance was an iconic moment of personal-vs-press friction."
+            direction: harm
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Blair House assassination attempt (November 1, 1950) by Puerto Rican nationalists; one attacker killed, one White House police officer killed. Generally low political violence; Truman not personally inflammatory."
+        evidence:
+          - citation: "Blair House attack record, November 1, 1950 (Secret Service historical files)"
+            source_url: "https://www.secretservice.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Truman survived an assassination attempt by Puerto Rican nationalists Oscar Collazo and Griselio Torresola at Blair House; White House Police Officer Leslie Coffelt killed defending."
+            direction: good
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        notes: "McCarthyism took off under Truman (1950 onward). Loyalty program created climate. Truman publicly opposed McCarthy but era of anti-communist persecution began under his watch."
+        evidence:
+          - citation: "Truman's 'Asiatic Hitler' speech against McCarthy, March 30, 1950; subsequent McCarthy hearings"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman publicly denounced McCarthy by name from 1950 onward but his own loyalty program had legitimized the political category of 'communist sympathizer' as basis for federal action."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Cold War architecture (NATO, Marshall Plan, Truman Doctrine) defined US foreign policy for 45+ years. Loyalty program legacy in surveillance state. Korea unresolved 70+ years."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "NATO operational 76 years later. Truman Doctrine architecture defined US foreign policy through Cold War. Marshall Plan was time-limited but its institutional logic persists. Social Security expansion endures."
+        evidence:
+          - citation: "NATO continuous operation 1949-present; Social Security Amendments of 1950 ongoing"
+            source_url: "https://www.nato.int/"
+            source_type: historical_record
+            tier: 1
+            claim: "Major Truman foreign-policy institutions (NATO, Marshall Plan logic, containment doctrine) persisted as US strategic framework through the entire Cold War."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 3
+        harm_score: 5
+        low_confidence: false
+        notes: "Loyalty program legitimized post-Cold-War surveillance state. Korean War set undeclared-executive-war precedent. Lavender Scare federal employment ban persisted through 1995 (Clinton EO 12968)."
+        evidence:
+          - citation: "Federal employment LGBTQ ban (EO 10450, Eisenhower 1953) directly continuing Truman-era logic; rescinded by EO 12968 (1995)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Federal employment discrimination against LGBTQ employees originated in Truman-era loyalty program logic, was formalized by Eisenhower's EO 10450, and persisted until 1995."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 8
+        harm_score: 3
+        low_confidence: false
+        notes: "Postwar boom enabled the Baby Boom and white middle class formation. Cold War defined a generation's foreign-policy framework. Suburbanization enabled by Truman-era housing/highway investment."
+        evidence:
+          - citation: "Postwar demographic data (Census 1950, 1960); Levittown and FHA-enabled suburban expansion"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "The 1946-1964 Baby Boom occurred substantially within an economic and housing infrastructure built under Truman; postwar US suburban expansion peaked in 1950s on FHA terms set in 1940s."
+            direction: good
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 8
+        harm_score: 4
+        low_confidence: false
+        notes: "NATO + containment + Marshall Plan = postwar order durability. BUT: Korea division persists 73 years. Cold War costs to US and global South immense."
+        evidence:
+          - citation: "Demilitarized Zone established 1953; ongoing Korean peninsula partition"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Korean Peninsula remains divided at the 38th parallel 73 years after the 1953 armistice that Truman set up but did not sign."
+            direction: harm
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.1 Mid-century formal. Generally maintained dignity within era norms; combative campaign style stretched but didn't break norms."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Maintained presidential dignity; modest personal style respected. Hume letter episode an outlier."
+        evidence:
+          - citation: "Standard biographical scholarship (McCullough 1992); contemporary press coverage"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Truman established the modern 'plain-spoken Midwestern' presidential style while maintaining ceremonial dignity."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "'Give 'em hell, Harry' campaign style; aggressive rhetoric against opponents (called Nixon 'a no-good lying bastard' privately). Within era norms."
+        evidence:
+          - citation: "1948 whistle-stop campaign speeches; Truman press conference style records"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman's combative rhetoric in 1948 — particularly attacks on the 'Do-Nothing 80th Congress' — was era-aggressive but factually grounded."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Restored 22nd Amendment spirit by declining 1952 race. Generally respected ceremonial conventions."
+        evidence:
+          - citation: "Truman White House renovation records, 1948-1952 (full structural rebuild); inaugural records"
+            source_url: "https://www.whitehouse.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Truman oversaw the complete structural rebuild of the White House (1948-1952) while temporarily residing at Blair House, preserving the structure for successors."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "Modeled humble post-presidency; declined corporate boards and speaking fees that successors would later accept routinely."
+        evidence:
+          - citation: "Truman post-presidency record; founded presidential library (Truman Library, 1957)"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Truman lived modestly in retirement, refusing corporate positions and speaking fees as inappropriate to the dignity of the former office — a model later abandoned."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "Low approval at end of term (~22%) but rehabilitated dramatically in retrospective rankings. Era of profound social transition."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 5
+        harm_score: 5
+        low_confidence: false
+        notes: "Mixed: postwar prosperity boosted morale, but Korean War, McCarthyism, and end-of-term scandals dragged. 22% Gallup approval at end of term, lowest since polling began."
+        evidence:
+          - citation: "Gallup approval ratings 1945-1953 (varied 32-87%); 22% final number"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Truman ended term with 22% Gallup approval, the lowest of any president measured at end-of-term to that point."
+            direction: harm
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 4
+        harm_score: 4
+        low_confidence: false
+        notes: "McCarthyism rising eroded cohesion. Dixiecrat split (1948) showed racial fracture. Labor strife (steel, coal, rail). Cold War polarization began."
+        evidence:
+          - citation: "Schrecker, 'Many Are the Crimes: McCarthyism in America' (1998)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "McCarthyism era began under Truman with the loyalty program legitimizing communist-sympathizer accusations, contributing to widespread political-social distrust through the 1950s."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 8
+        harm_score: 3
+        low_confidence: false
+        notes: "US as undisputed Western leader; Marshall Plan and NATO produced enormous European goodwill. Atomic monopoly ended (1949) reducing primacy. Korea reduced standing in some quarters."
+        evidence:
+          - citation: "Marshall Plan recipient nations' contemporary reception; 1948-1952 polling in Europe"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "European public opinion polled by USIS in 1949-1952 showed strong favorability toward US in Marshall Plan recipient countries; sharp drop in Soviet bloc."
+            direction: good
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 6
+        harm_score: 3
+        low_confidence: true
+        notes: "Western Europe favorable; postcolonial world mixed (China 'loss' contested in Asia); Soviet bloc adversarial."
+        evidence:
+          - citation: "USIS public-opinion surveys 1948-1953"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Foreign-public-opinion data for Truman era is limited but available USIS surveys show favorable Western European reception, mixed elsewhere."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Mixed record: Displaced Persons Act (1948) substantial refugee admission; McCarran-Walter Act 1952 passed over Truman veto kept restrictive national-origins system."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        notes: "Vetoed Immigration and Nationality Act of 1952 (McCarran-Walter) which preserved national-origins quotas and added McCarthyist exclusions. Veto overridden by Congress."
+        evidence:
+          - citation: "Truman veto message on McCarran-Walter, June 25, 1952; Public Law 82-414"
+            source_url: "https://www.trumanlibrary.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Truman vetoed McCarran-Walter as 'rigid, racial discrimination' that 'denies the basic premise of democracy'; Congress overrode his veto and the discriminatory national-origins quota system persisted until 1965."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 4
+        harm_score: 3
+        low_confidence: true
+        notes: "Era-typical. Operation Wetback was 1954 (Eisenhower); earlier enforcement less aggressive."
+        evidence:
+          - citation: "INS annual reports 1945-1953; pre-Operation Wetback enforcement statistics"
+            source_url: "https://www.uscis.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Truman-era immigration enforcement was era-typical and less aggressive than the subsequent Eisenhower-era Operation Wetback."
+            direction: good
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 6
+        harm_score: 4
+        low_confidence: false
+        notes: "Displaced Persons Act of 1948 admitted ~400,000 European refugees. Initial 1948 act discriminatory against Jews and Catholics; Truman criticized but signed. 1950 amendments improved. McCarran-Walter (1952) tightened asylum criteria."
+        evidence:
+          - citation: "Displaced Persons Act of 1948, Public Law 80-774; 1950 amendments, Public Law 81-555"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Displaced Persons Act admitted ~400,000 refugees 1948-1952, partially redressing the wartime refugee admission failures; the largest US refugee admission program of the pre-1980 era."
+            direction: good
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 4
+        harm_score: 3
+        low_confidence: true
+        notes: "Bracero Program continued. DP Act and 1952 Act small relative to overall demographic dynamics. Modest impact."
+        evidence:
+          - citation: "Bracero Program records 1942-1964; INS annual reports"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Bracero Program continued under Truman bringing tens of thousands of Mexican workers annually; total US foreign-born population at historical lows during 1945-1953."
+            direction: harm
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 5.7
+  harm_average_across_categories: 3.5
+  net_average_across_categories: 2.2
+  high_good_sub_criteria_count: 4   # sub-criteria scoring 9 or 10 good (NATO/Marshall Plan; EO 9981)
+  high_harm_sub_criteria_count: 4   # sub-criteria scoring 8+ harm (atomic bomb, Korean civilian, Lavender Scare, loyalty program)
+  era_contexts_invoked: ["E2.2", "E2.3", "E3.1", "E4.1", "E4.2", "E6.1", "E8 standard", "E9.1", "E11.1"]
+
+reviewer_notes: |
+  Truman is the second of two "early-Cold-War contested" anchors. Score pattern shows simultaneous
+  high good (2.2 = 10/1 for NATO+Marshall Plan; 3.1 = 8/2 for EO 9981) and high harm (2.4 = 2/9 for
+  atomic bombs + Korean civilian casualties; 3.3 = 0/7 for Lavender Scare; 4.2 = 1/7 for loyalty
+  program). This is exactly the dual-axis pattern the framework is designed to capture. Lens divergence
+  test: Realist will weight 2.x heavily (lifting Truman); Libertarian will weight 4.x heavily
+  (lowering); Progressive will weight 3.1 + 5.3 heavily (mixed). If all three produce different
+  rankings of Truman relative to FDR/Eisenhower, the framework is working.

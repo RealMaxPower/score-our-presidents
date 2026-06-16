@@ -1,0 +1,813 @@
+president: george_h_w_bush
+display_name: "George H.W. Bush"
+term_start: 1989-01-20
+term_end: 1993-01-20
+party: R
+terms_served: 1
+calibration_anchor: false
+spec_version: v1.2
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Inherited Reagan-era expansion's end. 1990-91 recession. 1990 budget deal ('read my lips' tax increase) restored fiscal discipline. Slow recovery cost reelection."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 4
+        harm_score: 5
+        notes: "1990-91 recession. Unemployment rose from 5.4% (Jan 1989) to 7.8% (Jun 1992). Slow recovery cost election."
+        evidence:
+          - citation: "BLS unemployment data 1989-1993; NBER recession dating July 1990 - March 1991"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Eight-month recession (July 1990-March 1991) followed by slow 'jobless recovery'; unemployment didn't peak until June 1992 election year."
+            direction: harm
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 4
+        harm_score: 4
+        notes: "Inequality continued rising. 1990 budget deal raised top marginal rate from 28% to 31%. Modest reversal of Reagan inequality trajectory."
+        evidence:
+          - citation: "Omnibus Budget Reconciliation Act of 1990, Public Law 101-508"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 OBRA raised top marginal rate from 28% to 31% — first reversal of Reagan-era top-bracket cuts; modest impact on inequality trajectory."
+            direction: good
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 7
+        harm_score: 3
+        notes: "1990 budget agreement raised taxes and created pay-as-you-go rules. Set up 1990s fiscal consolidation. Politically costly ('read my lips')."
+        evidence:
+          - citation: "1990 Budget Enforcement Act provisions (PAYGO rules)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 budget deal created pay-as-you-go rules that helped enable the 1990s deficit reduction and eventual budget surpluses."
+            direction: good
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 4
+        harm_score: 4
+        notes: "Real wages stagnant. Union density continued declining. NAFTA negotiated (signed by Clinton)."
+        evidence:
+          - citation: "NAFTA negotiations 1990-1992"
+            source_url: "https://history.state.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "NAFTA negotiations completed under GHW Bush; framework set for subsequent labor-market dislocation."
+            direction: harm
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.3 → E2.4 transition. Cold War end. Gulf War (1991) coalition assembly. Panama invasion (1989). Tienanmen (1989). German reunification."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 8
+        harm_score: 3
+        era_context: "E2.4 Unipolar emergence"
+        notes: "Gulf War (1991) extraordinarily successful coalition operation. Panama invasion (December 1989) to capture Noriega. Restrained at end of Soviet collapse."
+        evidence:
+          - citation: "Gulf War coalition operations January-February 1991; UN Security Council Resolution 678"
+            source_url: "https://www.un.org/"
+            source_type: primary_document
+            tier: 1
+            claim: "Operation Desert Storm liberated Kuwait via 35-nation coalition with UN authorization; major US foreign-policy success with limited civilian impact and clear objectives."
+            direction: good
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 9
+        harm_score: 1
+        era_context: "E2.3/E2.4 transition — era-defining 9-good"
+        notes: "Built 35-nation Gulf War coalition. Managed Soviet collapse and German reunification without conflict. NATO held through transition."
+        evidence:
+          - citation: "Gulf War coalition list (35 nations); Two Plus Four Treaty (September 12, 1990)"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush administration's Gulf War coalition assembly and Two Plus Four treaty managing German reunification were among the most accomplished alliance-management feats of any administration."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 8
+        harm_score: 2
+        notes: "START Treaty (1991), START II (1993). Madrid Conference (October 1991). Bush-Yeltsin relationship. Skilled professional diplomacy."
+        evidence:
+          - citation: "Strategic Arms Reduction Treaty signed July 31, 1991; Madrid Conference October 30, 1991"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "START Treaty reduced US and Soviet/Russian strategic nuclear arsenals substantially; Madrid Conference launched bilateral Israeli-Arab negotiations."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 5
+        harm_score: 4
+        notes: "Gulf War civilian impact limited by Coalition rules of engagement (~3,500 Iraqi civilian deaths in war; substantial subsequent sanctions impact). Panama: ~500 civilian deaths."
+        evidence:
+          - citation: "Gulf War civilian casualty estimates (HRW); Panama invasion casualties"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Gulf War direct civilian casualties ~3,500 (HRW estimate); Panama invasion civilian deaths ~500 (Independent Commission estimate)."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Americans with Disabilities Act 1990 — era-defining good. Civil Rights Act of 1991. Anita Hill / Clarence Thomas hearings exposed gender-equity gaps."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 5
+        harm_score: 3
+        notes: "Vetoed Civil Rights Act 1990 (signed 1991 modified). Vetoed Motor Voter (1992; signed by Clinton 1993). David Duke distancing. Willie Horton legacy controversial."
+        evidence:
+          - citation: "Civil Rights Act of 1991, Public Law 102-166; Civil Rights Act of 1990 veto"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush vetoed 1990 CRA citing 'quotas' concerns; signed modified 1991 version after Senate confirmation hearings of Clarence Thomas raised civil-rights political pressure."
+            direction: good
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 4
+        harm_score: 4
+        notes: "Anita Hill hearings (October 1991) exposed gender-equity gaps. Family and Medical Leave Act vetoed twice (signed by Clinton 1993). Reproductive rights restrictions continued."
+        evidence:
+          - citation: "Anita Hill testimony October 11, 1991; FMLA vetoes 1990, 1992"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Anita Hill testimony during Clarence Thomas confirmation hearings spotlighted sexual harassment in workplace; Bush vetoed FMLA twice (Clinton signed 1993)."
+            direction: harm
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 1
+        harm_score: 5
+        notes: "HIV/AIDS response improved over Reagan but limited. EO 10450 still in force. No federal LGBTQ protections."
+        evidence:
+          - citation: "Ryan White CARE Act of 1990, Public Law 101-381"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ryan White CARE Act provided federal funding for HIV/AIDS treatment and services; bipartisan response after Reagan-era inaction."
+            direction: good
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 10
+        harm_score: 0
+        era_context: "E3 — era-defining 10-good anchor for disability rights"
+        notes: "Americans with Disabilities Act of 1990 (Public Law 101-336) — landmark disability civil rights legislation, comprehensive prohibition of disability discrimination."
+        evidence:
+          - citation: "Americans with Disabilities Act of 1990, Public Law 101-336"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ADA is the most comprehensive federal disability civil rights legislation; prohibited disability discrimination in employment, public services, public accommodations, and telecommunications."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 6
+        harm_score: 2
+        notes: "Native American Graves Protection and Repatriation Act 1990. Continued ISDEAA framework."
+        evidence:
+          - citation: "Native American Graves Protection and Repatriation Act, Public Law 101-601 (1990)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "NAGPRA required federal agencies and museums to return Native American cultural items and human remains to descendant tribes; major federal acknowledgment of tribal cultural rights."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.2 → E4.3 transition. End of Cold War. Iran-Contra pardons (controversial). Generally restrained on civil liberties."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 6
+        harm_score: 2
+        notes: "Generally protective. Telecommunications Act 1992 modest. No major press conflicts."
+        evidence:
+          - citation: "Bush press relations records 1989-1993"
+            source_url: "https://bush41.org/"
+            source_type: historical_record
+            tier: 2
+            claim: "Bush maintained cordial press relations; no major free-press conflicts during term."
+            direction: good
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 4
+        harm_score: 4
+        notes: "FISA continued. Crime Control Act 1990. War on Drugs continued surveillance expansion under existing framework. Calibration v1.1 revision: 5/3→4/4 per cross-president-rankings.md — era-typical continuation without substantial reform."
+        evidence:
+          - citation: "Crime Control Act of 1990, Public Law 101-647"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "Crime Control Act expanded federal law enforcement authority; era-typical War on Drugs surveillance expansion."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 4
+        harm_score: 6
+        notes: "Iran-Contra pardons (December 24, 1992) of Weinberger, Elliott Abrams, others — major norm-erosion. Signing statements continued. Gulf War congressional authorization sought (good)."
+        evidence:
+          - citation: "Proclamation 6518 (Iran-Contra pardons) December 24, 1992; Authorization for Use of Military Force Against Iraq Resolution of 1991, Public Law 102-1"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush sought and received congressional Gulf War authorization (good); subsequently pardoned six Iran-Contra figures on Christmas Eve 1992 (controversial; foreclosed Walsh prosecutions)."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 5
+        harm_score: 4
+        notes: "Iran-Contra pardons obstructed accountability. FOIA continued operation. Some classification expansion."
+        evidence:
+          - citation: "Walsh Independent Counsel final report (1993) addressing pardon impact"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Independent Counsel Walsh's final report stated Bush's pardons aborted prosecutions that would have exposed presidential involvement in Iran-Contra; significant transparency-accountability loss."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Ryan White CARE Act for HIV/AIDS. Limited domestic welfare expansion under fiscal constraint."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 5
+        harm_score: 3
+        notes: "Ryan White CARE Act 1990. Modest other healthcare expansion. Universal coverage not pursued."
+        evidence:
+          - citation: "Ryan White CARE Act 1990, Public Law 101-381"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ryan White Act became foundational US HIV/AIDS funding framework; bipartisan turnaround from Reagan-era neglect."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 5
+        harm_score: 2
+        notes: "America 2000 plan (1991) — national education goals framework. Limited federal action. Education Summit (Charlottesville 1989) launched standards movement."
+        evidence:
+          - citation: "Charlottesville Education Summit September 1989; America 2000 plan 1991"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 2
+            claim: "Bush's Charlottesville Education Summit launched the standards-based education reform movement that shaped subsequent decades."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 4
+        harm_score: 3
+        notes: "EITC expansion 1990. Otherwise modest. Welfare reform pressures building."
+        evidence:
+          - citation: "OBRA 1990 EITC expansion provisions"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 OBRA expanded EITC substantially as part of overall budget deal; continued growth of EITC framework."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 4
+        harm_score: 3
+        notes: "Modest housing programs. HOPE program (1990) homeownership for low-income. S&L crisis resolution continued from late Reagan era."
+        evidence:
+          - citation: "Cranston-Gonzalez National Affordable Housing Act of 1990, Public Law 101-625"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 Affordable Housing Act created HOPE program and continued federal housing programs at modest level."
+            direction: good
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Clean Air Act Amendments 1990 — landmark federal air-pollution reform including acid rain cap-and-trade. Strong environmental record."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 5
+        harm_score: 3
+        era_context: "E6.3 Climate-aware emerging"
+        notes: "Attended Earth Summit Rio (June 1992) — first US president to do so. Signed UN Framework Convention on Climate Change. But weakened action commitments."
+        evidence:
+          - citation: "UN Framework Convention on Climate Change signed June 12, 1992; ratified October 15, 1992"
+            source_url: "https://unfccc.int/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush signed and Senate ratified UNFCCC at Rio Earth Summit; framework that subsequent Kyoto and Paris Agreements built upon."
+            direction: good
+            verification_status: pending
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 9
+        harm_score: 1
+        era_context: "E6.2 — era-defining 9-good"
+        notes: "Clean Air Act Amendments of 1990 — most consequential air-pollution law since 1970. Acid rain cap-and-trade. CFC phase-out (Montreal Protocol implementation)."
+        evidence:
+          - citation: "Clean Air Act Amendments of 1990, Public Law 101-549"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 CAA Amendments expanded air-pollution regulation, created acid rain cap-and-trade system (foundational for subsequent emissions trading), and accelerated CFC phase-out."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 6
+        harm_score: 2
+        notes: "Continued ANILCA framework. Pollution Prevention Act 1990. Standard public-lands management."
+        evidence:
+          - citation: "Pollution Prevention Act of 1990, Public Law 101-508"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 2
+            claim: "Pollution Prevention Act established federal pollution-prevention framework prioritizing source reduction."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 5
+        harm_score: 2
+        notes: "ESA continued enforcement. Some spotted owl controversy (Pacific Northwest). NAGPRA cultural-rights aspects."
+        evidence:
+          - citation: "Northern spotted owl ESA listing June 1990"
+            source_url: "https://www.fws.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Northern spotted owl ESA listing initiated major Pacific Northwest forest-policy controversy; ESA enforced despite economic-impact concerns."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Gulf War extraordinary crisis-management success. Cold War endgame masterful. Recession recovery handling cost reelection."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 8
+        harm_score: 2
+        notes: "Gulf War: Saddam invaded Kuwait August 2, 1990; coalition operations January 17, 1991 (5 months for diplomatic + military assembly). Panama: rapid."
+        evidence:
+          - citation: "Gulf War coalition timeline August 1990-February 1991"
+            source_url: "https://history.state.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Bush administration assembled UN-authorized 35-nation Gulf War coalition in 5 months, executed Operation Desert Storm in 6 weeks."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 8
+        harm_score: 3
+        notes: "Gulf War extraordinarily effective. Cold War endgame masterful. Recession recovery slow. Mixed pattern."
+        evidence:
+          - citation: "Gulf War outcome assessments; Cold War endgame analysis"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush administration's foreign-policy execution during 1989-1991 ranks among the most effective of any modern presidency; domestic effectiveness mixed."
+            direction: good
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 5
+        harm_score: 5
+        notes: "Gulf War communication broadly honest. 'Read my lips' tax pledge broken (politically necessary, breach of public commitment). Mixed honesty record."
+        evidence:
+          - citation: "Bush 1988 'Read my lips: no new taxes' pledge; 1990 OBRA tax increase"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush's 1988 'read my lips' campaign pledge was broken via 1990 OBRA tax increase; politically costly breach of explicit commitment."
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 6
+        harm_score: 5
+        notes: "Cold War end durably resolved. Gulf War resolution incomplete (Saddam retained, leading to subsequent Iraq War). Recession resolved under Clinton."
+        evidence:
+          - citation: "Gulf War aftermath; subsequent Iraq policy 1991-2003"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush's Gulf War decision not to advance to Baghdad preserved coalition consensus but left Saddam in power, leading to 12 years of containment and ultimately 2003 Iraq War."
+            direction: good
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Personal ethics strong. Iran-Contra pardons (1992) most controversial action. Limited administration scandals."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 8
+        harm_score: 1
+        notes: "Personally clean. Restrained patrician style. No personal scandals."
+        evidence:
+          - citation: "Standard biographical scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush widely regarded as one of most personally honorable presidents of modern era; no significant personal-ethics scandals."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 6
+        harm_score: 3
+        notes: "Generally clean Cabinet. Some Iran-Contra-era figures retained (Robert Gates as CIA Director). Sununu travel scandal (resigned 1991)."
+        evidence:
+          - citation: "John Sununu resignation December 1991; Robert Gates CIA nomination"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Chief of Staff Sununu resigned over personal-travel-on-government-aircraft scandal; otherwise relatively clean administration."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 5
+        harm_score: 5
+        notes: "Iran-Contra pardons norm-eroding. Otherwise norm-respecting. Smooth transition to Clinton."
+        evidence:
+          - citation: "Iran-Contra pardons December 24, 1992; Walsh independent counsel final report"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush's last-minute Christmas Eve pardons of Iran-Contra figures aborted ongoing prosecutions and were criticized as obstructing accountability."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 6
+        harm_score: 4
+        notes: "Two SCOTUS appointments: David Souter (became liberal vote, surprising conservatives), Clarence Thomas (lifetime conservative anchor). Quality mixed."
+        evidence:
+          - citation: "Souter and Thomas confirmations 1990, 1991"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Bush's two SCOTUS picks: Souter as moderate-then-liberal; Thomas as reliable conservative for 30+ years. Both qualified but ideologically inconsistent."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 4
+        harm_score: 5
+        notes: "Thomas confirmation marred by Anita Hill sexual harassment allegations and dismissive Senate handling. Selection process politicized."
+        evidence:
+          - citation: "Senate Judiciary Committee Thomas hearings October 1991; Anita Hill testimony"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Thomas confirmation included Anita Hill sexual harassment testimony; subsequent confirmation by 52-48 vote was era-defining moment for women in workplace politics."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 5
+        harm_score: 3
+        notes: "Mixed. Thomas conservative-activist on many issues; Souter restraint-oriented. Unpredictable outcomes."
+        evidence:
+          - citation: "Thomas and Souter jurisprudential trajectories"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Bush's two SCOTUS appointees diverged dramatically in jurisprudential approach despite similar selection criteria."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 3
+        harm_score: 6
+        notes: "Thomas confirmation (52-48) one of closest in modern SCOTUS history. Hill hearings marked deteriorating confirmation norms."
+        evidence:
+          - citation: "Thomas confirmation vote October 15, 1991 (52-48)"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Thomas confirmation produced 52-48 vote, narrowest SCOTUS confirmation in modern era; Hill hearings established pattern of politicized confirmations."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Strong democratic institutions. Norm-respecting administration. Anita Hill hearings marked deteriorating gender-political dynamics."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 4
+        harm_score: 3
+        notes: "Vetoed Motor Voter (1992; Clinton signed 1993). VRA continued enforcement. Modest pattern."
+        evidence:
+          - citation: "Motor Voter veto 1992; subsequent Clinton signing of National Voter Registration Act of 1993"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush vetoed National Voter Registration Act (Motor Voter) in 1992; Clinton signed in 1993."
+            direction: harm
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 6
+        harm_score: 2
+        notes: "Generally cordial. Restrained personal style. Press appreciated accessibility."
+        evidence:
+          - citation: "Bush press conferences 1989-1993"
+            source_url: "https://bush41.org/"
+            source_type: historical_record
+            tier: 2
+            claim: "Bush maintained traditional cordial press relations; press conferences regular and substantive."
+            direction: good
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 5
+        harm_score: 4
+        notes: "Los Angeles riots (April-May 1992) following Rodney King verdict — federal response. Mixed political-violence era."
+        evidence:
+          - citation: "Los Angeles riots April 29-May 4, 1992; federal response"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Los Angeles riots after Rodney King verdict produced ~63 deaths, ~2,300 injuries, ~$1B property damage; federal troops deployed."
+            direction: harm
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 5
+        harm_score: 4
+        notes: "Willie Horton ads (1988) legacy. Lee Atwater Southern Strategy. Bush personally restrained but political strategy polarizing."
+        evidence:
+          - citation: "1988 Willie Horton campaign ads; Lee Atwater retrospective"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Bush 1988 campaign Willie Horton advertising became defining example of racially charged political messaging; Bush's personal civility contrasted with campaign strategy."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Cold War endgame durably resolved. ADA continues. CAA Amendments 1990 framework. Iran-Contra pardons enabled subsequent norm erosion."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 8
+        harm_score: 2
+        notes: "ADA, CAA Amendments 1990, START, Ryan White, NAGPRA, Education Summit framework — all operational. Strong durability record."
+        evidence:
+          - citation: "Continued operation of Bush 41-era legislation"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Major Bush 41 legislation (ADA, CAA Amendments, ARRA, Ryan White) remain foundational frameworks 30+ years later."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 4
+        harm_score: 5
+        notes: "Iran-Contra pardons normalized presidential immunity-protection of officials. Thomas SCOTUS lifetime appointment. PAYGO rules constrained subsequent policy."
+        evidence:
+          - citation: "Iran-Contra pardon legacy analysis; subsequent presidential-pardon practice"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush's Iran-Contra pardons established precedent for presidential pardoning of executive-branch officials facing prosecution for actions taken on president's behalf."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 6
+        harm_score: 4
+        notes: "Cold War end shaped generational US identity. ADA opened public spaces and employment for disabled Americans. Gulf War as defining military moment for early Gen X."
+        evidence:
+          - citation: "Generational political-science scholarship on Cold War end; ADA demographic impact"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush 41 term spanned Cold War end (defining geopolitical moment), Gulf War, and ADA implementation — substantial generational and demographic impact."
+            direction: good
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 7
+        harm_score: 5
+        notes: "Cold War end produced unipolar moment. Gulf War coalition framework durable. Saddam retention led to 2003 Iraq War. NAFTA negotiation shaped subsequent trade politics."
+        evidence:
+          - citation: "Post-1991 unipolar US foreign policy; Iraq policy 1991-2003"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush 41 administration's Cold War endgame management shaped 30+ years of subsequent US foreign policy; Saddam retention contributed to 2003 Iraq War."
+            direction: good
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.2 → E11.3 transition. Restrained patrician style. Strong ceremonial dignity. Generally exemplary public conduct."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 8
+        harm_score: 1
+        notes: "Restrained East Coast patrician dignity. Strong ceremonial conduct. No personal-decorum issues."
+        evidence:
+          - citation: "Standard biographical scholarship; contemporary press"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush maintained restrained patrician presidential dignity throughout term; widely regarded as embodying traditional presidential decorum."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 6
+        harm_score: 2
+        notes: "'Kinder, gentler nation' framing. 'Thousand points of light.' Modest rhetorical skill. Some 1988 campaign rhetoric divisive."
+        evidence:
+          - citation: "Bush inaugural address January 20, 1989; 1988 campaign rhetoric"
+            source_url: "https://bush41.org/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush's 'kinder, gentler nation' and 'thousand points of light' framings emphasized service and community; campaign rhetoric (Willie Horton) more divisive."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 8
+        harm_score: 1
+        notes: "Strong observance of ceremonial duties. Bush family WASP tradition. Statesmanlike conduct."
+        evidence:
+          - citation: "Bush ceremonial-conduct records 1989-1993"
+            source_url: "https://bush41.org/"
+            source_type: historical_record
+            tier: 2
+            claim: "Bush observed traditional ceremonial standards consistently; reception of foreign dignitaries handled with appropriate gravity."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 7
+        harm_score: 2
+        notes: "Modeled restrained dignified presidency. Post-presidential modest retirement. Bush-Clinton friendship and humanitarian work."
+        evidence:
+          - citation: "Bush post-presidency 1993-2018; Bush-Clinton tsunami/Katrina partnership"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Bush's post-presidency included partnership with Clinton on humanitarian causes — modeled bipartisan post-presidential conduct."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "High approval during Gulf War (peak 89%, March 1991). Collapsed during recession. End-of-term ~56%."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 5
+        harm_score: 4
+        notes: "Gulf War-era national unity (March 1991 peak 89% approval — highest in Gallup history to that point). Recession-era morale collapse."
+        evidence:
+          - citation: "Gallup approval ratings 1989-1993; Gulf War approval peak"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Bush 41 reached 89% Gallup approval in March 1991 (highest recorded approval to that point); subsequently declined to ~56% by election due to recession."
+            direction: good
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 5
+        harm_score: 4
+        notes: "Gulf War-era unifying. Rodney King / LA riots fracturing. Culture wars rising (Pat Buchanan 1992 convention)."
+        evidence:
+          - citation: "1992 Republican Convention Buchanan speech; LA riots"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Pat Buchanan's 1992 Republican Convention 'culture war' speech and LA riots fractured Bush-era national consensus; Bush personally embraced unifying rhetoric while party shifted."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 9
+        harm_score: 1
+        notes: "Cold War end + Gulf War coalition produced highest US international standing of postwar era. 'Unipolar moment' began."
+        evidence:
+          - citation: "Charles Krauthammer 'The Unipolar Moment' (Foreign Affairs 1990/91); international polling 1989-1993"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Bush 41 era produced US international standing peak; Cold War victory + Gulf War coalition + German reunification managed flawlessly contributed."
+            direction: good
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 8
+        harm_score: 2
+        notes: "Strongly favorable globally. Gulf War coalition reflected broad international support. Tienanmen response controversial."
+        evidence:
+          - citation: "International polling 1989-1993; Tienanmen response criticism"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Foreign-public-sentiment toward US under Bush 41 was extraordinarily favorable globally; Tienanmen Square response was notable exception."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Immigration Act of 1990 — major legal-immigration reform. Increased annual immigration limits substantially."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 7
+        harm_score: 2
+        notes: "Immigration Act of 1990 (Public Law 101-649) increased annual immigration from ~500,000 to ~700,000; created diversity visa lottery; expanded employment-based categories."
+        evidence:
+          - citation: "Immigration Act of 1990, Public Law 101-649"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "1990 Immigration Act was largest legal-immigration expansion since Hart-Celler; created diversity visa lottery and expanded employment-based and family categories."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 4
+        harm_score: 3
+        notes: "Continued IRCA framework. Border Patrol modest expansion. No mass deportation operations."
+        evidence:
+          - citation: "INS enforcement records 1989-1993"
+            source_url: "https://www.uscis.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Era-typical immigration enforcement under Bush 41; IRCA framework continuing."
+            direction: good
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 6
+        harm_score: 3
+        notes: "Haitian refugee interdiction policy (1992) — Coast Guard turning back Haitian boats. Some humanitarian admission continued."
+        evidence:
+          - citation: "Executive Order 12807 (Haitian interdiction) May 24, 1992"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EO 12807 authorized Coast Guard to return Haitians intercepted at sea without asylum screening; controversial humanitarian-policy departure."
+            direction: harm
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 6
+        harm_score: 2
+        notes: "Immigration Act 1990 reshaped demographic trajectory. Foreign-born share continued rising (~8% by 1990 Census)."
+        evidence:
+          - citation: "1990 Census foreign-born population data"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Foreign-born US population share rose to ~7.9% by 1990 Census, continuing post-Hart-Celler upward trajectory."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 6.0
+  harm_average_across_categories: 3.0
+  net_average_across_categories: 3.0
+  pattern_notes: "Bush 41 is the 'foreign-policy excellence with domestic limits' anchor. Era-defining strength in Cold War endgame and Gulf War; ADA 1990 and CAA Amendments 1990 strong domestic record. Iran-Contra pardons (1992) principal harm. Should rank high on Realist and Internationalist lenses, moderate on others."

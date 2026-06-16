@@ -1,0 +1,814 @@
+president: george_w_bush
+display_name: "George W. Bush"
+term_start: 2001-01-20
+term_end: 2009-01-20
+party: R
+terms_served: 2
+calibration_anchor: false
+spec_version: v1.2
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Two recessions (2001 dot-com bust; 2007-09 Great Recession). Tax cuts (2001, 2003). Housing boom and bust. TARP (2008)."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 3
+        harm_score: 7
+        notes: "2001 recession (mild). 2007-2009 Great Recession (most severe since Great Depression). Unemployment from 4.2% (Jan 2001) to 7.8% (Jan 2009). Net jobs near zero over 8 years."
+        evidence:
+          - citation: "BLS unemployment data 2001-2009; NBER recession dating"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "GW Bush term spanned two recessions including Great Recession of 2007-2009; net job creation across 8 years was approximately zero — worst since Hoover."
+            direction: harm
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 2
+        harm_score: 7
+        notes: "Top 1% income share rose from ~17% (2000) to ~19% (2008). Tax cuts disproportionately benefited high earners. Bush tax cuts (2001, 2003) ended 1990s fiscal balance."
+        evidence:
+          - citation: "Economic Growth and Tax Relief Reconciliation Act of 2001, Public Law 107-16; Jobs and Growth Tax Relief Reconciliation Act of 2003, Public Law 108-27"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush tax cuts substantially reduced top marginal rates and capital gains/dividends taxes; CBO estimated 65% of benefits flowed to top quintile."
+            direction: harm
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 1
+        harm_score: 8
+        notes: "Inherited budget surplus (2001) → $1.4T deficit (2009). Federal debt rose from $5.7T to $10.6T. Tax cuts + Iraq War + Medicare Part D + TARP without revenue offsets."
+        evidence:
+          - citation: "OMB Historical Tables; CBO budget projections 2001-2009"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal debt nearly doubled during GW Bush term ($5.7T to $10.6T); inherited surplus converted to $1.4T deficit; debt-to-GDP rose from ~55% to ~74%."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 3
+        harm_score: 6
+        notes: "Real wages flat. Union density continued declining. Manufacturing jobs lost. Late-term Great Recession devastated working-class employment."
+        evidence:
+          - citation: "BLS real wages and manufacturing employment data 2001-2009"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Manufacturing employment fell by approximately 4.5 million during GW Bush term; real median household income fell ~5% from 2001 to 2009."
+            direction: harm
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.4 Unipolar. 9/11 redefined foreign policy. Afghanistan and Iraq wars. Torture program. Guantanamo. PEPFAR positive. Single most consequential foreign-policy presidency since LBJ."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 2
+        harm_score: 9
+        era_context: "E2.4 — Iraq War as era-defining 10-harm anchor"
+        notes: "Afghanistan War (October 2001) — justified response to 9/11. Iraq War (March 2003) — invasion based on flawed WMD intelligence; ~4,500 US military deaths, ~200K+ Iraqi deaths. Defining foreign-policy failure of 21st century."
+        evidence:
+          - citation: "Authorization for Use of Military Force Against Iraq Resolution of 2002, Public Law 107-243; Iraq Study Group Report (2006)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Iraq invasion was undertaken on premise of WMD that did not exist; war produced ~4,500 US military deaths, ~200,000+ Iraqi deaths, regional destabilization, and rise of ISIS."
+            direction: harm
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 4
+        harm_score: 6
+        notes: "Strong post-9/11 alliance solidarity. Iraq War fractured NATO consensus (Germany, France opposed). 'Old Europe' rhetoric damaging. UK-US 'special relationship' maintained."
+        evidence:
+          - citation: "Iraq War coalition (Coalition of the Willing) March 2003; NATO Article 5 invocation September 12, 2001"
+            source_url: "https://www.nato.int/"
+            source_type: primary_document
+            tier: 1
+            claim: "NATO invoked Article 5 for first time after 9/11; Iraq War subsequently fractured NATO consensus with Germany and France in active opposition."
+            direction: harm
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 3
+        harm_score: 7
+        notes: "'Axis of Evil' framing. Withdrawal from ABM Treaty 2002. Withdrew from Kyoto. North Korea diplomacy late-term. PEPFAR (HIV/AIDS) positive soft power."
+        evidence:
+          - citation: "State of the Union 'Axis of Evil' speech January 29, 2002; ABM Treaty withdrawal December 13, 2001"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush framework rejected detente-era arms-control institutions and engaged adversaries through confrontational rhetoric; US soft power declined substantially during term per international polling."
+            direction: harm
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 2
+        harm_score: 9
+        era_context: "E2.4 — Iraq civilian impact major harm"
+        notes: "Iraq War civilian deaths: 200,000-1,000,000+ estimates depending on methodology. Afghanistan continued. Detention of thousands without charge. Abu Ghraib torture. Major civilian-impact harm."
+        evidence:
+          - citation: "Burnham, Lafta, Doocy, Roberts, 'Mortality after the 2003 invasion of Iraq', The Lancet (Oct 2006) estimating 654,965 excess deaths through July 2006; Iraq Body Count documented deaths database"
+            source_url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(06)69491-9/fulltext"
+            source_type: academic
+            tier: 1
+            claim: "Estimates of Iraq War civilian and excess deaths span methodologies: The Lancet (Oct 2006) survey-based study estimated 654,965 excess Iraqi deaths through July 2006 (95% CI 393K-943K); Iraq Body Count's media-documented total stood at roughly 150,000 documented civilian deaths by Bush term-end. Subsequent ISIS emergence and sectarian conflict produced additional deaths."
+            direction: harm
+            verification_status: verified
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.3/E3.4 transition. Mixed: PEPFAR helped global LGBTQ AIDS response; domestically opposed marriage equality. Strong Hispanic engagement. Detention abuses on Arab/Muslim Americans."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 4
+        harm_score: 5
+        notes: "Diverse Cabinet (Powell, Rice as Secretary of State). Hurricane Katrina response (2005) widely criticized as racial-equity failure. Post-9/11 Arab/Muslim discrimination. Faith-based initiative."
+        evidence:
+          - citation: "Hurricane Katrina response August 29 - September 2005"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Hurricane Katrina response widely criticized as displaying federal disregard for predominantly Black New Orleans neighborhoods; 'Bush doesn't care about Black people' became defining racial-equity moment."
+            direction: harm
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 4
+        harm_score: 4
+        notes: "Condoleezza Rice as Secretary of State (2005). Lily Ledbetter case (decided against equity) preceded Obama's act. Restricted abortion rights (Partial-Birth Abortion Ban). Mixed."
+        evidence:
+          - citation: "Partial-Birth Abortion Ban Act of 2003, Public Law 108-105; Ledbetter v. Goodyear, 550 U.S. 618 (2007)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Partial-Birth Abortion Ban first major federal abortion restriction since Roe; Ledbetter ruling required prompt EEOC complaint, contested under Obama-era legislation."
+            direction: harm
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 2
+        harm_score: 6
+        notes: "Supported Federal Marriage Amendment (2004) — failed. Opposed marriage equality. DOMA continued. DADT continued. PEPFAR helped global LGBTQ AIDS response."
+        evidence:
+          - citation: "Federal Marriage Amendment 2004; PEPFAR funding"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush supported Federal Marriage Amendment defining marriage as one man-one woman (failed Senate 2004, 2006); domestic LGBTQ policy was anti-equality."
+            direction: harm
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 6
+        harm_score: 2
+        notes: "ADA Amendments Act of 2008 expanded disability protections. Continued enforcement. Faith-based initiative had mixed disability-services impact."
+        evidence:
+          - citation: "ADA Amendments Act of 2008, Public Law 110-325"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ADA Amendments Act broadened definition of 'disability' in response to SCOTUS rulings that had narrowed ADA coverage; bipartisan disability-rights advance."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 4
+        harm_score: 3
+        notes: "Continued ISDEAA framework. Some tribal land/trust litigation issues (Cobell case ongoing). Modest record."
+        evidence:
+          - citation: "Cobell v. Salazar continuing litigation 2001-2009"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 2
+            claim: "Cobell trust-accounting litigation continued through GW Bush term; substantial federal liability accruing during the term, settled under Obama."
+            direction: harm
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.4 War on Terror — era-defining era-10-harm anchor. Patriot Act, mass surveillance, torture program, indefinite detention, signing statements. Defining civil-liberties failure of modern presidency."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 3
+        harm_score: 6
+        notes: "Free Speech Zones for protests. AP and other journalist phone records subpoenaed. NYT Pulitzer winning Times-Risen NSA reporting prosecuted. Mixed pattern."
+        evidence:
+          - citation: "James Risen subpoena 2008; Free Speech Zone policies 2001-2008"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Bush DOJ subpoenaed journalist James Risen seeking sources for NSA reporting; substantially restricted press access to administration."
+            direction: harm
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 1
+        harm_score: 10
+        era_context: "E4.4 — era-defining 10-harm anchor"
+        notes: "USA PATRIOT Act 2001 expanded surveillance authority dramatically. NSA warrantless wiretapping program 2001-2007 (revealed 2005 by NYT). Mass metadata collection. FISA Amendments Act 2008. Defining surveillance overreach of modern era."
+        evidence:
+          - citation: "USA PATRIOT Act, Public Law 107-56 (October 26, 2001); NSA Terrorist Surveillance Program (revealed by NYT December 2005)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Patriot Act expanded federal surveillance authority dramatically; warrantless wiretapping program operated 2001-2007 in apparent violation of FISA before retroactive legalization in 2008 FISA Amendments."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 1
+        harm_score: 10
+        era_context: "E4.4 — era-defining 10-harm anchor"
+        notes: "Unitary executive theory advanced via OLC memos. Yoo torture memos. 1,200+ signing statements. Indefinite detention without charge (Guantanamo). 'Enemy combatant' framework. Extraordinary rendition."
+        evidence:
+          - citation: "Bybee/Yoo OLC torture memos August 1, 2002; Hamdi v. Rumsfeld, 542 U.S. 507 (2004); Boumediene v. Bush, 553 U.S. 723 (2008)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush administration advanced unitary executive theory through OLC torture memos, signing statements, and indefinite detention authority; SCOTUS rejected several core claims (Hamdi, Hamdan, Boumediene)."
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 2
+        harm_score: 8
+        notes: "Ashcroft FOIA memo (2001) encouraged maximum withholding. Massive classification expansion. NSA program existence concealed for 4 years."
+        evidence:
+          - citation: "Ashcroft FOIA Memorandum, October 12, 2001"
+            source_url: "https://www.justice.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ashcroft memo replaced Reno-era 'foreseeable harm' standard with 'sound legal basis' standard, encouraging maximum FOIA withholding; classification expanded substantially."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "No Child Left Behind 2002. Medicare Part D 2003 (largest Medicare expansion since 1965). PEPFAR — major global health success."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 6
+        harm_score: 3
+        notes: "Medicare Part D (2003) — prescription drug benefit, largest Medicare expansion since 1965. PEPFAR (President's Emergency Plan for AIDS Relief) saved millions of lives globally."
+        evidence:
+          - citation: "Medicare Prescription Drug, Improvement, and Modernization Act of 2003, Public Law 108-173; PEPFAR initial authorization 2003"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Medicare Part D added prescription drug coverage for ~40 million seniors; PEPFAR delivered $15B+ over 5 years to combat HIV/AIDS globally, saving estimated 20+ million lives."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 5
+        harm_score: 5
+        notes: "No Child Left Behind 2001 (signed January 2002) — major federal education expansion with high-stakes testing. Bipartisan but increasingly contested. Mixed long-term outcomes."
+        evidence:
+          - citation: "No Child Left Behind Act of 2001, Public Law 107-110"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "NCLB expanded federal K-12 testing requirements and accountability provisions; bipartisan enactment but increasingly contested over implementation; replaced by ESSA 2015."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 4
+        harm_score: 4
+        notes: "Modest changes. Failed Social Security privatization (2005). Some food stamp restrictions. SCHIP reauthorization vetoed twice (overridden by Obama)."
+        evidence:
+          - citation: "GW Bush Social Security privatization proposal 2005"
+            source_url: "https://georgewbush-whitehouse.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush's Social Security privatization proposal failed amid bipartisan opposition; SCHIP reauthorization vetoed twice."
+            direction: harm
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 3
+        harm_score: 6
+        notes: "Housing bubble (2003-2007) → 2008 crash. Subprime crisis. Foreclosure crisis. HUD oversight failures. Major harm."
+        evidence:
+          - citation: "Financial Crisis Inquiry Commission Report (2011); Federal Reserve housing-bubble analysis"
+            source_url: "https://fcic.law.stanford.edu/"
+            source_type: primary_document
+            tier: 1
+            claim: "FCIC found housing bubble and subprime crisis were enabled by lax federal regulatory enforcement during GW Bush term; bubble's collapse caused 2008 financial crisis."
+            direction: harm
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.3 Climate-aware. Withdrew from Kyoto. Weakened environmental enforcement. Endangered Species Act weakened. Major environmental rollback era."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 2
+        harm_score: 8
+        era_context: "E6.3 — climate inaction era-defining"
+        notes: "Withdrew from Kyoto Protocol (March 2001). Suppressed federal climate science (Hansen documented). Denied EPA authority to regulate CO2 (Mass v. EPA 2007 reversed). No federal climate policy."
+        evidence:
+          - citation: "Kyoto withdrawal March 2001; Massachusetts v. EPA, 549 U.S. 497 (2007)"
+            source_url: "https://supreme.justia.com/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush withdrew from Kyoto Protocol and resisted EPA regulation of CO2; SCOTUS ruled in Mass v. EPA that EPA had authority to regulate greenhouse gases under Clean Air Act."
+            direction: harm
+            verification_status: pending
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 3
+        harm_score: 6
+        notes: "Clear Skies initiative (weakened CAA — failed). Mercury rule (weakened then struck down). Mountaintop removal mining facilitated."
+        evidence:
+          - citation: "Clear Skies initiative 2002-2005; Mercury rule litigation"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush EPA pursued 'Clear Skies' deregulatory framework that would have weakened CAA; failed in Congress and was substantially struck down in courts."
+            direction: harm
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 5
+        harm_score: 4
+        notes: "Mixed. Marine national monuments created (~200M acres in Pacific). Opposed Wilderness designations. Energy development on public lands accelerated."
+        evidence:
+          - citation: "Papahānaumokuākea Marine National Monument 2006; Pacific Remote Islands MNM 2009"
+            source_url: "https://www.nps.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush created largest marine protected areas in world via Antiquities Act; energy development on public lands also accelerated."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 3
+        harm_score: 5
+        notes: "ESA listings slowed dramatically. Polar bear listing forced via litigation (2008). Some marine protection good."
+        evidence:
+          - citation: "USFWS ESA listing data 2001-2009; polar bear listing 2008"
+            source_url: "https://www.fws.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "ESA listings declined to historic lows during GW Bush term; polar bear listing forced via Center for Biological Diversity litigation."
+            direction: harm
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "9/11 response initially strong, deteriorated through Iraq. Katrina response catastrophic failure. 2008 financial crisis response mixed (TARP effective; foreclosures inadequate)."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 5
+        harm_score: 5
+        notes: "9/11 response initially fast and unifying. Katrina response slow. 2008 financial crisis response eventually fast (TARP)."
+        evidence:
+          - citation: "9/11 response timeline September 2001; Katrina response timeline August 29 - September 2005"
+            source_url: "https://www.911commission.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "9/11 response was initially fast and unifying; Hurricane Katrina federal response was widely criticized as catastrophically slow."
+            direction: harm
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 3
+        harm_score: 7
+        notes: "Afghanistan initial military operations effective. Iraq War tactically successful but strategic failure. Katrina catastrophically ineffective. TARP effective at stabilizing financial system."
+        evidence:
+          - citation: "Iraq Study Group Report (December 2006); Katrina After-Action Report; Troubled Asset Relief Program effectiveness analysis"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "Iraq Study Group concluded by 2006 that situation was 'grave and deteriorating'; Katrina federal response was widely criticized as showing systemic failure; TARP stabilized financial markets but at major moral hazard cost."
+            direction: harm
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 2
+        harm_score: 8
+        notes: "WMD intelligence presented misleadingly to public and UN. Iraq War 'Mission Accomplished' (May 2003) preceded years of war. Suppressed climate science. Major honesty failures."
+        evidence:
+          - citation: "Senate Intelligence Committee Report on Pre-War Intelligence (2008); Powell UN Security Council speech February 5, 2003"
+            source_url: "https://www.intelligence.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Senate Intelligence Committee concluded administration's public statements about Iraq's WMD programs were not substantiated by intelligence; Powell later called UN speech 'a blot on my record.'"
+            direction: harm
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 2
+        harm_score: 8
+        notes: "Iraq destabilization continues 20+ years later. Afghanistan war continued for 20 years. 2008 crisis required Obama-era resolution. Katrina recovery decades long."
+        evidence:
+          - citation: "Iraq post-Saddam history through 2024; Afghanistan war until 2021"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "GW Bush-era crises (Iraq, Afghanistan, 2008 financial crisis) all required decades or are still unresolved; long-term resolution record poor."
+            direction: harm
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "OLC memos legitimizing torture. Signing statements expansion. US Attorney firings (2006-07). Plame leak (2003). Major institutional damage."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 5
+        harm_score: 4
+        notes: "Personally clean. Earnest faith framework. Some honesty issues in Iraq communication."
+        evidence:
+          - citation: "Standard biographical scholarship; contemporary press"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "GW Bush personally clean; institutional and policy failures rather than personal-ethics scandals."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 2
+        harm_score: 8
+        notes: "Plame Affair (2003) leak of CIA officer's identity for political revenge. Libby conviction (commuted). US Attorney firings (2006-07) for politically-motivated reasons. Halliburton/Cheney conflicts."
+        evidence:
+          - citation: "United States v. Libby trial 2007; US Attorney firings investigation 2007"
+            source_url: "https://www.justice.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Scooter Libby convicted of perjury and obstruction in Plame Affair (sentence commuted by GW Bush); US Attorney firings exposed pattern of political interference in DOJ prosecutions."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 2
+        harm_score: 8
+        notes: "Bush v. Gore (2000) precedent contested. Iraq War without genuine UN authorization. Torture program. Indefinite detention. Signing statement abuse."
+        evidence:
+          - citation: "Bush v. Gore, 531 U.S. 98 (2000); 1,200+ Bush signing statements"
+            source_url: "https://supreme.justia.com/"
+            source_type: primary_document
+            tier: 1
+            claim: "Bush issued more signing statements claiming authority to ignore parts of laws than all prior presidents combined; multiple SCOTUS rulings struck down detention and military commission frameworks."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 6
+        harm_score: 4
+        notes: "John Roberts (CJ, 2005). Samuel Alito (2006). Failed: Harriet Miers (2005). Both confirmed picks influential; Roberts later wrote ACA and 2020 election decisions controversially."
+        evidence:
+          - citation: "Roberts confirmation September 2005; Alito confirmation January 2006; Miers withdrawal October 2005"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Roberts and Alito reshaped SCOTUS conservative majority; Roberts became Chief Justice at age 50, projected long influence."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 3
+        harm_score: 6
+        notes: "Miers nomination criticized as cronyism (failed). Federalist Society pipeline central. ABA evaluation downgraded. Politicized selection process."
+        evidence:
+          - citation: "Miers nomination October 3, 2005; withdrawal October 27, 2005"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Miers nomination withdrawn after bipartisan criticism of cronyism and lack of judicial experience; signaled return to Federalist Society pipeline."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 5
+        harm_score: 4
+        notes: "Roberts and Alito conservative jurisprudential approach; activist on certain issues (Citizens United, Shelby County coming). Mixed restraint."
+        evidence:
+          - citation: "Roberts Court trajectory analysis 2005-present"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Roberts and Alito advanced Federalist Society jurisprudential approach combining stated restraint with activist outcomes on specific issues."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 4
+        harm_score: 5
+        notes: "Roberts confirmed 78-22. Alito 58-42 (closer). Miers withdrew. Politicized confirmation politics continued post-Bork pattern."
+        evidence:
+          - citation: "Roberts and Alito confirmation votes"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Alito confirmation 58-42 was tightly partisan; post-Bork SCOTUS confirmation polarization continued and intensified."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "9/11 brief unity gave way to deep partisan polarization. Help America Vote Act 2002 mixed. US Attorney politicization. Voter ID expansion."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 4
+        harm_score: 5
+        notes: "Help America Vote Act 2002 (post-2000 Florida response) — improved voting infrastructure. BUT: voter ID push, US Attorney politicization of voting prosecutions, voter purges expanded."
+        evidence:
+          - citation: "Help America Vote Act of 2002, Public Law 107-252; 2007 US Attorney firings DOJ Inspector General Report"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "HAVA improved voting infrastructure but Bush DOJ subsequently pursued voter-fraud prosecutions disproportionately and politicized US Attorney offices."
+            direction: harm
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 3
+        harm_score: 6
+        notes: "9/11 brief cooperation. Iraq War press management. Press pool restrictions. Embedded journalist program. Subpoenas of journalists. Hostile late-term."
+        evidence:
+          - citation: "Embedded journalist program Iraq War 2003; Risen subpoena 2008"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "GW Bush administration's press management during Iraq War was tightly controlled; press freedoms substantially constrained post-2003."
+            direction: harm
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 5
+        harm_score: 4
+        notes: "Post-9/11 anti-Muslim hate crimes spike. Anti-war protests largely peaceful. Anthrax attacks (October 2001). Generally manageable era."
+        evidence:
+          - citation: "FBI hate crime statistics 2001; Anthrax attacks September-October 2001"
+            source_url: "https://www.fbi.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Anti-Muslim hate crimes increased ~1700% in 2001 following 9/11; subsequent decline but elevated baseline persisted."
+            direction: harm
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 2
+        harm_score: 7
+        notes: "Iraq War polarization. 'With us or against us' rhetoric. Fox News dominance. Talk radio polarization. Tea Party precursor anti-bailout backlash."
+        evidence:
+          - citation: "Iraq War partisan polling 2003-2009; Pew partisan polarization research"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "Partisan polarization measured by Pew increased substantially during GW Bush term; Iraq War assessments split along partisan lines unprecedented in foreign-policy polling history."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Iraq destabilization continues. Surveillance state precedents. Mass-incarceration era continued. 2008 financial crisis reshaping. PEPFAR durable positive."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 4
+        harm_score: 6
+        notes: "PEPFAR durable positive (operational 22+ years, saved 25M+ lives). Medicare Part D durable. Bush tax cuts mostly continued. Iraq War and surveillance state legacy ongoing."
+        evidence:
+          - citation: "PEPFAR continued reauthorization; Bush tax cuts continuation"
+            source_url: "https://www.pepfar.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "PEPFAR has been continuously reauthorized and is widely cited as among the most successful global health programs in history; estimated 25+ million lives saved."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 1
+        harm_score: 9
+        notes: "Surveillance state legalized. Torture program normalization. Guantanamo continued 16+ years post-Bush. Unitary executive theory continued. Major durable institutional damage."
+        evidence:
+          - citation: "Senate Select Committee on Intelligence, Committee Study of the CIA's Detention and Interrogation Program (executive summary, 525 pp., released Dec 9 2014; full report 6,700+ pp.) — National Security Archive copy at https://nsarchive2.gwu.edu/torture_archive/report.html; Guantanamo Bay continued operation 2009-present"
+            source_url: "https://nsarchive2.gwu.edu/torture_archive/report.html"
+            source_type: primary_document
+            tier: 1
+            claim: "The Senate Select Committee on Intelligence's 2014 report on the CIA's Detention and Interrogation Program documented use of torture techniques on detainees and concluded the CIA had misrepresented the program's techniques and efficacy to Congress, the White House, DOJ, and the public; Guantanamo continues to detain individuals over two decades after 9/11."
+            direction: harm
+            verification_status: verified
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 3
+        harm_score: 7
+        notes: "9/11 generation defined by War on Terror. Millennials came of age during Iraq War + Great Recession — economic-political-formative experience. Mass-incarceration continued."
+        evidence:
+          - citation: "Millennial generation political-economic analysis"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Millennial political and economic identity heavily shaped by GW Bush-era experiences: 9/11, Iraq War opposition, Great Recession entering job market; left-leaning political alignment partly attributed."
+            direction: harm
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 2
+        harm_score: 9
+        era_context: "Iraq War geopolitical aftermath major harm"
+        notes: "Iraq destabilization → ISIS emergence → Syria civil war. Afghanistan 20-year war. NATO friction. China rise during US ME distraction. End of unipolar moment dated to GW Bush term."
+        evidence:
+          - citation: "ISIS emergence and Syria civil war scholarship; standard post-2003 Middle East analysis"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Iraq War destabilization directly enabled ISIS emergence (former Baathist officers + Syrian civil war); end of unipolar moment widely dated to overstretch from War on Terror."
+            direction: harm
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.3 → E11.4 transition. Personally restrained and dignified. Rhetorical style folksy. Mission Accomplished controversial."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 6
+        harm_score: 3
+        notes: "Maintained personal dignity. 'Mission Accomplished' banner (May 2003) undermined dignity. Hugging children of fallen soldiers became signature."
+        evidence:
+          - citation: "Bush USS Lincoln 'Mission Accomplished' speech May 1, 2003"
+            source_url: "https://georgewbush-whitehouse.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "'Mission Accomplished' banner backdrop on USS Lincoln preceded ~95% of subsequent Iraq War US military deaths; became symbol of presidential miscalibration."
+            direction: harm
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 5
+        harm_score: 4
+        notes: "Post-9/11 unifying rhetoric initially strong. 'Bullhorn moment' (September 14, 2001). Subsequent 'evildoers,' 'with us or against us' polarizing."
+        evidence:
+          - citation: "Bush bullhorn at Ground Zero September 14, 2001; subsequent rhetoric"
+            source_url: "https://georgewbush-whitehouse.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush's bullhorn moment at Ground Zero was era-defining unifying rhetoric; subsequent 'with us or against us' framework was more divisive."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 7
+        harm_score: 2
+        notes: "Strong observance of ceremonial duties. Comforter-in-chief role post-9/11. State funerals, foreign visits handled well."
+        evidence:
+          - citation: "Ceremonial-conduct records 2001-2009"
+            source_url: "https://georgewbush-whitehouse.archives.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "GW Bush observed traditional ceremonial standards consistently; particularly effective in comforter-in-chief moments post-9/11."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 5
+        harm_score: 4
+        notes: "Post-presidential modest retirement. Avoided criticizing Obama. Painted post-presidential portraits of veterans. Mixed modeling."
+        evidence:
+          - citation: "GW Bush post-presidency 2009-present"
+            source_url: "https://www.bushcenter.org/"
+            source_type: historical_record
+            tier: 2
+            claim: "GW Bush's post-presidency featured deliberate restraint from criticism of successors and humanitarian/veterans focus."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "9/11 unifying peak (90% approval). Iraq War polarization. End-of-term ~34% approval. Among most polarized presidencies."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 3
+        harm_score: 6
+        notes: "Brief 9/11 unity (90% peak approval October 2001) gave way to Iraq War polarization. Katrina depressing. 2008 crisis devastating. End-of-term ~34% approval."
+        evidence:
+          - citation: "Gallup approval ratings 2001-2009"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "GW Bush approval peaked at 90% after 9/11 (highest Gallup approval ever recorded); ended at 34%, one of largest declines in presidential approval history."
+            direction: harm
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 3
+        harm_score: 7
+        notes: "Brief 9/11 unity. Iraq War polarization. Marriage Amendment culture-war. Tea Party precursor. Substantial cohesion damage."
+        evidence:
+          - citation: "Pew partisan polarization 2001-2009"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "Partisan polarization measured by Pew increased substantially during GW Bush term; Iraq War assessments showed unprecedented partisan split in foreign-policy polling."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 2
+        harm_score: 8
+        notes: "Post-9/11 solidarity quickly dissipated. Iraq War devastated US international standing. Pew Global Attitudes documented historic lows. End of unipolar moment."
+        evidence:
+          - citation: "Pew Global Attitudes Project surveys 2002-2009"
+            source_url: "https://www.pewresearch.org/global/"
+            source_type: statistic
+            tier: 1
+            claim: "US favorability rating in major allies (Germany, France, UK) fell from 60-78% in 2000 to 30-40% by 2007 per Pew; defining decline in US international standing."
+            direction: harm
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 2
+        harm_score: 8
+        notes: "Devastating decline globally. Anti-Bush sentiment widespread in allied populations. Muslim-world hostility peaked. PEPFAR-recipient countries one exception."
+        evidence:
+          - citation: "Pew Global Attitudes surveys 2003-2008"
+            source_url: "https://www.pewresearch.org/global/"
+            source_type: statistic
+            tier: 1
+            claim: "Foreign-public sentiment toward US under GW Bush reached postwar lows in most allied and most non-allied countries; PEPFAR-recipient African countries were notable exception."
+            direction: harm
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Failed comprehensive immigration reform (2006-07). Post-9/11 securitization. DHS established."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 4
+        harm_score: 4
+        notes: "Supported comprehensive immigration reform (2006-2007) — failed in Senate. Strong Hispanic outreach. Legal immigration policy attempts blocked by own party."
+        evidence:
+          - citation: "Comprehensive Immigration Reform Act of 2006 (failed); Secure Borders, Economic Opportunity and Immigration Reform Act of 2007 (failed)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GW Bush twice attempted bipartisan comprehensive immigration reform combining legalization with enforcement; both efforts blocked primarily by his own party in Senate."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 4
+        harm_score: 5
+        notes: "Secure Fence Act 2006 (700 miles of border fencing). Workplace raids expanded. Detention capacity expanded. Post-9/11 securitization framework."
+        evidence:
+          - citation: "Secure Fence Act of 2006, Public Law 109-367"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Secure Fence Act authorized 700 miles of southern border fencing; enforcement infrastructure expanded substantially during GW Bush term."
+            direction: harm
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 4
+        harm_score: 4
+        notes: "Post-9/11 refugee admission ceilings cut substantially (76,000 to 27,000 by FY 2002). Mixed pattern subsequently. Iraqi refugee admission inadequate."
+        evidence:
+          - citation: "Refugee admission ceiling FY 2002-2008"
+            source_url: "https://www.state.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Annual refugee admission ceiling fell from 80,000 (FY 2001) to 27,000 (FY 2002) following 9/11; admission of Iraqi refugees from US-supported war inadequate to need."
+            direction: harm
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 5
+        harm_score: 3
+        notes: "Foreign-born share continued rising (~12% by 2008). H-1B remained substantial. Demographic transition continued."
+        evidence:
+          - citation: "Census 2008 American Community Survey foreign-born data"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Foreign-born US population share rose to ~12% by 2008, continuing post-Hart-Celler demographic transition."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 3.4
+  harm_average_across_categories: 5.9
+  net_average_across_categories: -2.5
+  pattern_notes: "GW Bush is the principal post-2000 high-harm anchor. Iraq War, surveillance state, torture, Great Recession dominate. PEPFAR is the major good outlier. Across most lenses GW Bush should rank near the bottom of all 16 presidents. Limited lens divergence: Realist may rank lower than Conservative (Iraq strategic failure dominant); Libertarian and Progressive both rank low (surveillance + Iraq + civil liberties failures); PEPFAR may lift slightly in Internationalist."

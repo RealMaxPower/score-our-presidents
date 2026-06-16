@@ -1,0 +1,820 @@
+president: barack_obama
+display_name: "Barack Obama"
+term_start: 2009-01-20
+term_end: 2017-01-20
+party: D
+terms_served: 2
+calibration_anchor: false
+spec_version: v1.2
+recency_note: "Out of office ~9.3 years per scoring date 2026-05-11. Per v1.2 §9.4: 5-10 years post-term → Cat 10 sub-criteria tagged low_confidence (tentative_long_tail: true)."
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Inherited Great Recession (worst since Great Depression). Recovery slow but sustained. ARRA stimulus, Dodd-Frank reform. Auto industry rescue. Inequality continued widening."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 7
+        harm_score: 3
+        notes: "Inherited 7.8% unemployment rising to 10% (Oct 2009); recovery brought to 4.7% (Jan 2017). 11.6 million private-sector jobs added during recovery (longest streak in history)."
+        evidence:
+          - citation: "BLS unemployment data 2009-2017; BEA GDP data"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Unemployment recovered from 10% (October 2009 peak) to 4.7% (January 2017); 75 consecutive months of private-sector job gains, longest streak in US history."
+            direction: good
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 4
+        harm_score: 5
+        notes: "Top 1% income share continued rising. Recovery benefited high earners disproportionately initially. Bush tax cuts partially extended; top-rate restoration to 39.6% (2013) modest reversal."
+        evidence:
+          - citation: "Piketty & Saez income share data 2009-2017; American Taxpayer Relief Act of 2012, Public Law 112-240"
+            source_url: "canonical"
+            source_type: statistic
+            tier: 1
+            claim: "Top 1% income share rose from ~17% (2008) to ~22% (2015); ATRA 2012 restored 39.6% top marginal rate; inequality trajectory continued."
+            direction: harm
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 4
+        harm_score: 5
+        notes: "ARRA $787B stimulus + Great Recession revenue collapse + bailouts produced record $1.4T (2009) deficit. Annual deficit fell to $585B by 2016. Debt rose from $10.6T to $19.9T."
+        evidence:
+          - citation: "OMB Historical Tables; American Recovery and Reinvestment Act of 2009, Public Law 111-5"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal debt nearly doubled during Obama term ($10.6T to $19.9T) due to ARRA stimulus, Great Recession revenue collapse, and continued Bush tax cuts; annual deficit reduced ~60% from peak."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 5
+        harm_score: 4
+        notes: "Real wage growth modest until late-term acceleration. Manufacturing partial recovery via auto bailout. Union density continued declining. Overtime rule expanded (blocked by courts)."
+        evidence:
+          - citation: "BLS real wages data 2009-2017; Auto Industry Financing and Restructuring Plan 2008-2009"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Auto industry bailout saved estimated 1-1.5 million jobs (GM, Chrysler restructuring); real median household income growth resumed late-term."
+            direction: good
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Era E2.4 late Unipolar / E2.5 multipolar onset. Killed bin Laden. Iran nuclear deal. Paris Agreement. Drone program expansion. Libya intervention. Syria red line. Ukraine and Crimea."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 6
+        harm_score: 5
+        era_context: "E2.4 → E2.5 transition"
+        notes: "Ended Iraq combat operations (December 2011). Afghanistan surge then drawdown. Libya intervention (2011) destabilizing. Syria 'red line' (2013) not enforced. Drone program dramatically expanded."
+        evidence:
+          - citation: "US withdrawal from Iraq December 2011; Libya intervention UN authorization Security Council Resolution 1973"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama ended formal US combat in Iraq (2011) and reduced Afghanistan forces; Libya intervention contributed to subsequent state collapse; drone program expanded substantially with civilian casualty concerns."
+            direction: good
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 6
+        harm_score: 3
+        notes: "Restored alliance relations post-GW Bush. NATO maintained through Crimea crisis. Asia pivot. TPP negotiated (not ratified). Some Israel friction."
+        evidence:
+          - citation: "Pivot to Asia framework 2011-2012; TPP negotiations 2009-2016"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama administration restored allied relationships post-GW Bush; pivot to Asia framework anticipated rising China challenge; TPP negotiated but never ratified."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 8
+        harm_score: 2
+        notes: "JCPOA Iran nuclear deal (2015). Paris Agreement (2015). Cuba normalization (2014-2016). Nobel Peace Prize (2009)."
+        evidence:
+          - citation: "Joint Comprehensive Plan of Action July 14, 2015; Paris Agreement December 12, 2015; Cuba diplomatic restoration December 17, 2014"
+            source_url: "https://history.state.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "JCPOA, Paris Agreement, and Cuba normalization were three major Obama-era diplomatic achievements; JCPOA constrained Iran's nuclear program for 15 years; Paris launched modern climate-cooperation framework."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 3
+        harm_score: 7
+        notes: "Drone program civilian casualties: estimated 300-1000+ civilians killed across multiple countries. Yemen civil war US support to Saudi coalition. Libya state collapse civilian impact. ISIS rise contributed."
+        evidence:
+          - citation: "Bureau of Investigative Journalism, 'Obama's covert drone war in numbers' (Jan 17 2017): 563 strikes in Pakistan/Yemen/Somalia, estimated 384-807 civilian deaths"
+            source_url: "https://www.thebureauinvestigates.com/stories/2017-01-17/obamas-covert-drone-war-in-numbers-ten-times-more-strikes-than-bush"
+            source_type: academic
+            tier: 1
+            claim: "Per the Bureau of Investigative Journalism, the Obama-era covert drone program in Pakistan, Yemen, and Somalia conducted 563 strikes (ten times the Bush-era total), with an estimated 384–807 civilian deaths."
+            direction: harm
+            verification_status: verified
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.4 LGBTQ+ expansion → contested. DADT repeal, marriage equality, federal LGBTQ employment protections. First Black president (symbolic + substantive). Police violence and BLM emergence late-term."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 6
+        harm_score: 4
+        notes: "First African American president. Trayvon Martin response, BLM emergence. Fair Sentencing Act 2010 (crack-powder disparity reduction). Substantial police-reform efforts. Birtherism backlash."
+        evidence:
+          - citation: "Fair Sentencing Act of 2010, Public Law 111-220; Black Lives Matter emergence 2013-2014"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Fair Sentencing Act reduced crack-powder cocaine sentencing disparity from 100:1 to 18:1; Obama's election produced symbolic racial-equity milestone alongside continued racial-justice tensions (Ferguson, Trayvon Martin)."
+            direction: good
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 7
+        harm_score: 2
+        notes: "Lily Ledbetter Fair Pay Act 2009 (first signed law). Substantial female Cabinet representation (Clinton, Yellen). Title IX expansion guidance (Dear Colleague letter). VAWA reauthorization 2013."
+        evidence:
+          - citation: "Lilly Ledbetter Fair Pay Act of 2009, Public Law 111-2; VAWA Reauthorization Act of 2013, Public Law 113-4"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Ledbetter Act extended pay-discrimination filing deadline; 2013 VAWA reauthorization extended protections to LGBTQ and Native American victims; substantial gender-equity advance."
+            direction: good
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 9
+        harm_score: 1
+        era_context: "E3.4 — era-defining LGBTQ rights advances"
+        notes: "DADT repeal 2010. DOMA withdrawal of defense (2011), struck down in Windsor (2013). Marriage equality 'evolution' (May 2012) — first sitting president to support. Obergefell (2015). Federal LGBTQ employment protections expanded."
+        evidence:
+          - citation: "Don't Ask, Don't Tell Repeal Act of 2010, Public Law 111-321; Obergefell v. Hodges, 576 U.S. 644 (2015)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama term spanned DADT repeal (2010), DOMA defense withdrawal (2011), presidential support for marriage equality (2012), Windsor decision (2013), and Obergefell decision (2015) — era-defining LGBTQ rights advances."
+            direction: good
+            verification_status: pending
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 6
+        harm_score: 2
+        notes: "ADA enforcement strong. Substantial disability community engagement. Olmstead implementation expanded."
+        evidence:
+          - citation: "DOJ Civil Rights Division ADA enforcement statistics 2009-2017"
+            source_url: "https://www.justice.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Obama DOJ ADA enforcement strong; Olmstead community-integration mandate expanded substantially."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 7
+        harm_score: 3
+        notes: "Cobell settlement (2010, $3.4B). Annual tribal nations conferences. Standing Rock pipeline controversy (DAPL) — Obama denied easement (late-term, reversed by Trump)."
+        evidence:
+          - citation: "Cobell v. Salazar settlement, December 8, 2010 ($3.4B); Dakota Access Pipeline easement denial December 2016"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Cobell settlement resolved century-old federal trust accounting failure; Obama held first tribal nations summits annually; DAPL easement denial reversed by Trump."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.4 → E4.5 (Snowden 2013 inflection). Continued and expanded surveillance state. Banned torture. Snowden revelations. Drone program executive precedent."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 4
+        harm_score: 5
+        notes: "The Obama Justice Department pursued at least eight Espionage Act prosecutions of alleged leakers (Manning 2010-2013, Drake 2010, Kiriakou 2012, Sterling, Kim, Snowden charged, others) — more than any prior administration on the public record (per Pozen and contemporaneous reporting). The May 2013 AP phone-records subpoena and the contemporaneous Rosen-affidavit episode were characterized in reporting and by press-freedom organizations as the most expansive journalist-records actions of the modern era."
+        evidence:
+          - citation: "Pozen, 'The Leaky Leviathan: Why the Government Condemns and Condones Unlawful Disclosures of Information', 127 Harv. L. Rev. 512 (2013) (https://harvardlawreview.org/wp-content/uploads/2013/12/vol127_pozen.pdf — documenting that 8 of the ~12 Espionage Act media-leak prosecutions in the statute's then-96-year history occurred under Obama); AP phone-records subpoena May 2013"
+            source_url: "https://harvardlawreview.org/wp-content/uploads/2013/12/vol127_pozen.pdf"
+            source_type: academic
+            tier: 1
+            claim: "Per Pozen's Harvard Law Review analysis, the Obama DOJ pursued 8 Espionage Act media-leak prosecutions — more than any prior administration on the public record (out of roughly 12 in the statute's then-96-year history). The May 2013 AP phone-records subpoena was widely characterized by press-freedom organizations as the most expansive journalist-records action of the modern era."
+            direction: harm
+            verification_status: verified
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 3
+        harm_score: 6
+        era_context: "E4.4 → E4.5 inflection"
+        notes: "Continued and expanded Bush-era surveillance. Snowden revelations (June 2013) exposed mass surveillance. USA Freedom Act 2015 ended bulk metadata collection partial reform. Major surveillance state continuation."
+        evidence:
+          - citation: "Snowden disclosures June 2013; USA Freedom Act of 2015, Public Law 114-23"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama administration continued Bush-era mass surveillance programs until Snowden disclosures forced partial reform via USA Freedom Act 2015; bulk metadata collection partially ended."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 4
+        harm_score: 5
+        notes: "Banned torture (EO 13491, January 2009) — major positive. BUT: extended drone program with US-citizen targeting (al-Awlaki). Continued indefinite Guantanamo detention. Used executive authority extensively post-2010."
+        evidence:
+          - citation: "Executive Order 13491 banning torture; targeted killing of Anwar al-Awlaki September 30, 2011"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama banned torture via EO 13491 but extended drone program to target US citizens (al-Awlaki) without judicial process; continued Guantanamo detention."
+            direction: good
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 4
+        harm_score: 5
+        notes: "Held campaign 'most transparent administration' rhetoric but reality more mixed. FOIA processing modestly improved. Espionage Act prosecutions undermined whistleblower transparency."
+        evidence:
+          - citation: "DOJ FOIA processing statistics 2009-2017; comparative-administration analyses"
+            source_url: "https://www.justice.gov/"
+            source_type: statistic
+            tier: 2
+            claim: "Obama administration FOIA performance fell short of campaign promises; record-setting Espionage Act prosecutions chilled internal-government transparency."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "ACA (2010) — most significant US healthcare legislation since Medicare/Medicaid. Dodd-Frank financial reform. ARRA. Major welfare policy expansion."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 9
+        harm_score: 2
+        era_context: "E5 — major good anchor"
+        notes: "Affordable Care Act (March 2010) expanded health coverage to ~20 million Americans. Medicaid expansion (states optional). Pre-existing condition protections. ACA survived multiple SCOTUS challenges."
+        evidence:
+          - citation: "Patient Protection and Affordable Care Act, Public Law 111-148 (2010)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ACA expanded health insurance to approximately 20 million previously uninsured Americans; established pre-existing condition protections and Medicaid expansion framework; survived SCOTUS challenges (NFIB v. Sebelius 2012, King v. Burwell 2015)."
+            direction: good
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 6
+        harm_score: 3
+        notes: "Race to the Top (2009) — federal education reform competition. Pell Grant expansion. Student loan reform (direct lending). For-profit college oversight expansion. ESSA 2015 replaced NCLB."
+        evidence:
+          - citation: "Race to the Top competition 2009-2014; Every Student Succeeds Act of 2015, Public Law 114-95"
+            source_url: "https://www.ed.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Race to the Top spurred state-level education reform; ESSA 2015 replaced NCLB with framework that reduced federal testing mandates; Pell Grant expansion increased college access."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 7
+        harm_score: 2
+        notes: "ARRA expanded EITC, Child Tax Credit, unemployment insurance. ACA Medicaid expansion. SNAP enrollment peaked. Strong safety-net expansion during recovery."
+        evidence:
+          - citation: "American Recovery and Reinvestment Act of 2009 safety-net provisions; ACA Medicaid expansion"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "ARRA expanded safety net substantially during Great Recession; ACA Medicaid expansion added ~12 million Americans to Medicaid coverage in states that adopted."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 4
+        harm_score: 5
+        notes: "Foreclosure crisis response inadequate (HAMP underwhelming). Banks bailed out but homeowners less so. Eviction crisis. Mixed."
+        evidence:
+          - citation: "Home Affordable Modification Program 2009; SIGTARP HAMP audits"
+            source_url: "https://www.sigtarp.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "HAMP fell far short of original 3-4 million homeowner target (~1.8 million permanent modifications); foreclosure crisis response widely criticized as inadequate compared to bank rescue."
+            direction: harm
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.3 Climate-aware → E6.4 Climate-imperative (Paris 2015 inflection). Strong climate record: Paris Agreement, Clean Power Plan, fuel economy standards."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 8
+        harm_score: 2
+        era_context: "E6.3 → E6.4 transition — major good"
+        notes: "Paris Agreement leadership (December 2015). Clean Power Plan (2015) — first federal greenhouse gas regulation (struck down 2022). Doubled fuel economy standards. Solar/wind subsidies."
+        evidence:
+          - citation: "Paris Agreement December 12, 2015; Clean Power Plan EPA Final Rule August 3, 2015"
+            source_url: "https://unfccc.int/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama led international Paris Agreement framework; Clean Power Plan set first federal greenhouse gas standards for power plants (subsequently struck down by SCOTUS); fuel economy standards doubled."
+            direction: good
+            verification_status: pending
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 7
+        harm_score: 2
+        notes: "Strong EPA enforcement. Mercury and Air Toxics Standards (2011). Methane rules. Waters of the United States rule."
+        evidence:
+          - citation: "Mercury and Air Toxics Standards (MATS) 2011; Waters of the US Rule 2015"
+            source_url: "https://www.epa.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "MATS rule reduced mercury emissions from power plants substantially; WOTUS expanded Clean Water Act jurisdiction (later contested)."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 8
+        harm_score: 1
+        notes: "Created more national monuments via Antiquities Act than any predecessor (~553 million acres protected including ocean). Bears Ears, Papahānaumokuākea expansion."
+        evidence:
+          - citation: "Antiquities Act monument designations 2009-2017"
+            source_url: "https://www.nps.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama designated 26 new national monuments and expanded 5 others, protecting more land and water than any predecessor; Papahānaumokuākea expansion (2016) created world's largest marine protected area."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 6
+        harm_score: 2
+        notes: "ESA enforcement strong. Marine protection expansion. Pollinator initiatives."
+        evidence:
+          - citation: "USFWS ESA listings 2009-2017"
+            source_url: "https://www.fws.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "ESA listings recovered from Bush-era lows; substantial marine biodiversity protection via monument designations."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "2008 financial crisis recovery. Ebola response (2014) successful. Sandy response. Several mass-shooting and police-violence events. Substantial crisis-management record."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 7
+        harm_score: 3
+        notes: "ARRA passed within 4 weeks of inauguration. Ebola response (2014) effective. Some slower responses (Flint water, Standing Rock late)."
+        evidence:
+          - citation: "ARRA signed February 17, 2009; Ebola response 2014"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama signed ARRA stimulus within 4 weeks of inauguration; Ebola response in 2014 successfully contained spread to US."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 7
+        harm_score: 3
+        notes: "Great Recession recovery effective (sustained job growth). Bin Laden raid successful. ACA effective at coverage expansion. Syria red line ineffective."
+        evidence:
+          - citation: "Operation Neptune Spear May 2, 2011 (bin Laden raid); Syria chemical weapons crisis August 2013"
+            source_url: "https://www.cia.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Operation Neptune Spear killed Osama bin Laden in Pakistan; Syria red line on chemical weapons was crossed without promised military response, damaging credibility."
+            direction: good
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 6
+        harm_score: 3
+        notes: "Generally honest. 'If you like your plan, you can keep it' ACA pledge contested. Snowden revelations exposed prior denials of mass surveillance."
+        evidence:
+          - citation: "PolitiFact, 'Lie of the Year: If you like your health care plan, you can keep it' (Dec 12 2013); Snowden disclosures June 2013"
+            source_url: "https://www.politifact.com/article/2013/dec/12/lie-year-if-you-like-your-health-care-plan-keep-it/"
+            source_type: journalism
+            tier: 1
+            claim: "Obama's 'if you like your plan, you can keep it' ACA pledge was rated PolitiFact's 'Lie of the Year' for 2013 after cancellation notices were sent to Americans whose individual-market plans did not meet ACA standards."
+            direction: harm
+            verification_status: verified
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 6
+        harm_score: 4
+        notes: "Great Recession recovery sustained. Bin Laden killed (closed 9/11 chapter). ACA durable through multiple challenges. Syria/ISIS unresolved at transition. JCPOA later abrogated."
+        evidence:
+          - citation: "Great Recession recovery 2009-2017; ACA durability through SCOTUS challenges"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Obama-era major crises substantially resolved or framework-resolved at handover; Syria, ISIS, and Russian revisionism unresolved."
+            direction: good
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Personal ethics strong. Limited administration scandals. Garland blockade (2016). DACA executive action contested. Mixed record."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 9
+        harm_score: 1
+        notes: "Personally clean. No personal-conduct scandals. Modest. Strong family/marriage role-modeling."
+        evidence:
+          - citation: "Standard biographical scholarship; contemporary press"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Obama widely regarded as one of most personally ethical presidents of modern era; no personal-conduct scandals during or after term."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 7
+        harm_score: 3
+        notes: "The Cabinet was characterized in reporting as broadly clean. The 2014 VA wait-time matter was documented by the VA Office of Inspector General and led to the resignation of Secretary Eric Shinseki. The 2013-2015 IRS targeting matter was documented in the Treasury Inspector General for Tax Administration (TIGTA) audit reports; the matter produced political controversy but no criminal prosecutions of administration officials. The Solyndra loan-guarantee episode produced political controversy without prosecutions."
+        evidence:
+          - citation: "VA Office of Inspector General report on wait-time data (2014); TIGTA Audit Report No. 2013-10-053 'Inappropriate Criteria Were Used to Identify Tax-Exempt Applications for Review' (May 14, 2013); Senate Finance Committee, S.Rept. 114-119 on IRS processing of 501(c)(3)/(c)(4) applications 2010-2013"
+            source_url: "https://www.congress.gov/committee-report/114th-congress/senate-report/119/1"
+            source_type: primary_document
+            tier: 1
+            claim: "The VA OIG documented the 2014 wait-time matter, which led to Secretary Shinseki's resignation. TIGTA Audit Report 2013-10-053 found the IRS used 'inappropriate criteria' (BOLO list flagging names like 'tea party', 'patriot') to identify tax-exempt applications for additional review; the Senate Finance Committee's bipartisan report (114-119) documented the matter further. No criminal prosecutions of administration officials resulted."
+            direction: harm
+            verification_status: verified
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 6
+        harm_score: 4
+        notes: "Generally norm-respecting. Significant executive action late-term (DACA 2012). Drone program executive precedent. Smooth transition to Trump despite policy opposition."
+        evidence:
+          - citation: "DACA memorandum June 15, 2012"
+            source_url: "https://www.dhs.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "DACA established by executive memo after immigration reform failed in Congress; controversial as expansion of executive immigration discretion."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 7
+        harm_score: 3
+        notes: "Two SCOTUS confirmed: Sotomayor (2009), Kagan (2010). Garland nominated (March 2016) but blocked by Senate Republicans 11 months — unprecedented. ~329 federal judges appointed."
+        evidence:
+          - citation: "Sotomayor confirmation August 2009; Kagan confirmation August 2010; Garland nomination March 16, 2016 (blocked)"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Obama appointed two SCOTUS justices (Sotomayor as first Hispanic justice, Kagan); third nominee Garland blocked by Senate Republicans for 11 months — unprecedented obstruction."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 6
+        harm_score: 3
+        notes: "Merit-based selection process. Garland (moderate) selected as compromise candidate — still blocked. Diverse appointments."
+        evidence:
+          - citation: "Obama judicial nomination process records"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Obama prioritized professional qualifications and demographic diversity; ~42% of confirmed appointees were women, ~36% non-white — most diverse cohort to that point."
+            direction: good
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 6
+        harm_score: 2
+        notes: "Sotomayor and Kagan moderate-to-liberal jurisprudence. Generally restraint-consistent. Both major SCOTUS voices on civil rights cases."
+        evidence:
+          - citation: "Sotomayor and Kagan jurisprudential analyses"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Sotomayor and Kagan emerged as liberal anchors on Roberts Court; both ideologically reliable while procedurally moderate."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 4
+        harm_score: 7
+        notes: "Sotomayor confirmed 68-31, Kagan 63-37 — politicized confirmations. Garland blockade was unprecedented norm violation by Senate Republicans (Obama administration responsible only for nomination, not blockade)."
+        evidence:
+          - citation: "Garland blockade Senate Republican statements March-November 2016; Sotomayor and Kagan confirmation votes"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Senate Republicans refused to consider Garland nomination for 11 months citing election-year rule subsequently abandoned for Barrett (2020); unprecedented institutional norm violation."
+            direction: harm
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Polarization peaked. Citizens United era. Republican obstruction (Garland, government shutdowns). Tea Party rise. Russia interference 2016. Trump-Obama transition."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 5
+        harm_score: 4
+        notes: "Shelby County v. Holder (2013) gutted VRA preclearance. DOJ Civil Rights Division enforcement strong. Voter ID expansion in states. Mixed pattern."
+        evidence:
+          - citation: "Shelby County v. Holder, 570 U.S. 529 (2013); subsequent state-level voting law changes"
+            source_url: "https://supreme.justia.com/"
+            source_type: primary_document
+            tier: 1
+            claim: "Shelby County struck down VRA preclearance formula; numerous states subsequently passed restrictive voting laws; Obama DOJ unable to block under post-Shelby framework."
+            direction: harm
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 4
+        harm_score: 5
+        notes: "The May 2013 AP phone-records subpoena, the contemporaneous Rosen-affidavit episode (in which a DOJ search-warrant affidavit referred to Fox News reporter James Rosen as a possible 'co-conspirator' under the Espionage Act for the purpose of establishing probable cause), and the larger pattern of Espionage Act prosecutions of alleged leakers were characterized by press-freedom organizations as significant departures from earlier-administration practice. Public solo press conferences declined relative to recent predecessors."
+        evidence:
+          - citation: "AP phone-records subpoena (May 2013); DOJ search-warrant affidavit in United States v. Kim, S.D.N.Y. (Rosen affidavit, 2010, disclosed 2013)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "The DOJ subpoenaed AP phone records (May 2013), and a 2010 DOJ search-warrant affidavit (disclosed in 2013) referred to Fox News reporter James Rosen as a possible 'co-conspirator' under the Espionage Act for the purpose of establishing probable cause."
+            direction: harm
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 5
+        harm_score: 5
+        notes: "Tucson shooting (2011, Gabby Giffords). Sandy Hook (2012). Charleston Mother Emanuel (2015). Police violence (Ferguson 2014, Eric Garner). Mixed era of rising political violence."
+        evidence:
+          - citation: "Sandy Hook Elementary shooting December 14, 2012; Charleston AME church shooting June 17, 2015"
+            source_url: "https://www.fbi.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama era saw multiple mass-shooting events (Sandy Hook, Charleston, Pulse) and emergence of police-violence as defining political issue (Ferguson, BLM)."
+            direction: harm
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 3
+        harm_score: 7
+        notes: "Tea Party rise (2009). Birtherism (Trump-led). Government shutdowns (2013). Garland blockade. Republican obstruction continuous. Polarization rose substantially."
+        evidence:
+          - citation: "Pew partisan polarization research 2009-2017; 2013 government shutdown"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "Partisan polarization measured by Pew reached then-record highs during Obama term; Tea Party movement and Trump-driven birtherism contributed to subsequent Republican Party transformation."
+            direction: harm
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Per v1.2 §9.4: 9.3 years post-term — all 10.x sub-criteria tagged low_confidence (tentative_long_tail: true)."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 6
+        harm_score: 3
+        low_confidence: true
+        notes: "ACA durable through repeated challenges. JCPOA abrogated under Trump T1 (2018). Paris Agreement withdrawal-rejoin-withdraw cycle. Many EO-based policies reversed."
+        evidence:
+          - citation: "ACA continued operation through 2024; JCPOA withdrawal May 2018; Paris withdrawal 2017, rejoin 2021"
+            source_url: "https://www.hhs.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "ACA proved most durable major Obama legislation despite multiple SCOTUS and political challenges; foreign-policy agreements (JCPOA, Paris) proved fragile under subsequent administrations."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 4
+        harm_score: 5
+        low_confidence: true
+        notes: "Garland blockade established new SCOTUS confirmation norm (election-year blockade — subsequently abandoned for Barrett 2020). Drone executive precedent. Espionage Act prosecution precedent."
+        evidence:
+          - citation: "Garland-Barrett asymmetry analysis; drone targeted killing executive precedent"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Garland blockade established asymmetric SCOTUS confirmation politics with continuing institutional damage; drone targeted-killing precedent inherited and continued by successors."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 7
+        harm_score: 3
+        low_confidence: true
+        notes: "First Black president symbolically transformative. LGBTQ rights advances generationally formative. Millennial political alignment shaped. Obamacare generation experiencing first universal-ish coverage."
+        evidence:
+          - citation: "Generational political-science scholarship on Obama era"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Obama presidency had substantial generational and demographic impact via symbolic representation of racial barrier-breaking, LGBTQ rights advances, and ACA coverage expansion."
+            direction: good
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 5
+        harm_score: 5
+        low_confidence: true
+        notes: "JCPOA collapsed → Iran nuclear program restart. Pivot to Asia incomplete vs. China rise. Crimea annexation unaddressed. Libya state collapse continues. Cuba normalization reversed."
+        evidence:
+          - citation: "JCPOA withdrawal May 2018; Russia-Ukraine relations 2014-present"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Obama-era foreign-policy framework substantially unwound under Trump T1; long-term geopolitical impact contested as JCPOA, Paris, and Pacific Pivot all proved fragile."
+            direction: harm
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.4 Pre-Trump residual. Strongly dignified style. Excellent rhetoric. Family role-modeling. Highest decorum scores since Eisenhower."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 9
+        harm_score: 1
+        era_context: "E11.4 — anchor for restored mid-century formality"
+        notes: "Era-defining dignity. Strong personal-conduct model. No personal scandals. Eulogist-in-chief role (Charleston 'Amazing Grace')."
+        evidence:
+          - citation: "Charleston Mother Emanuel eulogy June 26, 2015"
+            source_url: "https://obamawhitehouse.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama's Charleston eulogy delivered 'Amazing Grace' moment widely cited as defining presidential dignity in crisis; broader personal-conduct exemplary throughout term."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 9
+        harm_score: 1
+        notes: "Era-defining oratory. 2008 'A More Perfect Union' race speech, 2004 keynote, multiple SOTUs, eulogies. Among most quoted modern presidential speakers."
+        evidence:
+          - citation: "'A More Perfect Union' speech March 18, 2008; multiple major addresses"
+            source_url: "https://obamawhitehouse.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Obama's 'A More Perfect Union' speech is widely considered the major civil-rights presidential speech of the 21st century; broader rhetorical record consistently strong."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 8
+        harm_score: 1
+        notes: "Strong observance of ceremonial duties. Successful state visits. Foreign-leader receptions. White House Easter Egg Roll and traditional events maintained."
+        evidence:
+          - citation: "Obama ceremonial-conduct records 2009-2017"
+            source_url: "https://obamawhitehouse.archives.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "Obama observed traditional ceremonial standards consistently while adapting to modern media environment."
+            direction: good
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 8
+        harm_score: 2
+        notes: "Modeled dignified telegenic presidency. Post-presidential restraint and dignity. Family-centered. Mixed legacy via subsequent Trump-era inversion."
+        evidence:
+          - citation: "Obama post-presidency 2017-present"
+            source_url: "https://www.obama.org/"
+            source_type: historical_record
+            tier: 2
+            claim: "Obama's post-presidency continued dignified pattern; Obama Foundation focuses on leadership development."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "Strong personal popularity (~58% Gallup approval term-average). Polarization rose. End-of-term ~59% approval."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 7
+        harm_score: 3
+        notes: "Inherited Great Recession depressed mood. Recovery boosted. End-of-term ~59% Gallup approval. Polarization affected; Republicans uniformly hostile, Democrats supportive."
+        evidence:
+          - citation: "Gallup approval ratings 2009-2017"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "Obama averaged ~48% Gallup approval, ending at 59%; partisan gap in approval (Democratic vs Republican) was largest measured by Gallup at that point."
+            direction: good
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 4
+        harm_score: 6
+        notes: "Tea Party rise. Birtherism. Police violence and BLM emergence. 2016 election polarization. Cohesion substantially damaged during term."
+        evidence:
+          - citation: "Pew partisan polarization research 2009-2017"
+            source_url: "https://www.pewresearch.org/"
+            source_type: statistic
+            tier: 1
+            claim: "Partisan polarization reached then-historic highs during Obama term; cultural-political divides intensified around race, immigration, and identity."
+            direction: harm
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 8
+        harm_score: 2
+        notes: "Restored after GW Bush lows. Pew Global Attitudes showed substantial favorability gains. Nobel Peace Prize (2009). Strong soft power era."
+        evidence:
+          - citation: "Pew Global Attitudes Project 2009-2017"
+            source_url: "https://www.pewresearch.org/global/"
+            source_type: statistic
+            tier: 1
+            claim: "US favorability ratings recovered substantially under Obama per Pew Global Attitudes; major-allied-country favorability rose 20-30 percentage points from GW Bush-era lows."
+            direction: good
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 8
+        harm_score: 2
+        notes: "Strong globally. Obama himself extremely popular internationally. Anti-Americanism declined substantially in allied populations."
+        evidence:
+          - citation: "Pew Global Attitudes presidential favorability 2009-2017"
+            source_url: "https://www.pewresearch.org/global/"
+            source_type: statistic
+            tier: 1
+            claim: "Obama personally polled extremely favorably globally throughout term; foreign-public sentiment toward US substantially improved from GW Bush era."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Failed comprehensive reform (2013-2014). DACA via executive action (2012). Highest deportation totals of any administration. Mixed record — 'Deporter-in-Chief.'"
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 5
+        harm_score: 4
+        notes: "Failed comprehensive immigration reform 2013 (passed Senate, died in House). DACA executive action (June 2012) — legal protection for 800K+ Dreamers. DAPA (2014) struck down."
+        evidence:
+          - citation: "Deferred Action for Childhood Arrivals memorandum June 15, 2012; Senate immigration reform bill 2013 (S. 744)"
+            source_url: "https://www.dhs.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "DACA established legal protection for ~800,000 undocumented young immigrants (Dreamers); Senate-passed comprehensive immigration reform died in Republican-led House."
+            direction: good
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 3
+        harm_score: 6
+        notes: "Deported ~2.5 million during term — most of any administration. Family detention. Operation Streamline expansion. Earned 'Deporter-in-Chief' label."
+        evidence:
+          - citation: "ICE deportation statistics 2009-2017"
+            source_url: "https://www.ice.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Obama administration deported approximately 2.5 million people 2009-2017, more than any prior administration; record contested between enforcement-focus and prioritization-of-serious-offenders framings."
+            direction: harm
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 5
+        harm_score: 4
+        notes: "Syrian refugee admission ramp-up (eventually ~10,000). Central American Minors program. 2014 unaccompanied minor crisis poorly handled."
+        evidence:
+          - citation: "Syrian refugee admission goals; 2014 unaccompanied minor crisis"
+            source_url: "https://www.state.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "Syrian refugee admission was substantial but slow compared to European response; 2014 Central American family crisis exposed processing-system inadequacies."
+            direction: harm
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 5
+        harm_score: 3
+        notes: "Foreign-born share continued rising (~13% by 2017). Latinx population continued growth. Indian and Chinese H-1B sources changed demographic profile of high-skilled immigrants."
+        evidence:
+          - citation: "Census foreign-born population data 2009-2017"
+            source_url: "https://www.census.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "US foreign-born share rose to ~13.5% by 2017, approaching all-time high; demographic transition continuing along multiple dimensions."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 5.8
+  harm_average_across_categories: 3.6
+  net_average_across_categories: 2.2
+  tentative_long_tail: true
+  pattern_notes: "Obama is a 'strong personal-conduct + mixed substantive' anchor. ACA, LGBTQ rights advances, Paris Agreement, JCPOA define positives. Drone program, surveillance state continuation, deportations, polarization define harms. Lens divergence: Progressive ranks high (ACA, LGBTQ, climate, racial-equity firsts); Libertarian/Classical Liberal mixed (surveillance state, drone program negatives); Conservative low (ACA, executive action); Realist mixed (good on diplomacy, weak on Russia/China)."

@@ -1,0 +1,877 @@
+president: franklin_d_roosevelt
+display_name: "Franklin D. Roosevelt"
+term_start: 1933-03-04
+term_end: 1945-04-12
+party: D
+terms_served: 4
+calibration_anchor: true
+anchor_status: draft_pending_external_review
+spec_version: v1.2
+
+categories:
+  - category: 1
+    name: "Economic outcomes"
+    category_notes: "Inherited a 25% unemployment rate and a collapsing banking system. Recovery was substantial but uneven, with a sharp Recession of 1937-38 followed by WWII mobilization. Score reflects both the initial rescue and the structural transformation of the US labor market and safety net."
+    sub_criteria:
+      - id: "1.1"
+        name: "Growth & employment"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Unemployment fell from ~25% (1933) to ~14% (1937), spiked back to ~19% in the 1937-38 recession, then fell to <2% by 1944. GDP doubled in real terms 1933-1945."
+        evidence:
+          - citation: "Historical Statistics of the United States (Series Ba470, unemployment); BEA historical GDP"
+            source_url: "https://www.bls.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Unemployment fell from ~25% in 1933 to under 2% by 1944, with a notable 1937-38 reversal; real GDP roughly doubled across the period."
+            direction: good
+            verification_status: pending
+      - id: "1.2"
+        name: "Inequality & mobility"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "New Deal compressed income inequality substantially. Top marginal tax rates rose to 79% (1936) and 94% (1944). Social Security and Wagner Act enabled mass middle-class formation."
+        evidence:
+          - citation: "Piketty & Saez, 'Income Inequality in the United States 1913-1998' (QJE 2003); IRS Statistics of Income historical tables"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "The top decile income share fell from ~45% in 1932 to ~33% by 1945; this 'Great Compression' is the largest peacetime inequality reduction in US history."
+            direction: good
+            verification_status: pending
+      - id: "1.3"
+        name: "Fiscal trajectory"
+        good_score: 4
+        harm_score: 5
+        low_confidence: false
+        era_context: "E2.1 Interwar / E2.2 WWII — wartime spending unavoidable"
+        notes: "Federal debt grew from ~$22B (1933) to ~$260B (1945) — from ~40% of GDP to ~120% of GDP. Era-defensible given Depression and war; scored against fiscal-trajectory criterion at face value."
+        evidence:
+          - citation: "OMB Historical Tables, Table 7.1 Federal Debt"
+            source_url: "https://www.whitehouse.gov/omb/historical-tables/"
+            source_type: statistic
+            tier: 1
+            claim: "Federal debt rose from $22.5 billion in 1933 to $258.7 billion in 1945, debt-to-GDP from ~40% to ~120%."
+            direction: harm
+            verification_status: pending
+      - id: "1.4"
+        name: "Worker conditions & wages"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "Wagner Act (1935) legalized union organizing; Fair Labor Standards Act (1938) established minimum wage and 40-hour week; union density rose from ~11% (1932) to ~35% (1945)."
+        evidence:
+          - citation: "Public Law 74-198 (Wagner Act, 1935); Public Law 75-718 (Fair Labor Standards Act, 1938)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Two landmark laws structurally reset US labor relations and wage floor, with union density tripling across the FDR years."
+            direction: good
+            verification_status: pending
+
+  - category: 2
+    name: "Foreign policy & war"
+    category_notes: "Score spans E2.1 Interwar (1933-1941) and E2.2 WWII (1941-1945). FDR's pre-Pearl Harbor maneuvering and the postwar architecture (Bretton Woods, UN groundwork) score era-defining good; Yalta concessions and wartime civilian impact are the principal harms."
+    sub_criteria:
+      - id: "2.1"
+        name: "War & peace decisions"
+        good_score: 9
+        harm_score: 3
+        low_confidence: false
+        era_context: "E2.1 Interwar / E2.2 WWII"
+        notes: "Pre-Pearl Harbor: Lend-Lease (1941), Atlantic Charter, undeclared naval war in Atlantic. Post-Pearl Harbor: total mobilization, Europe-first strategy. Yalta concessions to Stalin remain contested."
+        evidence:
+          - citation: "Lend-Lease Act, Public Law 77-11 (1941); Atlantic Charter joint declaration (August 1941)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Lend-Lease and the Atlantic Charter committed the US to anti-fascist coalition months before formal entry; both shaped the postwar order."
+            direction: good
+            verification_status: pending
+      - id: "2.2"
+        name: "Alliance management"
+        good_score: 9
+        harm_score: 2
+        low_confidence: false
+        era_context: "E2.2 WWII"
+        notes: "Built and held the Grand Alliance (US-UK-USSR) through major strategic disagreements (second front timing). Architect of UN, Bretton Woods. Some friction with de Gaulle and Chiang."
+        evidence:
+          - citation: "Bretton Woods Conference (July 1944); Dumbarton Oaks (Aug-Oct 1944); UN Charter signed June 1945"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "FDR's wartime conferences produced the IMF, World Bank, and UN — the post-1945 multilateral architecture."
+            direction: good
+            verification_status: pending
+      - id: "2.3"
+        name: "Diplomacy & soft power"
+        good_score: 8
+        harm_score: 1
+        low_confidence: false
+        notes: "Four Freedoms (1941) framing of war aims; Good Neighbor policy with Latin America (1933 onward, ended military interventions there)."
+        evidence:
+          - citation: "Four Freedoms speech (State of the Union, January 6, 1941)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's Four Freedoms framing committed the US to a values-based postwar order that shaped UN Declaration of Human Rights."
+            direction: good
+            verification_status: pending
+      - id: "2.4"
+        name: "Civilian impact"
+        good_score: 3
+        harm_score: 6
+        low_confidence: true
+        era_context: "E2.2 WWII — score within era's mass-war norms"
+        notes: "Strategic bombing of German cities (Dresden Feb 1945, under Allied joint command); civilian casualties in Pacific air war. Decision to drop atomic bombs was Truman's, not FDR's. Era-relative scoring."
+        evidence:
+          - citation: "USAAF Strategic Bombing Survey (1945); historical casualty estimates from Allied bombing"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "Allied strategic bombing under FDR caused several hundred thousand German and Japanese civilian deaths before V-E Day; era norms accepted this but harm remains real."
+            direction: harm
+            verification_status: pending
+
+  - category: 3
+    name: "Civil rights & equality"
+    category_notes: "Era E3.1 Pre-Brown. FDR's record is sharply mixed: substantial good on tribal policy (Indian Reorganization Act) and a partial federal anti-discrimination opening (FEPC), but defining harm on Japanese internment and refusal to support anti-lynching legislation."
+    sub_criteria:
+      - id: "3.1"
+        name: "Racial equity"
+        good_score: 3
+        harm_score: 8
+        low_confidence: false
+        era_context: "E3.1 Pre-Brown — Japanese internment scored as era-10-harm baseline (criticized contemporaneously, not just retroactively)"
+        notes: "EO 8802 (1941) established FEPC, first federal anti-discrimination action. BUT: EO 9066 (1942) authorized Japanese American internment (~120,000 detained). Refused to support federal anti-lynching legislation to preserve Southern Democratic coalition."
+        evidence:
+          - citation: "Executive Order 9066 (February 19, 1942); Korematsu v. United States, 323 U.S. 214 (1944)"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "EO 9066 authorized the forced relocation and internment of ~120,000 Japanese Americans, ~2/3 US citizens, on the basis of ancestry."
+            direction: harm
+            verification_status: pending
+      - id: "3.2"
+        name: "Gender equity"
+        good_score: 5
+        harm_score: 1
+        low_confidence: false
+        notes: "Frances Perkins, first female Cabinet member (Sec of Labor, 1933-1945). Eleanor Roosevelt's prominent public role. Women's wartime workforce participation enabled by federal contract policies. Era-typical otherwise."
+        evidence:
+          - citation: "Cabinet appointment of Frances Perkins, March 4, 1933; Department of Labor official records"
+            source_url: "https://www.dol.gov/general/aboutdol/history/perkins"
+            source_type: historical_record
+            tier: 1
+            claim: "Frances Perkins was the first woman appointed to a US presidential Cabinet, serving Labor for FDR's full tenure."
+            direction: good
+            verification_status: pending
+      - id: "3.3"
+        name: "LGBTQ+ rights"
+        good_score: 0
+        harm_score: 0
+        low_confidence: false
+        notes: "Era E3.1 — not a federal policy domain. Score N/A; reported as 0/0 per spec convention."
+        evidence: []
+      - id: "3.4"
+        name: "Disability & other protected classes"
+        good_score: 2
+        harm_score: 2
+        low_confidence: true
+        notes: "FDR himself disabled (polio); largely concealed it. No major disability policy. Veterans services expanded via GI Bill. Era-typical for disabled Americans broadly."
+        evidence:
+          - citation: "Servicemen's Readjustment Act of 1944 (GI Bill), Public Law 78-346"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GI Bill provided extensive services for disabled veterans, the largest federal disability-services expansion to date."
+            direction: good
+            verification_status: pending
+      - id: "3.5"
+        name: "Tribal & indigenous policy"
+        good_score: 8
+        harm_score: 1
+        low_confidence: false
+        notes: "Indian Reorganization Act of 1934 (Wheeler-Howard Act) ended the allotment-and-assimilation policy in force since 1887, restored tribal self-government, halted land alienation. Defining federal tribal-policy reform of the 20th century."
+        evidence:
+          - citation: "Indian Reorganization Act, Public Law 73-383 (June 18, 1934)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "The IRA ended Dawes-era allotment, restored tribal governance, and halted the loss of tribal land — reversing 47 years of termination policy."
+            direction: good
+            verification_status: pending
+
+  - category: 4
+    name: "Civil liberties & rule of law"
+    category_notes: "Era E4.1 Pre-Cold War. Court-packing attempt (1937) was the defining executive-restraint failure of FDR's term. FBI grew substantially under Hoover with FDR's blessing."
+    sub_criteria:
+      - id: "4.1"
+        name: "Speech & press posture"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Strong press relationship; 998 press conferences, more than any president before or since. Some pressure on critical outlets (Chicago Tribune treason rumblings 1942). No major prosecutions of speech."
+        evidence:
+          - citation: "Pollard, 'The Presidents and the Press' (1947); presidential press conference records"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "FDR held 998 press conferences during his 12-year tenure, establishing the modern press-conference institution."
+            direction: good
+            verification_status: pending
+      - id: "4.2"
+        name: "Search, seizure, and surveillance"
+        good_score: 2
+        harm_score: 6
+        low_confidence: false
+        notes: "FBI grew from ~600 agents (1933) to ~5,000 (1945) under Hoover with FDR's authorization. Approved warrantless wiretaps on 'subversives' from 1940."
+        evidence:
+          - citation: "FDR memo to Attorney General Robert Jackson, May 21, 1940, authorizing warrantless wiretapping"
+            source_url: "https://fdrlibrary.org/"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's 1940 directive to AG Jackson authorized warrantless wiretapping of suspected subversives, the foundational FBI surveillance authority later used by Hoover for decades."
+            direction: harm
+            verification_status: pending
+      - id: "4.3"
+        name: "Executive restraint"
+        good_score: 2
+        harm_score: 8
+        low_confidence: false
+        notes: "Court-packing plan (1937) was the largest executive-restraint failure of the 20th century — explicit attempt to add 6 Supreme Court justices to overcome judicial review. Failed in Senate but produced 'switch in time' effect. Also EO 9066 internment authority, multiple emergency-powers expansions."
+        evidence:
+          - citation: "Judicial Procedures Reform Bill of 1937 (the 'court-packing plan'); Senate Judiciary Committee report rejecting bill"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR proposed adding up to 6 justices to the Supreme Court to overcome anti-New-Deal rulings; the bill was rejected by his own party's Senate Judiciary Committee as 'a needless, futile, and utterly dangerous abandonment of constitutional principle.'"
+            direction: harm
+            verification_status: pending
+      - id: "4.4"
+        name: "Transparency & FOIA"
+        good_score: 3
+        harm_score: 5
+        low_confidence: true
+        notes: "FOIA didn't exist (enacted 1966). Wartime secrecy extensive. Pre-modern transparency baseline."
+        evidence:
+          - citation: "Wartime censorship via Office of Censorship (Executive Order 8985, 1941)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 2
+            claim: "FDR's Office of Censorship reviewed and approved press and mail content during WWII; era-typical but extensive."
+            direction: harm
+            verification_status: pending
+
+  - category: 5
+    name: "Domestic welfare & health"
+    category_notes: "Most transformative welfare-policy administration in US history. Social Security, FDIC, FHA, GI Bill, public housing — created the modern federal welfare state from near-zero baseline."
+    sub_criteria:
+      - id: "5.1"
+        name: "Healthcare access & outcomes"
+        good_score: 3
+        harm_score: 2
+        low_confidence: false
+        notes: "Original Social Security Act (1935) considered including national health insurance but dropped. VA hospital expansion via GI Bill. No major civilian healthcare reform."
+        evidence:
+          - citation: "Committee on Economic Security report (1934-35); Social Security Act, Public Law 74-271, as enacted without health insurance"
+            source_url: "https://www.ssa.gov/history/"
+            source_type: historical_record
+            tier: 1
+            claim: "The Committee on Economic Security drafted national health insurance provisions for Social Security but FDR removed them to avoid AMA opposition jeopardizing the broader bill."
+            direction: harm
+            verification_status: pending
+      - id: "5.2"
+        name: "Education"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "GI Bill (1944) provided college tuition to 8 million WWII veterans, doubling US college-educated population by 1960. Largest federal education investment ever to that point."
+        evidence:
+          - citation: "Servicemen's Readjustment Act of 1944 (GI Bill), Public Law 78-346; VA usage statistics"
+            source_url: "https://www.va.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "GI Bill funded college or vocational training for 7.8 million returning WWII veterans, transformational impact on US higher education access and middle-class formation."
+            direction: good
+            verification_status: pending
+      - id: "5.3"
+        name: "Safety net"
+        good_score: 10
+        harm_score: 1
+        low_confidence: false
+        notes: "Social Security Act (1935) created old-age insurance, unemployment insurance, AFDC predecessor (ADC), federal-state public assistance. CCC, WPA, FERA put millions to work. Era-defining 10-good anchor for the entire framework."
+        evidence:
+          - citation: "Social Security Act of 1935, Public Law 74-271; SSA historical records"
+            source_url: "https://www.ssa.gov/history/35act.html"
+            source_type: primary_document
+            tier: 1
+            claim: "The Social Security Act created the foundational federal old-age insurance, unemployment insurance, and public-assistance systems that defined the US welfare state for the next 90+ years."
+            direction: good
+            verification_status: pending
+      - id: "5.4"
+        name: "Housing & cost of living"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "FHA created (1934), enabled 30-year mortgages and mass middle-class homeownership. Housing Act of 1937 funded public housing. BUT: FHA redlining maps systematically excluded Black neighborhoods, creating a 50-year structural inequity."
+        evidence:
+          - citation: "National Housing Act of 1934, Public Law 73-479; Rothstein, 'The Color of Law' (2017) on FHA redlining"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "FHA made homeownership accessible to millions of white Americans while redlining maps explicitly excluded Black neighborhoods, locking in racial wealth gaps for decades."
+            direction: good
+            verification_status: pending
+
+  - category: 6
+    name: "Environmental stewardship"
+    category_notes: "Era E6.1 Pre-environmental. FDR's environmental legacy is era-defining within the conservation frame: CCC, soil conservation, national park expansion, dust-bowl response."
+    sub_criteria:
+      - id: "6.1"
+        name: "Climate posture"
+        good_score: 0
+        harm_score: 0
+        low_confidence: false
+        era_context: "E6.1 Pre-environmental — climate not a recognized policy domain"
+        notes: "N/A per era. Score 0/0."
+        evidence: []
+      - id: "6.2"
+        name: "Air & water regulation"
+        good_score: 3
+        harm_score: 1
+        low_confidence: true
+        era_context: "E6.1 Pre-environmental — pre-regulatory framework"
+        notes: "TVA addressed water management and flood control at regional scale. No federal air-pollution regulation existed yet. Calibration v1.1 revision: good 5→3 per cross-president-rankings.md — current score made FDR look comparable to post-1955 regulatory-era presidents; era_context emphasized."
+        evidence:
+          - citation: "Tennessee Valley Authority Act of 1933, Public Law 73-17"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "TVA was the first major federal water-resource and regional-development authority, addressing flood control, soil erosion, and rural electrification across seven states."
+            direction: good
+            verification_status: pending
+      - id: "6.3"
+        name: "Public lands & conservation"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        era_context: "E6.1 Pre-environmental — era-defining good"
+        notes: "CCC employed 3 million young men in conservation work 1933-1942. Soil Conservation Act (1935). National park system expanded (Olympic, Kings Canyon, Big Bend, Everglades added). Migratory Bird Conservation Act."
+        evidence:
+          - citation: "Emergency Conservation Work Act (CCC), Public Law 73-5 (March 1933); CCC historical records"
+            source_url: "https://www.nps.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "The CCC enrolled approximately 3 million young men over 9 years in soil conservation, reforestation, and park infrastructure work; era-defining federal conservation program."
+            direction: good
+            verification_status: pending
+      - id: "6.4"
+        name: "Biodiversity & wildlife"
+        good_score: 7
+        harm_score: 1
+        low_confidence: false
+        notes: "Major expansion of National Wildlife Refuge System; Pittman-Robertson Act (1937) funded wildlife conservation via firearms excise tax. Migratory bird conservation expanded."
+        evidence:
+          - citation: "Pittman-Robertson Federal Aid in Wildlife Restoration Act, Public Law 75-415 (1937)"
+            source_url: "https://www.congress.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Pittman-Robertson established the funding mechanism that financed state wildlife conservation programs for the next 90 years."
+            direction: good
+            verification_status: pending
+
+  - category: 7
+    name: "Crisis management"
+    category_notes: "Two major crises: Great Depression and WWII. Generally well-managed at speed and effectiveness; Recession of 1937-38 was a self-inflicted setback from premature fiscal contraction."
+    sub_criteria:
+      - id: "7.1"
+        name: "Speed of response"
+        good_score: 9
+        harm_score: 2
+        low_confidence: false
+        notes: "Inaugurated March 4, 1933; First Hundred Days produced 15 major laws including Emergency Banking Act (3 days), CCC (~3 weeks), FERA, AAA, TVA, NIRA. Pearl Harbor → declaration of war within 24 hours."
+        evidence:
+          - citation: "First 100 Days legislative record; Hundred Days roster (Schlesinger, 'The Coming of the New Deal,' 1958)"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "FDR's first 100 days produced 15 major laws and established the modern Presidential 'Hundred Days' benchmark for crisis response speed."
+            direction: good
+            verification_status: pending
+      - id: "7.2"
+        name: "Effectiveness of action"
+        good_score: 8
+        harm_score: 3
+        low_confidence: false
+        notes: "New Deal achieved partial recovery; full employment came only with war mobilization. Recession of 1937-38 from premature fiscal tightening was a self-inflicted setback. WWII industrial mobilization extraordinarily effective."
+        evidence:
+          - citation: "Romer, 'What Ended the Great Depression?' (Journal of Economic History 1992); BLS unemployment series"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Economic historians attribute the partial 1933-37 recovery to New Deal monetary and fiscal policy, the 1937-38 reversal to premature fiscal contraction, and full recovery to wartime spending."
+            direction: good
+            verification_status: pending
+      - id: "7.3"
+        name: "Honesty with the public during crisis"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Fireside Chats (30 broadcasts 1933-1944) modeled clear public communication. But: concealed disability throughout; underreported war news for morale; downplayed pre-Pearl Harbor commitments."
+        evidence:
+          - citation: "Buhite & Levy, eds., 'FDR's Fireside Chats' (1992) collection of broadcasts; primary transcripts"
+            source_url: "https://www.presidency.ucsb.edu/"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's Fireside Chats explained complex economic and military situations directly to the public, establishing a new presidential communication norm."
+            direction: good
+            verification_status: pending
+      - id: "7.4"
+        name: "Long-term resolution of the crisis"
+        good_score: 9
+        harm_score: 2
+        low_confidence: false
+        notes: "Depression resolved (war + postwar middle class via GI Bill). War resolved with UN/Bretton Woods architecture for postwar order. Yalta concessions complicated the Soviet endgame."
+        evidence:
+          - citation: "Bretton Woods agreements (1944); UN Charter (1945); GI Bill (1944) — combined institutional legacy"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "FDR's wartime planning produced the IMF, World Bank, UN, and GI Bill — the institutional architecture that defined the postwar order and the American middle class."
+            direction: good
+            verification_status: pending
+
+  - category: 8
+    name: "Institutional integrity"
+    category_notes: "Court-packing attempt is the defining institutional-integrity failure; running for 4 terms violated the 2-term Washingtonian norm and led directly to the 22nd Amendment. Generally clean personal and administration ethics; high-quality judicial appointments."
+    sub_criteria:
+      - id: "8.1"
+        name: "Personal ethics & conduct in office"
+        good_score: 7
+        harm_score: 2
+        low_confidence: false
+        notes: "No major personal corruption. Lucy Mercer relationship was personal not financial. Generally maintained pre-modern conduct standards."
+        evidence:
+          - citation: "Smith, 'FDR' (2007); standard biographical scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Standard scholarship finds no significant personal financial corruption; FDR's ethical lapses were political (court-packing) rather than personal."
+            direction: good
+            verification_status: pending
+      - id: "8.2"
+        name: "Administration ethics"
+        good_score: 6
+        harm_score: 3
+        low_confidence: false
+        notes: "Some patronage/cronyism issues common to era. Hopkins, Ickes, Perkins generally clean. Some war-mobilization contracting irregularities; Truman Committee investigated under his auspices."
+        evidence:
+          - citation: "Truman Committee (Special Committee to Investigate the National Defense Program) reports, 1941-1948"
+            source_url: "https://www.senate.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "Senate's Truman Committee investigated WWII contracting irregularities under FDR; identified ~$10-15 billion in waste/fraud but largely cooperative-not-adversarial relationship with administration."
+            direction: harm
+            verification_status: pending
+      - id: "8.3"
+        name: "Norm adherence"
+        good_score: 3
+        harm_score: 7
+        low_confidence: false
+        notes: "Broke the 2-term Washingtonian norm (1940, 1944); led directly to 22nd Amendment (1951). Court-packing plan (1937) attacked judicial independence. Multiple wartime emergency-powers expansions."
+        evidence:
+          - citation: "22nd Amendment, ratified February 27, 1951; legislative history explicitly cites FDR's 4 terms"
+            source_url: "https://www.archives.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "The 22nd Amendment was enacted specifically in response to FDR's four-term presidency, formalizing a constitutional limit where the prior 150-year informal norm had been broken."
+            direction: harm
+            verification_status: pending
+      - id: "8.4"
+        name: "Judicial appointment quality"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Appointed 8 Supreme Court justices including Hugo Black, Felix Frankfurter, William O. Douglas, Robert Jackson, Wiley Rutledge. Generally high-caliber appointments. Black's former Klan membership a notable blemish."
+        evidence:
+          - citation: "Supreme Court appointment records, 1937-1943; standard SCOTUS scholarship"
+            source_url: "https://www.supremecourt.gov/"
+            source_type: historical_record
+            tier: 1
+            claim: "FDR appointed 8 Supreme Court justices, the most by any president; several (Black, Douglas, Jackson) became major jurisprudential figures of the 20th century."
+            direction: good
+            verification_status: pending
+      - id: "8.5"
+        name: "Judicial appointment selection ethics"
+        good_score: 6
+        harm_score: 3
+        low_confidence: true
+        notes: "Selection process pre-modern, mostly conducted via AG and informal channels. Black's Klan membership was either unknown or downplayed during confirmation. No major ethics scandals in selection."
+        evidence:
+          - citation: "Newman, 'Hugo Black: A Biography' (1994); contemporary press on Black's KKK past"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "Black's 1920s Klan membership emerged publicly only after his Senate confirmation; the FDR administration's prior knowledge remains historically disputed."
+            direction: harm
+            verification_status: pending
+      - id: "8.6"
+        name: "Judicial activism vs. restraint posture"
+        good_score: 4
+        harm_score: 4
+        low_confidence: false
+        era_context: "Era-relative scoring — 'restraint' meant deference to New Deal expansion in 1930s context"
+        notes: "Appointed justices who would defer to New Deal economic regulation — judicial restraint in the Lochner-era sense. Same appointees became Warren-Court activists on civil rights. Era-relative assessment."
+        evidence:
+          - citation: "West Coast Hotel Co. v. Parrish, 300 U.S. 379 (1937); switch in time saves nine"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's appointees consolidated a Court majority that deferred to legislative economic regulation, reversing the Lochner-era judicial activism that had struck down New Deal legislation."
+            direction: good
+            verification_status: pending
+      - id: "8.7"
+        name: "Confirmation-process conduct"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Generally respected Senate confirmation norms. Court-packing plan was a structural threat to judicial independence rather than a confirmation-process violation. Pre-modern era of confirmation politics."
+        evidence:
+          - citation: "Senate Judiciary Committee confirmation records, 1937-1943"
+            source_url: "https://www.senate.gov/"
+            source_type: historical_record
+            tier: 2
+            claim: "FDR's 8 SCOTUS confirmations proceeded through standard pre-modern Senate processes; no Garland-style blockade or accelerated push."
+            direction: good
+            verification_status: pending
+
+  - category: 9
+    name: "Democratic health"
+    category_notes: "Era E9.1 New Deal coalition. Built durable Democratic coalition; transformed presidency-press relationship. But: maintained alliance with Southern segregationist Democrats, blocking civil-rights progress; expanded executive power substantially."
+    sub_criteria:
+      - id: "9.1"
+        name: "Voting access"
+        good_score: 2
+        harm_score: 5
+        low_confidence: false
+        notes: "Failed to advance Black voting rights in the South; coalition required Southern Democratic acquiescence. Anti-poll-tax legislation blocked in part because FDR didn't push it. Pre-VRA baseline."
+        evidence:
+          - citation: "Anti-Lynching Bill blockage history; Sitkoff, 'A New Deal for Blacks' (1978); standard scholarship"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "FDR repeatedly declined to support anti-lynching legislation or aggressive voting-rights enforcement, preserving the alliance with Southern Democratic Senators who controlled key committees."
+            direction: harm
+            verification_status: pending
+      - id: "9.2"
+        name: "Press relationship"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Highly accessible press relationship; 998 press conferences. Wartime Office of Censorship cooperative not adversarial. Tribune and McCormick papers in genuine conflict but no government action."
+        evidence:
+          - citation: "White, 'FDR and the Press' (1979); press conference records"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "FDR institutionalized the modern presidential press conference and maintained generally cooperative working relationships across most major outlets despite vocal opposition press."
+            direction: good
+            verification_status: pending
+      - id: "9.3"
+        name: "Political violence"
+        good_score: 5
+        harm_score: 3
+        low_confidence: true
+        notes: "Era of labor violence and lynching. FDR navigated without major escalation; deployed federal troops sparingly. Survived 1933 assassination attempt. Did not address lynching as political violence."
+        evidence:
+          - citation: "FDR Miami assassination attempt by Giuseppe Zangara, February 15, 1933"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "Anton Cermak (Chicago mayor) was killed in an assassination attempt on FDR weeks before his inauguration; FDR's measured response avoided escalating political violence."
+            direction: good
+            verification_status: pending
+      - id: "9.4"
+        name: "Polarization contribution"
+        good_score: 7
+        harm_score: 3
+        low_confidence: false
+        notes: "Built broad New Deal coalition (urban North, South, labor, Catholics, Jews, Black voters). Some class antagonism in rhetoric ('I welcome their hatred'). But broadly coalition-building."
+        evidence:
+          - citation: "Madison Square Garden speech, October 31, 1936; New Deal coalition political analysis"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's 1936 'I welcome their hatred' speech against organized money was polarizing rhetorically but his governing coalition was the broadest in 20th-century US politics."
+            direction: good
+            verification_status: pending
+
+  - category: 10
+    name: "Long-tail consequences"
+    category_notes: "Era 10 normal scoring (term ended 1945, 80+ years elapsed). Among the highest long-tail-impact administrations in US history."
+    sub_criteria:
+      - id: "10.1"
+        name: "Policy durability"
+        good_score: 10
+        harm_score: 1
+        low_confidence: false
+        notes: "Social Security, FDIC, SEC, NLRB, FHA, public housing, Fair Labor Standards — most of the New Deal regulatory and welfare-state architecture endures 80+ years later. Era-defining 10-good anchor."
+        evidence:
+          - citation: "OASDI Annual Statistical Supplement; FDIC quarterly reports; ongoing operation of New Deal agencies"
+            source_url: "https://www.ssa.gov/"
+            source_type: statistic
+            tier: 1
+            claim: "Social Security, FDIC, SEC, NLRB, and FHA remain operational federal entities 80-93 years after their New Deal creation, distributing trillions of dollars to hundreds of millions of Americans."
+            direction: good
+            verification_status: pending
+      - id: "10.2"
+        name: "Institutional damage that persisted"
+        good_score: 2
+        harm_score: 5
+        low_confidence: false
+        notes: "Court-packing failed but the 'switch in time' shifted constitutional jurisprudence. Imperial presidency expansion accelerated under FDR. Internment precedent (Korematsu) overturned only in 2018 (Trump v. Hawaii dicta)."
+        evidence:
+          - citation: "Trump v. Hawaii, 585 U.S. ___ (2018), overruling Korematsu in dicta; Schlesinger, 'The Imperial Presidency' (1973)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "FDR-era executive-power expansion (and the Korematsu precedent it produced) cast a 70+ year shadow on civil-liberties jurisprudence."
+            direction: harm
+            verification_status: pending
+      - id: "10.3"
+        name: "Generational & demographic impact"
+        good_score: 10
+        harm_score: 1
+        low_confidence: false
+        notes: "GI Bill enabled the post-WWII white middle class. Social Security made retirement a universal life stage rather than a privilege. New Deal arguably defined modern American identity."
+        evidence:
+          - citation: "Mettler, 'Soldiers to Citizens: The G.I. Bill and the Making of the Greatest Generation' (2005)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "GI Bill college funding doubled US higher-education attainment within 15 years and was the largest single contributor to post-WWII middle-class formation."
+            direction: good
+            verification_status: pending
+      - id: "10.4"
+        name: "Geopolitical aftermath"
+        good_score: 8
+        harm_score: 3
+        low_confidence: false
+        notes: "UN, IMF, World Bank, Bretton Woods, NATO precursor — postwar order architecture. BUT: Yalta concessions enabled Soviet sphere in Eastern Europe; Cold War followed."
+        evidence:
+          - citation: "Yalta Conference protocols (February 1945); Bretton Woods agreements (1944); UN Charter (1945)"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's wartime conferences established both the liberal multilateral order and the Soviet sphere in Eastern Europe — defining the postwar world both positively and negatively."
+            direction: good
+            verification_status: pending
+
+  - category: 11
+    name: "Decorum & conduct of office"
+    category_notes: "Era E11.1 Mid-century formal. FDR established the modern dignified-but-warm presidential communication style. Fireside Chats are a 9-good era anchor."
+    sub_criteria:
+      - id: "11.1"
+        name: "Dignity of office"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "Maintained formal presidential dignity throughout. Concealed disability with dignity rather than concealment-as-deceit. Wartime conduct exemplary."
+        evidence:
+          - citation: "Standard presidential biographies; Smith, 'FDR' (2007); contemporary press coverage"
+            source_url: "canonical"
+            source_type: academic
+            tier: 2
+            claim: "FDR established the modern model of dignified-but-accessible presidential conduct that defined the role for 60+ years."
+            direction: good
+            verification_status: pending
+      - id: "11.2"
+        name: "Rhetoric & tone"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "Era-defining oratory: First Inaugural ('the only thing we have to fear...'), Four Freedoms, Day of Infamy, Fireside Chats. Rare class-antagonism rhetoric (1936 'I welcome their hatred') was strong but within era norms."
+        evidence:
+          - citation: "First Inaugural Address, March 4, 1933; Pearl Harbor speech to Congress, December 8, 1941"
+            source_url: "canonical"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR's First Inaugural and Day-of-Infamy speeches are among the most-quoted presidential addresses in US history."
+            direction: good
+            verification_status: pending
+      - id: "11.3"
+        name: "Respect for tradition & ceremony"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Broke 2-term tradition (penalty in 8.3, not double-counted here per §4.6). Otherwise respected ceremonial conventions."
+        evidence:
+          - citation: "Inaugural ceremony records, 1933, 1937, 1941, 1945"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "FDR's four inaugurations followed standard ceremonial practice while his decision to run for and serve four terms was itself a norm break."
+            direction: harm
+            verification_status: pending
+      - id: "11.4"
+        name: "Model behavior"
+        good_score: 9
+        harm_score: 2
+        low_confidence: false
+        notes: "Modeled crisis leadership, mass communication, and executive activism for every successor. 22nd Amendment was a corrective; otherwise FDR is the modern presidential model."
+        evidence:
+          - citation: "Skowronek, 'The Politics Presidents Make' (1993); Greenstein, 'The Presidential Difference' (2009)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Presidential studies scholarship consistently identifies FDR as the model of 'reconstructive' presidential leadership that defined the modern office."
+            direction: good
+            verification_status: pending
+
+  - category: 12
+    name: "Effect on populace"
+    category_notes: "Among the highest morale-and-confidence impacts in modern presidential history. Built durable national mood from despair; created the postwar American Century framing."
+    sub_criteria:
+      - id: "12.1"
+        name: "Domestic morale & national mood"
+        good_score: 10
+        harm_score: 1
+        low_confidence: false
+        notes: "Lifted nation from 1933 despair through Fireside Chats and visible activism. Wartime morale extraordinary. Death (April 1945) was a national grief event."
+        evidence:
+          - citation: "Gallup approval ratings 1937-1945 (consistently 60-80%); contemporary memoirs and reporting on national mood"
+            source_url: "https://news.gallup.com/"
+            source_type: statistic
+            tier: 1
+            claim: "FDR maintained 60-80% Gallup approval through most of his presidency despite a decade of crisis; nationwide grief at his death indicated extraordinary morale impact."
+            direction: good
+            verification_status: pending
+      - id: "12.2"
+        name: "Social cohesion vs. division"
+        good_score: 8
+        harm_score: 2
+        low_confidence: false
+        notes: "Built coalition spanning ethnic and class divides. Some class antagonism rhetoric. Maintained Southern alliance at cost of Black civil rights — cohesion at cost of justice."
+        evidence:
+          - citation: "Gerstle, 'American Crucible: Race and Nation in the Twentieth Century' (2001)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "FDR's coalition incorporated previously-excluded immigrant Catholic and Jewish voters into the political mainstream while leaving Black voters' Southern enfranchisement unresolved."
+            direction: good
+            verification_status: pending
+      - id: "12.3"
+        name: "International standing"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "Established US as leader of liberal-democratic anti-fascist coalition; positioned US as architect of postwar order. International standing peaked at FDR's death."
+        evidence:
+          - citation: "Contemporary international press coverage; UN Charter signed June 1945 with US as host"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 1
+            claim: "By 1945, US international standing was at its zenith as both military victor and architect of the new multilateral order — both attributable substantially to FDR's wartime leadership."
+            direction: good
+            verification_status: pending
+      - id: "12.4"
+        name: "Foreign public sentiment"
+        good_score: 9
+        harm_score: 1
+        low_confidence: false
+        notes: "Beloved across Allied populations; Eleanor Roosevelt international travels reinforced. UN Declaration of Human Rights (1948) bore Roosevelt fingerprints internationally."
+        evidence:
+          - citation: "Eleanor Roosevelt's 1948-1952 UN diplomacy on Universal Declaration of Human Rights; contemporary foreign press"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "FDR-Roosevelt branding extended internationally via Eleanor's postwar UN work, cementing US soft-power leadership."
+            direction: good
+            verification_status: pending
+
+  - category: 13
+    name: "Immigration & demographics"
+    category_notes: "Era E3.1 immigration context — 1924 Johnson-Reed Act quotas in force. FDR's record is largely a failure to act: refugee admission ceilings unfilled even as the Holocaust unfolded; St. Louis incident is the defining harm."
+    sub_criteria:
+      - id: "13.1"
+        name: "Legal immigration policy"
+        good_score: 2
+        harm_score: 4
+        low_confidence: false
+        notes: "1924 Johnson-Reed quota system remained in force throughout FDR's tenure; he did not propose reform. Immigration to US fell to its lowest levels since the mid-19th century."
+        evidence:
+          - citation: "Immigration Act of 1924 (Johnson-Reed Act, Public Law 68-139) — in force throughout FDR years; INS annual reports"
+            source_url: "https://www.uscis.gov/"
+            source_type: primary_document
+            tier: 1
+            claim: "FDR did not propose or pursue significant reform of the 1924 national-origins quota system that severely restricted immigration from Southern/Eastern Europe and excluded Asians."
+            direction: harm
+            verification_status: pending
+      - id: "13.2"
+        name: "Enforcement & treatment of unauthorized migrants"
+        good_score: 2
+        harm_score: 4
+        low_confidence: true
+        notes: "Mexican repatriation of the 1930s (largely state and Hoover-administration-initiated) continued during early FDR years. ~400,000-2 million people of Mexican origin (including US citizens) returned/forced south."
+        evidence:
+          - citation: "Balderrama & Rodríguez, 'Decade of Betrayal: Mexican Repatriation in the 1930s' (2006)"
+            source_url: "canonical"
+            source_type: academic
+            tier: 1
+            claim: "Mexican repatriation programs continued during FDR's first term and were not actively halted by federal action; estimates of those forced or pressured to leave range from 400,000 to 2 million."
+            direction: harm
+            verification_status: pending
+      - id: "13.3"
+        name: "Refugee & asylum policy"
+        good_score: 1
+        harm_score: 9
+        low_confidence: false
+        notes: "Era-defining harm. Refused to expand or even fill existing quota allocations for Jewish refugees fleeing Nazi Germany. St. Louis turned away June 1939 (most passengers later died in Holocaust). Refugee admissions consistently below available quota throughout 1933-1945."
+        evidence:
+          - citation: "Voyage of the MS St. Louis, June 1939; Wyman, 'The Abandonment of the Jews: America and the Holocaust 1941-1945' (1984)"
+            source_url: "https://www.ushmm.org/"
+            source_type: historical_record
+            tier: 1
+            claim: "The MS St. Louis carrying 937 Jewish refugees was turned away from US waters in June 1939; ~254 of those passengers were subsequently killed in the Holocaust. The State Department systematically under-issued visas even within existing quotas throughout the war years."
+            direction: harm
+            verification_status: pending
+      - id: "13.4"
+        name: "Demographic and labor-market impact"
+        good_score: 2
+        harm_score: 3
+        low_confidence: true
+        notes: "Bracero Program initiated 1942 (wartime labor agreement with Mexico) — substantial economic-immigration program though with significant exploitation concerns. Otherwise low-immigration era."
+        evidence:
+          - citation: "Bracero Program executive agreement with Mexico, 1942-1964; wartime labor records"
+            source_url: "canonical"
+            source_type: historical_record
+            tier: 2
+            claim: "The 1942 Bracero Program brought ~200,000 Mexican workers to the US during WWII labor shortages; conditions for workers were poor and the program established a contested precedent."
+            direction: good
+            verification_status: pending
+
+calibration_summary:
+  good_average_across_categories: 6.8
+  harm_average_across_categories: 2.8
+  net_average_across_categories: 4.0
+  high_good_sub_criteria_count: 12  # sub-criteria scoring 9 or 10 good
+  high_harm_sub_criteria_count: 4   # sub-criteria scoring 8+ harm
+  era_contexts_invoked: ["E2.1", "E2.2", "E3.1", "E4.1", "E6.1", "E8 standard", "E9.1", "E11.1"]
+  cross_attributions_under_4_6:
+    - action: "Japanese internment (EO 9066)"
+      primary: "3.1 (Racial equity)"
+      secondary: "4.3 (Executive restraint — distinct mechanism)"
+    - action: "Court-packing plan (1937)"
+      primary: "4.3 (Executive restraint)"
+      secondary: "8.3 (Norm adherence — distinct mechanism)"
+
+reviewer_notes: |
+  FDR is one of three "high good with significant variance" anchors. The combination of transformational
+  domestic policy (5.3 = 10/1, 10.1 = 10/1, 10.3 = 10/1, 12.1 = 10/1) with major civil-liberties and
+  civil-rights failures (3.1 = 3/8, 4.3 = 2/8, 13.3 = 1/9) makes FDR the framework's most demanding
+  calibration test: the dual-axis scoring should show high good AND high harm without collapsing to a
+  midpoint. If a lens (e.g., Libertarian on 4.3, or Progressive on 13.3) significantly reweights this
+  pattern, the framework is working as designed.
