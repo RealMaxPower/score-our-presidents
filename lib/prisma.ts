@@ -26,8 +26,12 @@ function isRetryableDbError(err: unknown): boolean {
   return false;
 }
 
-const RETRY_ATTEMPTS = 3;
-const RETRY_BASE_DELAY_MS = 150;
+// Neon resume-from-scale-to-zero typically takes 1-5s, so the retry window must
+// comfortably exceed that or every attempt exhausts before the compute wakes.
+// 5 attempts with a 250ms base spans ~3.75s of back-off (250+500+1000+2000),
+// which covers a normal resume while staying well under Vercel's SSR timeout.
+const RETRY_ATTEMPTS = 5;
+const RETRY_BASE_DELAY_MS = 250;
 
 async function runWithRetry<T>(op: () => Promise<T>): Promise<T> {
   let lastErr: unknown;
