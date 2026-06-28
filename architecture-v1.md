@@ -8,6 +8,8 @@
 > **2026-05-14 deltas**: implementation is on **Next.js 15.5 / React 19** (this doc still references 14+ in diagrams; the architectural decisions all hold). Auth is wired via NextAuth.js v5 with Credentials/Google/Resend providers per §2. Audit logging is implemented as the `AuditLog` table (added beyond the original schema). Rate limiting has both Upstash and in-process modes per §9.
 >
 > **2026-05-15 deltas**: production stack swapped to **Supabase** (Postgres) and **Vercel Analytics** in place of the originally-planned Neon and Plausible. Worker hosting plan is **Fly.io** (originally Railway) but workers are not yet built or deployed. Admin surface gained an `ADMIN_TOKEN` second-factor unlock cookie on top of NextAuth + `isAdmin`. Sentry is wired via `instrumentation.ts` (no-op when DSN unset). Authoritative deploy runbook lives in [`DEPLOYMENT.md`](DEPLOYMENT.md); when this doc and that doc disagree, `DEPLOYMENT.md` is correct.
+>
+> **2026-06-27 deltas**: production Postgres moved to **Neon** (serverless; scales compute to zero when idle, so the first request after a quiet period pays a one-time resume latency) — this supersedes the 2026-05-15 Supabase note above. The pooled runtime URL is `DATABASE_URL` (Neon pooler); migrations use the direct `POSTGRES_URL_NON_POOLING` via Prisma `directUrl`. `lib/prisma.ts` retries Neon cold-start `P1001` ("Can't reach database server") with jittered back-off, and the pooled connection string should carry `connect_timeout=15`. The privacy-policy subprocessor list now names Neon. (Inline `DATABASE_URL_UNPOOLED=…` examples below predate the canonical `POSTGRES_URL_NON_POOLING` name.) See [`DEPLOYMENT.md`](DEPLOYMENT.md) for the live setup.
 
 ---
 

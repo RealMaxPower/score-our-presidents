@@ -248,7 +248,7 @@ export default function PrivacyPage() {
             and cookieless aggregate page analytics (Vercel Analytics).
           </li>
           <li>
-            <strong>Supabase</strong> — managed PostgreSQL for account and
+            <strong>Neon</strong> — managed PostgreSQL for account and
             scoring data.
           </li>
           <li>
