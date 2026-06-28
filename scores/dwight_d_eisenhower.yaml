@@ -26,7 +26,14 @@ categories:
             tier: 1
             claim: "Eight-year unemployment average ~5%; three recessions (1953-54, 1957-58, 1960-61) but cumulative real GDP growth ~22% across the term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "BLS/NBER/BEA data confirm all specifics: ~4.9% 8-yr unemployment avg, NBER-dated recessions of 1953-54, 1957-58, 1960-61, and ~2.99% annualized real GDP growth implying ~21-24% cumulative term growth (~22% is accurate)."
+              suggested_fix: "For a deep BLS link to the unemployment series, cite https://data.bls.gov/timeseries/LNU04000000 (annual averages 1953-1961); GDP levels: FRED GDPCA https://fred.stlouisfed.org/series/GDPCA"
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 7
@@ -40,7 +47,14 @@ categories:
             tier: 1
             claim: "Top-decile income share remained at ~33% during the Eisenhower years, near the Great Compression nadir."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Piketty-Saez (\"Striking It Richer\") state the top decile share fell to just above 32.5% in WWII and \"stayed fairly stable around 33 percent until the 1970s,\" squarely covering Eisenhower's 1953-1961 plateau near the Great Compression nadir."
+              suggested_fix: "https://eml.berkeley.edu/~saez/saez-UStopincomes-2022.pdf"
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 8
@@ -54,7 +68,14 @@ categories:
             tier: 1
             claim: "Eisenhower achieved balanced budgets in three of eight fiscal years and reduced debt-to-GDP ratio by ~15 percentage points."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "OMB/American Presidency Project data confirm surpluses in FY1956, 1957, 1960 (three of eight years), and gross debt-to-GDP fell ~70%→54% (~15.8 pts), matching the ~15-point claim."
+              suggested_fix: "Use deep links: OMB Hist. Table 1.1 (surpluses/deficits) and Table 7.1 (debt as % GDP) at https://www.whitehouse.gov/omb/budget/historical-tables/ ; e.g. https://obamawhitehouse.archives.gov/omb/budget/Historicals/"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 7
@@ -68,7 +89,14 @@ categories:
             tier: 1
             claim: "US union density peaked at ~33% during Eisenhower years; real median wages grew ~25% across the term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "US union density did peak at 33.5% in 1954 (all-time high, within Eisenhower's term); Census P-60 constant-dollar data shows real median family income rose ~$4,600 (1953) to $5,759 (1960), about +25%, though the claim says \"wages\" where the matching data is family income."
+              suggested_fix: "For union density use https://www.bls.gov/news.release/union2.htm (and Census P-60 No. 41, https://www2.census.gov/library/publications/1963/demographics/p60-41.pdf, for the constant-dollar median family income series); note \"wages\" should read \"median family income.\""
 
   - category: 2
     name: "Foreign policy & war"
@@ -88,7 +116,14 @@ categories:
             tier: 1
             claim: "Eisenhower ended the Korean War and declined to commit US forces to save the French in Indochina, choosing restraint where his advisors and Vice President urged escalation."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept, Eisenhower Library, and Miller Center confirm the July 27, 1953 Korean armistice and Eisenhower's 1954 refusal to commit US forces at Dien Bien Phu despite VP Nixon and Adm. Radford urging escalation."
+              suggested_fix: "https://history.state.gov/milestones/1953-1960/dien-bien-phu"
       - id: "2.2"
         name: "Alliance management"
         good_score: 7
@@ -102,7 +137,14 @@ categories:
             tier: 1
             claim: "Built alliance architecture across Asia and Middle East (SEATO, CENTO, Eisenhower Doctrine) extending Truman-era containment framework."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept and Wikipedia confirm SEATO (Sept 1954), Baghdad Pact/CENTO, and the Eisenhower Doctrine (joint resolution, signed Mar 1957) as Eisenhower-era containment alliances; only nuance is the US was a CENTO backer, not formal member."
+              suggested_fix: "https://history.state.gov/milestones/1953-1960/eisenhower-doctrine"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 7
@@ -116,7 +158,14 @@ categories:
             tier: 1
             claim: "Atoms for Peace speech launched IAEA framework and reshaped global nuclear policy through civilian-use framing."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower's Dec 8, 1953 UN \"Atoms for Peace\" speech proposed an \"international atomic energy agency,\" reframed nuclear tech around civilian uses, and provided the ideological foundation for the IAEA (founded 1957); date and substance are accurate."
+              suggested_fix: "https://www.iaea.org/about/history/atoms-for-peace-speech"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 4
@@ -131,7 +180,14 @@ categories:
             tier: 1
             claim: "Two declassified CIA-led coups (Iran 1953, Guatemala 1954) overthrew elected governments and installed authoritarian regimes; both led to decades of subsequent civil conflict and anti-US sentiment in target regions."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Declassified CIA/FRUS records confirm both Eisenhower-era coups (Iran 1953/Ajax, Guatemala 1954/PBSUCCESS) overthrew elected leaders, installed authoritarian regimes, and fueled lasting anti-US sentiment; \"civil conflict\" fits Guatemala's 1960-1996 war squarely but is looser for Iran (Shah autocracy/1979 revolution rather than civil war)."
+              suggested_fix: "https://history.state.gov/historicaldocuments/frus1952-54Iran"
 
   - category: 3
     name: "Civil rights & equality"
@@ -151,7 +207,14 @@ categories:
             tier: 1
             claim: "Eisenhower deployed the 101st Airborne to Little Rock Central High to enforce school desegregation; first president since Reconstruction to use federal troops to enforce civil rights."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "National Archives confirms EO 10730 (signed Sept 24, 1957) deployed ~1,000 101st Airborne paratroopers to Little Rock Central High to enforce desegregation, and NMAAHC/NPS/History sources confirm Eisenhower was the first president since Reconstruction to send federal troops to protect African Americans' rights."
+              suggested_fix: "Replace bare homepage with deep link: https://www.archives.gov/milestone-documents/executive-order-10730"
       - id: "3.2"
         name: "Gender equity"
         good_score: 4
@@ -159,13 +222,19 @@ categories:
         low_confidence: true
         notes: "Era-typical. Equal Pay legislation not enacted (came under Kennedy). Era of suburban-domesticity cultural norm."
         evidence:
-          - citation: "Era women's labor-force participation data (BLS); Goldin, 'Understanding the Gender Gap' (1990)"
+          - citation: "Era women's labor-force participation data (BLS, https://www.bls.gov/opub/ted/2000/feb/wk3/art03.htm); Goldin, 'Understanding the Gender Gap' (1990)"
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "Women's labor-force participation flat at ~32-34% during Eisenhower years; no major federal gender-equity legislation."
+            claim: "Women's labor-force participation rose gradually from ~33.9% (1950) to 37.7% (1960) during Eisenhower years; no major federal gender-equity legislation."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the incorrect \"flat at ~32-34%\" labor-force figure with the accurate gradual rise from ~33.9% (1950) to 37.7% (1960) and added the supporting BLS URL to the citation."
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 0
@@ -173,13 +242,19 @@ categories:
         low_confidence: false
         notes: "Executive Order 10450 (April 1953) formalized federal employment ban on 'sexual perverts' — codified Lavender Scare logic that persisted until 1995. Continued purges of gay federal employees."
         evidence:
-          - citation: "Executive Order 10450, signed April 27, 1953"
+          - citation: "Executive Order 10450, signed April 27, 1953 (Sec. 8(a)(1)(iii)); not formally revoked until EO 13764 (2017)"
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "EO 10450 explicitly enumerated 'sexual perversion' as grounds for federal employment denial; this federal anti-LGBTQ employment policy persisted continuously until rescinded by EO 12968 in 1995."
+            claim: "EO 10450 explicitly enumerated 'sexual perversion' (Sec. 8(a)(1)(iii)) as grounds for denial of federal employment; this federal anti-LGBTQ employment policy persisted for decades and was not formally revoked until EO 13764 (2017), with EO 13087 (1998) barring sexual-orientation discrimination in the federal workforce."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected rescission: EO 10450 was not repealed by EO 12968 (1995) but by EO 13764 (2017); EO 13087 (1998) added employment protection. 'Sexual perversion' confirmed in Sec. 8(a)(1)(iii)."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 4
@@ -193,7 +268,14 @@ categories:
             tier: 2
             claim: "1954 amendments expanded federal disability rehabilitation services modestly; pre-modern disability rights framework."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower signed the Vocational Rehabilitation Amendments of 1954 (PL 83-565) on Aug 3, 1954, expanding federal disability rehabilitation services (funding, research/training grants); calling it \"modest\" understates its scale but is defensible against the pre-civil-rights framework noted in the claim."
+              suggested_fix: "https://www.congress.gov/bill/83rd-congress/senate-bill/2759/titles"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 1
@@ -205,10 +287,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Termination policy formally inaugurated by HCR 108 led to the federal termination of 109 tribes between 1953-1968, with severe economic and cultural consequences; reversed by Indian Self-Determination Act 1975."
+            claim: "Termination policy formally inaugurated by HCR 108 led to the federal termination of 109 tribes between 1953-1964, with severe economic and cultural consequences; reversed by Indian Self-Determination Act 1975."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the date range for the 109-tribes figure from 1953-1968 to its standard scholarly window of 1953-1964."
   - category: 4
     name: "Civil liberties & rule of law"
     category_notes: "Era E4.2 Cold War surveillance. McCarthyism receded under Eisenhower's quiet resistance; he never named McCarthy publicly but undercut him. COINTELPRO began (1956). U-2 cover-up was the major transparency failure."
@@ -226,7 +313,14 @@ categories:
             tier: 2
             claim: "Eisenhower's 'hidden hand' anti-McCarthy strategy never publicly named McCarthy but starved his investigations of executive cooperation; McCarthy was censured December 1954."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Greenstein's \"hidden hand\" thesis, Ike's documented refusal to publicly name McCarthy, his executive-privilege denial of cooperation, the Dec 2, 1954 censure (67-22), and the Yates 354 U.S. 298 (1957) Smith Act narrowing are all accurate; only nuance is the final resolution worded \"condemn,\" still universally called the censure."
+              suggested_fix: "https://www.senate.gov/about/powers-procedures/censure/133Joseph_McCarthy.htm"
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 2
@@ -234,13 +328,19 @@ categories:
         low_confidence: false
         notes: "COINTELPRO authorized (1956) — FBI political surveillance program targeting CPUSA, then expanded over decades. CIA covert operations expanded. NSA established (1952, Truman) but expanded under Eisenhower."
         evidence:
-          - citation: "FBI COINTELPRO initiation, August 28, 1956 internal memo (declassified via Church Committee)"
+          - citation: "FBI COINTELPRO initiation, August 28, 1956 internal memo (declassified via Church Committee, https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf)"
             source_url: "https://vault.fbi.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Hoover initiated COINTELPRO in August 1956 with Eisenhower administration awareness; program ultimately targeted civil rights, anti-war, and various political movements for 15+ years."
+            claim: "Hoover initiated COINTELPRO in August 1956 as a covert FBI program (presidential or Cabinet awareness of it specifically is not documented); program ultimately targeted civil rights, anti-war, and various political movements for 15+ years."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the unsupported \"with Eisenhower administration awareness\" to note that COINTELPRO was a covert FBI program whose presidential/Cabinet awareness is not documented, and added the Church Committee deep-link URL to the citation."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 6
@@ -248,13 +348,19 @@ categories:
         low_confidence: false
         notes: "Generally restrained. No undeclared major wars. Refused Dulles/Nixon pressure for nuclear weapons or escalation at multiple junctures. EO 10450 expansion was the principal overreach."
         evidence:
-          - citation: "NSC meetings on Indochina 1954 (declassified); Suez crisis NSC records 1956"
+          - citation: "NSC meetings on Indochina 1954 (declassified); Suez crisis NSC records 1956; https://history.state.gov/milestones/1953-1960/suez"
             source_url: "https://history.state.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Eisenhower repeatedly resisted Dulles, Nixon, and military pressure for escalation in Indochina (1954), Hungary (1956), and Suez (1956)."
+            claim: "Eisenhower repeatedly resisted pressure for escalation: from Dulles and Nixon in Indochina (1954), and from allied and Cold War escalation pressure in Hungary (1956) and Suez (1956)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Scoped the \"Dulles and Nixon\" escalation-pressure attribution to Indochina 1954 and reframed Hungary/Suez as resisting allied and Cold War pressure, and added the State Department Suez milestone deep link to the citation."
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 4
@@ -268,7 +374,14 @@ categories:
             tier: 1
             claim: "Eisenhower's initial denial of U-2 overflight programs, then admission after Soviet display of pilot Powers, was a major presidential transparency failure that contributed to the failed Paris Summit and ongoing public-vs-government credibility gap."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept, Eisenhower Library, and NPS confirm the U-2 was downed May 1, 1960, the US gave a false NASA weather-plane cover story, Eisenhower admitted the espionage program on May 11, 1960 after Soviets displayed pilot Powers, and the fallout collapsed the Paris Summit."
+              suggested_fix: "For a deep link instead of the bare homepage, use https://www.eisenhowerlibrary.gov/research/online-documents/u-2-spy-plane-incident or https://history.state.gov/milestones/1953-1960/u2-incident"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -287,7 +400,14 @@ categories:
             tier: 1
             claim: "Eisenhower's HEW creation and polio-vaccine federal program substantially expanded federal health infrastructure; polio cases fell from 35,000 (1953) to ~3,000 (1960)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "HEW (Reorg Plan No.1, 1953) and the Poliomyelitis Vaccination Assistance Act (PL 84-377, Aug 12 1955) are accurate; US polio cases were ~35,000 in 1953 and the cited ~3,000 for 1960 matches the authoritative figure of 2,525 (slightly rounded up)."
+              suggested_fix: "Tighten the 1960 figure to ~2,500 (CDC/OWID report 2,525) and deep-link e.g. https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-18-poliomyelitis.html."
       - id: "5.2"
         name: "Education"
         good_score: 7
@@ -295,13 +415,19 @@ categories:
         low_confidence: false
         notes: "National Defense Education Act (1958), passed in Sputnik response, made first major federal investment in K-12 STEM education and higher-ed loans. School Lunch Program expanded."
         evidence:
-          - citation: "National Defense Education Act, Public Law 85-864 (September 2, 1958)"
+          - citation: "National Defense Education Act, Public Law 85-864 (September 2, 1958), 72 Stat. 1580, https://www.govinfo.gov/content/pkg/STATUTE-72/pdf/STATUTE-72-Pg1580.pdf"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "NDEA committed $1 billion+ over 4 years to math/science/foreign-language education and student loans; first major federal K-12 investment outside the GI Bill."
+            claim: "NDEA committed $1 billion+ over 4 years to math/science/foreign-language education and student loans; first major comprehensive federal education investment since the Smith-Hughes Vocational Education Act of 1917."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the imprecise \"first major federal K-12 investment outside the GI Bill\" framing with \"first major comprehensive federal education investment since the Smith-Hughes Vocational Education Act of 1917\" and added the govinfo deep link to the citation."
       - id: "5.3"
         name: "Safety net"
         good_score: 7
@@ -313,9 +439,15 @@ categories:
             source_url: "https://www.ssa.gov/history/"
             source_type: primary_document
             tier: 1
-            claim: "1956 Amendments created Social Security Disability Insurance, expanding the federal disability safety net for working Americans under 65."
+            claim: "1956 Amendments created Social Security Disability Insurance, expanding the federal disability safety net for disabled workers aged 50-64."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the overstated \"for working Americans under 65\" with the original 1956 scope, \"for disabled workers aged 50-64.\""
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 6
@@ -329,7 +461,14 @@ categories:
             tier: 1
             claim: "Federal-Aid Highway Act funded ~$25B in interstate construction over a decade, enabling suburban expansion but also destroying urban (often Black) neighborhoods in many cities."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Federal-Aid Highway Act of 1956 (PL 84-627, signed by Eisenhower) authorized $25B for ~41,000 mi of interstates over a 10-year period; authoritative sources confirm it spurred suburban growth while displacing ~1M people, disproportionately Black urban neighborhoods."
+              suggested_fix: "https://en.wikipedia.org/wiki/Federal-Aid_Highway_Act_of_1956"
 
   - category: 6
     name: "Environmental stewardship"
@@ -355,7 +494,14 @@ categories:
             tier: 1
             claim: "1955 Air Pollution Control Act and 1956 Water Pollution Control Act amendments established the federal research infrastructure later expanded into EPA regulation in 1970."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PL 84-159 (Air Pollution Control Act, July 1955) and PL 84-660 (Water Pollution Control Act Amendments, signed by Eisenhower July 9, 1956) both created federal research/technical-assistance roles, and EPA's own history confirms this foundation was expanded into regulation under the 1970 Clean Air Act and the EPA created Dec 2, 1970."
+              suggested_fix: "https://www.epa.gov/clean-air-act-overview/evolution-clean-air-act"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 6
@@ -369,7 +515,14 @@ categories:
             tier: 2
             claim: "Mission 66 (1956-1966) was a 10-year, $1B program to modernize and expand the National Park System for the agency's 50th anniversary."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NPS confirms Mission 66 ran 1956-1966 as a 10-year, ~$1B program (final spend ~$985M) to modernize/expand the park system timed to the NPS's 50th anniversary; launched under Eisenhower via Director Wirth, so the claim is accurate as stated."
+              suggested_fix: "Use deep link https://www.nps.gov/articles/000/mission-66.htm instead of the bare nps.gov homepage; note the Cape Hatteras detail is secondary (established as first national seashore in 1953, authorized 1937)."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 5
@@ -383,7 +536,14 @@ categories:
             tier: 2
             claim: "USFWS designated several new refuges and expanded existing ones; era-typical conservation pace."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower's USFWS designated several new refuges (Arctic ~9M-acre and Izembek ~498k-acre ranges both Dec 6, 1960; Great Swamp NWR 1960), supporting the modest claim, though those Alaska acts were actually larger than \"era-typical.\""
+              suggested_fix: "https://en.wikipedia.org/wiki/History_of_the_National_Wildlife_Refuge_System"
 
   - category: 7
     name: "Crisis management"
@@ -402,7 +562,14 @@ categories:
             tier: 1
             claim: "Eisenhower achieved Korean armistice within 7 months of taking office, fulfilling 'I shall go to Korea' campaign pledge."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower inaugurated Jan 20, 1953; Korean armistice signed July 27, 1953 (~6 months, within 7 months as NPS states), fulfilling his Oct 24, 1952 \"I shall go to Korea\" pledge—all verified by NPS and Eisenhower Library."
+              suggested_fix: "https://www.nps.gov/articles/000/eisenhower-and-the-korean-war-armistice.htm"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 7
@@ -410,13 +577,19 @@ categories:
         low_confidence: false
         notes: "Korea ended; Suez crisis defused; Lebanon 1958 stabilized; Brown enforcement initiated. Sherman Adams scandal (1958) mishandled but no major effectiveness failure."
         evidence:
-          - citation: "Suez Crisis resolution (October-November 1956); US economic pressure on UK forcing withdrawal"
+          - citation: "Suez Crisis resolution (October-November 1956); US economic pressure on UK forcing withdrawal; FRUS 1955-1957, Vol. XVI: https://history.state.gov/historicaldocuments/frus1955-57v16"
             source_url: "https://history.state.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Eisenhower deployed financial pressure (Sterling crisis threat) to force UK/France/Israel withdrawal from Suez, ending the crisis without military escalation."
+            claim: "Eisenhower deployed financial pressure (Sterling crisis threat) to force UK/France withdrawal from Suez (ceasefire Nov 1956), ending the crisis without military escalation; Israel withdrew later (Mar 1957) under separate US aid-cutoff/sanctions pressure."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Split the claim so the sterling threat forces UK/France withdrawal while Israel's later 1957 withdrawal is attributed to separate US aid-cutoff/sanctions pressure, and added the FRUS deep-link to the citation."
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 5
@@ -430,7 +603,14 @@ categories:
             tier: 1
             claim: "Eisenhower's initial 'weather plane' cover story for the U-2 shootdown was abandoned within 10 days when Khrushchev produced pilot Powers; the lying-then-admission damaged the Paris Summit and US credibility."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the weather/research cover story (May 5), Khrushchev's reveal of a live Powers (May 7) collapsing it, Eisenhower's admission (May 11, ~10 days post-shootdown), and resulting Paris Summit collapse and credibility damage."
+              suggested_fix: "Deep link: https://history.state.gov/milestones/1953-1960/u2-incident"
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 5
@@ -444,7 +624,14 @@ categories:
             tier: 1
             claim: "CIA-supported coups in Iran (1953) and Guatemala (1954) produced multi-decade destabilization and anti-US sentiment, with Iran's 1979 Revolution and Guatemala's 36-year civil war directly traceable."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower authorized CIA Operation Ajax (Iran 1953) and PBSuccess (Guatemala 1954); historians widely agree the 1953 coup \"sowed the seeds\" for Iran's 1979 Revolution and attribute Guatemala's 1960-1996 civil war (36 years) to the 1954 coup, with lasting anti-US sentiment in both regions."
+              suggested_fix: "Deep links for the offline \"canonical\" source: https://en.wikipedia.org/wiki/1953_Iranian_coup_d'%C3%A9tat and https://en.wikipedia.org/wiki/1954_Guatemalan_coup_d'%C3%A9tat"
 
   - category: 8
     name: "Institutional integrity"
@@ -461,9 +648,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "No significant personal financial impropriety identified by contemporary or subsequent scholarship; Eisenhower maintained pre-modern standards of office conduct."
+            claim: "No major personal-finance scandal identified by contemporary or subsequent scholarship, though his pre-presidential book-royalty tax ruling and acceptance of farm gifts drew contemporary criticism; Eisenhower maintained pre-modern standards of office conduct."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the absolute \"no significant impropriety/none identified\" framing to acknowledge the contemporary criticism of his book-royalty tax ruling and acceptance of farm gifts, per the note."
       - id: "8.2"
         name: "Administration ethics"
         good_score: 6
@@ -477,7 +670,14 @@ categories:
             tier: 1
             claim: "Sherman Adams, Eisenhower's chief of staff, resigned after House investigation revealed gifts from textile manufacturer under FTC investigation — the only major scandal of the administration."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Sherman Adams, Eisenhower's chief of staff, did resign after the House Special Subcommittee on Legislative Oversight (Jun-Sep 1958) revealed gifts (vicuna coat, oriental rug) from Boston textile maker Bernard Goldfine, who was under FTC investigation; Adams tendered his resignation Sept 22, 1958 (effective Oct 7), and it is widely cited as the administration's only major scandal."
+              suggested_fix: "https://en.wikipedia.org/wiki/Sherman_Adams"
       - id: "8.3"
         name: "Norm adherence"
         good_score: 7
@@ -491,7 +691,14 @@ categories:
             tier: 1
             claim: "Eisenhower respected 22nd Amendment term limits and executed orderly transition to Kennedy administration despite party defeat."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower was the first president bound by the 22nd Amendment, served two terms and left office Jan 20, 1961, and his administration cooperatively facilitated an orderly transition (telegrams, liaison Persons/Clifford, Dec 6 & Jan 19 meetings, CIA/State briefings) to Kennedy despite Nixon's GOP loss."
+              suggested_fix: "https://en.wikipedia.org/wiki/Presidential_transition_of_John_F._Kennedy"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
@@ -505,7 +712,14 @@ categories:
             tier: 1
             claim: "Eisenhower's SCOTUS appointments included two transformational justices (Warren, Brennan) plus high-quality Harlan and Stewart; among the strongest cohorts of the 20th century."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Eisenhower did appoint Warren and Brennan (both universally rated transformational/most-influential of the 20th C) plus the highly respected Harlan II and Stewart, making it one of the century's strongest cohorts; only nuance is that Blaustein-Mersky (1970) cleanly rates Warren \"great\" while the others rest on broader scholarly esteem."
+              suggested_fix: "https://en.wikipedia.org/wiki/Dwight_D._Eisenhower_Supreme_Court_candidates"
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 6
@@ -513,13 +727,19 @@ categories:
         low_confidence: false
         notes: "Selection process more professionalized than Truman's. Warren's appointment driven partly by political debt (1952 California delegation). Otherwise merit-based."
         evidence:
-          - citation: "Eisenhower-Brownell correspondence on SCOTUS selection (declassified); contemporary accounts"
+          - citation: "Eisenhower-Brownell correspondence on SCOTUS selection (declassified); contemporary accounts; https://en.wikipedia.org/wiki/Dwight_D._Eisenhower_Supreme_Court_candidates"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "AG Herbert Brownell organized merit-based SCOTUS selection processes; Warren appointment was politically motivated but qualifications were sound."
+            claim: "AG Herbert Brownell organized SCOTUS selection processes with some merit screening (ABA review, FBI vetting), though the guiding principle was ideological/partisan balance; Warren appointment was politically motivated but qualifications were sound."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"merit-based\" framing to reflect that Brownell's process used some merit screening but was guided by ideological/partisan balance, and added the Wikipedia source URL to the citation."
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 4
@@ -528,13 +748,19 @@ categories:
         era_context: "Era-relative scoring — Warren Court activism perceived from Eisenhower's intended restraint"
         notes: "Eisenhower intended restraint-oriented justices; Warren and Brennan delivered activist rulings (Brown, Reynolds v. Sims, Miranda etc.). Famously called Warren appointment 'biggest damn-fool mistake.' Scoring against intent vs. outcome."
         evidence:
-          - citation: "Eisenhower's later reflections on Warren and Brennan appointments (memoirs, 1965)"
+          - citation: "Eisenhower's reported reflections on the Warren and Brennan appointments (anecdotal, ~1961); see https://en.wikipedia.org/wiki/Earl_Warren and Baker v. Carr (1962), NYT v. Sullivan (1964) for Brennan's activist opinions"
             source_url: "canonical"
             source_type: primary_document
             tier: 1
-            claim: "Eisenhower publicly described Warren and Brennan appointments as his biggest mistakes; both delivered defining 'activist' Warren Court rulings against Eisenhower's stated restraint preference."
+            claim: "Eisenhower reportedly described his Warren and Brennan appointments as mistakes (anecdotal remark, ~1961); both delivered defining 'activist' Warren Court rulings against Eisenhower's stated restraint preference."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened \"publicly described...biggest mistakes\" to a reported anecdotal remark (~1961) and replaced the incorrect \"memoirs, 1965\" citation with the Earl Warren reference plus Brennan's activist opinions."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 7
@@ -542,14 +768,19 @@ categories:
         low_confidence: false
         notes: "All five SCOTUS confirmations proceeded smoothly. Pre-modern confirmation politics."
         evidence:
-          - citation: "Senate confirmation records, 1954-1958"
+          - citation: "Senate confirmation records, 1954-1959; https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm"
             source_url: "https://www.senate.gov/"
             source_type: historical_record
             tier: 2
-            claim: "All five Eisenhower SCOTUS confirmations proceeded with broad bipartisan support; no significant opposition."
+            claim: "All five Eisenhower SCOTUS confirmations succeeded, three by voice vote, though Harlan (71-11) and Stewart (70-17) faced notable Southern Democratic opposition tied to desegregation."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the false \"no significant opposition\" claim to note Harlan and Stewart faced Southern Democratic opposition, and fixed the citation date range (to 1959) plus added the Senate source URL."
   - category: 9
     name: "Democratic health"
     category_notes: "Era E9.1 New Deal coalition late period. Consensus-era politics generally. Civil rights enforcement strong (Little Rock). McCarthyism declined under Eisenhower."
@@ -567,7 +798,14 @@ categories:
             tier: 1
             claim: "First civil rights legislation since Reconstruction; both Acts were substantially weakened in Senate conference but established federal voting-rights enforcement infrastructure."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PL 85-315 (1957) was the first civil-rights law since Reconstruction, substantially weakened in the Senate (Anderson-Aiken removed Title III, O'Mahoney jury-trial amendment) yet created the Civil Rights Commission/DOJ Civil Rights Division; PL 86-449 (1960) added voting referees—all citations accurate, though \"Senate conference\" loosely describes Senate-floor amendments."
+              suggested_fix: "For deep links: https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1957 and https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1960 ; phrase \"weakened on the Senate floor\" rather than \"in Senate conference.\""
       - id: "9.2"
         name: "Press relationship"
         good_score: 6
@@ -581,7 +819,14 @@ categories:
             tier: 1
             claim: "Eisenhower held first televised presidential press conference in January 1955, establishing the modern presidential-press-television relationship."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources (PBS NewsHour, White House Historical Association, C-SPAN) confirm Eisenhower held the first televised presidential press conference on January 19, 1955, establishing television's role in the presidential-press relationship; footage was filmed/edited not live, but the claim doesn't assert \"live.\""
+              suggested_fix: "https://www.eisenhowerlibrary.gov/research/online-documents/press-conferences (or White House Historical Association: https://www.whitehousehistory.org/presidential-press-conferences) for a specific deep link rather than the bare homepage."
       - id: "9.3"
         name: "Political violence"
         good_score: 7
@@ -595,7 +840,14 @@ categories:
             tier: 1
             claim: "Eisenhower deployed federal troops to enforce desegregation against state-organized resistance, the first such use since Reconstruction."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "National Archives confirms EO 10730 (Sept 24, 1957) federalized the Arkansas National Guard and sent the 101st Airborne to enforce desegregation against Gov. Faubus's resistance; NPS confirms the \"not seen since Reconstruction\" framing."
+              suggested_fix: "https://www.archives.gov/milestone-documents/executive-order-10730"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 7
@@ -609,7 +861,14 @@ categories:
             tier: 1
             claim: "Eisenhower won 41 of 48 states in 1956 with substantial Democratic crossover support; era of low partisan polarization."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: Eisenhower won 41 of 48 states in 1956 (Stevenson 7), 57.4% popular vote with documented Democratic crossover (white ethnics, Southern whites, ~40% Black vote), and the 1950s are well-established as a low-polarization, high-bipartisanship era."
+              suggested_fix: "https://en.wikipedia.org/wiki/1956_United_States_presidential_election"
 
   - category: 10
     name: "Long-tail consequences"
@@ -628,7 +887,14 @@ categories:
             tier: 1
             claim: "Interstate Highway System (46,000+ miles), SSDI, and NASA — all created or substantially shaped under Eisenhower — remain operational 65+ years later."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three programs verified: Eisenhower signed the 1956 Highway Act (Interstate now 46,700+ mi), 1956 SSDI amendments, and 1958 NASA Act; all remain operational 68-70 years later, matching the \"65+ years\" claim."
+              suggested_fix: "Replace bare FHWA homepage with deep link: https://www.fhwa.dot.gov/programadmin/interstate.cfm (and SSA.gov/history, NASA.gov/history for SSDI and NASA)."
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 3
@@ -636,13 +902,19 @@ categories:
         low_confidence: false
         notes: "Federal LGBTQ employment ban (EO 10450) persisted 42 years. Termination policy harmed tribes for 22 years. CIA covert-operations infrastructure built for ongoing covert-action use."
         evidence:
-          - citation: "EO 10450 effective 1953-1995; Indian Self-Determination Act 1975 reversing termination"
+          - citation: "EO 10450 effective from 1953, anti-LGBTQ employment exclusion eroded mid-1970s and formally repealed by EO 13087 (1998); Indian Self-Determination Act 1975 reversing termination. https://en.wikipedia.org/wiki/Executive_Order_10450 https://en.wikipedia.org/wiki/Indian_termination_policy"
             source_url: "canonical"
             source_type: primary_document
             tier: 1
-            claim: "Federal anti-LGBTQ employment policy (EO 10450) operated continuously from 1953 to 1995; tribal termination policy operated from 1953 to 1975, terminating 109 tribes."
+            claim: "Federal anti-LGBTQ employment policy (EO 10450) began in 1953 and, though eroded by courts and the Civil Service Commission in the mid-1970s, was not formally repealed until EO 13087 in 1998; tribal termination policy operated from 1953 to 1975, terminating 109 tribes."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the overstated EO 10450 end date, replacing \"continuously from 1953 to 1995\" with its erosion in the mid-1970s and formal repeal by EO 13087 in 1998, and updated the citation accordingly; the tribal half is unchanged."
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 8
@@ -656,7 +928,14 @@ categories:
             tier: 1
             claim: "Suburban share of US population rose from ~23% (1950) to ~30% (1960) during the Eisenhower years, enabled by Highway Act and FHA continuation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census Bureau confirms 23.3% suburban share in 1950, and academic sources (American Yawp) confirm 30.7% by 1960, with the Interstate Highway System and FHA loans explicitly credited as drivers—matching the ~23%-to-~30% claim during Eisenhower's years."
+              suggested_fix: "For a deep link confirming the 1950 figure: https://www.census.gov/library/stories/2022/03/1950-census-records-window-to-history.html (states \"23.3% living in suburbs\"); the 30.7% 1960 figure is best sourced from American Yawp."
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 4
@@ -670,7 +949,14 @@ categories:
             tier: 1
             claim: "Two Eisenhower-era CIA coups produced decades-long destabilization: Iran's 1979 Revolution and 36-year Guatemala civil war (~200,000 dead) are both directly traceable to 1953-54 covert actions."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both Eisenhower-era coups are verified: the 1953 Iran coup (Operation Ajax, Eisenhower-approved) is widely held to have sown seeds of the 1979 Revolution, and the 1954 Guatemala coup (PBSUCCESS) led to the 1960-1996 (~36-year) civil war with the UN CEH commission's ~200,000 dead figure."
+              suggested_fix: "For a deep authoritative source on the Guatemala death toll, cite the UN Commission for Historical Clarification (CEH) \"Guatemala: Memory of Silence\" report (1999); for Iran, the National Security Archive's declassified 1953 coup history."
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -689,7 +975,14 @@ categories:
             tier: 1
             claim: "Eisenhower modeled an era-defining presidential dignity grounded in military command experience; broadly considered one of the most dignified presidents in office."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Britannica, Miller Center, and Wikipedia confirm Eisenhower drew dignity/stature from his WWII supreme-command role and \"vigorously maintained an air of optimistic dignity\"; the \"most dignified\" superlative is interpretive but consistent with his high moral-authority standing and growing legacy."
+              suggested_fix: "https://millercenter.org/president/eisenhower/impact-and-legacy"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 8
@@ -703,10 +996,17 @@ categories:
             tier: 1
             claim: "Eisenhower's farewell address warning about the 'military-industrial complex' is among the most quoted presidential addresses; introduced enduring political-economy concept to public discourse."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Eisenhower's Jan 17, 1961 farewell address introduced/popularized the \"military-industrial complex\" phrase, is among the most quoted/significant presidential addresses, and the concept endures in political discourse."
+              suggested_fix: "Deep link: https://www.eisenhowerlibrary.gov/research/online-documents/farewell-address"
       - id: "11.3"
         name: "Respect for tradition & ceremony"
-        good_score: 8
+        good_score: 6
         harm_score: 1
         low_confidence: false
         notes: "Strong observance of ceremonial duties. State funerals, inaugurations, foreign visits handled with consistent gravitas."
@@ -715,9 +1015,15 @@ categories:
             source_url: "https://www.eisenhowerlibrary.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Eisenhower's ceremonial conduct set the modern template for state funerals, foreign-leader receptions, and ceremonial duties."
+            claim: "Eisenhower maintained formal, dignified ceremonial conduct in office (state functions, foreign-leader receptions); the modern templates for presidential state funerals and arrival ceremonies are more commonly credited to Lincoln and Kennedy."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Template-setting credited to Lincoln/Kennedy, not Eisenhower. Score adjusted per review: good 8->6 (dignified conduct, not era-defining template-setting)."
       - id: "11.4"
         name: "Model behavior"
         good_score: 9
@@ -729,10 +1035,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Greenstein and other presidential scholars consistently identify Eisenhower's 'hidden-hand' leadership style as a major influence on subsequent presidential conduct."
+            claim: "Greenstein and other presidential scholars identify Eisenhower's 'hidden-hand' leadership style as a major influence on the scholarly understanding and reassessment of presidential leadership."
             direction: good
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstatement by reframing the 'hidden-hand' style as an influence on scholarly understanding of presidential leadership rather than on subsequent presidential conduct, and removed \"consistently.\""
   - category: 12
     name: "Effect on populace"
     category_notes: "'I Like Ike' era of high domestic morale and broad popularity. Cold War tension constant background but managed. International standing strong."
@@ -750,7 +1061,14 @@ categories:
             tier: 1
             claim: "Eisenhower averaged ~65% Gallup approval across his presidency, one of the highest term-averaged approvals on record."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup/Wikipedia term-average data confirm Eisenhower averaged ~65% approval (1953-1961), second-highest of the Gallup era behind only Kennedy (70%), so \"one of the highest term-averaged approvals\" holds."
+              suggested_fix: "Replace bare homepage with deep link: https://news.gallup.com/poll/116677/presidential-approval-ratings-gallup-historical-statistics-trends.aspx"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 6
@@ -764,7 +1082,14 @@ categories:
             tier: 2
             claim: "Eisenhower-era US showed high social cohesion by most measures (church attendance, civic participation) while civil rights and counterculture pressures emerged at the margins."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Eisenhower-era peak social cohesion: Gallup weekly church attendance ~49% (1955-58, highest ever) and church membership rising 57%→63.3%, union membership peaking ~32.5%, with civil rights (Brown 1954, Montgomery 1955, Little Rock 1957) and the Beat counterculture genuinely emerging at the margins."
+              suggested_fix: "For the offline \"canonical\" source, a concrete deep link is https://news.gallup.com/poll/166613/four-report-attending-church-last-week.aspx (Gallup historical church attendance) plus Putnam's \"Bowling Alone\" (Journal of Democracy 1995)."
       - id: "12.3"
         name: "International standing"
         good_score: 7
@@ -778,7 +1103,14 @@ categories:
             tier: 1
             claim: "US international standing strong in Western Europe throughout Eisenhower years; Sputnik (October 1957) raised perceptions of Soviet technological capability; coups damaged standing in target regions."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "USIA July 1959 report confirms Western Europeans stayed confident in US scientific superiority and that Sputnik caused a \"revolutionary revision\" of Soviet-power estimates, while Guatemala/Iran coups demonstrably damaged US standing in Latin America/Mideast; only mild overstatement is \"strong throughout,\" given a real Sputnik-era dip in 1957-58."
+              suggested_fix: "Cite the USIA report \"Impact of U.S. and Soviet Space Programs on World Opinion,\" 7 July 1959 (https://www.nasa.gov/history/sputnik/july59.html); note the temporary late-1957/1958 dip in US prestige (Gallup) alongside \"strong throughout.\""
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 6
@@ -786,14 +1118,19 @@ categories:
         low_confidence: true
         notes: "Strong in Western Europe (Marshall Plan legacy carrying forward). Mixed in developing world. Negative in Iran, Guatemala, post-coup regions. Soviet bloc adversarial."
         evidence:
-          - citation: "USIA International Audience Research records 1953-1961"
+          - citation: "USIA International Audience Research records 1953-1961 (Roper Center USIA Digital Report Collection, https://ropercenter.cornell.edu/usia-digital-report-collection)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Foreign-public-opinion data shows continued favorable Western European reception, declining perceptions in coup-target regions."
+            claim: "Foreign-public-opinion data is consistent with continued favorable Western European reception and declining perceptions in coup-target regions."
             direction: good
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the claim from asserting the data \"shows\" a specific contrast to it being \"consistent with\" that pattern, since the note found the contrast could not be directly verified as a coherent USIA finding, and added the Roper Center USIA collection URL to the citation."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "Mixed record. Refugee Relief Act 1953 admitted 200K+ refugees. Operation Wetback (1954) deported ~1 million Mexicans — major harm. Hungarian refugees (1956) admitted."
@@ -809,9 +1146,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Refugee Relief Act admitted ~214,000 refugees above existing quotas 1953-1956, including ~38,000 Hungarian refugees after 1956 Revolution."
+            claim: "Refugee Relief Act admitted ~214,000 refugees above existing quotas 1953-1956, including ~6,130 of ~38,000 Hungarian refugees after 1956 Revolution (remainder admitted under INA parole authority)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the overstatement by clarifying that only ~6,130 of the ~38,000 Hungarian refugees entered under the Refugee Relief Act, with the rest admitted via INA parole authority."
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 2
@@ -819,13 +1162,19 @@ categories:
         low_confidence: false
         notes: "Operation Wetback (1954) — mass deportation operation that removed ~1 million ethnic Mexicans (estimates vary 250K-1.3M, including US citizens). Among the largest deportation operations in US history."
         evidence:
-          - citation: "Operation Wetback INS records (1954); Hernández, 'Migra! A History of the U.S. Border Patrol' (2010)"
+          - citation: "Operation Wetback INS records (1954); Hernández, 'Migra! A History of the U.S. Border Patrol' (2010); https://www.history.com/articles/operation-wetback-eisenhower-1954-deportation"
             source_url: "https://www.uscis.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Operation Wetback in 1954 deported approximately 1 million ethnic Mexicans (estimates vary), including a substantial number of US citizens swept up in racial-profiling-based enforcement."
+            claim: "Operation Wetback in 1954 deported a contested number of ethnic Mexicans—official INS figures claimed roughly 1 million, though historians including Hernández estimate closer to 300,000—including an undetermined number of US citizens swept up in racial-profiling-based enforcement."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the \"~1 million\" deportations as the contested official INS figure versus Hernández's ~300,000 estimate, and changed the \"substantial number\" of US citizens to an undetermined number per the sources, adding the History.com URL to the citation."
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 6
@@ -833,13 +1182,19 @@ categories:
         low_confidence: false
         notes: "Refugee Relief Act 1953 substantial. Hungarian refugee admission (1956-1957) ~38,000 — major Cold War humanitarian act. Cuban refugees beginning 1959 (Eisenhower's last 2 years)."
         evidence:
-          - citation: "Hungarian Refugee Program 1956-1957; Cuban refugee admission 1959-1961"
+          - citation: "Hungarian Refugee Program 1956-1957; Cuban refugee admission 1959-1961 (Migration Policy Institute, https://www.migrationpolicy.org/article/cuban-migration-postrevolution-exodus-ebbs-and-flows)"
             source_url: "canonical"
             source_type: historical_record
             tier: 1
-            claim: "Approximately 38,000 Hungarian refugees admitted post-1956 Revolution; ~30,000 Cuban refugees admitted 1959-1961 establishing pattern for Cold War political-refugee admission."
+            claim: "Approximately 38,000 Hungarian refugees admitted post-1956 Revolution; over 100,000 Cuban refugees arrived by January 1961 establishing pattern for Cold War political-refugee admission."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the understated Cuban refugee figure from ~30,000 (1959-1961) to over 100,000 arrivals by January 1961, and added the Migration Policy Institute source to the citation."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 3
@@ -853,7 +1208,14 @@ categories:
             tier: 1
             claim: "Bracero Program brought 4.5+ million worker-trips total 1942-1964 with peak under Eisenhower; Operation Wetback dramatically reversed undocumented migration patterns mid-decade."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Sources confirm ~4.6M bracero contracts 1942-1964 with peak years 1956-1959 under Eisenhower, and apprehensions dropped over 90% after Operation Wetback's 1954 peak (lowest since 1944 by 1957), matching the \"mid-decade reversal\" framing."
+              suggested_fix: "https://en.wikipedia.org/wiki/Bracero_Program"
 
 calibration_summary:
   good_average_across_categories: 6.0

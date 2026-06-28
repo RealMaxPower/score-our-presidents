@@ -25,20 +25,33 @@ categories:
             tier: 1
             claim: "Unemployment recovered from 10% (October 2009 peak) to 4.7% (January 2017); 75 consecutive months of private-sector job gains, longest streak in US history."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "BLS/Obama WH confirm 10.0% Oct-2009 peak, 75 straight months of private-sector gains (longest on record since 1939), and ~4.7% by office-end; minor caveats: 4.7% was Dec-2016 (Jan-2017 ticked to 4.8%) and the \"longest in history\" superlative is contested when single-month dips are excluded (Clinton ~85 mo)."
+              suggested_fix: "https://obamawhitehouse.archives.gov/blog/2017/01/06/eight-years-labor-market-progress-and-employment-situation-december/ — note 4.7% is the December 2016 rate (January 2017 was 4.8%)."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 4
         harm_score: 5
         notes: "Top 1% income share continued rising. Recovery benefited high earners disproportionately initially. Bush tax cuts partially extended; top-rate restoration to 39.6% (2013) modest reversal."
         evidence:
-          - citation: "Piketty & Saez income share data 2009-2017; American Taxpayer Relief Act of 2012, Public Law 112-240"
+          - citation: "Saez \"Striking it Richer\" (TabFig2015prel) https://eml.berkeley.edu/~saez/saez-UStopincomes-2015.pdf; American Taxpayer Relief Act of 2012, Public Law 112-240"
             source_url: "canonical"
             source_type: statistic
             tier: 1
-            claim: "Top 1% income share rose from ~17% (2008) to ~22% (2015); ATRA 2012 restored 39.6% top marginal rate; inequality trajectory continued."
+            claim: "Top 1% income share (incl. capital gains) went from ~20.9% (2008) to ~22% (2015); ATRA 2012 restored 39.6% top marginal rate; inequality trajectory continued."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the mixed-series ~17% (2008) figure with the consistent incl.-cap-gains ~20.9% (2008) endpoint and updated the citation to Saez's specific source."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 4
@@ -51,7 +64,14 @@ categories:
             tier: 1
             claim: "Federal debt nearly doubled during Obama term ($10.6T to $19.9T) due to ARRA stimulus, Great Recession revenue collapse, and continued Bush tax cuts; annual deficit reduced ~60% from peak."
             direction: harm
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Debt $10.6T→$19.9T (gross, ~88%/\"nearly doubled\"), all three causes (ARRA, recession revenue loss, Bush tax-cut extensions) cited by CRFB/CBPP, and deficit fell from $1.41T peak (FY09) to $587B (FY16) = ~58%, matching \"~60%.\""
+              suggested_fix: "Use a deep link instead of the OMB homepage, e.g. https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/ or CRFB https://www.crfb.org/blogs/has-president-obama-doubled-national-debt"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 5
@@ -64,7 +84,14 @@ categories:
             tier: 1
             claim: "Auto industry bailout saved estimated 1-1.5 million jobs (GM, Chrysler restructuring); real median household income growth resumed late-term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Center for Automotive Research backs the 1-1.5M auto-bailout jobs figure, and Census data confirm real median household income resumed growth late-term (+5.2% in 2015, +3.2% in 2016); income data is actually Census/CPS not BLS, a minor citation slip."
+              suggested_fix: "For the income claim cite Census Bureau: https://www.census.gov/library/publications/2016/demo/p60-256.html ; for jobs cite Center for Automotive Research's 2010 bailout impact study."
 
   - category: 2
     name: "Foreign policy & war"
@@ -83,7 +110,14 @@ categories:
             tier: 1
             claim: "Obama ended formal US combat in Iraq (2011) and reduced Afghanistan forces; Libya intervention contributed to subsequent state collapse; drone program expanded substantially with civilian casualty concerns."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All four components verified: last US troops left Iraq Dec 2011 (war formally ended), Afghanistan surge peaked ~100k then drew down (combat ended 2014), UNSCR 1973 authorized Libya intervention that toppled Gaddafi leaving state collapse, and drone strikes rose ~10x over Bush with disputed civilian-casualty estimates (official 64-116 vs independent 384-807+)."
+              suggested_fix: "Use a deep authoritative link instead of the bare homepage, e.g. https://history.state.gov/milestones/2009-2016 or https://obamawhitehouse.archives.gov/the-press-office/2011/10/21/remarks-president-ending-war-iraq"
       - id: "2.2"
         name: "Alliance management"
         good_score: 6
@@ -96,7 +130,14 @@ categories:
             tier: 1
             claim: "Obama administration restored allied relationships post-GW Bush; pivot to Asia framework anticipated rising China challenge; TPP negotiated but never ratified."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three sub-claims hold: Pew/transatlantic data shows US-leadership confidence in Europe rose from <20% (Bush 2008) to >85% (Obama 2009); the Asia pivot was announced Nov 2011 to manage rising China; TPP was negotiated (2009-2016), signed Feb 2016, but never US-ratified (Trump withdrew Jan 2017)."
+              suggested_fix: "Bare homepage cited; deeper link: https://history.state.gov/milestones/2009-2016 (Office of the Historian, 2009-2016 milestones) or https://en.wikipedia.org/wiki/East_Asian_foreign_policy_of_the_Obama_administration"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 8
@@ -109,7 +150,14 @@ categories:
             tier: 1
             claim: "JCPOA, Paris Agreement, and Cuba normalization were three major Obama-era diplomatic achievements; JCPOA constrained Iran's nuclear program for 15 years; Paris launched modern climate-cooperation framework."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three achievements and their exact dates are confirmed by authoritative sources (JCPOA July 14, 2015 with 15-year key restrictions; Paris Agreement adopted Dec 12, 2015 as a new global climate framework; Cuba thaw announced Dec 17, 2014)."
+              suggested_fix: "https://2009-2017.state.gov/r/pa/prs/ps/2015/07/244623.htm (State Dept on re-establishing Cuba relations); JCPOA: https://www.armscontrol.org/factsheets/joint-comprehensive-plan-action-jcpoa-glance"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 3
@@ -123,6 +171,12 @@ categories:
             claim: "Per the Bureau of Investigative Journalism, the Obama-era covert drone program in Pakistan, Yemen, and Somalia conducted 563 strikes (ten times the Bush-era total), with an estimated 384–807 civilian deaths."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Bureau of Investigative Journalism's Jan 17 2017 report states verbatim 563 strikes (vs 57 under Bush, ~ten times) in Pakistan/Yemen/Somalia with 384-807 estimated civilian deaths; confirmed via Airwars republication, Snopes, and Wikipedia."
 
   - category: 3
     name: "Civil rights & equality"
@@ -140,7 +194,14 @@ categories:
             tier: 1
             claim: "Fair Sentencing Act reduced crack-powder cocaine sentencing disparity from 100:1 to 18:1; Obama's election produced symbolic racial-equity milestone alongside continued racial-justice tensions (Ferguson, Trayvon Martin)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Fair Sentencing Act (Pub. L. 111-220, signed Aug 3 2010) did reduce the crack-powder ratio from 100:1 to 18:1; the symbolic-milestone-amid-tensions framing (Trayvon Martin 2012, Ferguson 2014, BLM 2013-14) is well-corroborated."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/111th-congress/senate-bill/1789"
       - id: "3.2"
         name: "Gender equity"
         good_score: 7
@@ -153,7 +214,14 @@ categories:
             tier: 1
             claim: "Ledbetter Act extended pay-discrimination filing deadline; 2013 VAWA reauthorization extended protections to LGBTQ and Native American victims; substantial gender-equity advance."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ledbetter Act (PL 111-2) reset the pay-discrimination filing clock per paycheck (reversing Ledbetter v. Goodyear), and VAWA 2013 (PL 113-4) added LGBTQ non-discrimination protections plus restored tribal jurisdiction over non-Indian offenders against Native victims; all public-law numbers and characterizations are accurate."
+              suggested_fix: "Use deep links: https://www.congress.gov/bill/111th-congress/senate-bill/181 (Ledbetter, PL 111-2) and https://www.congress.gov/bill/113th-congress/senate-bill/47 (VAWA Reauthorization, PL 113-4)."
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 9
@@ -167,7 +235,14 @@ categories:
             tier: 1
             claim: "Obama term spanned DADT repeal (2010), DOMA defense withdrawal (2011), presidential support for marriage equality (2012), Windsor decision (2013), and Obergefell decision (2015) — era-defining LGBTQ rights advances."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All five milestones verified with correct dates: DADT Repeal Act signed Dec 22, 2010 (PL 111-321); DOJ dropped DOMA defense Feb 23, 2011; Obama backed marriage equality May 2012; Windsor (2013) and Obergefell (2015, 576 U.S. 644) decided during his term."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/111th-congress/house-bill/2965 (DADT Repeal Act, H.R.2965 / PL 111-321)."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 6
@@ -180,7 +255,14 @@ categories:
             tier: 1
             claim: "Obama DOJ ADA enforcement strong; Olmstead community-integration mandate expanded substantially."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (ADA.gov archive, DOJ, ABA) confirm the Obama DOJ launched aggressive Olmstead integration-mandate enforcement in 2009 (\"Year of Community Living\"), bringing 25+ cases across 17-25 states with landmark statewide settlements (Georgia, Virginia, etc.) and 2011 guidance."
+              suggested_fix: "Replace bare homepage with a deep link, e.g. https://archive.ada.gov/olmstead/index.html or https://www.justice.gov/archives/opa/pr/justice-department-issues-technical-assistance-document-enforcement-supreme-court-decision"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 7
@@ -193,7 +275,14 @@ categories:
             tier: 1
             claim: "Cobell settlement resolved century-old federal trust accounting failure; Obama held first tribal nations summits annually; DAPL easement denial reversed by Trump."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three sub-claims verified: Cobell $3.4B Claims Resolution Act signed Dec 8 2010 resolving historic Individual Indian Money trust accounting; first White House Tribal Nations Conference Nov 5 2009, held annually through 8th in 2016; Army Corps denied DAPL Lake Oahe easement Dec 4 2016, Trump's Jan 24 2017 memorandum led to easement grant Feb 7 2017."
+              suggested_fix: "Replace bare archives.gov homepage with a deep link, e.g. https://obamawhitehouse.archives.gov/the-press-office/2016/09/26/fact-sheet-8th-annual-white-house-tribal-nations-conference or https://en.wikipedia.org/wiki/Cobell_v._Salazar"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -212,6 +301,12 @@ categories:
             claim: "Per Pozen's Harvard Law Review analysis, the Obama DOJ pursued 8 Espionage Act media-leak prosecutions — more than any prior administration on the public record (out of roughly 12 in the statute's then-96-year history). The May 2013 AP phone-records subpoena was widely characterized by press-freedom organizations as the most expansive journalist-records action of the modern era."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Pozen's \"Leaky Leviathan\" (127 Harv. L. Rev. 512) states verbatim that ~a dozen media-leak prosecutions occurred in the Espionage Act's 96 years, \"eight of them under the Obama Administration\"—more than any prior administration; the May 2013 AP subpoena was widely called a \"massive and unprecedented intrusion,\" consistent with the claim's \"most expansive\" framing (a fair paraphrase, not a verbatim superlative)."
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 3
@@ -225,7 +320,14 @@ categories:
             tier: 1
             claim: "Obama administration continued Bush-era mass surveillance programs until Snowden disclosures forced partial reform via USA Freedom Act 2015; bulk metadata collection partially ended."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "USA Freedom Act of 2015 is Public Law 114-23 (signed June 2, 2015) following Snowden's June 2013 disclosures; it ended NSA's own bulk Section 215 metadata collection (Nov 2015) while data moved to providers and Section 702 collection continued, so \"partially ended\" is accurate."
+              suggested_fix: "Deep link: https://www.congress.gov/bill/114th-congress/house-bill/2048"
       - id: "4.3"
         name: "Executive restraint"
         good_score: 4
@@ -238,7 +340,14 @@ categories:
             tier: 1
             claim: "Obama banned torture via EO 13491 but extended drone program to target US citizens (al-Awlaki) without judicial process; continued Guantanamo detention."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All components verified: EO 13491 (Jan 22, 2009) banned torture; US citizen Anwar al-Awlaki was killed by drone Sept 30, 2011 without judicial process (first extrajudicial killing of a US citizen); Guantanamo stayed open through Obama's term."
+              suggested_fix: "Replace bare homepage with deep link: https://www.federalregister.gov/documents/2009/01/27/E9-1885/ensuring-lawful-interrogations (EO 13491) and https://en.wikipedia.org/wiki/Anwar_al-Awlaki"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 4
@@ -251,7 +360,14 @@ categories:
             tier: 2
             claim: "Obama administration FOIA performance fell short of campaign promises; record-setting Espionage Act prosecutions chilled internal-government transparency."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (AP/PBS, ProPublica, NPR, ACLU, EFF) confirm Obama set FOIA denial/censoring records despite \"most transparent\" pledge, and brought ~8 Espionage Act leak prosecutions—more than all prior administrations combined—widely documented as chilling whistleblowing."
+              suggested_fix: "Replace bare homepage with DOJ OIP FOIA annual report data: https://www.justice.gov/oip/reports-1 (and AP/PBS coverage of the FY2014 record denials)."
 
   - category: 5
     name: "Domestic welfare & health"
@@ -270,7 +386,14 @@ categories:
             tier: 1
             claim: "ACA expanded health insurance to approximately 20 million previously uninsured Americans; established pre-existing condition protections and Medicaid expansion framework; survived SCOTUS challenges (NFIB v. Sebelius 2012, King v. Burwell 2015)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "HHS estimated ~20M adults gained ACA coverage by Feb 2016; pre-existing condition protections and Medicaid expansion confirmed; ACA upheld in NFIB v. Sebelius (2012, 5-4) and King v. Burwell (2015, 6-3) — all specifics accurate."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/111th-congress/house-bill/3590"
       - id: "5.2"
         name: "Education"
         good_score: 6
@@ -283,7 +406,14 @@ categories:
             tier: 1
             claim: "Race to the Top spurred state-level education reform; ESSA 2015 replaced NCLB with framework that reduced federal testing mandates; Pell Grant expansion increased college access."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three sub-claims check out: RTT (2009-14, $4.35B, states enacted 68% of reforms) spurred state reform; ESSA (PL 114-95, Dec 2015) replaced NCLB and narrowed the federal role/mandates (though annual testing was retained, not eliminated); Pell expansion raised max award to ~$5,975 and added ~2.5M students/year."
+              suggested_fix: "Replace bare ed.gov homepage with https://www.ed.gov/laws-and-policy/laws-preschool-grade-12-education/every-student-succeeds-act-essa ; note ESSA kept annual testing while reducing federal accountability mandates."
       - id: "5.3"
         name: "Safety net"
         good_score: 7
@@ -296,7 +426,14 @@ categories:
             tier: 1
             claim: "ARRA expanded safety net substantially during Great Recession; ACA Medicaid expansion added ~12 million Americans to Medicaid coverage in states that adopted."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ARRA's safety-net expansion (FMAP boost, ~$40B SNAP increase, $39B UI) is well documented, and CMS/KFF data confirm ~12.3M enrollees in the ACA Medicaid expansion adult group as of March 2020 (current totals are higher at ~20-21M), so the ~12M figure is accurate if conservative."
+              suggested_fix: "Replace bare homepage with deep links, e.g. https://www.cms.gov/newsroom/press-releases/new-reports-show-record-35-million-people-enrolled-coverage-related-affordable-care-act-historic-21 and https://www.cbpp.org/research/snap-benefit-boost-in-2009-recovery-act-provided-economic-stimulus-and-reduced-hardship"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 4
@@ -309,7 +446,14 @@ categories:
             tier: 1
             claim: "HAMP fell far short of original 3-4 million homeowner target (~1.8 million permanent modifications); foreclosure crisis response widely criticized as inadequate compared to bank rescue."
             direction: harm
-            verification_status: pending
+            verification_status: failed
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "SIGTARP/Treasury/Congress confirm HAMP's Feb 2009 3-4 million homeowner goal vs ~1.8 million permanent modifications by 2016, and the \"foam the runway\" / bank-rescue-over-homeowners critique is well documented, though Treasury later reframed 3-4M as trial-offer targets."
+              suggested_fix: "For a deep link, cite SIGTARP's HAMP quarterly audits at https://www.sigtarp.gov/Pages/quarterlyreports.aspx and Treasury's HAMP page https://home.treasury.gov/data/troubled-assets-relief-program/housing/mha/hamp"
 
   - category: 6
     name: "Environmental stewardship"
@@ -328,7 +472,14 @@ categories:
             tier: 1
             claim: "Obama led international Paris Agreement framework; Clean Power Plan set first federal greenhouse gas standards for power plants (subsequently struck down by SCOTUS); fuel economy standards doubled."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three elements check out: Paris Agreement adopted Dec 12 2015 with US leadership; CPP (Aug 3 2015) was first federal carbon-pollution standards for power plants and its legal basis was invalidated by SCOTUS in West Virginia v. EPA (2022); 54.5 mpg standards roughly doubled fuel economy—though \"struck down\" is shorthand since the CPP was stayed in 2016 and never took effect."
+              suggested_fix: "For a deep-link supporting the SCOTUS point: https://www.supremecourt.gov/opinions/21pdf/20-1530_n758.pdf (West Virginia v. EPA, 2022)."
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 7
@@ -341,7 +492,14 @@ categories:
             tier: 1
             claim: "MATS rule reduced mercury emissions from power plants substantially; WOTUS expanded Clean Water Act jurisdiction (later contested)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EPA confirms MATS (finalized Dec 2011, Obama) cut power-plant mercury emissions ~86% by 2017, and the 2015 WOTUS/Clean Water Rule was widely viewed as expanding CWA jurisdiction over streams/wetlands and was immediately litigated (Sixth Circuit stay, district-court injunctions, later repealed)."
+              suggested_fix: "For deep links: https://www.epa.gov/stationary-sources-air-pollution/mercury-and-air-toxics-standards and https://www.epa.gov/wotus/about-waters-united-states"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 8
@@ -354,7 +512,14 @@ categories:
             tier: 1
             claim: "Obama designated 26 new national monuments and expanded 5 others, protecting more land and water than any predecessor; Papahānaumokuākea expansion (2016) created world's largest marine protected area."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Obama White House fact sheet, NOAA) confirm 26 new monuments + 5 expansions, \"more land and water than any administration in history,\" and the Aug 2016 Papahanaumokuakea expansion (582,578 sq mi) as the world's largest marine protected area."
+              suggested_fix: "Replace bare homepage with deep link: https://obamawhitehouse.archives.gov/the-press-office/2016/08/26/fact-sheet-president-obama-create-worlds-largest-marine-protected-area (and https://sanctuaries.noaa.gov/papahanaumokuakea-expansion/ for the marine monument figures)."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 6
@@ -367,7 +532,14 @@ categories:
             tier: 2
             claim: "ESA listings recovered from Bush-era lows; substantial marine biodiversity protection via monument designations."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Bush listed the fewest species of any modern president (~57, mostly via litigation), while Obama listed far more (~340) recovering from that low, and designated/expanded Papahanaumokuakea (~582,578 sq mi), Pacific Remote Islands (~495,000 sq mi), and the first Atlantic monument (Northeast Canyons), confirming substantial marine biodiversity protection."
+              suggested_fix: "For the bare fws.gov homepage, a deeper source is the USFWS ESA listings data and https://en.wikipedia.org/wiki/Papah%C4%81naumoku%C4%81kea_Marine_National_Monument for monument figures."
 
   - category: 7
     name: "Crisis management"
@@ -385,7 +557,14 @@ categories:
             tier: 1
             claim: "Obama signed ARRA stimulus within 4 weeks of inauguration; Ebola response in 2014 successfully contained spread to US."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ARRA was signed Feb 17, 2009, exactly 28 days (4 weeks) after the Jan 20 inauguration, and the 2014 US Ebola response halted spread with only two domestic infections (both nurses, both recovered, no sustained transmission), so both prongs are accurate."
+              suggested_fix: "Use a deep link instead of the bare homepage: https://www.congress.gov/bill/111th-congress/house-bill/1 (ARRA / H.R.1, signed into law Feb 17, 2009)."
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 7
@@ -398,7 +577,14 @@ categories:
             tier: 1
             claim: "Operation Neptune Spear killed Osama bin Laden in Pakistan; Syria red line on chemical weapons was crossed without promised military response, damaging credibility."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both claims verified: Operation Neptune Spear (May 2, 2011) killed bin Laden in Abbottabad, Pakistan, and Obama's 2012 Syria chemical-weapons red line was crossed (Ghouta, Aug 21, 2013) without the threatened strike, widely seen as damaging credibility."
+              suggested_fix: "sourceUrl is a bare CIA homepage; deep links: https://en.wikipedia.org/wiki/Killing_of_Osama_bin_Laden and https://www.brookings.edu/articles/brookings-scholars-on-syrias-chemical-weapons-use-and-obama-administration-response/"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 6
@@ -412,6 +598,12 @@ categories:
             claim: "Obama's 'if you like your plan, you can keep it' ACA pledge was rated PolitiFact's 'Lie of the Year' for 2013 after cancellation notices were sent to Americans whose individual-market plans did not meet ACA standards."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PolitiFact's 2013 Lie of the Year (Dec 12, 2013) was Obama's \"if you like your plan, you can keep it\" ACA pledge, tied to cancellation notices for non-compliant individual-market plans, exactly as claimed; the citation's tacked-on \"Snowden disclosures June 2013\" is extraneous but the claim text itself is fully accurate."
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 6
@@ -424,7 +616,14 @@ categories:
             tier: 1
             claim: "Obama-era major crises substantially resolved or framework-resolved at handover; Syria, ISIS, and Russian revisionism unresolved."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm both halves: Great Recession recovery (unemployment 10%→4.8%, record net worth) and ACA surviving NFIB v. Sebelius (2012) and King v. Burwell (2015) were resolved/durable at handover, while Syria's civil war, ISIS (~23,300 sq mi; Mosul/Raqqa fell only after Jan 2017), and Russia's Crimea/Ukraine revisionism remained unresolved."
+              suggested_fix: "Optional deep links: en.wikipedia.org/wiki/National_Federation_of_Independent_Business_v._Sebelius and wilsoncenter.org/article/timeline-the-rise-spread-and-fall-the-islamic-state"
 
   - category: 8
     name: "Institutional integrity"
@@ -442,7 +641,14 @@ categories:
             tier: 1
             claim: "Obama widely regarded as one of most personally ethical presidents of modern era; no personal-conduct scandals during or after term."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Sources confirm Obama spent decades in public life \"without a whiff of scandal about his personal life\" and historians/ethics experts note his administration was \"virtually scandal free\" with no indictments; the claim is narrowly about personal conduct, and the contested \"scandal-free administration\" critiques (IRS, Benghazi, VA) are policy/administrative, not personal-conduct, scandals."
+              suggested_fix: "https://millercenter.org/president/obama/family-life"
       - id: "8.2"
         name: "Administration ethics"
         good_score: 7
@@ -456,6 +662,12 @@ categories:
             claim: "The VA OIG documented the 2014 wait-time matter, which led to Secretary Shinseki's resignation. TIGTA Audit Report 2013-10-053 found the IRS used 'inappropriate criteria' (BOLO list flagging names like 'tea party', 'patriot') to identify tax-exempt applications for additional review; the Senate Finance Committee's bipartisan report (114-119) documented the matter further. No criminal prosecutions of administration officials resulted."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All four assertions verified: TIGTA 2013-10-053 (BOLO list flagging \"tea party\"/\"patriot\"/\"9/12\") and its title match exactly; Senate Finance bipartisan report 114-119 (2010-2013) confirmed; VA OIG 2014 Phoenix wait-time report preceded Shinseki's May 2014 resignation; DOJ closed the IRS probe in Oct 2015 with no charges."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 6
@@ -468,7 +680,14 @@ categories:
             tier: 1
             claim: "DACA established by executive memo after immigration reform failed in Congress; controversial as expansion of executive immigration discretion."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "DACA was established by Sec. Napolitano's June 15, 2012 DHS prosecutorial-discretion memo after the DREAM Act failed in Congress, and was widely criticized by Republicans as executive overreach—all three claim elements are confirmed by authoritative sources."
+              suggested_fix: "Replace bare dhs.gov homepage with the actual memo: https://www.dhs.gov/sites/default/files/publications/s1-exercising-prosecutorial-discretion-individuals-who-came-to-us-as-children.pdf (or the Congress.gov CRS overview)."
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
@@ -479,9 +698,15 @@ categories:
             source_url: "https://www.supremecourt.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Obama appointed two SCOTUS justices (Sotomayor as first Hispanic justice, Kagan); third nominee Garland blocked by Senate Republicans for 11 months — unprecedented obstruction."
+            claim: "Obama appointed two SCOTUS justices (Sotomayor as first Hispanic justice, Kagan); third nominee Garland blocked by Senate Republicans for nearly 10 months (293 days, longest-pending SCOTUS nomination ever) — unprecedented obstruction."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Changed the overstated \"11 months\" to \"nearly 10 months (293 days, longest-pending SCOTUS nomination ever)\" per the fact-checker's finding."
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 6
@@ -494,20 +719,33 @@ categories:
             tier: 2
             claim: "Obama prioritized professional qualifications and demographic diversity; ~42% of confirmed appointees were women, ~36% non-white — most diverse cohort to that point."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Pew Research and Feminist Majority Foundation both confirm Obama's judicial appointees were 42% women and 36% nonwhite — a record (most diverse) at the time, exceeding Clinton's prior bests (~28-29% women, 24% minority)."
+              suggested_fix: "https://www.pewresearch.org/short-reads/2018/10/02/trump-has-appointed-a-larger-share-of-female-judges-than-other-gop-presidents-but-lags-obama/"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 6
         harm_score: 2
         notes: "Sotomayor and Kagan moderate-to-liberal jurisprudence. Generally restraint-consistent. Both major SCOTUS voices on civil rights cases."
         evidence:
-          - citation: "Sotomayor and Kagan jurisprudential analyses"
+          - citation: "Sotomayor and Kagan jurisprudential analyses; https://legalytics.substack.com/p/measuring-the-justices-an-portrait; https://slate.com/news-and-politics/2020/04/elena-kagan-supreme-court-conservatives-precedent.html"
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "Sotomayor and Kagan emerged as liberal anchors on Roberts Court; both ideologically reliable while procedurally moderate."
+            claim: "Sotomayor and Kagan emerged as liberal anchors on Roberts Court; both ideologically reliable, with Kagan procedurally moderate while Sotomayor was the more assertive, expansive liberal."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Limited \"procedurally moderate\" to Kagan and characterized Sotomayor as the more assertive/expansive liberal, and added the two supporting source URLs to the citation."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 4
@@ -520,7 +758,14 @@ categories:
             tier: 1
             claim: "Senate Republicans refused to consider Garland nomination for 11 months citing election-year rule subsequently abandoned for Barrett (2020); unprecedented institutional norm violation."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm the Garland blockade (no hearing/vote, \"first since Civil War\"), the election-year/\"Biden rule\" justification, and its abandonment for Barrett (confirmed Oct 26, 2020, 8 days pre-election); \"11 months\" matches CNN's framing (Scalia death Feb 2016 to Jan 2017), though the nomination itself was pending 293 days (~9.6 months)."
+              suggested_fix: "For a precise senate.gov deep link, cite the Barrett roll call: https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm ; consider \"~9.6 months pending (293 days)\" or note the 11-month figure spans vacancy-to-new-president."
 
   - category: 9
     name: "Democratic health"
@@ -538,20 +783,33 @@ categories:
             tier: 1
             claim: "Shelby County struck down VRA preclearance formula; numerous states subsequently passed restrictive voting laws; Obama DOJ unable to block under post-Shelby framework."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Shelby County (570 U.S. 529, 2013) struck the Section 4(b) preclearance coverage formula; states (e.g., Texas voter ID same day) then passed restrictive laws (~100 since per Brennan Center), and the Obama DOJ lost Section 5 preclearance to block them—all accurate."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/570/529/"
       - id: "9.2"
         name: "Press relationship"
         good_score: 4
         harm_score: 5
         notes: "The May 2013 AP phone-records subpoena, the contemporaneous Rosen-affidavit episode (in which a DOJ search-warrant affidavit referred to Fox News reporter James Rosen as a possible 'co-conspirator' under the Espionage Act for the purpose of establishing probable cause), and the larger pattern of Espionage Act prosecutions of alleged leakers were characterized by press-freedom organizations as significant departures from earlier-administration practice. Public solo press conferences declined relative to recent predecessors."
         evidence:
-          - citation: "AP phone-records subpoena (May 2013); DOJ search-warrant affidavit in United States v. Kim, S.D.N.Y. (Rosen affidavit, 2010, disclosed 2013)"
+          - citation: "AP phone-records subpoena (May 2013); DOJ search-warrant affidavit in United States v. Kim, No. 1:10-cr-00225, D.D.C. (Rosen affidavit, 2010, disclosed 2013); https://fas.org/publication/kim-rosen-warrant/"
             source_url: "canonical"
             source_type: primary_document
             tier: 1
             claim: "The DOJ subpoenaed AP phone records (May 2013), and a 2010 DOJ search-warrant affidavit (disclosed in 2013) referred to Fox News reporter James Rosen as a possible 'co-conspirator' under the Espionage Act for the purpose of establishing probable cause."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the citation's case venue from S.D.N.Y. to D.D.C. (United States v. Kim, No. 1:10-cr-00225) and added the deep-link source; the claim text is unchanged."
       - id: "9.3"
         name: "Political violence"
         good_score: 5
@@ -564,7 +822,14 @@ categories:
             tier: 1
             claim: "Obama era saw multiple mass-shooting events (Sandy Hook, Charleston, Pulse) and emergence of police-violence as defining political issue (Ferguson, BLM)."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All specifics verified: Sandy Hook (Dec 14, 2012), Charleston AME (June 17, 2015), Pulse (June 12, 2016), and Ferguson/Michael Brown (Aug 9, 2014) sparking BLM/police-violence as a defining national issue all occurred during Obama's 2009-2017 term."
+              suggested_fix: "Replace bare FBI homepage with a deep link, e.g. https://www.fbi.gov/history/cases-and-criminals/pulse-nightclub-shooting"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 3
@@ -577,7 +842,14 @@ categories:
             tier: 1
             claim: "Partisan polarization measured by Pew reached then-record highs during Obama term; Tea Party movement and Trump-driven birtherism contributed to subsequent Republican Party transformation."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew's 2017 report states verbatim that party-values divisions \"reached record levels during Barack Obama's presidency\" (avg gap 15→36 pts), and authoritative sources confirm Tea Party (from 2009) and Trump-led birtherism fed the GOP's transformation; \"then-record\" framing is correct since polarization grew further under Trump."
+              suggested_fix: "Replace bare homepage with deep link: https://www.pewresearch.org/politics/2017/10/05/the-partisan-divide-on-political-values-grows-even-wider/"
 
   - category: 10
     name: "Long-tail consequences"
@@ -596,7 +868,14 @@ categories:
             tier: 1
             claim: "ACA proved most durable major Obama legislation despite multiple SCOTUS and political challenges; foreign-policy agreements (JCPOA, Paris) proved fragile under subsequent administrations."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All specifics verified: ACA survived 3 SCOTUS cases (Sebelius 2012, King 2015, California v. Texas 2021) and continued through 2024 with record enrollment; JCPOA withdrawal May 8 2018; Paris withdrawal announced 2017, Biden rejoined Jan 2021."
+              suggested_fix: "Replace bare hhs.gov homepage with a deep link, e.g. https://www.kff.org/affordable-care-act/explaining-california-v-texas-a-guide-to-the-case-challenging-the-aca/ (SCOTUS challenges) and https://en.wikipedia.org/wiki/United_States_and_the_Paris_Agreement"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 4
@@ -610,7 +889,14 @@ categories:
             tier: 1
             claim: "Garland blockade established asymmetric SCOTUS confirmation politics with continuing institutional damage; drone targeted-killing precedent inherited and continued by successors."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both prongs verified: the 2016 Garland blockade vs. 2020 Barrett rush is the documented asymmetry that damaged SCOTUS confirmation norms, and Obama's drone/targeted-killing precedent (al-Awlaki, OLC memos) was demonstrably inherited and continued by Trump and Biden."
+              suggested_fix: "For SCOTUS asymmetry: https://en.wikipedia.org/wiki/Amy_Coney_Barrett_Supreme_Court_nomination ; for drone precedent continuity: https://mwi.westpoint.edu/ten-years-after-the-al-awlaki-killing-a-reckoning-for-the-united-states-drones-wars-awaits/"
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 7
@@ -624,7 +910,14 @@ categories:
             tier: 1
             claim: "Obama presidency had substantial generational and demographic impact via symbolic representation of racial barrier-breaking, LGBTQ rights advances, and ACA coverage expansion."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three pillars verified by authoritative sources: Obama as first Black president (extensive political-science scholarship on symbolic/generational impact), LGBTQ advances (DADT repeal 2010, DOMA non-defense, first sitting president to back same-sex marriage 2012), and ACA expansion (~20M gained coverage by 2016)."
+              suggested_fix: "For deep links, cite Gillespie's \"Race and the Obama Administration,\" the Obama WH LGBT record (obamawhitehouse.archives.gov/the-press-office/2016/06/09/fact-sheet-obama-administrations-record-and-lgbt-community), and HHS/Urban Institute ACA 20M coverage figures."
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 5
@@ -638,7 +931,14 @@ categories:
             tier: 1
             claim: "Obama-era foreign-policy framework substantially unwound under Trump T1; long-term geopolitical impact contested as JCPOA, Paris, and Pacific Pivot all proved fragile."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three pillars verified: Trump withdrew from TPP (Jan 2017), Paris Agreement (announced Jun 2017), and JCPOA (May 8, 2018), substantially reversing Obama's framework; the \"fragile/contested long-term impact\" framing is well-grounded in CFR/RAND/Foreign Affairs sources."
+              suggested_fix: "For the \"canonical\" source, a specific deep link: https://www.cfr.org/timeline/us-policy-toward-iran or https://en.wikipedia.org/wiki/United_States_withdrawal_from_the_Iran_nuclear_deal"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -657,20 +957,33 @@ categories:
             tier: 1
             claim: "Obama's Charleston eulogy delivered 'Amazing Grace' moment widely cited as defining presidential dignity in crisis; broader personal-conduct exemplary throughout term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Official White House transcript confirms Obama delivered Pinckney's eulogy on June 26, 2015 and sang \"Amazing Grace,\" a moment widely cited (ABC, MSNBC, 10-yr retrospectives) as defining presidential dignity in crisis; the \"exemplary conduct throughout term\" portion is evaluative but the core citable event is fully accurate."
+              suggested_fix: "https://obamawhitehouse.archives.gov/the-press-office/2015/06/26/remarks-president-eulogy-honorable-reverend-clementa-pinckney"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 9
         harm_score: 1
         notes: "Era-defining oratory. 2008 'A More Perfect Union' race speech, 2004 keynote, multiple SOTUs, eulogies. Among most quoted modern presidential speakers."
         evidence:
-          - citation: "'A More Perfect Union' speech March 18, 2008; multiple major addresses"
+          - citation: "'A More Perfect Union' speech March 18, 2008 (delivered as a candidate), https://en.wikipedia.org/wiki/A_More_Perfect_Union_(speech); multiple major presidential addresses including 2015 Selma/Charleston eulogy"
             source_url: "https://obamawhitehouse.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Obama's 'A More Perfect Union' speech is widely considered the major civil-rights presidential speech of the 21st century; broader rhetorical record consistently strong."
+            claim: "Obama's 'A More Perfect Union' speech, delivered as a 2008 candidate, is widely considered a landmark civil-rights address of the 21st century, and his presidential rhetorical record (e.g., the 2015 Selma address and Charleston 'Amazing Grace' eulogy) was consistently strong."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reworded to note the speech was given as a 2008 candidate rather than as president and anchored the conduct-of-office rhetoric claim to genuinely presidential addresses (2015 Selma/Charleston eulogy), updating the citation accordingly."
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 8
@@ -683,7 +996,14 @@ categories:
             tier: 2
             claim: "Obama observed traditional ceremonial standards consistently while adapting to modern media environment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Obama maintained traditional ceremonies (state dinners, military honors, holiday/inaugural protocol) while being widely documented as the first \"social media president\"; only cosmetic/partisan complaints (tan suit, latte salute) arose, no substantive ceremonial breaches."
+              suggested_fix: "sourceUrl is a bare archive homepage; deep-link to ceremonial documentation e.g. https://obamawhitehouse.archives.gov/about/inside-white-house/holidays-2014 or the \"first social media presidency\" recap https://obamawhitehouse.archives.gov/blog/2017/01/05/new-lenses-first-social-media-presidency"
       - id: "11.4"
         name: "Model behavior"
         good_score: 8
@@ -696,7 +1016,13 @@ categories:
             tier: 2
             claim: "Obama's post-presidency continued dignified pattern; Obama Foundation focuses on leadership development."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "obama.org and press confirm the Obama Foundation (launched Jan 2017) centers on leadership development—Leaders Program, Scholars, Obama Leadership Network—and post-presidency conduct (summits, youth-jobs donations, joint humanitarian appeals) fits the \"dignified\" framing, though that adjective is editorial."
 
   - category: 12
     name: "Effect on populace"
@@ -714,7 +1040,14 @@ categories:
             tier: 1
             claim: "Obama averaged ~48% Gallup approval, ending at 59%; partisan gap in approval (Democratic vs Republican) was largest measured by Gallup at that point."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup confirms all three points: Obama averaged 47.9% (~48%), ended at 59% (Jan 2017), and his 70-point partisan gap (83% Dems vs 13% Reps) was the largest Gallup ever measured, exceeding Bush's 61."
+              suggested_fix: "Use deep links: https://news.gallup.com/poll/202742/obama-averages-job-approval-president.aspx (average/final) and https://news.gallup.com/poll/203006/obama-job-approval-ratings-politically-polarized-far.aspx (partisan gap)"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 4
@@ -727,20 +1060,33 @@ categories:
             tier: 1
             claim: "Partisan polarization reached then-historic highs during Obama term; cultural-political divides intensified around race, immigration, and identity."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew documents partisan value gaps reaching record highs across 2009-2017 (avg ~15 to 36 points by 2017), with sharp intensification on race (13 to 50-point gap), immigration, and identity, matching the claim."
+              suggested_fix: "https://www.pewresearch.org/politics/2017/10/05/the-partisan-divide-on-political-values-grows-even-wider/"
       - id: "12.3"
         name: "International standing"
         good_score: 8
         harm_score: 2
         notes: "Restored after GW Bush lows. Pew Global Attitudes showed substantial favorability gains. Nobel Peace Prize (2009). Strong soft power era."
         evidence:
-          - citation: "Pew Global Attitudes Project 2009-2017"
+          - citation: "Pew Global Attitudes Project 2009-2017; https://www.pewresearch.org/global/2009/07/23/chapter-1-views-of-the-u-s-and-american-foreign-policy-2/"
             source_url: "https://www.pewresearch.org/global/"
             source_type: statistic
             tier: 1
-            claim: "US favorability ratings recovered substantially under Obama per Pew Global Attitudes; major-allied-country favorability rose 20-30 percentage points from GW Bush-era lows."
+            claim: "US favorability ratings recovered substantially under Obama per Pew Global Attitudes; major-allied-country favorability rose roughly 16-33 percentage points from GW Bush-era lows."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Widened the favorability-rise range from \"20-30\" to \"roughly 16-33\" percentage points to match Pew's actual allied-country swings (France/Germany +33, Britain +16) and added the specific Pew chapter URL to the citation."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 8
@@ -753,7 +1099,14 @@ categories:
             tier: 1
             claim: "Obama personally polled extremely favorably globally throughout term; foreign-public sentiment toward US substantially improved from GW Bush era."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Pew Global Attitudes confirms Obama polled very favorably abroad throughout his term (median ~64% global confidence by 2015-16; ~77% median across EU nations) and that foreign confidence/favorability rose sharply from the Bush era (Bush median ~27% confidence; US favorability ~49% late-Bush vs ~60% under Obama)."
+              suggested_fix: "https://www.pewresearch.org/global/2016/06/29/as-obama-years-draw-to-close-president-and-u-s-seen-favorably-in-europe-and-asia/"
 
   - category: 13
     name: "Immigration & demographics"
@@ -771,20 +1124,33 @@ categories:
             tier: 1
             claim: "DACA established legal protection for ~800,000 undocumented young immigrants (Dreamers); Senate-passed comprehensive immigration reform died in Republican-led House."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "DACA (June 15, 2012 Napolitano memo) provided deportation protection/work authorization to ~800,000 Dreamers (834,877 cumulative enrollees), and the Senate-passed S. 744 (68-32, June 27, 2013) died in the GOP-controlled House under Boehner — all specifics check out."
+              suggested_fix: "Deep link instead of bare DHS homepage: https://www.dhs.gov/sites/default/files/publications/20_0728_s1_daca-reconsideration-memo.pdf (references the June 15, 2012 memo); cumulative DACA figure source: https://www.americanimmigrationcouncil.org/fact-sheet/deferred-action-childhood-arrivals-daca-overview/"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 3
         harm_score: 6
         notes: "Deported ~2.5 million during term — most of any administration. Family detention. Operation Streamline expansion. Earned 'Deporter-in-Chief' label."
         evidence:
-          - citation: "ICE deportation statistics 2009-2017"
+          - citation: "DHS Yearbook of Immigration Statistics 2016 (Table 39); ICE removal statistics 2009-2016"
             source_url: "https://www.ice.gov/"
             source_type: statistic
             tier: 1
-            claim: "Obama administration deported approximately 2.5 million people 2009-2017, more than any prior administration; record contested between enforcement-focus and prioritization-of-serious-offenders framings."
+            claim: "Obama's administration carried out a record ~3 million formal removals (FY2009-2016), more than any prior administration; the record is contested between enforcement-focus and serious-offender-prioritization framings."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected the figure: full-term formal removals were ~2.7-3.0M (DHS/ICE), not ~2.5M (which was a through-2015 tally)."
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 5
@@ -797,21 +1163,33 @@ categories:
             tier: 1
             claim: "Syrian refugee admission was substantial but slow compared to European response; 2014 Central American family crisis exposed processing-system inadequacies."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PBS/MPI/WaPo confirm ~12,500 Syrian refugees admitted in FY2016 (met Obama's 10k goal but slow—under 2,000 in first 7 months, modest vs. Germany's 174k+), and the 2014 Central American surge (~137k unaccompanied children/family units) overwhelmed processing with multi-year court backlogs and emergency FEMA/$1.57B response."
+              suggested_fix: "Replace bare homepage with a deep link such as https://www.migrationpolicy.org/article/us-meets-2016-syrian-refugee-admission-goal-opposition-new-resettlement-mounts (Syrian goal) and https://en.wikipedia.org/wiki/2014_American_immigration_crisis (2014 crisis)."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 5
         harm_score: 3
         notes: "Foreign-born share continued rising (~13% by 2017). Latinx population continued growth. Indian and Chinese H-1B sources changed demographic profile of high-skilled immigrants."
         evidence:
-          - citation: "Census foreign-born population data 2009-2017"
+          - citation: "Census foreign-born population data 2009-2017 (2017 ACS, https://www.census.gov/topics/population/foreign-born/data/tables/acs-tables.html)"
             source_url: "https://www.census.gov/"
             source_type: statistic
             tier: 1
-            claim: "US foreign-born share rose to ~13.5% by 2017, approaching all-time high; demographic transition continuing along multiple dimensions."
+            claim: "US foreign-born share rose to ~13.7% (44.5 million) by 2017, approaching all-time high; demographic transition continuing along multiple dimensions."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the foreign-born share from ~13.5% to ~13.7% (44.5 million) per the 2017 Census ACS and added the ACS data-tables URL to the citation."
 calibration_summary:
   good_average_across_categories: 5.8
   harm_average_across_categories: 3.6

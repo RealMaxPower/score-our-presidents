@@ -25,7 +25,14 @@ categories:
             tier: 1
             claim: "Stagflation peaked under Ford with unemployment at 9.0% and inflation at 12.3% in 1974-75; modest recovery 1976."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "BLS-derived data confirms unemployment peaked at 9.0% (May 1975, post-WWII record) and CPI inflation hit 12.3% Dec/Dec 1974, both under Ford, with modest 1976 recovery (unemployment ~7.7%, inflation ~5-6%)."
+              suggested_fix: "Replace bare homepage with deep links: https://data.bls.gov/timeseries/LNS14000000 (unemployment) and https://www.usinflationcalculator.com/inflation/historical-inflation-rates/ (CPI 1974-76)."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 5
@@ -38,7 +45,14 @@ categories:
             tier: 1
             claim: "EITC enacted under Ford became foundational anti-poverty tax instrument; modest at inception, expanded substantially under Reagan and Clinton."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Ford signed the Tax Reduction Act of 1975 (P.L. 94-12) creating the EITC as a modest temporary credit (max $400/10% of first $4,000), later substantially expanded under Reagan (1986) and Clinton (1993)."
+              suggested_fix: "Use a deep link instead of the bare homepage, e.g. https://www.congress.gov/crs-product/R44825 (CRS \"The Earned Income Tax Credit (EITC): Legislative History\")."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 4
@@ -51,7 +65,14 @@ categories:
             tier: 2
             claim: "Federal deficits remained large under Ford due to recession-era stimulus and continued inflation pressure."
             direction: harm
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "OMB/Treasury data confirm deficits surged under Ford (FY1975 -$53.2B, FY1976 -$73.7B record, FY1977 -$53.7B vs FY1974 -$6.1B), driven by the 1973-75 recession, 1975 tax-cut stimulus, and high inflation."
+              suggested_fix: "https://www.whitehouse.gov/omb/budget/historical-tables/ (Table 1.1, Summary of Receipts, Outlays, and Surpluses or Deficits)"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 4
@@ -64,7 +85,14 @@ categories:
             tier: 1
             claim: "ERISA established federal pension and benefit protection framework that became foundational for US employer-sponsored retirement system."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ERISA (P.L. 93-406), signed by Ford on Sept 2, 1974, established the federal pension/benefit protection framework (vesting, funding, fiduciary standards, disclosure, PBGC) widely recognized as foundational to the US employer-sponsored retirement system."
+              suggested_fix: "https://www.congress.gov/bill/93rd-congress/house-bill/2 (or PBGC source: https://www.pbgc.gov/about/who-we-are/history/president-ford-signing-erisa-1974)"
 
   - category: 2
     name: "Foreign policy & war"
@@ -82,7 +110,14 @@ categories:
             tier: 1
             claim: "Ford executed Saigon evacuation ending US Vietnam involvement; Mayaguez rescue operation lost more Americans (41) than hostages saved (39)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Operation Frequent Wind (Apr 29-30, 1975) was the final US Vietnam evacuation under Ford, and the Mayaguez rescue (May 12-15, 1975) cost 41 American lives (the last names on the Vietnam Veterans Memorial) versus all 39 crew saved; dates and figures check out, though the 41 includes 23 killed in a non-combat helicopter crash during staging."
+              suggested_fix: "https://en.wikipedia.org/wiki/Mayaguez_incident"
       - id: "2.2"
         name: "Alliance management"
         good_score: 6
@@ -95,7 +130,14 @@ categories:
             tier: 1
             claim: "Helsinki Accords established European-security framework including human-rights provisions that subsequent dissidents used to challenge Soviet bloc."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept and other authoritative sources confirm the 1975 CSCE Final Act (signed Aug 1, 1975, under Ford) set a European-security framework with Basket III human-rights provisions that dissidents (e.g., Helsinki Monitoring Groups) used to challenge the Soviet bloc."
+              suggested_fix: "Replace bare homepage with deep link: https://history.state.gov/milestones/1969-1976/helsinki or https://www.osce.org/helsinki-final-act"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 6
@@ -108,7 +150,14 @@ categories:
             tier: 1
             claim: "Ford-Brezhnev Vladivostok agreement on strategic arms framework set up SALT II that Carter completed."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept and Ford Library confirm the Nov 23-24, 1974 Vladivostok Summit where Ford and Brezhnev agreed on the SALT II framework (2,400 SNDV / 1,320 MIRV limits), which Carter completed by signing SALT II in Vienna June 18, 1979; minor caveat is the treaty was signed but never Senate-ratified."
+              suggested_fix: "https://history.state.gov/milestones/1969-1976/salt"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 4
@@ -121,7 +170,14 @@ categories:
             tier: 1
             claim: "Ford and Kissinger explicitly approved Indonesia's invasion of East Timor on December 6, 1975, leading to estimated 100,000+ Timorese deaths over subsequent occupation."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NSArchive declassified docs confirm Ford/Kissinger gave Suharto a green light at the Dec 6, 1975 Jakarta meeting (invasion began Dec 7), and 100,000+ deaths is well within authoritative estimates (UN CAVR 90,800-202,600)."
+              suggested_fix: "Deep link: https://nsarchive2.gwu.edu/NSAEBB/NSAEBB62/ (National Security Archive Electronic Briefing Book No. 62, \"East Timor Revisited\")."
 
   - category: 3
     name: "Civil rights & equality"
@@ -139,7 +195,14 @@ categories:
             tier: 1
             claim: "1975 VRA Amendments extended language-minority protections, particularly for Hispanic and Asian American voters."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford signed PL 94-73 (VRA Amendments of 1975) on Aug 6, 1975, extending language-minority protections to groups defined as American Indian, Asian American, Alaskan Native, and Spanish-heritage (Hispanic), exactly matching the claim."
+              suggested_fix: "https://www.congress.gov/bill/94th-congress/house-bill/6219"
       - id: "3.2"
         name: "Gender equity"
         good_score: 5
@@ -152,7 +215,14 @@ categories:
             tier: 2
             claim: "Title IX enforcement continued during Ford term; Betty Ford's public advocacy normalized first-lady political voice."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford signed Title IX final regulations May 1975 and HEW issued enforcement rules (34 CFR 106) with a 3-year compliance window covering 1974-1977, and Betty Ford is widely documented as the precedent-setting \"activist\" first lady (ERA lobbying, candid public advocacy)."
+              suggested_fix: "https://ford.blogs.archives.gov/2024/03/21/title-ix/ (Title IX) and https://www.whitehousehistory.org/betty-ford-activist-first-lady (Betty Ford advocacy)"
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 1
@@ -165,7 +235,14 @@ categories:
             tier: 2
             claim: "Civil Service Commission softened EO 10450 enforcement somewhat in mid-1970s but federal LGBTQ employment ban remained formally in effect."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CSC's July 3, 1975 suitability rules required a rational conduct-job nexus (codifying Norton v. Macy) without formally rescinding the ban; EO 10450 stayed on the books until 2017, though some popular sources loosely call the 1975 action a full \"rescission.\""
+              suggested_fix: "https://www.ebsco.com/research-starters/social-sciences-and-humanities/us-civil-service-commission-prohibits"
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 7
@@ -178,7 +255,14 @@ categories:
             tier: 1
             claim: "EAHCA (later IDEA) established federal right to free appropriate public education for disabled children; transformative disability-rights legislation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "U.S. Dept. of Education IDEA history confirms Ford signed EAHCA (PL 94-142) on Nov 29, 1975, guaranteeing FAPE to children with disabilities and later renamed IDEA in 1990; claim accurate."
+              suggested_fix: "https://sites.ed.gov/idea/IDEA-History (or https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg773.pdf for the statute text); congress.gov homepage is too generic."
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 8
@@ -191,7 +275,14 @@ categories:
             tier: 1
             claim: "ISDEAA enabled tribes to contract for federal Indian-services programs, formally ending termination era and establishing self-determination framework that continues today."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ISDEAA (PL 93-638), signed by Ford Jan 4, 1975, created \"638 contracts\" letting tribes administer federal programs, reversed the termination policy, and established a self-determination framework that continues (90%+ of tribes now hold such contracts)."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/93rd-congress/senate-bill/1017"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -203,26 +294,38 @@ categories:
         harm_score: 2
         notes: "Post-Watergate press relations improved. No major press conflicts."
         evidence:
-          - citation: "Ford-press relations records 1974-1977"
+          - citation: "Ford-press relations records 1974-1977 (Ford Library & Museum, Media Relations: https://www.fordlibrarymuseum.gov/galleries/media-relations)"
             source_url: "https://www.fordlibrarymuseum.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Ford restored post-Watergate press-presidential cooperation patterns; no major conflicts."
+            claim: "Ford restored post-Watergate press-presidential cooperation patterns; few major conflicts apart from the press-credibility rupture over the Nixon pardon and press secretary terHorst's protest resignation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened \"no major conflicts\" to note the Nixon-pardon press rupture and terHorst's resignation as exceptions, and added the Ford Library media-relations URL to the citation."
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 5
         harm_score: 3
         notes: "Church Committee (1975-76) exposed FBI/CIA/NSA abuses. Ford administration cooperated. Created Foreign Intelligence Surveillance framework (FISA drafted, enacted 1978 under Carter)."
         evidence:
-          - citation: "Senate Select Committee to Study Governmental Operations (Church Committee) reports 1975-1976"
+          - citation: "Senate Select Committee to Study Governmental Operations (Church Committee) reports 1975-1976; https://www.senate.gov/about/powers-procedures/investigations/church-committee.htm"
             source_url: "https://www.senate.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Church Committee investigations exposed extensive CIA, FBI, NSA abuses; Ford administration cooperated and initiated reform process leading to FISA 1978."
+            claim: "Church Committee investigations exposed extensive CIA, FBI, NSA abuses; Ford administration's cooperation was partial and contested (it pledged cooperation but sought to limit the probe and disclosure), while FISA 1978 traces mainly to the Committee's recommendations and Congress (signed by Carter); Ford's own reform was EO 11905 (1976)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated claim that Ford fully cooperated and initiated the reform process leading to FISA 1978, noting his cooperation was partial/contested and crediting FISA to the Committee and Congress while attributing Ford's reform to EO 11905, and added the Senate deep-link to the citation."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 5
@@ -235,7 +338,14 @@ categories:
             tier: 1
             claim: "Ford vetoed FOIA Amendments strengthening the law; Congress overrode the veto; subsequent administration complied with strengthened framework."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford vetoed the FOIA-strengthening amendments (Oct 17, 1974) and Congress overrode him (House 371-31 Nov 20; Senate 65-27 Nov 21, 1974; PL 93-502); the resulting framework took effect, fully supporting the claim."
+              suggested_fix: "https://www.congress.gov/bill/93rd-congress/house-bill/12471 (or the National Security Archive history: https://nsarchive2.gwu.edu/NSAEBB/NSAEBB142/index.htm)"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 5
@@ -248,7 +358,14 @@ categories:
             tier: 1
             claim: "Ford signed multiple post-Watergate transparency reforms including Privacy Act and Sunshine Act; vetoed FOIA Amendments (overridden)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford signed the Privacy Act of 1974 (PL 93-579) and Government in the Sunshine Act of 1976 (PL 94-409), and vetoed the 1974 FOIA Amendments, which Congress overrode (House 371-31, Senate 65-27); all elements verified."
+              suggested_fix: "https://www.senate.gov/legislative/vetoes/FordG.htm (deep link confirming the FOIA Amendments veto override vs. bare congress.gov homepage)"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -266,7 +383,14 @@ categories:
             tier: 1
             claim: "Ford's swine flu program vaccinated 40 million Americans before halt due to Guillain-Barré link; became cautionary tale for subsequent public-health programs."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CDC, Ford Library, and Wikipedia confirm ~40-45 million Americans were vaccinated before the Dec 16, 1976 suspension over Guillain-Barré links, and the program is widely cited as a public-health cautionary tale."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/digital-research-room/topic-guides/swine-flu-immunization-program-1976"
       - id: "5.2"
         name: "Education"
         good_score: 7
@@ -279,7 +403,14 @@ categories:
             tier: 1
             claim: "EAHCA was foundational federal education-for-disabled-children legislation; substantial education investment continued."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford signed EAHCA (P.L. 94-142) on Nov 29, 1975—the foundational/landmark federal special-education law—and the Education Amendments of 1976 (P.L. 94-482) continued substantial education funding; both citations are accurate."
+              suggested_fix: "https://www.congress.gov/bill/94th-congress/senate-bill/6"
       - id: "5.3"
         name: "Safety net"
         good_score: 5
@@ -292,7 +423,14 @@ categories:
             tier: 1
             claim: "EITC creation was foundational anti-poverty policy innovation though small at inception."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Ford signed the Tax Reduction Act of 1975 creating the EITC, the first refundable credit (max $400, income under $8,000, temporary), a foundational anti-poverty innovation that was small at inception."
+              suggested_fix: "Use deep link for verification: https://www.congress.gov/bill/94th-congress/house-bill/2166 (Tax Reduction Act of 1975, P.L. 94-12)."
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 4
@@ -303,10 +441,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Ford signed Section 8 voucher program one week into his term (originally Nixon-era legislation)."
+            claim: "Ford signed Section 8 housing assistance program about two weeks into his term (Aug 22, 1974) (originally Nixon-era legislation)."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected \"one week\" to \"about two weeks into his term (Aug 22, 1974)\" and \"Section 8 voucher program\" to \"Section 8 housing assistance program.\""
   - category: 6
     name: "Environmental stewardship"
     category_notes: "Era E6.2 Modern environmental. Modest continued expansion of post-EPA framework."
@@ -329,7 +472,14 @@ categories:
             tier: 1
             claim: "RCRA established federal hazardous-waste regulation framework still in effect."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "RCRA (Public Law 94-580) was signed by Ford on Oct 21, 1976 and created the federal \"cradle-to-grave\" hazardous-waste framework under Subtitle C that remains in effect (amended by HSWA 1984, EPAct 2005), per EPA and govinfo."
+              suggested_fix: "https://www.congress.gov/bill/94th-congress/senate-bill/2150"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 6
@@ -342,7 +492,14 @@ categories:
             tier: 1
             claim: "FLPMA and NFMA established modern federal land-management framework for BLM and Forest Service lands."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "FLPMA (PL 94-579, signed by Ford Oct 21, 1976) is BLM's foundational/organic management law and NFMA (PL 94-588, Oct 22, 1976) is the primary statute governing national forests; both PL numbers and the framework characterization are accurate."
+              suggested_fix: "For congress.gov deep links: https://www.congress.gov/bill/94th-congress/senate-bill/507 (FLPMA) and https://www.congress.gov/bill/94th-congress/senate-bill/3091 (NFMA)"
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 5
@@ -353,10 +510,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Magnuson-Stevens Act established US 200-mile Exclusive Economic Zone and federal fisheries management framework."
+            claim: "Magnuson-Stevens Act established US 200-mile fishery conservation zone (later relabeled the Exclusive Economic Zone) and federal fisheries management framework."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the anachronistic \"Exclusive Economic Zone\" with the 1976 statute's actual \"200-mile fishery conservation zone (later relabeled the Exclusive Economic Zone)\" term."
   - category: 7
     name: "Crisis management"
     category_notes: "Inherited Nixon resignation crisis. Pardon decision. Stagflation. Vietnam withdrawal. Two assassination attempts."
@@ -373,7 +535,14 @@ categories:
             tier: 1
             claim: "Ford pardoned Nixon within one month of taking office; rapid decision aimed at closing Watergate chapter but politically devastating."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford took office Aug 9, 1974 and signed Proclamation 4311 pardoning Nixon on Sept 8, 1974 (exactly one month); approval fell from 71% to 50% and it is widely cited as a major factor in his 1976 loss."
+              suggested_fix: "https://www.presidency.ucsb.edu/documents/proclamation-4311-granting-pardon-richard-nixon"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 5
@@ -386,7 +555,14 @@ categories:
             tier: 2
             claim: "WIN (Whip Inflation Now) campaign was widely criticized as ineffective; inflation continued through Ford term."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm the 1974 WIN campaign was widely derided as ineffective (a \"PR blunder,\" \"one of the great fizzles\") and that inflation persisted through Ford's term, not falling below 5% until Nov 1976."
+              suggested_fix: "https://en.wikipedia.org/wiki/Whip_Inflation_Now"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 7
@@ -397,9 +573,15 @@ categories:
             source_url: "https://www.fordlibrarymuseum.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Ford publicly defended pardon as in national interest; testified to Congress (October 1974) — first sitting president to testify under oath to Congress."
+            claim: "Ford publicly defended pardon as in national interest; testified to Congress (October 1974) — first sitting president to testify before the House since Lincoln (1862)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Removed the false \"first sitting president to testify under oath\" superlative, replacing it with the accurate \"first sitting president to testify before the House since Lincoln (1862).\""
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 6
@@ -412,7 +594,14 @@ categories:
             tier: 2
             claim: "Ford pardon of Nixon retrospectively defended by many historians as enabling national focus on other matters, criticized by others as precluding accountability."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the dual historical assessment: initial accountability criticism (NYT \"unjust act\") gave way to retrospective defense (2001 Profile in Courage Award, Ted Kennedy reversal, Woodward \"act of courage\") as enabling national focus on other matters."
+              suggested_fix: "https://en.wikipedia.org/wiki/Pardon_of_Richard_Nixon"
 
   - category: 8
     name: "Institutional integrity"
@@ -424,26 +613,38 @@ categories:
         harm_score: 1
         notes: "Personally clean. Modest finances. Most honest presidency since Eisenhower per contemporary assessment."
         evidence:
-          - citation: "Standard biographical scholarship; contemporary press assessments"
+          - citation: "Standard biographical scholarship; contemporary press assessments; https://www.pbs.org/newshour/spc/character/essays/ford.html"
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Ford widely considered one of most personally honest presidents of modern era; no personal-ethics scandals during or after term."
+            claim: "Ford widely considered one of most personally honest presidents of modern era; no personal-ethics scandals during term."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Removed the overstated \"or after term\" so the no-scandal claim is limited to Ford's time in office, and added the PBS \"Character Above All\" essay URL to the citation."
       - id: "8.2"
         name: "Administration ethics"
         good_score: 7
         harm_score: 2
         notes: "Generally clean administration. Rockefeller wealth disclosure during VP confirmation set new transparency precedent."
         evidence:
-          - citation: "Nelson Rockefeller VP confirmation records 1974; financial disclosure"
+          - citation: "Nelson Rockefeller VP confirmation records 1974; financial disclosure; https://www.senate.gov/about/officers-staff/vice-president/VP_Nelson_Rockefeller.htm"
             source_url: "https://www.senate.gov/"
             source_type: primary_document
             tier: 2
-            claim: "Rockefeller's financial disclosure during VP confirmation established new transparency precedent for executive-branch appointees."
+            claim: "Rockefeller's unusually detailed financial disclosure during his 25th-Amendment VP confirmation established a new transparency precedent for the scrutiny of vice-presidential nominees."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the overstated \"executive-branch appointees\" precedent as a transparency precedent for scrutinizing 25th-Amendment vice-presidential nominees, and added the Senate deep-link to the citation."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 5
@@ -456,7 +657,14 @@ categories:
             tier: 1
             claim: "Ford's preemptive Nixon pardon was constitutionally legitimate but normatively controversial; contributed to Ford's 1976 defeat."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three elements confirmed: Proclamation 4311 used Article II pardon power (constitutionally legitimate), it was highly controversial (approval fell 71%→50%, NYT called it \"unjust\"), and historians plus Ford himself attribute his 1976 loss partly to it."
+              suggested_fix: "Deep link: https://www.fordlibrarymuseum.gov/library/document/0067/1563016.pdf (Ford's pardon proclamation/statement); or https://en.wikipedia.org/wiki/Pardon_of_Richard_Nixon"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
@@ -469,7 +677,14 @@ categories:
             tier: 1
             claim: "Stevens served on SCOTUS for 35 years (1975-2010) and became major moderate-to-liberal voice; widely regarded as a strong Ford appointment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford nominated Stevens (confirmed 98-0, Dec 1975); he served Dec 1975-June 2010 (~34.5 yrs, claim's \"35 years\" is a slight round-up) and became leader of the Court's liberal wing, widely regarded as a strong appointment."
+              suggested_fix: "https://supremecourthistory.org/associate-justices/john-paul-stevens-1975-2010/ (note actual tenure was 34 years 6 months, i.e. \"nearly 35 years\")"
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 7
@@ -482,7 +697,14 @@ categories:
             tier: 2
             claim: "Stevens selection conducted via merit-based process led by AG Levi, returning to pre-Nixon-era professional vetting."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Ford delegated the 1975 Stevens selection to AG Edward Levi via a merit-based, apolitical vetting and renewed the ABA-committee referral practice that his predecessor Nixon had downgraded."
+              suggested_fix: "https://en.wikipedia.org/wiki/Gerald_Ford_Supreme_Court_candidates"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 5
@@ -495,21 +717,33 @@ categories:
             tier: 2
             claim: "Stevens evolved from moderate Republican appointee to consistent liberal vote; jurisprudential restraint mixed with activism on specific issues."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Ford-appointed Stevens shifted from moderate conservative to the Court's liberal leader, while espousing judicial restraint yet evolving/being activist on specific issues (death penalty, affirmative action); his jurisprudence is widely called idiosyncratic."
+              suggested_fix: "For a deep citable source: https://en.wikipedia.org/wiki/John_Paul_Stevens or https://supreme.justia.com/justices/john-paul-stevens/"
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 8
         harm_score: 1
         notes: "Stevens confirmed unanimously 98-0 within 19 days. Pre-modern (pre-Bork) confirmation process."
         evidence:
-          - citation: "Stevens Senate confirmation December 17, 1975 (98-0)"
+          - citation: "Stevens Senate confirmation December 17, 1975 (98-0). https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm"
             source_url: "https://www.senate.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Stevens confirmed unanimously and rapidly — last pre-Bork-era SCOTUS confirmation under traditional norms."
+            claim: "Stevens confirmed unanimously and rapidly — a 98-0 Senate vote."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Dropped the false \"last pre-Bork-era confirmation under traditional norms\" framing (contradicted by unanimous O'Connor and Scalia confirmations) and added the Senate.gov deep link to the citation."
   - category: 9
     name: "Democratic health"
     category_notes: "Restored post-Watergate institutional functioning. Survived two assassination attempts (1975). Lost narrowly 1976."
@@ -526,7 +760,14 @@ categories:
             tier: 1
             claim: "Ford signed VRA extension expanding protections to language minorities."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford signed the VRA Amendments of 1975 (Public Law 94-73) on Aug 6, 1975, which expanded protections to language minorities (Spanish-heritage, American Indian, Asian American, Alaskan Native) via bilingual ballots/materials; his signing remarks confirm this."
+              suggested_fix: "https://www.congress.gov/bill/94th-congress/house-bill/6219"
       - id: "9.2"
         name: "Press relationship"
         good_score: 6
@@ -539,7 +780,14 @@ categories:
             tier: 2
             claim: "Ford maintained dignified response to often-mocking press treatment; restored post-Watergate cooperative norms."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford famously laughed off SNL/Chevy Chase mockery and even appeared on SNL, while he and press secretary Ron Nessen deliberately restored press access vs. Nixon's hostility; only caveat is the Nixon pardon strained press relations, but the claim's core characterization holds."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/digital-research-room/finding-aids/ron-nessen-files-1974-77"
       - id: "9.3"
         name: "Political violence"
         good_score: 6
@@ -552,7 +800,14 @@ categories:
             tier: 1
             claim: "Ford survived assassination attempts by Lynette 'Squeaky' Fromme (September 5, 1975) and Sara Jane Moore (September 22, 1975)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Ford Library/Museum, Wikipedia) confirm Ford survived both attempts: Lynette \"Squeaky\" Fromme on Sept 5, 1975 (Sacramento) and Sara Jane Moore on Sept 22, 1975 (San Francisco); names and dates all accurate."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/galleries/assassination-attempts-september-1975"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 6
@@ -565,7 +820,14 @@ categories:
             tier: 2
             claim: "Ford lost 1976 election narrowly (50.1% to 48.0%); election was competitive across both ideological spectrum and regions, suggesting modest polarization."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "1976 results confirm Carter 50.08% vs Ford 48.02% (claim's 50.1%/48.0%), a ~2-point margin; Carter swept the South and key Northern states while Ford swept the West, matching the regionally-competitive, modest-polarization framing."
+              suggested_fix: "https://en.wikipedia.org/wiki/1976_United_States_presidential_election"
 
   - category: 10
     name: "Long-tail consequences"
@@ -583,33 +845,52 @@ categories:
             tier: 1
             claim: "Multiple foundational laws signed in Ford's short term (ISDEAA, EAHCA, ERISA, RCRA, FLPMA, Magnuson-Stevens) remain operational frameworks today."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All six laws were signed by Ford during his term (ERISA 1974; ISDEAA, EAHCA 1975; Magnuson-Stevens Apr 1976, RCRA and FLPMA Oct 1976) and all remain operational today, confirmed by 2025 Federal Register/Congress.gov activity; EAHCA now operates as IDEA after its 1990 renaming."
+              suggested_fix: "https://en.wikipedia.org/wiki/Presidency_of_Gerald_Ford"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 6
         harm_score: 3
         notes: "Post-Watergate institutional restoration. Pardon precedent debated. Church Committee reforms (FISA, IG framework) durable."
         evidence:
-          - citation: "Post-Watergate institutional reforms; Church Committee legacy"
+          - citation: "Post-Watergate institutional reforms; Church Committee legacy. U.S. Senate, Select Committee to Study Governmental Operations with Respect to Intelligence Activities (Church Committee): https://www.senate.gov/about/powers-procedures/investigations/church-committee.htm"
             source_url: "https://www.senate.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Ford-era cooperation with Church Committee enabled the legal-framework reforms (FISA 1978, IG Act 1978) that constrained intelligence-community abuses through subsequent decades."
+            claim: "Church Committee investigations during the Ford era drove the legal-framework reforms (FISA 1978, Executive Order 11905) that constrained intelligence-community abuses through subsequent decades."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Dropped the inaccurate \"Ford cooperation\" framing and the IG Act, attributing the reforms to Church Committee investigations and replacing the IG Act with EO 11905, and added the Senate Church Committee citation."
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 4
         harm_score: 3
         notes: "Modest. Boomers came of age. Vietnam ended ('Vietnam Syndrome' began). Stagflation generational economic experience."
         evidence:
-          - citation: "Generational political-science scholarship on Vietnam Syndrome"
+          - citation: "Generational political-science scholarship on Vietnam Syndrome; https://en.wikipedia.org/wiki/Vietnam_syndrome"
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "Vietnam War end under Ford initiated 'Vietnam Syndrome' affecting US foreign-policy decisions for 25+ years."
+            claim: "Vietnam War end under Ford (1975) contributed to the 'Vietnam Syndrome' that constrained US military interventions until the 1991 Gulf War."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened \"initiated...for 25+ years\" to \"contributed to...until the 1991 Gulf War\" to fix the overstated attribution and duration, and added the suggested Wikipedia URL to the citation."
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 5
@@ -622,7 +903,14 @@ categories:
             tier: 1
             claim: "Helsinki Accords' human-rights provisions enabled Soviet bloc dissident movements; East Timor approval led to ~100,000-200,000 Timorese deaths over subsequent decades."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both prongs check out: Helsinki Accords' Basket III enabled Charter 77/Solidarity/Helsinki Watch (founded 1978), and Ford/Kissinger's Dec 1975 green light to Suharto preceded an East Timor occupation whose authoritative death tolls (CAVR ~102k min, ~90,800-202,600; Amnesty ~200k) bracket the claimed 100k-200k."
+              suggested_fix: "For a deep authoritative source on the death toll, cite the CAVR \"Chega!\" report; on the green light, cite National Security Archive EBB No. 62 (https://nsarchive2.gwu.edu/NSAEBB/NSAEBB62/)."
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -640,7 +928,14 @@ categories:
             tier: 1
             claim: "Ford restored institutional dignity to the presidency post-Watergate with personal humility and competent public conduct."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Miller Center and multiple authoritative sources confirm Ford was widely seen as an innately decent, humble man whose integrity and competent conduct restored honor/dignity to the post-Watergate presidency, the well-documented historical consensus."
+              suggested_fix: "https://millercenter.org/president/ford/impact-and-legacy"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 6
@@ -653,7 +948,14 @@ categories:
             tier: 1
             claim: "'Our long national nightmare is over' framed Ford's accession appropriately for the post-Watergate moment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Quote is verbatim from Ford's Aug 9, 1974 remarks on taking the oath of office after Nixon's Watergate resignation; the \"post-Watergate framing\" characterization is historically well-supported (only nit: \"inaugural remarks\" is loosely worded since it was a swearing-in, not a formal inauguration)."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/library/speeches/740001.asp"
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 7
@@ -666,7 +968,14 @@ categories:
             tier: 2
             claim: "Ford presided over Bicentennial commemorations with appropriate ceremonial gravity."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ford Library/Museum and other authoritative sources confirm Ford presided over July 4, 1976 Bicentennial ceremonies (Valley Forge, Independence Hall speech, Operation Sail/USS Forrestal bell-ringing) with dignified ceremonial conduct."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/galleries/celebration-bicentennial-american-revolution"
       - id: "11.4"
         name: "Model behavior"
         good_score: 7
@@ -679,7 +988,14 @@ categories:
             tier: 2
             claim: "Ford's post-presidential conduct continued his pattern of dignified restraint; widely respected across partisan lines."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Ford's dignified, cross-partisan post-presidency: Clinton (D) gave him the 1999 Medal of Freedom for healing the nation, he won the 2001 JFK Profile in Courage Award, and was widely respected as a bipartisan elder statesman; \"restraint\" is slightly imprecise (he was actively engaged) but the core claim holds."
+              suggested_fix: "https://millercenter.org/president/ford/life-after-the-presidency"
 
   - category: 12
     name: "Effect on populace"
@@ -697,7 +1013,14 @@ categories:
             tier: 1
             claim: "Ford averaged ~47% approval; pardon caused immediate ~20-point drop; ended term ~53%."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup retrospective confirms all three figures: 47% term average, drop from 71% to ~50% (21 points) after the Sept 1974 pardon, and a final 53% reading (Dec 1976); APP data corroborates."
+              suggested_fix: "https://news.gallup.com/poll/23995/gerald-ford-retrospective.aspx"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 6
@@ -710,7 +1033,14 @@ categories:
             tier: 2
             claim: "Ford era featured Bicentennial-era national unifying moments and post-Watergate institutional restoration."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Ford Library/Museum, White House Historical Association, Miller Center, CBS) confirm the 1976 Bicentennial occurred during Ford's presidency and inspired national unity, and that Ford is widely credited with restoring institutional trust/integrity to the presidency after Watergate."
+              suggested_fix: "https://www.fordlibrarymuseum.gov/digital-research-room/topic-guides/american-bicentennial-celebration"
       - id: "12.3"
         name: "International standing"
         good_score: 5
@@ -723,21 +1053,33 @@ categories:
             tier: 2
             claim: "Ford-era US international standing was mixed: restored post-Watergate trust slightly, Vietnam-era damage continued."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Miller Center and Wikipedia corroborate a \"mixed\" Ford-era standing: a \"solid, if mostly unremarkable\" record with modest post-Watergate trust restoration (inaugural goodwill, later undercut by the Nixon pardon) and continued Vietnam damage from the \"ignominious\" fall of Saigon, though the claim slightly blurs domestic-trust vs. international-standing."
+              suggested_fix: "https://millercenter.org/president/ford/foreign-affairs"
       - id: "12.4"
         name: "Foreign public sentiment"
-        good_score: 5
-        harm_score: 3
+        good_score: 3
+        harm_score: 5
         notes: "Allied relations restored. Vietnam-era hostility continued in much of world."
         evidence:
-          - citation: "USIA international polling 1975-1976"
+          - citation: "USIA European reports / international polling 1975-1976 (Roper Center, https://ropercenter.cornell.edu/european-usia-report-collection)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Foreign public sentiment toward US under Ford modestly improved from Vietnam-era lows."
+            claim: "Foreign public sentiment toward US under Ford declined, with rising \"bad feeling\" and falling US prestige in Western Europe during the Vietnam-era aftermath."
             direction: good
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "USIA 1975-76 polling showed US prestige/sentiment in Western Europe declined (a 1976 campaign issue), contradicting the original favorable framing. Score adjusted per review: good 5->3, harm 3->5 (decline largely inherited post-Vietnam/Watergate, partly offset by Helsinki/ally diplomacy over a short term)."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "Indochinese refugee resettlement (post-Saigon 1975). Hart-Celler in effect throughout."
@@ -748,13 +1090,19 @@ categories:
         harm_score: 2
         notes: "Indochina Migration and Refugee Assistance Act 1975. Hart-Celler continued."
         evidence:
-          - citation: "Indochina Migration and Refugee Assistance Act of 1975, Public Law 94-23"
+          - citation: "Indochina Migration and Refugee Assistance Act of 1975, Public Law 94-23 (https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg87.pdf)"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "1975 Act authorized resettlement and assistance for Vietnamese, Cambodian, Laotian refugees; ~130,000 admitted in first wave."
+            claim: "1975 Act authorized resettlement and assistance for Vietnamese and Cambodian refugees (Laotians added by 1976 amendment, P.L. 94-313); ~130,000 admitted in first wave."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the original 1975 act's scope to Vietnamese and Cambodian refugees only, noting Laotians were added by the 1976 amendment (P.L. 94-313), and added the govinfo deep link to the citation."
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -767,7 +1115,14 @@ categories:
             tier: 2
             claim: "Era-typical immigration enforcement during Ford term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "INS 1978 Statistical Yearbook shows enforcement under Ford (FY74-77: deportable aliens located 788K/767K/876K/1,042K; ~18K-37K deportations, rest voluntary departures) was a smooth continuation of the 1970s upward trend with no spike or leniency campaign, i.e. era-typical."
+              suggested_fix: "Deep-link primary data: INS 1978 Statistical Yearbook, Table 23, https://cis.org/sites/default/files/2019-03/INS_Yearbook_1978.pdf (p.62)"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 7
@@ -780,7 +1135,14 @@ categories:
             tier: 1
             claim: "Indochinese refugee admission under Ford was among the largest emergency US refugee responses; established framework for Carter-era Refugee Act of 1980."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm ~130,000 Indochinese refugees admitted under Ford's 1975 Indochina Migration and Refugee Assistance Act—a major emergency response that laid groundwork for the Refugee Act of 1980—though the bulk of admissions occurred in 1975 rather than spread evenly across 1975-1977."
+              suggested_fix: "https://en.wikipedia.org/wiki/Indochina_Migration_and_Refugee_Assistance_Act"
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 4
@@ -793,7 +1155,14 @@ categories:
             tier: 1
             claim: "US foreign-born share continued slow rise from 1970 low during Ford term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census confirms 1970 was the record-low foreign-born share (4.7%) and it rose to 6.2% by 1980, so the share was indeed rising during Ford's term (1974-77); \"slow\" mildly understates the 46% decade growth but the directional claim holds."
+              suggested_fix: "https://www.census.gov/library/working-papers/1999/demo/POP-twps0029.html"
 
 calibration_summary:
   good_average_across_categories: 5.5

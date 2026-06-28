@@ -26,20 +26,33 @@ categories:
             tier: 1
             claim: "Trump T1 ended with net job loss of ~3 million across the term — first net job loss since Hoover — driven by COVID-19 pandemic recession; pre-pandemic trajectory continued Obama-era recovery."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "BLS/FactCheck confirm a net loss of ~2.7M jobs (contemporary reporting rounded to ~3M) over Trump's term, the first since modern records (Hoover-era), driven by the COVID-19 recession with pre-pandemic growth continuing though slowing."
+              suggested_fix: "Optional precision: actual BLS net change was about -2.7 million (not 3.0M); deeper source: https://www.factcheck.org/2021/10/trumps-final-numbers/"
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 3
         harm_score: 6
         notes: "TCJA 2017 disproportionately benefited high earners and corporations (corporate rate 35%→21%). Top 1% income share continued rising. CARES Act provided broad benefits during COVID."
         evidence:
-          - citation: "Tax Cuts and Jobs Act of 2017, Public Law 115-97; CBO TCJA distributional analysis"
+          - citation: "Tax Cuts and Jobs Act of 2017, Public Law 115-97; Joint Committee on Taxation and Tax Policy Center distributional analyses"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "TCJA reduced corporate tax rate from 35% to 21% permanently and reduced individual rates temporarily; CBO estimated top 1% received outsized share of benefits."
+            claim: "TCJA cut the corporate tax rate from 35% to 21% permanently and reduced individual rates temporarily (expiring end-2025); JCT and Tax Policy Center analyses found the top 1% received an outsized share of the benefits."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Fixed attribution: the top-1%-share figures come from JCT/Tax Policy Center, not CBO; added that individual cuts expire end-2025."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 2
@@ -52,21 +65,33 @@ categories:
             tier: 1
             claim: "Federal debt rose from $19.9T to $27.8T during Trump T1; TCJA reduced revenues by ~$1.5T over 10 years; COVID-19 spending added trillions more."
             direction: harm
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "CRFB/OMB confirm gross debt $19.95T (Jan 2017) to $27.75T (Jan 2021); JCT scored TCJA at ~$1.456T deficit increase over 10yrs (~$1.5T revenue loss); COVID relief added ~$3.6T — all figures accurate."
+              suggested_fix: "Replace bare OMB homepage with a deep source: https://www.crfb.org/blogs/how-much-did-president-trump-add-debt (debt + COVID + TCJA breakdown)."
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 4
         harm_score: 5
         notes: "Real wage growth modest pre-pandemic. Workforce participation rate flat. Overtime rule weakened. Joint employer rule weakened. Manufacturing employment essentially flat."
         evidence:
-          - citation: "BLS real wages data 2017-2021"
+          - citation: "Census P60-273 real median household income 2017-2020; BLS series CES3000000001 manufacturing employment; FactCheck.org \"Trump's Final Numbers\" (https://www.factcheck.org/2021/10/trumps-final-numbers/)"
             source_url: "https://www.bls.gov/"
             source_type: statistic
             tier: 1
-            claim: "Real median household income rose modestly pre-pandemic before pandemic-era collapse; manufacturing employment essentially flat across the term contrary to campaign rhetoric."
+            claim: "Real median household income grew strongly pre-pandemic (a record high in 2019) before a 2.9% pandemic-era decline in 2020; manufacturing employment essentially flat across the term contrary to campaign rhetoric."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the \"rose modestly\"/\"collapse\" mischaracterization with the actual magnitudes (record-high 2019 growth, -2.9% in 2020) and corrected the citation from BLS to Census/CPS plus the manufacturing and FactCheck sources."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.5 Multipolar contested. Withdrew from Paris, JCPOA, TPP, WHO, INF Treaty. Abraham Accords. North Korea summits. Trade wars. Soleimani killing. Most disruptive foreign-policy presidency since LBJ."
@@ -84,7 +109,14 @@ categories:
             tier: 1
             claim: "Trump did not initiate new major wars but killed Soleimani provoking Iran retaliation; Doha Agreement with Taliban set framework for subsequent Afghanistan withdrawal."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three elements verified: Trump's first term started no new major war; Soleimani killed by US drone strike Jan 3 2020 with Iran's Jan 8 missile retaliation on Al Asad; Doha Agreement signed Feb 29 2020 framing the 2021 Afghanistan withdrawal—dates accurate."
+              suggested_fix: "Replace bare homepage with a deep link, e.g. https://www.state.gov/wp-content/uploads/2020/02/Agreement-For-Bringing-Peace-to-Afghanistan-02.29.20.pdf (Doha) and the DoD/CRS Soleimani strike report."
       - id: "2.2"
         name: "Alliance management"
         good_score: 3
@@ -97,7 +129,14 @@ categories:
             tier: 1
             claim: "Trump repeatedly threatened to withdraw from NATO and criticized allies publicly; major allied countries' trust in US declined sharply per Pew Global Attitudes."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew's June 2017 report confirms \"sharp decline...especially pronounced among...America's closest allies\" (median confidence 64%→22%), and Trump publicly confirmed (Atlantic Council, NYT) he repeatedly threatened to leave NATO in 2018 and called allies \"delinquent.\""
+              suggested_fix: "Cite the primary Pew report directly: https://www.pewresearch.org/global/2017/06/26/u-s-image-suffers-as-publics-around-world-question-trumps-leadership/"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 5
@@ -110,7 +149,14 @@ categories:
             tier: 1
             claim: "Abraham Accords was major diplomatic achievement normalizing Israel with multiple Arab states; offset by major withdrawals from international agreements (Paris, JCPOA, WHO, TPP, INF, Open Skies, UNHRC)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All verified: Abraham Accords (Sep 15, 2020, Israel-UAE/Bahrain normalization), plus T1-era withdrawals from Paris (Jun 1 2017), JCPOA (May 2018), UNHRC (Jun 2018), TPP (Jan 2017), INF (2018-19), Open Skies (Nov 2020), and WHO (initiated 2020); dates and characterization accurate."
+              suggested_fix: "Use deep links e.g. https://2017-2021.state.gov/the-abraham-accords/ and https://2017-2021.state.gov/us-TPP-withdrawal/ instead of the bare history.state.gov homepage."
       - id: "2.4"
         name: "Civilian impact"
         good_score: 4
@@ -124,6 +170,13 @@ categories:
             claim: "Airwars and UN data documented sharply increased civilian casualties from US/coalition airstrikes during Trump T1 after Obama-era targeting restrictions were relaxed; separately, the 'zero tolerance' family-separation policy separated thousands of children from parents at the border (documented by HHS OIG)."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Cited Airwars page plus UN data document sharply increased civilian casualties after Obama-era restrictions were relaxed (active-hostilities designations; ~50% rise in Afghanistan strike casualties), and HHS OIG report OEI-BL-18-00511 confirms thousands of children separated under zero-tolerance."
+              suggested_fix: "For the HHS OIG family-separation specifics, cite the report directly: https://oig.hhs.gov/oei/reports/oei-BL-18-00511.pdf"
 
   - category: 3
     name: "Civil rights & equality"
@@ -143,19 +196,31 @@ categories:
             claim: "Trump T1's response to the Unite the Right rally ('very fine people on both sides'), the travel ban targeting several majority-Muslim countries (upheld 5-4 in Trump v. Hawaii, 2018), and the Census citizenship question (blocked by the Supreme Court in Department of Commerce v. New York, 2019) defined the administration's racial-equity record."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three facts check out: Trump's Aug 15 2017 \"very fine people on both sides\" Charlottesville remark, Trump v. Hawaii 585 U.S. 667 (2018) upholding the travel ban 5-4, and Dept. of Commerce v. New York (2019) blocking the census citizenship question."
       - id: "3.2"
         name: "Gender equity"
         good_score: 2
         harm_score: 7
         notes: "A New York federal civil jury found Trump liable for sexual abuse and defamation of E. Jean Carroll (May 9, 2023; affirmed on appeal); a second jury awarded $83.3M in defamation damages (January 26, 2024). Separately, Trump has faced numerous unadjudicated allegations of sexual misconduct (including the 'Access Hollywood' recording released in 2016 and the Stormy Daniels matter, which was the subject of a separate New York criminal proceeding). Title IX administrative policy was weakened. Reproductive rights were rolled back through judicial appointments. The Women's March (January 21, 2017) was reported as the largest single-day protest in US history."
         evidence:
-          - citation: "Carroll v. Trump, S.D.N.Y. verdicts May 9 2023 ($5M: sexual battery + defamation) and Jan 26 2024 ($83.3M defamation); both affirmed by the Second Circuit, Dec 30 2024 (No. 23-793); Title IX policy changes 2020"
+          - citation: "Carroll v. Trump, S.D.N.Y. verdicts May 9 2023 ($5M) and Jan 26 2024 ($83.3M); Second Circuit affirmed No. 23-793 (Dec 30 2024) and No. 24-644 (Sept 8 2025); Title IX policy changes 2020"
             source_url: "https://law.justia.com/cases/federal/appellate-courts/ca2/23-793/23-793-2024-12-30.html"
             source_type: primary_document
             tier: 1
-            claim: "A federal civil jury found Trump liable for sexual abuse and defamation of E. Jean Carroll (May 9, 2023; $5M verdict — $2M sexual battery, $2.7M defamation, $0.28M punitive); a second jury awarded $83.3M in defamation damages (January 26, 2024); both verdicts were affirmed by the Second Circuit in December 2024. Title IX administrative changes weakened campus sexual-assault procedural protections."
+            claim: "A federal civil jury found Trump liable for sexual abuse and defamation of E. Jean Carroll (May 9, 2023; $5M verdict - $2M sexual battery, $2.7M defamation, $0.28M punitive); a second jury awarded $83.3M in defamation damages (January 26, 2024). The Second Circuit affirmed the $5M verdict on December 30, 2024 and the $83.3M judgment on September 8, 2025. Title IX administrative changes weakened campus sexual-assault procedural protections."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected the appeals: only the $5M verdict was affirmed Dec 30 2024; the $83.3M judgment was affirmed Sept 8 2025."
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 1
@@ -170,6 +235,12 @@ categories:
             claim: "Trump T1 announced a transgender military service ban via social media (July 26 2017; the Supreme Court allowed it to take effect in Jan 2019, and it was later reversed by Biden); rolled back federal-contractor LGBTQ protections and healthcare anti-discrimination rules; in Bostock v. Clayton County (2020) the Supreme Court ruled against the administration's position, holding Title VII protects sexual-orientation and gender-identity discrimination."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All components verified: July 26 2017 Twitter ban announcement, SCOTUS Jan 22 2019 stay allowing it to take effect, Biden reversal, federal-contractor (OFCCP religious-exemption) and HHS Section 1557 rollbacks, and Bostock 590 U.S. 644 (2020) ruling against the DOJ's position are all accurate."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 3
@@ -182,7 +253,14 @@ categories:
             tier: 1
             claim: "Public charge rule expansion penalized immigrants for using public benefits including disability services; subsequently rescinded by Biden."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "DHS's Aug 2019 public charge final rule (effective Feb 2020) expanded penalized benefits and weighed disability as a negative factor, denying immigrants with disabilities access; Biden stopped enforcing it in 2021 and finalized a replacement Sept 2022 — all elements confirmed."
+              suggested_fix: "https://www.federalregister.gov/documents/2019/08/14/2019-17142/inadmissibility-on-public-charge-grounds"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 3
@@ -195,7 +273,14 @@ categories:
             tier: 1
             claim: "Trump shrunk Bears Ears National Monument by 85% and Grand Staircase-Escalante by 50% — largest reductions in monument history; both subsequently restored by Biden."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Bears Ears was cut ~85% (1.35M to ~202k acres) and Grand Staircase-Escalante by 47% (commonly called \"about half\") via the Dec 4, 2017 proclamations—the largest such reductions in US history—and Biden fully restored both on Oct 8, 2021; only nuance is GSE was 47%, not exactly 50%."
+              suggested_fix: "https://www.presidency.ucsb.edu/documents/proclamation-10286-grand-staircase-escalante-national-monument (note GSE reduction was ~47%, often described as \"about half\")"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -214,7 +299,14 @@ categories:
             tier: 1
             claim: "Trump repeatedly characterized US press as 'enemy of the people' and 'fake news'; Committee to Protect Journalists tracked unprecedented presidential anti-press rhetoric during T1."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "CPJ's own reports document Trump repeatedly calling the press \"fake news\" and \"enemy of the people\" and explicitly describe his \"unprecedented hostility toward the press,\" fully supporting the claim; sourceUrl is a bare homepage."
+              suggested_fix: "Replace bare homepage with deep link: https://cpj.org/reports/2020/04/trump-media-attacks-credibility-leaks/ (and https://cpj.org/2019/01/trump-twitter-press-fake-news-enemy-people/ for the tweet counts)."
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 3
@@ -227,7 +319,14 @@ categories:
             tier: 1
             claim: "FISA Section 702 reauthorized 2018; surveillance state continued largely unchanged from Obama era with some expansion in immigration enforcement surveillance."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "S.139 / FISA Amendments Reauthorization Act of 2017 became Public Law 115-118, signed Jan 19, 2018, reauthorizing Section 702 largely intact; ICE/immigration data surveillance demonstrably expanded under Trump's first term, matching all claim elements."
+              suggested_fix: "https://www.congress.gov/115/plaws/publ118/PLAW-115publ118.pdf"
       - id: "4.3"
         name: "Executive restraint"
         good_score: 2
@@ -242,6 +341,12 @@ categories:
             claim: "Trump T1 declared a national emergency to redirect appropriated funds for the border wall after Congress declined; fired multiple inspectors general (State, DoD, HHS, Intelligence Community); impeached Dec 18 2019 for abuse of power and obstruction of Congress over Ukraine pressure (acquitted Feb 5 2020)."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three components verified: Feb 15 2019 national emergency (Proclamation 9844) to redirect funds for the wall after Congress declined; IG firings at IC (Atkinson Apr 3), DoD (Fine Apr 7), HHS (Grimm May 1), State (Linick May 15) 2020; and first impeachment Dec 18 2019 (abuse of power + obstruction of Congress, Ukraine), acquitted Feb 5 2020 per H.Res.755."
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 2
@@ -254,7 +359,14 @@ categories:
             tier: 1
             claim: "Trump T1 broke 40-year tradition by refusing to release tax returns; systematically stonewalled congressional document requests requiring SCOTUS resolution."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm Trump was first president since the ~1976 Nixon-era norm to withhold tax returns, broadly obstructed House oversight (\"fighting all the subpoenas\"), and that records fights reached SCOTUS in Trump v. Mazars and Trump v. Vance (both 7-2, July 2020); only minor nuance is Vance was a state criminal subpoena rather than congressional."
+              suggested_fix: "For a deep link, cite https://en.wikipedia.org/wiki/Trump_v._Mazars_USA,_LLP and https://en.wikipedia.org/wiki/Tax_returns_of_Donald_Trump instead of the Justia homepage."
 
   - category: 5
     name: "Domestic welfare & health"
@@ -273,7 +385,14 @@ categories:
             tier: 1
             claim: "US COVID-19 deaths reached ~400,000 by Trump T1 end; Operation Warp Speed accelerated vaccine development (Pfizer EUA December 11, 2020); response widely criticized as slow on testing, masks, and federal coordination."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All components verified: US deaths crossed ~400,000 on Jan 19-20, 2021 (PBS/KFF; CDC ~424k by Jan 20); Pfizer EUA Dec 11, 2020; OWS launched May 15, 2020; slow-testing/masks/coordination criticism well-documented."
+              suggested_fix: "For a deep CDC link, cite the CDC COVID Data Tracker mortality archive (https://covid.cdc.gov/covid-data-tracker/#trends_totaldeaths); note Pfizer declined OWS R&D funding though it joined OWS procurement in July 2020."
       - id: "5.2"
         name: "Education"
         good_score: 3
@@ -286,7 +405,14 @@ categories:
             tier: 2
             claim: "DeVos education department reduced federal enforcement of civil rights, for-profit college regulations, and student loan protections."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three pillars confirmed: OCR scaled back systemic civil-rights investigations/compliance reviews (2017 memo, 1,200+ probes scuttled), DeVos repealed gainful-employment (2019) and rewrote borrower-defense rules, and weakened student-loan relief (held in civil contempt for illegal collections)."
+              suggested_fix: "Replace bare homepage with deep links such as https://www.washingtonpost.com/local/education/how-do-you-enforce-civil-rights-under-betsy-devos-a-stark-shift-in-approach/2018/07/30/0ebf6e3e-8eb2-11e8-bcd5-9d911c784c38_story.html and https://www.cnbc.com/2019/07/01/devos-rescinds-rule-forcing-colleges-to-disclose-debt-and-salary-data.html"
       - id: "5.3"
         name: "Safety net"
         good_score: 4
@@ -299,7 +425,14 @@ categories:
             tier: 1
             claim: "CARES Act of 2020 provided unprecedented unemployment benefits expansion ($600/week federal supplement), direct payments, and Paycheck Protection Program; emergency response substantial."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CARES Act (P.L. 116-136, signed 3/27/2020) is verified to include the $600/week FPUC unemployment supplement, ~$1,200 direct Economic Impact Payments, and the $349B Paycheck Protection Program, matching all specifics in the claim."
+              suggested_fix: "https://www.congress.gov/bill/116th-congress/house-bill/748"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 3
@@ -312,7 +445,14 @@ categories:
             tier: 1
             claim: "CDC eviction moratorium protected ~30 million renters from eviction during COVID-19; legal authority contested, struck down by SCOTUS August 2021."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CDC order took effect Sept 4, 2020 under Trump; SCOTUS blocked it Aug 26, 2021 on CDC-authority grounds; ~30M renters figure aligns with widely-cited \"30-40M at risk\" / ~30M behind on rent, though it's an approximation (Eviction Lab: covered 39M of 43M renter households)."
+              suggested_fix: "https://www.federalregister.gov/documents/2020/09/04/2020-19654/temporary-halt-in-residential-evictions-to-prevent-the-further-spread-of-covid-19"
 
   - category: 6
     name: "Environmental stewardship"
@@ -331,20 +471,33 @@ categories:
             tier: 1
             claim: "Trump T1 withdrew US from Paris Agreement effective the day after 2020 election; reversed multiple federal climate regulations; substantially set back US climate policy."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm Trump announced Paris withdrawal June 1, 2017, effective Nov 4, 2020 (one day after the Nov 3, 2020 election), and rolled back ~98 environmental rules including the Clean Power Plan, substantially setting back US climate policy."
+              suggested_fix: "Replace bare homepage with deep link: https://en.wikipedia.org/wiki/United_States_and_the_Paris_Agreement (or Sabin Center: https://climate.law.columbia.edu/content/president-trump-announces-withdrawal-paris-agreement-0)"
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 2
         harm_score: 7
         notes: "Reversed ~125+ environmental regulations per Harvard Environmental and Energy Law Program tracker. WOTUS rule rolled back. Mercury rule weakened."
         evidence:
-          - citation: "Harvard Law School Environmental and Energy Law Program regulatory tracker 2017-2021"
+          - citation: "Harvard Law School Environmental & Energy Law Program regulatory tracker 2017-2021; Washington Post rollback tally (Oct 2020)"
             source_url: "https://eelp.law.harvard.edu/"
             source_type: academic
             tier: 1
-            claim: "Trump T1 reversed approximately 125+ environmental regulations across EPA, Interior, USDA — major environmental regulatory rollback era."
+            claim: "Trump T1 rolled back roughly 100 environmental regulations across EPA and Interior (the Harvard EELP/NYT tracker counted ~98 finalized; a higher '125+' figure comes from a Washington Post tally) - a major environmental deregulation era."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected the count/attribution: the Harvard EELP tracker counted ~98 finalized rollbacks; the '125+' figure is a Washington Post tally; trimmed the overstated USDA emphasis."
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 2
@@ -357,7 +510,14 @@ categories:
             tier: 1
             claim: "TCJA opened ANWR Coastal Plain to oil and gas leasing (long-fought conservation reversal); Tongass roadless rule reversal opened 9.4 million acres of national forest to logging and roads."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm the TCJA (2017) opened the ANWR Coastal Plain to oil/gas leasing and the 2020 Alaska Roadless Rule exempted the Tongass, opening it to logging and roads; official acreage is 9.37M, of which \"9.4 million\" is a fair rounding."
+              suggested_fix: "Optionally cite the exact figure (9.37 million acres) per USDA/Forest Service and link the CRS product https://www.congress.gov/crs-product/IF10782 for the ANWR/TCJA provision."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 2
@@ -370,7 +530,14 @@ categories:
             tier: 1
             claim: "ESA regulations rewritten to make listing harder and protections weaker; Migratory Bird Treaty Act reinterpreted to exclude incidental take, reducing wildlife protections."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Confirmed: Aug 27, 2019 ESA rules (rescinded blanket 4(d), allowed economic info in listing, narrowed \"foreseeable future,\" heightened critical-habitat standards) weakened protections, and Solicitor Opinion M-37050 (Dec 22, 2017) excluded incidental take from the MBTA; only flaw is the bare fws.gov homepage source URL."
+              suggested_fix: "Use deep links: https://www.fws.gov/press-release/2019-08/trump-administration-improves-implementing-regulations-endangered-species-act and https://www.doi.gov/sites/doi.gov/files/uploads/m-37050.pdf"
 
   - category: 7
     name: "Crisis management"
@@ -388,7 +555,14 @@ categories:
             tier: 1
             claim: "COVID-19 federal response criticized as systematically slow on testing capacity, federal stockpile management, and risk communication; Hurricane Maria Puerto Rico response was notoriously slow."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "GAO reports document early missteps/delays in COVID-19 testing capacity (flawed CDC kits), Strategic National Stockpile shortfalls, and inconsistent risk communication, and GAO/FEMA reports confirm the Hurricane Maria response was slower and less-resourced than Harvey/Irma."
+              suggested_fix: "For deep links: COVID-19 GAO-21-191 (https://www.gao.gov/products/gao-21-191) and Maria GAO-19-256 (https://www.gao.gov/products/gao-19-256)."
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 3
@@ -401,7 +575,14 @@ categories:
             tier: 1
             claim: "US COVID-19 mortality during Trump T1 exceeded peer-country mortality rates; estimated 100,000-200,000 excess US deaths attributable to inadequate federal response (per various studies)."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Peer-reviewed mortality-gap study found 132,173 (2020) growing to 190,867 (Apr2020-Apr2021) excess US deaths vs five European peers, and the Lancet Commission found ~40% of ~450,000 US COVID deaths (~180,000) avoidable vs G7 average, calling Trump's response \"inept and insufficient\"—all within the claimed 100k-200k range and supporting peer-country comparison."
+              suggested_fix: "CDC homepage lacks the comparative analysis; cite Peterson-KFF (healthsystemtracker.org/brief/covid-19-pandemic-related-excess-mortality-and-potential-years-of-life-lost-in-the-u-s-and-peer-countries/) and the mortality-gap study (ncbi.nlm.nih.gov/pmc/articles/PMC10057752/) plus the 2021 Lancet Commission report."
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 1
@@ -416,6 +597,13 @@ categories:
             claim: "The Washington Post's Fact Checker catalog identified 30,573 statements by Trump during his first term that it rated false or misleading by its published methodology."
             direction: harm
             verification_status: pending
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "WaPo Fact Checker's official tally was exactly 30,573 false or misleading claims over Trump's 2017-2021 first term, confirmed by the WaPo headline and multiple corroborating sources (The Hill, The Week, Wikipedia); claim's only trivial deviation is \"statements\" vs WaPo's \"claims.\""
+              suggested_fix: "Deep link: https://www.washingtonpost.com/politics/2021/01/24/trumps-false-or-misleading-claims-total-30573-over-four-years/"
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 3
@@ -428,7 +616,14 @@ categories:
             tier: 1
             claim: "Trump T1 ended with US in active COVID-19 crisis (~4,000 daily deaths peak January 2021); transition to Biden administration handled multiple unresolved crises."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "US single-day COVID deaths first topped 4,000 on Jan 7, 2021 (4,194) and peaked ~mid-January (single-day record ~4,400; 7-day avg ~3,425), with Trump's term ending amid an active COVID crisis and a Biden handover of converging crises (pandemic, economy, Jan 6/unrest) — all elements supported."
+              suggested_fix: "Optionally cite https://www.cnn.com/2021/01/07/health/us-coronavirus-thursday/index.html (first day >4,000 deaths) and https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/01/20/fact-sheet-president-elect-bidens-day-one-executive-actions-deliver-relief-for-families-across-america-amid-converging-crises/ for the converging-crises handover."
 
   - category: 8
     name: "Institutional integrity"
@@ -445,9 +640,15 @@ categories:
             source_url: "https://manhattanda.org/d-a-bragg-announces-34-count-felony-trial-conviction-of-donald-j-trump/"
             source_type: primary_document
             tier: 1
-            claim: "Trump became the first US president convicted of a felony (People v. Trump, May 30, 2024 — 34 counts of falsifying business records; on appeal). The federal cases on classified documents and January 6 were dismissed following the 2024 election; the Georgia state election-interference case remained pending."
+            claim: "Trump became the first US president convicted of a felony (People v. Trump, May 30, 2024 - 34 counts of falsifying business records; on appeal). The federal classified-documents and January 6 cases were dismissed following the 2024 election, and the Georgia state election-interference case was dismissed on November 26, 2025."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Updated the Georgia case: dismissed Nov 26, 2025 (Judge McAfee, after charges were dropped), not still pending."
       - id: "8.2"
         name: "Administration ethics"
         good_score: 2
@@ -458,9 +659,15 @@ categories:
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "The Mueller investigation yielded 7 convictions or guilty pleas among Trump associates (some subsequently pardoned by Trump); subsequent prosecutions yielded additional convictions among campaign-era and administration figures."
+            claim: "The Mueller investigation yielded guilty pleas or convictions of 6 Trump associates (some subsequently pardoned by Trump; 8 convictions/pleas in total); subsequent prosecutions yielded additional convictions among campaign-era and administration figures."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected '7 associates' to 6 (Papadopoulos, Gates, Manafort, Flynn, Cohen, Stone); Mueller's 8 total pleas/convictions included two non-associates."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 1
@@ -472,9 +679,15 @@ categories:
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Trump T1 was twice impeached by House (December 2019 for Ukraine pressure; January 2021 for incitement of insurrection) — first president to be twice impeached; refused peaceful transition for first time since 1860 secession."
+            claim: "Trump T1 was twice impeached by the House (December 2019 for Ukraine pressure; January 2021 for incitement of insurrection) - the first president to be twice impeached; he also refused to commit to a peaceful transfer of power, breaking a norm dating to 1801."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Replaced the imprecise 'first time since 1860 secession' framing; the peaceful-transfer norm dates to 1801 and Buchanan handed power to Lincoln peacefully."
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 6
@@ -487,7 +700,14 @@ categories:
             tier: 1
             claim: "Trump T1 appointed three SCOTUS justices reshaping Court to 6-3 conservative supermajority that subsequently decided Dobbs (2022), Bruen (2022), and Trump v. Anderson (2024)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gorsuch/Kavanaugh/Barrett were all confirmed in Trump's first term creating the 6-3 majority, and Dobbs (June 24, 2022), Bruen (June 23, 2022), and Trump v. Anderson (March 4, 2024) all check out; only nuance is Anderson was a unanimous 9-0 ruling rather than a 6-3 conservative split."
+              suggested_fix: "For a court-specific deep link, cite https://www.supremecourt.gov/opinions/23pdf/23-719_19m2.pdf (Trump v. Anderson) rather than the bare homepage."
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 3
@@ -500,7 +720,14 @@ categories:
             tier: 1
             claim: "Kavanaugh confirmation hearings featured Christine Blasey Ford allegations; Barrett confirmation in 30 days days before 2020 election after Senate Republicans blocked Garland in 2016 citing election-year rule."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All four elements verified: Kavanaugh hearings (Sept 4-7, 2018) featured Ford's Sept 27 testimony; Barrett nominated Sept 26 and confirmed Oct 26, 2020 (exactly 30 days, 8 days pre-election); McConnell blocked Garland in 2016 on election-year grounds; only a harmless \"days days\" typo."
+              suggested_fix: "Replace bare homepage with deep link, e.g. https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm (Barrett confirmation roll call vote)."
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 4
@@ -513,7 +740,14 @@ categories:
             tier: 1
             claim: "Trump-appointed SCOTUS justices joined Dobbs decision overturning Roe v. Wade (1973) — among most consequential 'activist' overturning of precedent in SCOTUS history."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Three Trump-appointed justices (Gorsuch, Kavanaugh, Barrett) joined the Dobbs majority (June 24, 2022) overturning Roe (1973); citation 597 U.S. ___ (2022) and the \"activist precedent reversal\" framing are accurate and widely supported."
+              suggested_fix: "https://www.law.cornell.edu/wex/dobbs_v._jackson_women's_health_organization_(2022)"
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 2
@@ -527,7 +761,14 @@ categories:
             tier: 1
             claim: "Barrett confirmed 8 days before election after McConnell's reversal from 2016 'no election-year confirmation' rule; established asymmetric SCOTUS confirmation politics."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Senate.gov roll call vote 224 confirms Barrett 52-48 on Oct 26, 2020 (8 days before the Nov 3 election); McConnell's 2016-vs-2020 reversal and the resulting asymmetric \"McConnell Rule\" are well-documented."
+              suggested_fix: "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1162/vote_116_2_00224.htm"
 
   - category: 9
     name: "Democratic health"
@@ -547,6 +788,12 @@ categories:
             claim: "On a recorded January 2, 2021 call, Trump pressed the Georgia Secretary of State to 'find 11,780 votes'; the recording was published by The Washington Post and the call later featured in the 2023 Fulton County election-interference indictment. Part of a broader pattern of post-election voter-access attacks during T1."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All specifics check out: the Jan 2, 2021 call, the \"find 11,780 votes\" quote to Ga. Sec. of State Raffensperger, WaPo's Jan 3, 2021 publication of the recording, and the call's central role (Count 28) in the Aug 14, 2023 Fulton County indictment."
       - id: "9.2"
         name: "Press relationship"
         good_score: 1
@@ -560,7 +807,14 @@ categories:
             tier: 1
             claim: "Trump T1 anti-press rhetoric was unprecedented in modern presidency; CPJ documented systematic attacks on press; pattern continued throughout term."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "CPJ's April 2020 report \"The Trump Administration and the Media\" documents systematic, sustained anti-press attacks (~1,900 tweets, \"fake news\"/\"enemy of the people\") and characterizes them as an unprecedented \"most direct sustained assault on freedom of the press in our history,\" continuing throughout the term."
+              suggested_fix: "https://cpj.org/reports/2020/04/trump-media-attacks-credibility-leaks/"
       - id: "9.3"
         name: "Political violence"
         good_score: 1
@@ -574,7 +828,14 @@ categories:
             tier: 1
             claim: "As documented by the House Select Committee's Final Report (December 22, 2022), the Committee concluded that Trump had a central role in the events leading to the January 6, 2021 Capitol attack and that he failed to act to stop the violence for approximately 187 minutes after it began. Five people died in connection with the events of that day per congressional and law-enforcement reporting; the Committee's characterizations of Trump's conduct are contested by Trump."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "The Dec 22, 2022 House Select Committee Final Report names Trump the \"central cause\" of Jan 6 and details \"187 minutes of dereliction\"; the ~five-death figure (4 on the day plus Officer Sicknick) and Trump's contestation are accurately and appropriately hedged."
+              suggested_fix: "For a deep link, cite the report executive summary: https://en.wikisource.org/wiki/Final_Report_of_the_Select_Committee_to_Investigate_the_January_6th_Attack_on_the_United_States_Capitol/Executive_Summary:_Overview"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 1
@@ -582,14 +843,19 @@ categories:
         era_context: "E9.4 — era-defining 10-harm"
         notes: "Most polarizing presidency in modern polling. Big Lie split Republicans from democracy. 'They're not sending their best' rhetoric. Caravan rhetoric. Squad attacks. Anti-Muslim, anti-Hispanic, anti-Black rhetoric. Most polarizing modern presidency."
         evidence:
-          - citation: "Pew partisan polarization research 2017-2021"
+          - citation: "Pew 'Partisan Antipathy' (Oct 2019); ANES affective-polarization (feeling-thermometer) data 2017-2020"
             source_url: "https://www.pewresearch.org/"
             source_type: statistic
             tier: 1
-            claim: "Partisan polarization measured by Pew reached historic highs during Trump T1; partisan-feeling-thermometer gap widest measured to that point."
+            claim: "Partisan animosity reached record highs during Trump T1 (Pew 2019: out-party 'very cold' ratings rose sharply); ANES affective-polarization data show the partisan feeling-thermometer gap at its widest measured to that point."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Disaggregated the sources: record cold/very-cold ratings are Pew (2019); the 'widest thermometer gap' is an ANES metric, not a Pew headline."
   - category: 10
     name: "Long-tail consequences"
     category_notes: "Per v1.2 §9.4: ~5.3 years post-term — all 10.x sub-criteria tagged low_confidence (tentative_long_tail: true)."
@@ -607,7 +873,14 @@ categories:
             tier: 1
             claim: "Trump T1's most durable legacies: TCJA (most provisions still in effect), USMCA, Abraham Accords, three SCOTUS appointments shaping subsequent decade of jurisprudence."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All four pillars verify: TCJA provisions extended/made permanent by 2025 OBBBA, USMCA in effect since July 2020, Abraham Accords (Sept 2020) intact, and three SCOTUS confirmations (Gorsuch 2017, Kavanaugh 2018, Barrett 2020)."
+              suggested_fix: "Optional deep links: https://en.wikipedia.org/wiki/Tax_Cuts_and_Jobs_Act ; https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement ; https://en.wikipedia.org/wiki/Abraham_Accords"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 1
@@ -621,7 +894,14 @@ categories:
             tier: 1
             claim: "V-Dem Institute and other democracy-quality indicators downgraded US democratic quality substantially during Trump T1 era; Trump v. United States (2024) expanded presidential immunity dramatically."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Both parts check out: V-Dem shows US fell below its 0.80 Liberal Democracy threshold from 2017 and Freedom House dropped ~6 pts during T1; Trump v. US (603 U.S. ___, July 1 2024, 6-3) did dramatically expand presidential immunity—though V-Dem frames T1 as \"foundation\" with the sharpest downgrade in T2, mildly overstating \"substantially\" for T1."
+              suggested_fix: "Replace bare homepage with deep links: https://www.v-dem.net/documents/12/dr_2021.pdf (Democracy Report 2021 covering 2017-2020) and Freedom House FIW 2021 https://freedomhouse.org/country/united-states/freedom-world/2021 ; cite Trump v. United States slip op. https://www.supremecourt.gov/opinions/23pdf/23-939_e2pg.pdf"
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 3
@@ -635,7 +915,14 @@ categories:
             tier: 1
             claim: "Trump T1 era fundamentally realigned Republican Party around populist-nationalist framework; COVID-era education disruption affected Gen Z developmental and educational outcomes substantially."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Both prongs hold: political-science sources (Cambridge JAS, AEI, Brookings/NBC on the diploma divide) document a Trump-era populist-nationalist GOP realignment, and NAEP data show historic COVID learning loss (record 8-pt math drop, reading to 1992 levels, ~40% of 8th graders below-basic); minor caveats are that scholars say Trump \"accelerated/completed\" a pre-existing trend rather than starting it, and the most-affected K-12 cohort is partly Gen Alpha, not purely Gen Z."
+              suggested_fix: "For deep-link citations: https://www.cambridge.org/core/journals/journal-of-american-studies/article/donald-trump-and-the-turn-to-rightwing-populism-in-the-republican-party-19902024/0F2E019C9441E9A0BBF6009211CF31A5 and https://www.pbs.org/newshour/education/test-scores-show-how-covid-set-kids-back-across-the-u-s"
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 4
@@ -649,7 +936,14 @@ categories:
             tier: 1
             claim: "Trump T1's foreign-policy disruption produced lasting effects: Iran nuclear program advanced beyond JCPOA limits, NATO trust damaged, China-Russia coordination strengthened."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three components check out: Iran began breaching JCPOA limits mid-2019 after Trump's 2018 withdrawal (CFR/IAEA), first-term NATO trust damage is well-documented (CSIS/PBS), and China-Russia coordination deepened 2017-2021 incl. joint patrols and the 2019 \"new era\" partnership upgrade; causal attribution is somewhat interpretive but factual core is accurate."
+              suggested_fix: "For Iran, cite https://www.cfr.org/backgrounders/what-iran-nuclear-deal ; for NATO, https://www.csis.org/analysis/transatlantic-relations-under-trump-uneasy-peace ; for China-Russia, https://www.cfr.org/articles/where-china-russia-partnership-headed-seven-charts-and-maps"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -668,7 +962,14 @@ categories:
             tier: 1
             claim: "Trump T1 established new presidential-conduct baseline characterized by public profanity, name-calling, and breach of traditional presidential dignity norms; era-defining decline."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Historians (Stanford, Brookings, Zelizer, C-SPAN 41st rank) and NYT/Wikipedia documentation broadly confirm Trump T1 breached presidential-dignity norms via prolific name-calling and norm-breaking; one nuance is that public profanity is documented as escalating most in T2 (40% of early first-term speeches vs 93% in T2), and the permanence of the \"decline\" is contested by some cited scholars."
+              suggested_fix: "For a deep authoritative source, cite the ABC News \"How Trump obliterated norms and changed the presidency\" (id=75275806) and Stanford History \"President Trump is breaking or ignoring all sorts of presidential norms\"; note profanity figures are firmer for T2 than T1."
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 1
@@ -682,7 +983,14 @@ categories:
             tier: 1
             claim: "Trump T1 rhetorical record established new era-defining baseline for presidential public discourse including racial epithets, ethnic-group disparagement, and personal-attack patterns."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Scholarly and documentary sources confirm Trump's 2017-2021 rhetoric featured ethnic-group disparagement (\"shithole countries,\" \"go back\" tweets, \"Pocahontas\") and quantifiably the most divisive/distinctive personal-attack discourse of any modern president, supporting the \"era-defining baseline\" framing."
+              suggested_fix: "https://academic.oup.com/pnasnexus/article/3/10/pgae431/7814873 (PNAS Nexus quantitative study showing Trump's discourse uniqueness and divisiveness exceeded even cross-party differences); corroborated by https://en.wikipedia.org/wiki/Racial_views_of_Donald_Trump"
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 2
@@ -695,7 +1003,14 @@ categories:
             tier: 1
             claim: "Trump T1 became first outgoing president since 1869 to skip his successor's inauguration; refused traditional handover protocols."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "CBS/NPR/WaPo confirm Trump was first outgoing president since Andrew Johnson (1869) to skip his successor's inauguration; he also broke transition norms (no WH invite, blocked GSA transition, refused concession), supporting \"refused traditional handover protocols.\""
+              suggested_fix: "https://www.cbsnews.com/news/trump-will-not-attend-biden-inauguration/"
       - id: "11.4"
         name: "Model behavior"
         good_score: 1
@@ -707,10 +1022,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Trump T1 conduct patterns were widely imitated by subsequent political figures and influenced subsequent political-discourse norms across spectrum; remains contested whether normalization or backlash dominates long-term."
+            claim: "Trump T1 conduct patterns were widely imitated within the GOP/MAGA orbit and influenced subsequent political-discourse norms (the documented 'Trump effect'); it remains contested whether normalization or backlash dominates long-term."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Narrowed 'across spectrum' to the GOP/MAGA orbit, where the documented imitation/'Trump effect' concentrates."
   - category: 12
     name: "Effect on populace"
     category_notes: "Highly polarizing. Strong base support. End-of-term ~34% approval. January 6 produced brief approval collapse."
@@ -725,9 +1045,15 @@ categories:
             source_url: "https://news.gallup.com/"
             source_type: statistic
             tier: 1
-            claim: "Trump T1 averaged ~41% Gallup approval (lowest term-average since systematic polling began); end-of-term 34% — lowest end-of-term rating since Carter."
+            claim: "Trump T1 averaged ~41% Gallup approval (lowest term-average since systematic polling began); his 34% final rating tied Carter and George W. Bush (Truman's 32% was lower)."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected 'lowest end-of-term since Carter': 34% tied Carter and GW Bush, and Truman's 32% was lower."
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 1
@@ -740,7 +1066,14 @@ categories:
             tier: 1
             claim: "Social cohesion indicators (partisan affective polarization, partisan animosity) reached historic highs during Trump T1 per multiple measurement frameworks."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew's \"How America Changed During Trump's Presidency\" plus Gallup (record 82-point 2019 approval gap, widest since Eisenhower) and academic affective-polarization research all confirm partisan polarization/animosity hit historic highs during T1 across multiple frameworks; cited URL is just a homepage."
+              suggested_fix: "Cite the specific deep link: https://www.pewresearch.org/politics/2021/01/29/how-america-changed-during-donald-trumps-presidency/ (and Gallup's 2019 82-point partisan approval gap)."
       - id: "12.3"
         name: "International standing"
         good_score: 2
@@ -751,23 +1084,34 @@ categories:
             source_url: "https://www.pewresearch.org/global/"
             source_type: statistic
             tier: 1
-            claim: "US international favorability rating in 13 surveyed countries fell from 64% median (Obama-era) to 31% by 2020 per Pew Global Attitudes — historic decline."
+            claim: "US international favorability across 13 surveyed countries fell to a 34% median by 2020 per Pew (versus a ~64% median in the Obama era, from a broader country set) - a historic decline."
             direction: harm
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected the 2020 median to 34% (was 31%) and noted the 64% Obama-era median comes from a larger country set."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 2
         harm_score: 8
         notes: "Trump personally polled very unfavorably globally. Anti-American sentiment grew in allied populations. Notable exceptions: Israel, some Eastern European, India."
         evidence:
-          - citation: "Pew Global Attitudes Trump personal favorability 2017-2020"
+          - citation: "Pew Global Attitudes - confidence in the US president 'to do the right thing in world affairs', 2017-2020"
             source_url: "https://www.pewresearch.org/global/"
             source_type: statistic
             tier: 1
-            claim: "Trump personal favorability across surveyed countries averaged ~22% per Pew — among lowest measured for any US president; allied-population sentiment particularly negative."
+            claim: "Confidence in Trump 'to do the right thing in world affairs' averaged ~22% across surveyed countries in Pew's 2017 polling - among the lowest measured for any US president (versus ~64% for Obama); allied-population sentiment was particularly negative."
             direction: harm
-            verification_status: pending
-
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Relabeled the metric (Pew measured 'confidence to do the right thing in world affairs', not personal favorability) and dated the 22% to 2017."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "Defining policy area. Travel ban, family separation, wall construction, asylum restrictions, public charge, DACA rescission attempts. Era-defining immigration-restriction administration."
@@ -784,7 +1128,14 @@ categories:
             tier: 1
             claim: "Travel ban targeted predominantly Muslim countries (upheld in revised form by SCOTUS in Trump v. Hawaii 2018); refugee admission ceiling cut from 110,000 (FY 2017) to 15,000 (FY 2021) — record low."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm EOs 13769/13780 and Proclamation 9645 targeted majority-Muslim nations and were upheld 5-4 in Trump v. Hawaii (June 26, 2018), and the refugee ceiling fell from 110,000 (FY2017, Obama-set) to 15,000 (FY2021), a record low through that period."
+              suggested_fix: "Optional precision: \"record low\" was true as of FY2021; the all-time program low was later set at 7,500 (FY2026). Deep link: https://en.wikipedia.org/wiki/Trump_v._Hawaii"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 1
@@ -792,13 +1143,19 @@ categories:
         era_context: "E13 — major harm anchor"
         notes: "Family separation policy 2017-2018 (~5,500 children separated; some never reunited). Remain in Mexico (MPP). Title 42 expulsions during COVID. ICE detention expansion. Wall construction (~458 miles). Largest immigration enforcement expansion since Operation Wetback."
         evidence:
-          - citation: "Family separation policy 2017-2018; HHS OIG report on family separation (January 2019)"
+          - citation: "Family separation policy 2017-2018; HHS OIG report OEI-09-18-00431 (Sept 2019) documenting mental-health harm to separated children"
             source_url: "https://oig.hhs.gov/"
             source_type: primary_document
             tier: 1
             claim: "Family separation policy under 'zero tolerance' separated 5,500+ children from parents at border; HHS OIG documented severe psychological harm; some families remain unreunited years later."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Fixed the citation: the psychological-harm finding is HHS OIG Sept 2019 (OEI-09-18-00431), not the Jan 2019 accounting report."
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 1
@@ -811,21 +1168,33 @@ categories:
             tier: 1
             claim: "Trump T1 reduced refugee admissions to historic low (~11,500 actually admitted FY 2020); Remain in Mexico forced ~70,000 asylum seekers to wait in Mexico in dangerous conditions; Title 42 enabled rapid turnback."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three components verified: FY2020 refugee admissions were a historic low (~11,800 admitted vs claim's ~11,500), MPP returned 70,000+ asylum seekers to dangerous Mexico conditions (Jan 2019), and Title 42 (March 20, 2020) enabled rapid turnbacks."
+              suggested_fix: "Bare State Dept homepage; cite deep link https://www.migrationpolicy.org/article/trump-effect-immigration-reality and https://www.americanimmigrationcouncil.org/fact-sheet/migrant-protection-protocols/ — note actual FY2020 admissions were ~11,814, not 11,500."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 3
         harm_score: 5
         notes: "Foreign-born share flat for first time in decades. Agricultural and service-sector labor shortages. Demographic transition continued but immigration component reduced."
         evidence:
-          - citation: "Census foreign-born population data 2017-2021"
+          - citation: "Census Bureau, \"Net International Migration at Lowest Levels in Decades,\" 2021 (https://www.census.gov/library/stories/2021/12/net-international-migration-at-lowest-levels-in-decades.html)"
             source_url: "https://www.census.gov/"
             source_type: statistic
             tier: 1
-            claim: "Foreign-born share of US population growth slowed substantially under Trump T1; first sustained restrictionist immigration regime since pre-1965 era."
+            claim: "Foreign-born share of US population growth slowed substantially under Trump T1, with net international migration declining sharply through 2019-20 (a drop further amplified by COVID-19)."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Dropped the unsourced, overstated \"first sustained restrictionist regime since pre-1965\" framing, noted the COVID amplification, and updated the citation to the specific Census story supporting the slowdown."
 calibration_summary:
   good_average_across_categories: 2.5
   harm_average_across_categories: 7.5

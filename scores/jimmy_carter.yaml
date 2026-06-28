@@ -22,9 +22,15 @@ categories:
             source_url: "https://www.bls.gov/"
             source_type: statistic
             tier: 1
-            claim: "Stagflation peaked under Carter: inflation 13.5% (1980), unemployment 7.5% (Dec 1980), 'misery index' reached postwar highs."
+            claim: "Stagflation peaked under Carter: inflation 13.5% (1980), unemployment 7.2% (Dec 1980), ~7.5% through late 1980, 'misery index' reached postwar highs."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected December 1980 unemployment from 7.5% to 7.2%, noting ~7.5% through late 1980."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 5
@@ -37,7 +43,14 @@ categories:
             tier: 1
             claim: "Income inequality remained near Great Compression lows under Carter despite stagflation pressures."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Piketty-Saez data confirm the top 1% share sat near its postwar/Great Compression low (~9-10%, down from a ~9.16% 1973 trough) through Carter's 1977-1981 term, with the sustained rise in inequality beginning only at the late-1970s inflection point and accelerating in the 1980s."
+              suggested_fix: "https://eml.berkeley.edu/~saez/saez-UStopincomes-2022.pdf (Piketty-Saez top income shares series; see also the underlying TabFig2022.xlsx for year-by-year 1977-1981 values)"
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 4
@@ -50,21 +63,33 @@ categories:
             tier: 1
             claim: "Federal deficits remained moderate under Carter; debt-to-GDP held roughly stable at ~33%."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "OMB Table 7.1 shows gross federal debt-to-GDP at ~36% (FY1976/77) easing to ~33% by FY1981, and deficits stayed a moderate ~1.6-2.8% of GDP, matching the claim (note ~33% is the gross-debt measure; debt held by public was lower, ~26%, and the trend was a slight decline rather than perfectly flat)."
+              suggested_fix: "https://www.govinfo.gov/content/pkg/BUDGET-2000-TAB/html/BUDGET-2000-TAB-9-1.htm (OMB Historical Table 7.1, Federal Debt as % of GDP)"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 4
         harm_score: 5
         notes: "Real wages fell substantially due to inflation. Deregulation (airlines, trucking) shifted labor patterns. Minimum wage increased."
         evidence:
-          - citation: "BLS real wages data 1977-1981; Airline Deregulation Act of 1978, Public Law 95-504"
+          - citation: "BLS real wages data 1977-1981 (PERC analysis: https://perc.tamu.edu/blog/2024/02/presidents-real-wages.html); Motor Carrier Act of 1980 (GAO: https://www.gao.gov/products/122840); Airline Deregulation Act of 1978, Public Law 95-504"
             source_url: "https://www.bls.gov/"
             source_type: statistic
             tier: 1
-            claim: "Real wages fell ~10% during Carter term due to inflation; deregulation reduced unionized employment in airlines and trucking sectors."
+            claim: "Real wages fell ~8% during Carter term due to inflation; trucking deregulation reduced unionized (Teamster) employment, while airline deregulation's effect on union employment was more limited and largely emerged later."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the real-wage decline from ~10% to ~8%, replaced the overstated airline-union claim with the better-supported Motor Carrier Act/Teamster trucking evidence while softening the airline impact, and updated the citation with PERC and GAO sources."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.3 Cold War late. Camp David Accords (1978), Panama Canal Treaties (1977), China normalization (1979), SALT II signing. BUT: Iran Hostage Crisis (1979-1981), Soviet Afghanistan invasion, failed Desert One rescue."
@@ -82,7 +107,14 @@ categories:
             tier: 1
             claim: "Carter maintained foreign-policy restraint despite multiple crises; Desert One rescue mission failed but no escalation to war."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both dates are exact (Eagle Claw/Desert One Apr 24 1980; Carter Doctrine SOTU Jan 23 1980), the rescue mission did fail killing 8 servicemen, and Carter avoided military escalation to war with Iran throughout the crisis."
+              suggested_fix: "https://www.jimmycarterlibrary.gov/research/hostage_crisis_in_iran"
       - id: "2.2"
         name: "Alliance management"
         good_score: 6
@@ -95,7 +127,14 @@ categories:
             tier: 1
             claim: "Carter completed US-PRC normalization process begun by Nixon, establishing full diplomatic relations and shifting Taiwan recognition."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept Office of the Historian and the Joint Communiqué confirm Carter completed Nixon-initiated normalization, establishing full PRC diplomatic relations effective Jan 1, 1979 and shifting recognition from Taiwan; citation accurate."
+              suggested_fix: "Use deep link https://history.state.gov/milestones/1977-1980/china-policy instead of the bare homepage."
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 8
@@ -108,7 +147,14 @@ categories:
             tier: 1
             claim: "Camp David Accords produced first peace treaty between Israel and an Arab state, foundational to subsequent Middle East peace process."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the Camp David Accords (Sept 17, 1978) and Egyptian-Israeli Peace Treaty (March 26, 1979) were the first peace treaty between Israel and an Arab state; \"foundational to subsequent peace process\" is a reasonable framing, though State Dept calls it the Carter-era high-water mark."
+              suggested_fix: "https://history.state.gov/milestones/1977-1980/camp-david"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 5
@@ -121,7 +167,14 @@ categories:
             tier: 1
             claim: "Carter expanded refugee admission framework via Refugee Act of 1980 while continuing US support for Indonesian Timor occupation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both parts confirmed: Carter signed the Refugee Act of 1980 (PL 96-212, raising the ceiling to 50,000 and adopting the UN refugee definition), and his administration accelerated military aid to Indonesia (OV-10 Broncos, $250M+) during the East Timor occupation."
+              suggested_fix: "https://www.govinfo.gov/content/pkg/STATUTE-94/pdf/STATUTE-94-Pg102.pdf"
 
   - category: 3
     name: "Civil rights & equality"
@@ -137,9 +190,15 @@ categories:
             source_url: "https://supreme.justia.com/"
             source_type: primary_document
             tier: 1
-            claim: "Carter administration's amicus brief supported diversity-based affirmative action; Bakke ruling preserved AA framework while restricting quotas."
+            claim: "Carter administration's amicus brief supported affirmative action as a remedy for past discrimination; Bakke ruling preserved AA framework while restricting quotas."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced \"diversity-based\" with \"as a remedy for past discrimination\" to accurately reflect the brief's rationale, since the diversity interest was Justice Powell's, not the brief's."
       - id: "3.2"
         name: "Gender equity"
         good_score: 6
@@ -152,20 +211,33 @@ categories:
             tier: 1
             claim: "Pregnancy Discrimination Act extended Title VII to prohibit pregnancy-based employment discrimination."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EEOC and Congress.gov confirm the Pregnancy Discrimination Act of 1978 (PL 95-555) amended Title VII via §701(k) to prohibit discrimination based on pregnancy, childbirth, or related conditions; Carter signed it Oct 31, 1978."
+              suggested_fix: "https://www.congress.gov/bill/95th-congress/senate-bill/995 (or authoritative EEOC text: https://www.eeoc.gov/statutes/pregnancy-discrimination-act-1978)"
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 3
         harm_score: 3
         notes: "Civil Service Commission softened anti-LGBTQ employment rules (1975-1980). Met with gay rights leaders (first president to do so officially). EO 10450 still formally in effect."
         evidence:
-          - citation: "Civil Service Commission Federal Personnel Manual revisions; Carter-NGTF meeting 1977"
+          - citation: "May 1980 OPM Director Alan K. Campbell memorandum under the 1978 Civil Service Reform Act (the categorical ban was lifted earlier in 1975 via FPM letter 731-3, before Carter); Carter administration (Costanza)-NGTF meeting March 26, 1977. See https://www.advocate.com/news/jimmy-carter-gay-activists-100 and https://www.mspb.gov/studies/studies/Sexual_Orientation_and_the_Federal_Workplace_Policy_Perception_1026379.pdf"
             source_url: "canonical"
             source_type: primary_document
             tier: 2
-            claim: "Carter's CSC further softened federal employment discrimination against LGBTQ workers; held first official White House meeting with gay rights leaders."
+            claim: "Carter's administration further softened federal employment discrimination against LGBTQ workers; aide Midge Costanza hosted the first official White House meeting with gay rights leaders (Carter himself not present)."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Attributed the 1977 meeting to Costanza (Carter not personally present) and corrected the citation to credit the May 1980 OPM Campbell memo while noting the 1975 pre-Carter ban-lifting."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 8
@@ -178,7 +250,14 @@ categories:
             tier: 1
             claim: "Section 504 regulations were issued under Carter after disability-rights protest occupations (504 Sit-ins) at HEW buildings; foundational disability-rights moment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Section 504 regulations were signed April 28, 1977 by HEW Secretary Joseph Califano under Carter, following the 504 Sit-in occupations of HEW buildings—a foundational disability-rights moment, all confirmed by multiple authoritative sources."
+              suggested_fix: "https://en.wikipedia.org/wiki/504_Sit-in (the cited sourceUrl https://www.hhs.gov/ is a bare homepage; this deep link documents the April 28, 1977 signing and sit-ins)"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 7
@@ -191,7 +270,14 @@ categories:
             tier: 1
             claim: "AIRFA committed federal government to protect tribal religious practices, though enforcement provisions were weak."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "AIRFA (PL 95-341), signed by Carter Aug 11 1978, declared US policy to protect American Indians' right to exercise traditional religions but contained no penalty/enforcement provisions—criticized as a joint resolution and amended in 1994—exactly matching the claim."
+              suggested_fix: "https://www.congress.gov/bill/95th-congress/senate-joint-resolution/102"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -203,13 +289,19 @@ categories:
         harm_score: 1
         notes: "Strong press relationship. No prosecutions of journalists. Generally protective of speech rights."
         evidence:
-          - citation: "Carter press relations records 1977-1981"
+          - citation: "Carter press relations records 1977-1981; https://firstamendment.mtsu.edu/article/jimmy-carter/; Time, \"How the Media Shaped—and Distorted—Jimmy Carter's Image\""
             source_url: "https://www.jimmycarterlibrary.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Carter maintained generally cooperative press relations and protected speech rights; no major press conflicts during term."
+            claim: "Carter championed First Amendment principles and protected speech rights, but had a notably adversarial press relationship, especially after the 1977 Bert Lance affair."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the overstated \"cooperative press relations/no major conflicts\" to note Carter championed First Amendment principles but had an adversarial press relationship after the 1977 Lance affair, and added the suggested sources to the citation."
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 7
@@ -222,7 +314,14 @@ categories:
             tier: 1
             claim: "FISA established judicial oversight of foreign-intelligence surveillance; foundational post-Watergate civil-liberties reform."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "FISA (Pub. L. 95-511, signed by Carter Oct. 25, 1978) created the FISA Court and required, for the first time, prior judicial warrants for foreign-intelligence surveillance; it arose from Church Committee/post-Watergate abuses and Carter's signing statement framed it as a civil-liberties protection."
+              suggested_fix: "Replace bare homepage with deep link: https://www.govinfo.gov/content/pkg/STATUTE-92/pdf/STATUTE-92-Pg1783.pdf"
       - id: "4.3"
         name: "Executive restraint"
         good_score: 7
@@ -235,7 +334,14 @@ categories:
             tier: 1
             claim: "IG Act established Inspectors General across federal agencies as accountability mechanism; CSRA reformed federal civil service."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both laws verified: IG Act (PL 95-452, signed Oct 12 1978) created federal Inspectors General as audit/investigation accountability units, and CSRA (PL 95-454, signed Oct 13 1978) reformed the civil service, abolishing the Civil Service Commission and creating OPM/MSPB/FLRA."
+              suggested_fix: "Deep links: https://www.govinfo.gov/content/pkg/STATUTE-92/pdf/STATUTE-92-Pg1101.pdf (IG Act) and https://www.govinfo.gov/content/pkg/STATUTE-92/pdf/STATUTE-92-Pg1111.pdf (CSRA)"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 7
@@ -248,7 +354,14 @@ categories:
             tier: 1
             claim: "Ethics in Government Act established modern executive-branch financial disclosure, special-prosecutor framework, and ethics rules."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter signed the Ethics in Government Act of 1978 (PL 95-521); its titles established executive-branch financial disclosure (Title I), the special-prosecutor framework (Title VI), and the Office of Government Ethics/ethics rules (Title IV), exactly as claimed."
+              suggested_fix: "https://www.congress.gov/bill/95th-congress/senate-bill/555"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -266,7 +379,14 @@ categories:
             tier: 2
             claim: "Carter's national health insurance proposal failed in Congress amid Kennedy-Carter Democratic rivalry."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Carter's June 1979 National Health Plan died in the Democratic-controlled Congress amid the Kennedy-Carter rivalry, with competing bills and Kennedy's denunciation collapsing support, fueling his 1980 primary challenge."
+              suggested_fix: "Bare homepage cited; better deep link: https://www.jimmycarterlibrary.gov/research/national_health_plan or Time piece https://time.com/6338230/jimmy-carter-dies-health-care/ . Note: \"CHAMPUS expansion records\" in citation is tangential to this NHI claim."
       - id: "5.2"
         name: "Education"
         good_score: 7
@@ -279,7 +399,14 @@ categories:
             tier: 1
             claim: "Cabinet-level Department of Education established under Carter; consolidated federal education programs and elevated education-policy visibility."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Department of Education Organization Act (Pub. L. 96-88, 93 Stat. 668), signed by Carter Oct 17, 1979, split a cabinet-level Department of Education from HEW with a Secretary at its head, consolidating federal education functions—fully matching the claim and citation."
+              suggested_fix: "Replace bare homepage with deep link: https://www.govinfo.gov/content/pkg/STATUTE-93/pdf/STATUTE-93-Pg668.pdf"
       - id: "5.3"
         name: "Safety net"
         good_score: 5
@@ -292,7 +419,14 @@ categories:
             tier: 2
             claim: "Carter expanded safety-net programs modestly within stagflation-era fiscal constraints."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter enacted real but incremental safety-net gains (1977 Food Stamp Act ended the purchase requirement and set national eligibility, raising participation; minimum-wage hike; CETA jobs) while his ambitious Program for Better Jobs and Income failed in Congress, matching the \"modestly/fiscal-constraints\" framing; bare ssa.gov homepage doesn't document food stamps (a USDA program)."
+              suggested_fix: "Use a topical deep link instead of the SSA homepage, e.g. USDA SNAP history: https://www.fns.usda.gov/snap/short-history-snap"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 4
@@ -305,7 +439,14 @@ categories:
             tier: 1
             claim: "30-year fixed mortgage rates peaked at 18.5% in October 1981 (just after Carter term) due to Volcker monetary tightening initiated in 1979."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Freddie Mac data confirms the 30-year fixed rate peaked at 18.63% the week of Oct 9, 1981 (after Carter's term), driven by Volcker's Oct 1979 tightening; the cited 18.5% is a slight under-rounding of the 18.63% record."
+              suggested_fix: "Use 18.63% (week of Oct 9, 1981) per Freddie Mac PMMS: https://www.freddiemac.com/pmms/pmms30"
 
   - category: 6
     name: "Environmental stewardship"
@@ -324,7 +465,14 @@ categories:
             tier: 1
             claim: "Carter installed solar panels on White House and launched federal renewable-energy R&D substantially; commitments largely reversed under Reagan."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Verified: Carter installed 32 White House solar panels (June 1979), created SERI/NREL (1977) and signed the National Energy Act (1978) plus renewable tax credits/Energy Security Act, and Reagan cut DOE solar R&D ~60-70% and removed the panels in 1986—core claim fully supported."
+              suggested_fix: "Deep link: https://www.jimmycarterlibrary.gov/research/energy_environment ; note the substantial R&D push is most precisely SERI (1977) and the Energy Security Act (1980) rather than the National Energy Act (1978) alone."
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 7
@@ -337,7 +485,14 @@ categories:
             tier: 1
             claim: "SMCRA established federal regulation of surface coal mining; CWA amendments strengthened pollution-control framework."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter signed SMCRA (PL 95-87, Aug 3 1977) establishing federal surface-coal-mining regulation and the Office of Surface Mining, plus the Clean Water Act Amendments of 1977 (PL 95-217, Dec 27 1977) strengthening the FWPCA pollution-control framework; both citations and characterizations are accurate."
+              suggested_fix: "For congress.gov deep links: https://www.congress.gov/bill/95th-congress/house-bill/2 (SMCRA) and https://www.congress.gov/bill/95th-congress/house-bill/3199 (Clean Water Act of 1977)."
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 9
@@ -349,9 +504,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "ANILCA protected ~104 million acres of Alaska including 10 new national parks and 19 national wildlife refuges — single largest conservation legislation in US history."
+            claim: "ANILCA protected ~104 million acres of Alaska including 10 new national parks and 9 new (and expanded 7 existing) national wildlife refuges — single largest conservation legislation in US history."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the wildlife refuge figure from \"19 national wildlife refuges\" to \"9 new (and expanded 7 existing) national wildlife refuges\" per USFWS/NPS sources."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 7
@@ -364,7 +525,14 @@ categories:
             tier: 1
             claim: "CERCLA established Superfund toxic-waste cleanup framework; signed in December 1980 as final major environmental legislation of Carter term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CERCLA/Superfund (Public Law 96-510) was signed by Carter on December 11, 1980, establishing the federal hazardous-waste cleanup framework and was among the last major environmental laws of his term."
+              suggested_fix: "https://www.congress.gov/bill/96th-congress/house-bill/7020"
 
   - category: 7
     name: "Crisis management"
@@ -382,7 +550,14 @@ categories:
             tier: 1
             claim: "Iran Hostage Crisis ran 444 days; despite multiple diplomatic and military attempts, hostages were only released on Reagan's inauguration day."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (History, Britannica, National Archives, Wikipedia) confirm the 444-day crisis (Nov 4, 1979–Jan 20, 1981), failed military attempts (Operation Eagle Claw, April 1980) and diplomatic efforts, and release minutes after Reagan's Jan 20, 1981 inauguration."
+              suggested_fix: "Cite a deep link such as https://www.history.com/this-day-in-history/january-20/iran-hostage-crisis-ends or https://www.archives.gov/research/foreign-policy/iran-hostage-crisis instead of the bare Carter Library homepage."
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 4
@@ -395,7 +570,14 @@ categories:
             tier: 1
             claim: "Carter's effectiveness was bimodal: extraordinary on Camp David and human-rights diplomacy, ineffective on Iran and economic crisis management."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Camp David Accords (Sep 17, 1978, Carter-mediated) and Iran hostage release (Algiers Accords Jan 19/hostages freed Jan 20, 1981 as Carter left office) are accurate, and the bimodal framing—success on Camp David/human-rights vs. failure on Iran and stagflation—matches mainstream historiography."
+              suggested_fix: "For a deep citation, link https://history.state.gov/milestones/1977-1980/camp-david (Camp David) and https://en.wikipedia.org/wiki/Algiers_Accords_(1981) (Iran resolution) rather than the bare library homepage."
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 7
@@ -408,7 +590,14 @@ categories:
             tier: 1
             claim: "Carter's 'malaise speech' — never using the word 'malaise' — was honest analysis of American confidence crisis; politically damaging but substantively candid."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the July 15, 1979 \"Crisis of Confidence\" speech never used the word \"malaise,\" was widely characterized as honest/candid analysis of a confidence crisis, and was politically damaging."
+              suggested_fix: "Replace bare homepage with deep link to the speech transcript: https://www.presidency.ucsb.edu/documents/address-the-nation-energy-and-national-goals-the-malaise-speech"
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 3
@@ -421,7 +610,14 @@ categories:
             tier: 1
             claim: "Major Carter-era crises (inflation, hostages) were resolved or framework-resolved just after his term ended, contributing to perception of presidency failing."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Hostages released Jan 20, 1981 minutes after Reagan's inauguration (Algiers Accords Jan 19); Carter-appointed Volcker's 1979-82 tightening tamed inflation (peak 14.8% Mar 1980) only after Carter left, both cited as factors in the perception his presidency failed."
+              suggested_fix: "https://history.state.gov/departmenthistory/short-history/hostageend and https://www.federalreservehistory.org/essays/anti-inflation-measures"
 
   - category: 8
     name: "Institutional integrity"
@@ -439,7 +635,14 @@ categories:
             tier: 1
             claim: "Carter consistently ranked among most personally ethical presidents by scholarly assessment; pursued post-presidency humanitarian work for 40+ years."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both prongs hold: scholarship and the C-SPAN survey (Carter ~14th in Moral Authority, 5th in equal-justice) place him among the more ethical presidents, and his post-presidency (1981–Dec 2024, ~44 yrs, Carter Center founded 1982, 30+ yrs of Habitat work) confirms 40+ years of humanitarian work."
+              suggested_fix: "For the ethics ranking, cite C-SPAN 2021 Presidential Historians Survey (Moral Authority category): https://www.c-span.org/presidentsurvey2021/ — note 14th in Moral Authority is \"above average,\" not literally \"the most ethical.\""
       - id: "8.2"
         name: "Administration ethics"
         good_score: 5
@@ -452,7 +655,14 @@ categories:
             tier: 1
             claim: "OMB Director Bert Lance resigned amid investigation of pre-OMB Georgia banking practices; major early-term administration-ethics issue."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple sources confirm Bert Lance resigned as OMB Director on Sept 21, 1977 amid the Senate Governmental Affairs Committee (Ribicoff) investigation of his pre-OMB Calhoun First National Bank/Georgia banking practices, a major early-term ethics blow to Carter's integrity platform."
+              suggested_fix: "Replace bare homepage with a deep link, e.g. https://www.georgiaencyclopedia.org/articles/government-politics/bert-lance-1931-2013/ or the EBSCO research starter on the Lance resignation."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 8
@@ -465,7 +675,14 @@ categories:
             tier: 1
             claim: "Carter institutionalized modern executive-branch ethics framework while personally modeling adherence; smooth presidential transition despite electoral defeat."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter signed the Ethics in Government Act of 1978 (PL 95-521, Oct 26, 1978) creating OGE, public financial disclosure, post-employment and special-prosecutor rules, and the 1981 Carter-Reagan handover was widely praised as smooth/cooperative; \"personally modeling adherence\" is the one soft spot given the Kirbo-run \"blind\" trust and Billy Carter/Libya affair."
+              suggested_fix: "Deep link for citation: https://www.congress.gov/bill/95th-congress/senate-bill/555 (S.555, Ethics in Government Act of 1978)."
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
@@ -478,7 +695,14 @@ categories:
             tier: 1
             claim: "Carter appointed ~250 federal judges including Ruth Bader Ginsburg (DC Circuit) and Stephen Breyer (1st Circuit) — both later elevated to SCOTUS."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter appointed 262 Article III judges (~250 is conservative); FJC/Wikipedia confirm RBG to DC Circuit (nominated Apr 1980, confirmed Jun 18 1980) and Breyer to 1st Circuit (confirmed Dec 9 1980), both later elevated to SCOTUS by Clinton."
+              suggested_fix: "Deep links: https://www.fjc.gov/history/judges/ginsburg-ruth-bader and https://www.fjc.gov/history/judges/breyer-stephen-gerald"
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 8
@@ -491,7 +715,14 @@ categories:
             tier: 1
             claim: "Carter's Circuit Judge Nominating Commission established merit-based judicial-selection framework that increased diversity (women and minorities) substantially."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EO 11972 (Feb 14, 1977) created the US Circuit Judge Nominating Commission with merit criteria (Sec 4) and diversity-mandated panels (Sec 2c); Carter went on to appoint ~40-41 women and 57 racial minorities, a ~500% rise in female and ~200% rise in nonwhite federal judges."
+              suggested_fix: "https://www.presidency.ucsb.edu/documents/executive-order-11972-united-states-circuit-judge-nominating-commission"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 6
@@ -504,7 +735,14 @@ categories:
             tier: 2
             claim: "Carter appointees displayed moderate-to-liberal patterns of jurisprudence consistent with party affiliation; high professional caliber."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Carter's appointees were moderate-to-liberal (consistent with Carp/Stidham/Rowland party-affiliation scholarship) and of high caliber—all ABA-rated at least \"qualified\" under his merit-selection process (EO 12097)."
+              suggested_fix: "For a deep link, cite Ballotpedia \"Federal judges nominated by Jimmy Carter\" (https://ballotpedia.org/Federal_judges_nominated_by_Jimmy_Carter) plus Carp/Stidham/Manning, The Federal Courts."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 7
@@ -517,7 +755,14 @@ categories:
             tier: 2
             claim: "Most Carter judicial nominations confirmed smoothly under pre-modern confirmation politics."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter won confirmation of a then-record 262 Article III judges (single-term record) with only ~6 withdrawn and ~20 unvoted, so most were confirmed in this pre-Supreme-Court-vacancy, pre-modern-confirmation-war era, though some late-1980 nominees were blocked under the Thurmond Rule."
+              suggested_fix: "https://en.wikipedia.org/wiki/List_of_federal_judges_appointed_by_Jimmy_Carter (262 confirmed; record single-term total); context: https://en.wikipedia.org/wiki/Jimmy_Carter_judicial_appointment_controversies"
 
   - category: 9
     name: "Democratic health"
@@ -535,33 +780,52 @@ categories:
             tier: 2
             claim: "Carter proposed universal voter registration but legislation failed; continued strong VRA enforcement via DOJ."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter's March 22, 1977 Election Reform Message proposed nationwide election-day (universal) voter registration and the comprehensive reform bill failed in Congress; his DOJ under Drew Days III continued active VRA enforcement, though \"strong\" is a fair but lightly documented characterization."
+              suggested_fix: "Deep link for verification: https://www.presidency.ucsb.edu/documents/election-reform-message-the-congress"
       - id: "9.2"
         name: "Press relationship"
         good_score: 7
         harm_score: 2
         notes: "Generally cordial. Regular press conferences. Some friction with media over Iran handling."
         evidence:
-          - citation: "Carter press conference records 1977-1981"
+          - citation: "Carter press conference records 1977-1981; https://www.presidency.ucsb.edu/statistics/data/presidential-news-conferences"
             source_url: "https://www.jimmycarterlibrary.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Carter maintained traditional cordial press relations; held regular press conferences throughout term."
+            claim: "Carter held regular press conferences throughout his term but had an increasingly adversarial, not cordial, relationship with the press."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the inaccurate \"cordial press relations\" characterization with \"increasingly adversarial, not cordial,\" and added the UCSB news-conference data URL to the citation."
       - id: "9.3"
         name: "Political violence"
         good_score: 7
         harm_score: 2
         notes: "Era of declining political violence. No major incidents. Modest. Hostage crisis abroad."
         evidence:
-          - citation: "Political-violence statistics late 1970s"
+          - citation: "Political-violence statistics late 1970s; https://en.wikipedia.org/wiki/Terrorism_in_the_United_States (incident counts show decline 1977-1980)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Late 1970s saw declining political-violence trend; Carter term largely free of major domestic political violence."
+            claim: "Late 1970s saw declining political-violence trend; Carter term spared the worst, though notable incidents occurred including the March 1977 Hanafi siege in DC and FALN bombings."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"largely free of major domestic political violence\" to acknowledge the 1977 Hanafi siege and FALN bombings, and added the supporting Wikipedia URL to the citation."
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 6
@@ -574,7 +838,14 @@ categories:
             tier: 1
             claim: "Religious Right (Moral Majority) emerged during Carter term opposing his policies despite Carter's own evangelical faith — initiating subsequent four decades of religion-politics realignment."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Moral Majority was founded June 1979 by Jerry Falwell during Carter's term, opposed Carter's policies despite his evangelical faith, and catalyzed a multi-decade evangelical realignment toward the GOP, per Wikipedia, Britannica, and an NBER study; the \"1980 Democratic primary\" label is slightly imprecise (it was the general election) but doesn't affect the substantive claim."
+              suggested_fix: "https://www.nber.org/papers/w32551 (NBER: \"The Rise of the Religious Right: Evidence from the Moral Majority and the Jimmy Carter Presidency\")"
 
   - category: 10
     name: "Long-tail consequences"
@@ -592,7 +863,14 @@ categories:
             tier: 1
             claim: "Carter-era institutional reforms (IG Act, FISA, Ethics Act, deregulation) and environmental laws (ANILCA, CERCLA) remain operational frameworks."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All six cited Carter-era laws — IG Act 1978, FISA 1978, Ethics in Government Act 1978, Airline/trucking deregulation, ANILCA 1980, and CERCLA/Superfund 1980 — were enacted under Carter and remain operational frameworks today, as authoritative sources confirm."
+              suggested_fix: "For a deep link supporting the IG Act's continued operation: https://www.ignet.gov/content/inspector-general-act-1978 ; CERCLA: https://www.epa.gov/superfund/superfund-cercla-overview"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 6
@@ -605,7 +883,14 @@ categories:
             tier: 2
             claim: "Carter era largely strengthened institutions through reform legislation; minimal lasting damage."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter signed landmark institution-strengthening reforms—Civil Service Reform Act of 1978 (creating OPM, MSPB, FLRA, SES, Office of Special Counsel) and the Ethics in Government Act of 1978—plus durable pro-competition deregulation; these structures endure with minimal lasting institutional damage, though some 1982-era scholars flagged civil-service politicization risk."
+              suggested_fix: "https://en.wikipedia.org/wiki/Civil_Service_Reform_Act_of_1978"
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 5
@@ -618,7 +903,14 @@ categories:
             tier: 2
             claim: "Carter era stagflation and Iran Hostage Crisis defined a generational economic and foreign-policy experience that shaped subsequent political alignment."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter-era stagflation and the 444-day Iran Hostage Crisis are well-documented, and generational political-science scholarship (Ghitza & Gelman's cohort-voting model identifying a \"Reagan Conservatives\" generation) confirms these formative experiences shaped durable partisan realignment."
+              suggested_fix: "https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12713"
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 7
@@ -631,7 +923,14 @@ categories:
             tier: 1
             claim: "Camp David Accords remain foundational Israel-Egypt peace framework 45+ years later; US-Iran hostility from 1979 continues to define Middle East strategic landscape."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Camp David Accords (1978)/Egypt-Israel treaty (1979) remain the foundational peace framework ~47 years on (claim says \"45+\", correct), and US-Iran relations severed after the 1979 revolution have never been restored and still shape the region—both confirmed by history.state.gov."
+              suggested_fix: "https://history.state.gov/milestones/1977-1980/camp-david (and history.state.gov/departmenthistory/short-history/iraniancrises)"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -643,13 +942,19 @@ categories:
         harm_score: 1
         notes: "Strong personal dignity. Modest demeanor. Walked Pennsylvania Avenue at inauguration."
         evidence:
-          - citation: "Carter inauguration January 20, 1977; personal-conduct records"
+          - citation: "Carter inauguration January 20, 1977; personal-conduct records; https://www.whitehousehistory.org/the-inauguration-of-jimmy-carter"
             source_url: "https://www.jimmycarterlibrary.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Carter walked Pennsylvania Avenue at inauguration (first since Jefferson) signaling modest accessible presidency; personal dignity sustained throughout term."
+            claim: "Carter walked Pennsylvania Avenue at inauguration (first president to walk rather than ride the inaugural parade route) signaling modest accessible presidency; personal dignity sustained throughout term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the inaccurate \"first since Jefferson\" detail with \"first president to walk rather than ride the inaugural parade route\" and added the White House Historical Association source URL to the citation."
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 6
@@ -662,7 +967,14 @@ categories:
             tier: 2
             claim: "Carter rhetoric was substantively serious but lacked the stylistic flair of predecessors and successors."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Scholarly sources confirm Carter's rhetoric was substantively serious (his \"Crisis of Confidence\" speech called the most theologically profound since Lincoln's Second Inaugural) yet he was a \"wooden,\" \"plain-style\" orator who \"failed to move the public,\" explicitly contrasted with successor Reagan's eloquence and predecessors' flair."
+              suggested_fix: "Cite the deep link for primary speeches: https://www.jimmycarterlibrary.gov/research/selected_speeches/ and scholarship like \"The Oratory of Jimmy Carter\" (Springer, link.springer.com/content/pdf/10.1057/9781137509031_5)."
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 7
@@ -675,7 +987,14 @@ categories:
             tier: 2
             claim: "Carter modeled accessibility while maintaining core ceremonial duties; reduced unnecessary monarchical trappings."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (WHHA, Washington Post, PBS, Slate, Annenberg) confirm Carter walked his inaugural route, sold the Sequoia yacht, carried his own luggage and de-imperialized the office while still keeping core ceremonial duties (state dinners, \"Hail to the Chief,\" helicopter arrivals)."
+              suggested_fix: "Replace bare homepage with deep link: https://www.whitehousehistory.org/the-inauguration-of-jimmy-carter"
       - id: "11.4"
         name: "Model behavior"
         good_score: 8
@@ -688,7 +1007,14 @@ categories:
             tier: 1
             claim: "Carter's post-presidency, including Carter Center founding (1982) and 40+ years of humanitarian work, established the gold standard for ethical post-presidential conduct."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Carter Center founding (1982), Nobel Peace Prize (2002), and ~44 years of post-presidency humanitarian work (1981-2024) are all confirmed by authoritative sources, and major outlets (CBS, others) explicitly credit Carter with setting the \"gold standard\" for the modern, ethical post-presidency."
+              suggested_fix: "Replace the bare homepage with a deep link such as https://www.cartercenter.org/jimmy-and-rosalynn-carter-legacy/ or https://www.nobelprize.org/prizes/peace/2002/carter/facts/"
 
   - category: 12
     name: "Effect on populace"
@@ -706,7 +1032,14 @@ categories:
             tier: 1
             claim: "Carter ended term with 34% Gallup approval; misery index reached postwar highs; Iran Hostage Crisis defined late-term national mood."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup/American Presidency Project confirm Carter's final approval at 34% (Dec 5-8, 1980); the misery index hit a postwar peak (~21.98% June 1980), and the Iran Hostage Crisis (444 days) is well-documented as defining his late-term national mood."
+              suggested_fix: "https://www.presidency.ucsb.edu/statistics/data/final-presidential-job-approval-ratings"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 4
@@ -719,20 +1052,33 @@ categories:
             tier: 1
             claim: "Religious Right political mobilization (Moral Majority 1979) emerged in Carter term as foundational element of subsequent partisan polarization."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Moral Majority was founded June 1979 (Falwell/Weyrich), squarely within Carter's term (1977-1981), mobilized the Religious Right, and is widely credited by scholars as a foundational driver of subsequent partisan polarization."
+              suggested_fix: "https://en.wikipedia.org/wiki/Moral_Majority (note: Christian Coalition (1989) was a successor, not a predecessor, of the Moral Majority)"
       - id: "12.3"
         name: "International standing"
         good_score: 5
         harm_score: 4
         notes: "Camp David boosted standing dramatically. Iran Hostage Crisis devastated. Mixed."
         evidence:
-          - citation: "International standing 1977-1981 (Pew Research predecessors)"
+          - citation: "International standing 1977-1981 (Gallup, https://news.gallup.com/opinion/gallup/235277/jimmy-carter-retrospective.aspx)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Carter's international standing was bimodal: peak after Camp David (1978), trough during Iran Hostage Crisis (1979-1981)."
+            claim: "Carter's international standing tracked his approval: a high after Camp David (1978, high 40s), then a rally-effect spike early in the Iran Hostage Crisis (~58% in Jan 1980) before collapsing to the low 30s by spring 1980 as the crisis dragged on."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the inaccurate \"bimodal peak/trough\" framing with the Gallup-documented Camp David high, early-crisis rally to ~58%, and later collapse to the low 30s, and corrected the citation from \"Pew predecessors\" to Gallup."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 6
@@ -745,7 +1091,14 @@ categories:
             tier: 2
             claim: "Carter's human-rights diplomacy earned international respect particularly in Latin America transitions; counterbalanced by Iran crisis."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Office of the Historian, HRW, Miller Center, Americas Quarterly) confirm Carter's human-rights diplomacy earned international respect and aided Latin American democratic transitions (Uruguay, Argentina, Chile), with the Iran crisis widely cited as the counterbalancing failure."
+              suggested_fix: "For a deep citation, use https://history.state.gov/milestones/1977-1980/human-rights or https://www.americasquarterly.org/article/how-jimmy-carter-transformed-u-s-latin-america-relations/"
 
   - category: 13
     name: "Immigration & demographics"
@@ -763,7 +1116,14 @@ categories:
             tier: 1
             claim: "Refugee Act of 1980 established modern US refugee admission framework, statutory refugee definition consistent with UN Convention; foundational immigration legislation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The Refugee Act of 1980 (Pub. L. 96-212), signed by Carter on March 17, 1980, established the permanent US refugee admission framework and a statutory refugee (\"well-founded fear of persecution\") definition aligned with the 1951 UN Convention/1967 Protocol, exactly as claimed."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/96th-congress/senate-bill/643"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -776,20 +1136,33 @@ categories:
             tier: 1
             claim: "Mariel Boatlift saw ~125,000 Cuban refugees arrive in Florida over 6 months; Carter administration overwhelmed; processing and detention systems strained."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm ~125,000 Cubans arrived in Florida April 15-Oct 31, 1980, overwhelming Carter-era processing (crowding forced relocation to Forts Chaffee, McCoy, Indiantown Gap)."
+              suggested_fix: "Replace bare uscis.gov homepage with a deep link, e.g. https://immigrationhistory.org/item/mariel-boatlift/ or https://en.wikipedia.org/wiki/Mariel_boatlift"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 7
         harm_score: 3
         notes: "Refugee Act 1980 established framework. Mariel admission generous in absolute terms (~125K). Indochinese admission ~280,000. Generous refugee response overall."
         evidence:
-          - citation: "Refugee Act 1980; Indochinese refugee admission 1977-1981 (~280,000)"
+          - citation: "Refugee Act 1980; DHS Yearbook of Immigration Statistics Table 13 (https://ohss.dhs.gov/topics/immigration/yearbook/2023/table13: FY1980=207,116; FY1981=159,252); Indochinese refugee parole/admission 1977-1981 (~300,000–360,000)"
             source_url: "https://www.state.gov/"
             source_type: statistic
             tier: 1
-            claim: "Carter administration admitted approximately 405,000 refugees total (Mariel + Indochinese + Soviet Jewish + others); generous in absolute terms compared to subsequent administrations."
+            claim: "Carter administration admitted well over 400,000 refugees total (Mariel + Indochinese ~300,000–360,000 + Soviet Jewish + others), with FY1980's 207,116 arrivals standing as the US single-year record; generous in absolute terms compared to subsequent administrations."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Revised the understated/uncorroborated figures (~405,000 total and ~280,000 Indochinese) to authoritative ranges anchored to the FY1980 record, and replaced the citation with the DHS Yearbook Table 13 source."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 5
@@ -802,7 +1175,14 @@ categories:
             tier: 1
             claim: "Foreign-born share continued slow rise during Carter term to ~6.2% by 1980 Census."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "U.S. Census Bureau historical statistics (POP-twps0029) confirm the foreign-born share rose from 4.7% (1970) to exactly 6.2% by the 1980 Census, a gradual rise consistent with the claim's framing."
+              suggested_fix: "https://www.census.gov/library/working-papers/1999/demo/POP-twps0029.html"
 
 calibration_summary:
   good_average_across_categories: 6.0
