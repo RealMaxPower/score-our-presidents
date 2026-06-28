@@ -25,7 +25,14 @@ categories:
             tier: 1
             claim: "Biden term saw approximately 16 million net new jobs (largest 4-year addition since Carter); unemployment reached 50-year low (3.4% January 2023); growth steady ~2.5%/year."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "BLS/BEA data confirm all three parts: ~16.1M net jobs (largest single-term gain since Carter), 3.4% unemployment in Jan 2023 (lowest since 1969, ~54-yr low), and growth of 2.5-2.8%/yr in 2022-2024."
+              suggested_fix: "Deep-link the jobs series: https://data.bls.gov/timeseries/CES0000000001 ; cf. FactCheck \"Biden's Final Numbers\" gives 15.4M (end-month/vintage difference), but ~16M and \"largest since Carter\" hold per BLS/Wikipedia term table."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 5
@@ -38,7 +45,14 @@ categories:
             tier: 1
             claim: "ARP expanded Child Tax Credit to $3,000-3,600 with monthly payments, halving child poverty 2021; expiration end-2021 doubled child poverty back; bottom-quartile real-wage growth strong but inequality trajectory continued."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census/JEC/CBPP confirm ARP raised CTC to $3,000-3,600 with monthly payments, cutting SPM child poverty from 9.7% to 5.2% in 2021 then rising to 12.4% in 2022 after expiration; bottom-quartile real-wage growth was strongest while inequality returned to trend."
+              suggested_fix: "Replace bare homepage with a deep link: https://www.census.gov/content/dam/Census/library/working-papers/2022/demo/sehsd-wp2022-24.pdf (Census SPM impact paper)"
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 3
@@ -49,9 +63,15 @@ categories:
             source_url: "https://www.whitehouse.gov/omb/historical-tables/"
             source_type: statistic
             tier: 1
-            claim: "Federal debt rose from $27.8T to ~$36T during Biden term; annual deficits ran ~5-7% of GDP; major spending legislation (ARP, Infrastructure, CHIPS, IRA) totaled ~$3T over multi-year period."
+            claim: "Federal debt rose from $27.8T to ~$36T during Biden's term; annual deficits ran from ~12.4% of GDP in FY2021 (the pandemic-recovery peak) down to ~5.5-6.4% in FY2022-2024; major spending legislation (ARP, Infrastructure, CHIPS, IRA) totaled ~$3T over a multi-year period."
             direction: harm
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected the deficit range to include FY2021's 12.4% (~$2.8T) peak, which the prior '~5-7%' band omitted."
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 7
@@ -64,7 +84,14 @@ categories:
             tier: 1
             claim: "Biden era saw strongest bottom-quartile real-wage growth in decades; first sitting president to walk a picket line (UAW September 2023); strengthened federal labor enforcement."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three parts confirmed: EPI shows ~13-15% real wage growth for the lowest-wage workers (2019-2024), fastest in over half a century; Biden joined the UAW picket line Sept 26, 2023 as the first sitting president (NBC/CNN/NPR/WaPo); and labor enforcement strengthened (first NLRB funding rise since 2014, +44% worker recoveries year one)."
+              suggested_fix: "Source homepage bls.gov is bare; deep link for low-wage growth: https://www.epi.org/publication/swa-wages-2023/ (and picket line: https://www.nbcnews.com/politics/white-house/biden-makes-history-striking-auto-workers-picket-line-rcna117348)"
 
   - category: 2
     name: "Foreign policy & war"
@@ -83,7 +110,14 @@ categories:
             tier: 1
             claim: "Afghanistan withdrawal ended 20-year war but chaotic execution included Abbey Gate attack killing 13 US service members and ~170 Afghan civilians; Taliban returned to power immediately."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm all specifics: 13 US service members and ~169-170 Afghan civilians killed at Abbey Gate Aug 26, 2021 (ISIS-K), withdrawal completed Aug 30, 2021, ending the ~20-year war, with Taliban back in power."
+              suggested_fix: "Replace bare homepage with deep link, e.g. https://en.wikipedia.org/wiki/2021_Kabul_airport_attack or https://www.war.gov/News/News-Stories/Article/article/2924398/us-central-command-releases-report-on-august-abbey-gate-attack/"
       - id: "2.2"
         name: "Alliance management"
         good_score: 8
@@ -96,7 +130,14 @@ categories:
             tier: 1
             claim: "NATO added Finland (2023) and Sweden (2024) after Russia's Ukraine invasion — major alliance expansion; AUKUS coordinated US-UK-Australia security framework for Indo-Pacific."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NATO confirms Finland joined April 4, 2023 (31st ally) and Sweden March 7, 2024 post-Ukraine invasion, and AUKUS was the US-UK-Australia Indo-Pacific security pact announced September 15, 2021 — all dates, names, and framing are accurate."
+              suggested_fix: "For the bare NATO homepage, a deep link: https://www.nato.int/cps/en/natohq/news_213448.htm (Finland joins NATO as 31st Ally)."
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 6
@@ -109,7 +150,14 @@ categories:
             tier: 1
             claim: "Biden rejoined Paris Agreement on inauguration day; multiple successful hostage release negotiations; Israel-Hamas war (October 2023+) substantially damaged US standing in Global South."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three sub-claims check out: Biden signed the Paris rejoin order on inauguration day Jan 20 2021 (formal re-entry Feb 19), Griner released Dec 8 2022 amid 70+ detainee/hostage releases, and the Gaza war's damage to US Global South standing is well-documented by CRS/Foreign Policy/Quincy."
+              suggested_fix: "Replace bare homepage with deep link: https://2021-2025.state.gov/the-united-states-officially-rejoins-the-paris-agreement/"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 3
@@ -123,6 +171,12 @@ categories:
             claim: "During US-supported Israeli operations in Gaza following the Oct 7 2023 attacks, the Gaza Health Ministry reported the death toll passing 45,000 Palestinians by mid-December 2024 (figures relayed but not independently verified by UN OCHA, which does not distinguish combatants from civilians); the US continued to supply weapons to Israel throughout this period. UN OHCHR documented civilian deaths in Ukraine during the US-supported defensive period."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "PBS source confirms Gaza toll passed 45,000 (45,028) on Dec 16 2024 per Gaza Health Ministry which does not distinguish combatants/civilians; OCHA relays-but-doesn't-verify, continued US arms transfers, and OHCHR Ukraine civilian-casualty documentation are all independently corroborated."
 
   - category: 3
     name: "Civil rights & equality"
@@ -140,7 +194,14 @@ categories:
             tier: 1
             claim: "Biden EO 13985 directed federal agencies to assess racial equity in programs; Harris was first woman, first Black, and first Asian American Vice President — symbolic and substantive milestones."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EO 13985 (signed Jan 20, 2021, Biden's first EO) directed agency heads to assess equity barriers in their programs, and Harris was sworn in same day as the first woman, first Black, and first Asian American VP — both facts confirmed by multiple authoritative sources."
+              suggested_fix: "Replace bare homepage with deep link: https://www.federalregister.gov/documents/2021/01/25/2021-01753/advancing-racial-equity-and-support-for-underserved-communities-through-the-federal-government"
       - id: "3.2"
         name: "Gender equity"
         good_score: 5
@@ -153,7 +214,14 @@ categories:
             tier: 1
             claim: "Dobbs decision under Biden term overturned Roe v. Wade ending federal abortion right; Biden administration unable to legislate replacement; women's reproductive rights substantially curtailed in many states post-Dobbs."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Dobbs (June 24, 2022) overturned Roe during Biden's term, the Women's Health Protection Act failed the Senate (49-51), and 12-14 states enforced total bans post-Dobbs per Guttmacher; all facts accurate, though attributing this as a Biden \"harm\" is a framing choice since it was a SCOTUS ruling plus Senate inaction."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/597/19-1392/"
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 7
@@ -166,7 +234,14 @@ categories:
             tier: 1
             claim: "Respect for Marriage Act codified federal recognition of same-sex and interracial marriages against potential SCOTUS reversal; reversed Trump-era trans military ban."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: RMA (Pub. L. 117-228, signed Dec 13 2022 by Biden) codifies federal recognition of same-sex and interracial marriages to guard against SCOTUS reversal of Obergefell, and Biden's Jan 25 2021 EO reversed Trump's trans military ban."
+              suggested_fix: "https://www.congress.gov/bill/117th-congress/house-bill/8404"
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 6
@@ -179,7 +254,14 @@ categories:
             tier: 2
             claim: "Biden administration ADA enforcement strong; HHS guidance recognizing long COVID as ADA-covered disability."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "DOJ/HHS jointly issued July 26, 2021 guidance recognizing long COVID as a disability under the ADA/Section 504/Section 1557, and Biden DOJ pursued active ADA enforcement (web-accessibility rule, Olmstead actions, Statements of Interest); minor nuance is the guidance was joint DOJ-HHS, not HHS-only."
+              suggested_fix: "https://www.justice.gov/archives/opa/pr/doj-and-hhs-issue-guidance-long-covid-and-disability-rights-under-ada-section-504-and-section"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 7
@@ -192,7 +274,14 @@ categories:
             tier: 1
             claim: "Biden restored Bears Ears and Grand Staircase-Escalante National Monuments to pre-Trump boundaries; Haaland appointment as first Native American Cabinet Secretary historic."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Biden signed proclamations Oct 8, 2021 restoring Bears Ears and Grand Staircase-Escalante to their pre-Trump boundaries (Bears Ears slightly expanded by ~11,200 acres), and Deb Haaland was confirmed March 15, 2021 (51-40) as the first Native American Cabinet secretary—all specifics match."
+              suggested_fix: "Replace bare homepage with deep links: https://www.doi.gov/pressreleases/administration-leaders-applaud-president-bidens-restoration-national-monuments and https://www.npr.org/2021/03/15/977558590/deb-haaland-confirmed-as-first-native-american-interior-secretary"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -210,7 +299,14 @@ categories:
             tier: 1
             claim: "DHS Disinformation Governance Board launched April 2022 disbanded August 2022 amid First Amendment concerns; otherwise Biden administration generally protective of speech and press."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "DHS publicly announced the Disinformation Governance Board on April 27, 2022 and disbanded it August 24, 2022 amid First Amendment/free speech criticism, exactly as claimed (board was formed earlier, ~March, but publicly revealed in April)."
+              suggested_fix: "https://www.dhs.gov/publication/disinformation-governance-board"
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 4
@@ -223,7 +319,14 @@ categories:
             tier: 1
             claim: "FISA Section 702 reauthorized in 2024 with some reforms; surveillance state largely continued from Obama/Trump T1 framework."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Biden signed the Section 702 reauthorization (Public Law 118-49) on April 20, 2024, extending it two years with limited reforms while major reforms like a warrant requirement failed; the only quibble is the citation's title—the act's actual short title is the Reforming Intelligence and Securing America Act (RISAA / H.R. 7888), not \"FISA Section 702 Reauthorization Act of 2024.\""
+              suggested_fix: "Title should read \"Reforming Intelligence and Securing America Act (RISAA), H.R. 7888, Public Law 118-49 (Apr. 20, 2024)\"; deep link: https://www.congress.gov/bill/118th-congress/house-bill/7888"
       - id: "4.3"
         name: "Executive restraint"
         good_score: 6
@@ -236,7 +339,14 @@ categories:
             tier: 1
             claim: "Biden restored institutional norms broadly; pardon of son Hunter (December 2024) was controversial breach of earlier promise; SCOTUS struck down student loan forgiveness as exceeding executive authority."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Hunter Biden's \"full and unconditional pardon\" was signed Dec 1, 2024, reversing his June 2024 \"I will not pardon him\" promise, and Biden v. Nebraska, 600 U.S. 477 (2023) struck down the student-loan plan 6-3 as exceeding executive authority under the major-questions doctrine—both specifics are exactly accurate."
+              suggested_fix: "Replace bare justice.gov homepage with deep link to the pardon warrant: https://www.justice.gov/d9/2024-12/biden_warrant.pdf (and/or supremecourt.gov/opinions/22pdf/22-506_nmip.pdf for the SCOTUS ruling)."
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 6
@@ -249,7 +359,14 @@ categories:
             tier: 1
             claim: "Biden released annual tax returns restoring pre-Trump tradition; restored White House visitor logs (Trump had eliminated); FOIA processing improvements documented."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Tax-return releases (2021-2024, restoring the Trump-broken tradition) and visitor-log restoration (Obama practice Trump killed, resumed May 2021) are firmly confirmed; FOIA \"improvements documented\" holds at the policy level (Garland's 3/15/2022 disclosure-favoring guidelines, some agency backlog cuts) though government-wide backlogs actually hit record highs, making that sub-point slightly overstated."
+              suggested_fix: "Replace bare homepage with deep link: https://www.presidency.ucsb.edu/documents/white-house-press-release-the-president-and-vice-president-release-their-2023-tax-returns (tax) and https://www.justice.gov/archives/opa/pr/attorney-general-merrick-b-garland-issues-new-foia-guidelines-favor-disclosure-and (FOIA)."
 
   - category: 5
     name: "Domestic welfare & health"
@@ -267,7 +384,14 @@ categories:
             tier: 1
             claim: "IRA established Medicare drug price negotiation framework — first time federal government negotiates drug prices; ACA marketplace enrollment reached ~21 million by 2024."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CMS/KFF/HHS confirm the IRA (P.L. 117-169) authorized Medicare to negotiate drug prices for the first time, and CMS officially reported a record 21.3-21.4M ACA marketplace plan selections for 2024, matching the \"~21 million\" figure."
+              suggested_fix: "For a deep link, cite https://www.cms.gov/newsroom/press-releases/historic-21-3-million-people-choose-aca-marketplace-coverage and https://www.cms.gov/inflation-reduction-act-and-medicare/medicare-drug-price-negotiation instead of the bare cms.gov homepage."
       - id: "5.2"
         name: "Education"
         good_score: 5
@@ -280,7 +404,14 @@ categories:
             tier: 1
             claim: "Initial $10K-$20K student loan forgiveness plan struck down by SCOTUS; SAVE Plan income-driven repayment partially implemented; Department of Education enforcement strengthened."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three parts verified: Biden v. Nebraska (600 U.S. 477, June 30 2023, 6-3) struck down $10K/$20K forgiveness; SAVE Plan was phased in (Oct 2023 + July 2024) before courts blocked it; ED reestablished the FSA Office of Enforcement (2021) and strengthened borrower-defense rules."
+              suggested_fix: "Replace bare homepage with deep link: https://www.supremecourt.gov/opinions/22pdf/22-506_nmip.pdf (Biden v. Nebraska opinion) or https://www.ed.gov/about/news/press-release/biden-harris-administration-launches-save-plan"
       - id: "5.3"
         name: "Safety net"
         good_score: 6
@@ -293,7 +424,14 @@ categories:
             tier: 1
             claim: "ARP-era CTC expansion produced 46% reduction in child poverty (Census); expiration of expansion at end-2021 returned child poverty to pre-pandemic level."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census confirms the ARP CTC expansion drove a 46% SPM child-poverty drop (9.7%→5.2%, 2020→2021); after the expansion expired end-2021, the rate rose to 12.4% in 2022, essentially the ~12.5% pre-pandemic (2019) level."
+              suggested_fix: "https://www.census.gov/library/stories/2022/09/record-drop-in-child-poverty.html (and 2023 SPM release for the 2022 rebound to 12.4%)"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 4
@@ -306,7 +444,14 @@ categories:
             tier: 1
             claim: "Housing inflation reached historic highs during Biden term; federal emergency rental assistance distributed ~$46B but affordability crisis worsened overall."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Treasury confirms ERA1+ERA2 totaled ~$46B ($25B + $21.55B); BLS shows shelter CPI hit its largest 12-month rise since June 1982 (~7.9-8.2%), and Harvard/news sources confirm affordability worsened to a record/decades-worst crisis."
+              suggested_fix: "For sourceUrl, use the deep link https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program (Treasury's \"over $46 billion\" page) and https://www.bls.gov/opub/ted/2023/consumer-prices-for-shelter-up-7-9-percent-from-january-2022-to-january-2023.htm for shelter CPI."
 
   - category: 6
     name: "Environmental stewardship"
@@ -325,20 +470,33 @@ categories:
             tier: 1
             claim: "IRA climate provisions are largest US federal climate investment ever — estimated to reduce US emissions ~40% by 2030 from 2005 baseline; Paris Agreement rejoin restored international leadership."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "IRA (P.L. 117-169) is widely cited as the largest US federal climate investment, with Princeton/Rhodium/Energy Innovation analyses projecting ~40% emissions cut below 2005 by 2030; Biden signed the Paris rejoin order Jan 20, 2021 (formally effective Feb 19, 2021)."
+              suggested_fix: "https://www.congress.gov/bill/117th-congress/house-bill/5376"
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 7
         harm_score: 2
         notes: "EPA enforcement restored. Strong methane rule. Power plant emissions rule. PFAS regulation expanded. WOTUS rule revised."
         evidence:
-          - citation: "EPA methane rule November 2023; EPA power plant rule May 2024"
+          - citation: "EPA methane rule December 2023 (https://www.epa.gov/newsreleases/biden-harris-administration-finalizes-standards-slash-methane-pollution-combat-climate); EPA power plant rule May 2024"
             source_url: "https://www.epa.gov/"
             source_type: primary_document
             tier: 1
-            claim: "EPA methane rule (November 2023) and power plant emissions rule (May 2024) substantially strengthened federal air-pollution regulation."
+            claim: "EPA methane rule (December 2023) and power plant emissions rule (May 2024) substantially strengthened federal air-pollution regulation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the EPA methane rule date from November 2023 to December 2023 in both the claim and citation, and added the EPA deep link to the citation."
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 7
@@ -351,7 +509,14 @@ categories:
             tier: 1
             claim: "Biden restored Trump-shrunk monuments; created Camp Hale Continental Divide, Avi Kwa Ame, and other national monuments; launched 30x30 conservation initiative."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All components verified: Biden restored Bears Ears/Grand Staircase (Oct 8 2021), designated Camp Hale-Continental Divide (Oct 2022) and Avi Kwa Ame (Mar 2023) monuments, and launched the 30x30/America the Beautiful initiative (Jan-May 2021)."
+              suggested_fix: "For the bare DOI homepage, a specific deep link is https://www.doi.gov/priorities/america-the-beautiful (and DOI press release on the Oct 2021 monument restorations)."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 6
@@ -364,7 +529,14 @@ categories:
             tier: 2
             claim: "ESA enforcement substantially restored; biodiversity protection framework strengthened."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Biden's March 2024 final rules (DOI/FWS/NMFS) reversed key 2019 Trump ESA rollbacks (blanket 4(d) rule, no-economic-impact listing standard, easier critical-habitat designation) and the America the Beautiful/30x30 framework launched in 2021, confirming both claim parts; \"substantially\" is mildly generous since experts called it a \"marginal win\" leaving some 2019 changes intact."
+              suggested_fix: "Deep link: https://www.fws.gov/press-release/2024-03/revisions-strengthen-endangered-species-act (and DOI: https://www.doi.gov/pressreleases/biden-harris-administration-finalizes-rules-strengthen-protection-and-recovery)"
 
   - category: 7
     name: "Crisis management"
@@ -382,20 +554,33 @@ categories:
             tier: 1
             claim: "Biden signed ARP 50 days into term; Ukraine response coalition assembly was rapid post-invasion; Afghanistan withdrawal poorly executed."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three assertions verified: ARP signed March 11, 2021 (exactly 50 days after the Jan 20 inauguration), Ukraine coalition response was rapid with same-day sanctions and broad allies, and the Afghanistan withdrawal was widely deemed poorly executed (Abbey Gate killed 13 US troops)."
+              suggested_fix: "Replace the bare homepage with a deep link, e.g. https://en.wikipedia.org/wiki/American_Rescue_Plan_Act_of_2021 (ARP date) plus https://en.wikipedia.org/wiki/2021_Kabul_airport_attack (withdrawal)."
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 6
         harm_score: 4
         notes: "COVID-19 vaccine rollout effective. Economic recovery effective. Ukraine coalition effective. Afghanistan withdrawal failed objectives. Inflation response mixed."
         evidence:
-          - citation: "US COVID-19 vaccination rate 2021-2022; Ukraine coalition assembly"
+          - citation: "US COVID-19 vaccination rate 2021-2022, Our World in Data per-capita data (https://ourworldindata.org/covid-vaccinations) and FactCheck.org (https://www.factcheck.org/2021/03/pace-of-u-s-vaccinations-vs-the-world/); Ukraine coalition assembly, UK House of Commons aid briefing (https://commonslibrary.parliament.uk/research-briefings/cbp-9477/)"
             source_url: "https://www.cdc.gov/"
             source_type: historical_record
             tier: 1
-            claim: "US COVID-19 vaccination rollout among fastest globally; Ukraine coalition assembled effectively maintaining alliance unity through 2024."
+            claim: "US COVID-19 vaccination rollout was among the fastest of large nations (~4th per capita); Ukraine coalition assembled effectively maintaining alliance unity through 2024."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"among fastest globally\" to \"among the fastest of large nations (~4th per capita)\" and replaced the unsupporting citation with Our World in Data, FactCheck.org, and the UK House of Commons briefing."
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 6
@@ -409,6 +594,12 @@ categories:
             claim: "Following the June 27, 2024 debate, critics including some Democratic officials alleged that the administration had downplayed concerns about the president's cognitive acuity in the preceding months. The Hunter Biden pardon (December 1, 2024) was widely characterized as inconsistent with earlier statements."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three elements check out: June 27 2024 debate; the cited Wikipedia page documents Democratic officials (Doggett, Moulton) and editorial boards alleging the administration concealed/downplayed his decline; and the Dec 1 2024 Hunter Biden pardon reversed Biden's repeated public \"I will not pardon him\" pledge."
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 5
@@ -421,7 +612,14 @@ categories:
             tier: 1
             claim: "Biden term ended with mixed crisis-resolution: COVID endemic, economy stable, Ukraine and Israel-Hamas ongoing, inflation cooled but cost-of-living elevated."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All five components hold at the Jan 2025 handover: COVID endemic, low-unemployment/stable economy, active Ukraine war, unresolved Israel-Hamas (a Jan 15 ceasefire deal soon collapsed), and cooled CPI (~3%) but ~21.5% cumulative price rise keeping cost-of-living elevated."
+              suggested_fix: "Optional deep links: https://www.factcheck.org/2025/10/bidens-final-numbers/ and https://en.wikipedia.org/wiki/January_2025_Gaza_war_ceasefire"
 
   - category: 8
     name: "Institutional integrity"
@@ -440,6 +638,13 @@ categories:
             claim: "The Hur Report (February 5, 2024) concluded that Biden willfully retained and disclosed classified materials but declined to recommend prosecution, referencing factors including likely juror perception; the administration disputed the report's framing. The Hunter Biden pardon (December 1, 2024) was widely characterized as inconsistent with earlier no-pardon statements."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Hur Report (dated Feb 5, 2024) language on \"willfully retained and disclosed,\" declination, juror-perception rationale, and administration's framing dispute all verbatim-confirmed, as is the Dec 1, 2024 Hunter Biden pardon reversing prior no-pardon statements; only flaw is the citation calling it \"Proclamation 10874\" when it was an Executive Grant of Clemency (DCPD-202401043), not a numbered proclamation."
+              suggested_fix: "Replace \"Proclamation 10874 (Dec. 1, 2024)\" with \"Executive Grant of Clemency for Robert Hunter Biden (Dec. 1, 2024), DCPD-202401043 / https://www.justice.gov/d9/2024-12/biden_warrant.pdf\""
       - id: "8.2"
         name: "Administration ethics"
         good_score: 7
@@ -452,7 +657,14 @@ categories:
             tier: 2
             claim: "Biden administration generally clean of major ethics scandals throughout term; no senior officials prosecuted."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple sources (incl. Washington Monthly Dec 2024) confirm no Biden political appointee was indicted/convicted and no cabinet official resigned over impropriety; departures (Lander, Cheatle) were conduct/performance, not prosecutions—Hunter Biden was a private citizen, not an official."
+              suggested_fix: "https://washingtonmonthly.com/2024/12/03/number-of-indictments-and-convictions-of-biden-white-house-appointees-zero/"
       - id: "8.3"
         name: "Norm adherence"
         good_score: 7
@@ -465,33 +677,52 @@ categories:
             tier: 1
             claim: "Biden withdrew from 2024 race after debate concerns — only sitting president to do so since LBJ 1968; presided over smooth transition to Trump T2."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three assertions check out: Biden's July 21, 2024 withdrawal after the June 27 debate, his status as the first sitting president to exit a reelection race since LBJ in 1968, and the peaceful Jan 20, 2025 transition (Biden/Harris attended Trump's inauguration)."
+              suggested_fix: "Replace the bare whitehouse.gov homepage with a deep link such as https://en.wikipedia.org/wiki/Withdrawal_of_Joe_Biden_from_the_2024_United_States_presidential_election"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
         harm_score: 2
         notes: "Ketanji Brown Jackson (2022) — first Black woman SCOTUS justice. ~235 federal judges total — most by any single term except FDR. Highly diverse and qualified."
         evidence:
-          - citation: "Ketanji Brown Jackson confirmation April 2022"
+          - citation: "Ketanji Brown Jackson confirmation April 2022; Pew Research Center, https://www.pewresearch.org/short-reads/2023/12/04/most-of-bidens-appointed-judges-to-date-are-women-racial-or-ethnic-minorities-a-first-for-any-president/"
             source_url: "https://www.supremecourt.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Jackson confirmation made her first Black woman on SCOTUS; Biden's lower-court appointments were most demographically diverse in history (~64% women, ~63% non-white)."
+            claim: "Jackson confirmation made her first Black woman on SCOTUS; Biden's lower-court appointments were most demographically diverse in history (~64% women, ~60% non-white)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the overstated non-white share from ~63% to ~60% (139 of 235) and added the Pew Research deep-link to the citation."
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 7
         harm_score: 1
         notes: "Strong vetting process. Diverse and qualified appointees. Public defender / civil rights experience pipeline expanded."
         evidence:
-          - citation: "Biden judicial appointment demographic data 2021-2025"
+          - citation: "Biden judicial appointment demographic data 2021-2025; ABA Journal, \"Like Trump, Biden asks ABA to start judicial ratings process after nominations are made\" https://www.abajournal.com/news/article/like-trump-biden-asks-aba-to-start-judicial-ratings-process-after-nominations-are-made"
             source_url: "https://www.fjc.gov/"
             source_type: statistic
             tier: 1
-            claim: "Biden judicial selection process emphasized professional and demographic diversity; ABA rating processes restored to traditional weight."
+            claim: "Biden judicial selection process emphasized professional and demographic diversity; he continued Trump's post-nomination ABA rating practice rather than restoring pre-nomination vetting, with ~85% of nominees rated \"well qualified.\""
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the backwards ABA clause to state Biden continued Trump's post-nomination ABA rating practice (~85% \"well qualified\") instead of restoring traditional pre-nomination vetting, and added the supporting ABA Journal source to the citation."
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 6
@@ -504,7 +735,14 @@ categories:
             tier: 2
             claim: "Jackson emerging as liberal voice on Roberts Court alongside Sotomayor and Kagan; pragmatic-liberal jurisprudence."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Bloomberg Law, ABA, Slate, SCOTUSblog) confirm Biden-appointee Jackson emerged 2022-2024 as a distinct liberal voice within the Sotomayor-Kagan bloc; \"pragmatic-liberal\" is loosely accurate but scholars more often label her early work \"progressive originalism/textualism.\""
+              suggested_fix: "https://news.bloomberglaw.com/us-law-week/jackson-emerges-as-the-supreme-courts-leading-liberal-voice"
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 5
@@ -517,7 +755,14 @@ categories:
             tier: 1
             claim: "Jackson confirmed 53-47 with 3 Republican votes; continued pattern of highly partisan SCOTUS confirmations."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Senate.gov roll call vote 117-2-134 confirms Jackson was confirmed 53-47 on April 7, 2022, with exactly 3 Republicans (Collins, Murkowski, Romney) voting yea, matching the claim."
+              suggested_fix: "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00134.htm"
 
   - category: 9
     name: "Democratic health"
@@ -535,33 +780,52 @@ categories:
             tier: 1
             claim: "Major voting-rights expansion legislation failed in Senate (filibuster); DOJ Civil Rights Division voting-rights enforcement returned to active levels post-Trump."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: combined Freedom to Vote/John Lewis VRA Advancement Act failed Senate cloture 49-51 on Jan 19, 2022 (Manchin/Sinema blocked filibuster change), and Biden DOJ Civil Rights Division under Clarke revived voting-rights enforcement (Section 2 suits vs Georgia SB202, Texas, Arizona) after dormant Trump era."
+              suggested_fix: "Deep link for verification: https://www.congress.gov/bill/117th-congress/house-bill/5746 (Freedom to Vote: John R. Lewis Act) and https://www.congress.gov/bill/117th-congress/house-bill/4 (John R. Lewis VRA Advancement Act)"
       - id: "9.2"
         name: "Press relationship"
         good_score: 6
         harm_score: 3
         notes: "Restored cordial press relations broadly. Fewer press conferences than predecessors. Some friction over age/cognitive coverage."
         evidence:
-          - citation: "Biden press conference frequency analysis"
+          - citation: "Biden press conference frequency analysis (https://www.presidency.ucsb.edu/analyses/bidens-solo-news-conferences-perspective)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Biden held fewer solo press conferences than any modern predecessor; otherwise restored cordial post-Trump press relations."
+            claim: "Biden held among the fewest formal news conferences and the lowest per-year rate since Reagan; otherwise restored cordial post-Trump press relations."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the false \"fewer solo press conferences than any modern predecessor\" superlative with the accurate \"among the fewest formal news conferences and lowest per-year rate since Reagan\" and added the American Presidency Project source URL."
       - id: "9.3"
         name: "Political violence"
         good_score: 5
         harm_score: 5
         notes: "The Biden DOJ prosecuted approximately 1,500 January 6 defendants between 2021 and 2024 per DOJ docket totals. During the 2024 campaign, DOJ charging documents described two incidents the FBI investigated as assassination attempts on Trump: the July 13, 2024 Butler, Pennsylvania incident (in which the shooter was killed by Secret Service and the matter was treated as established) and the September 15, 2024 incident in West Palm Beach, Florida (charged by federal prosecutors as an attempted assassination)."
         evidence:
-          - citation: "DOJ docket totals for January 6 prosecutions 2021-2024; United States v. Crooks (closed by death of suspect) and United States v. Routh (filed Sept. 2024, S.D. Fla.) charging documents"
+          - citation: "USAO-DC Capitol Breach Cases (justice.gov/usao-dc/capitol-breach-cases) for January 6 prosecution totals 2021-2024; FBI classification of the Butler incident as an attempted assassination (fbi.gov/news/press-releases/update-on-the-fbi-investigation); United States v. Routh (filed Sept. 2024, S.D. Fla.) charging documents"
             source_url: "https://www.justice.gov/"
             source_type: primary_document
             tier: 1
             claim: "Per DOJ charging documents and docket totals, approximately 1,500 January 6 defendants were prosecuted under the Biden DOJ between 2021 and 2024. The July 13, 2024 Butler incident was treated as an established assassination attempt; the September 15, 2024 West Palm Beach incident was charged as an attempted assassination."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Removed the nonexistent \"United States v. Crooks\" charging-document citation (Crooks died at the scene, no case filed) and replaced it with the FBI's Butler attempted-assassination classification and the USAO-DC Capitol Breach Cases page for the ~1,500 figure, leaving the claim text unchanged."
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 4
@@ -574,7 +838,14 @@ categories:
             tier: 1
             claim: "Biden 'Soul of the Nation' framing was substantively pro-democracy but contributed to partisan polarization; achieved some bipartisan legislation (Infrastructure, CHIPS, Respect for Marriage, ECA reform)."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All components verified: the Sept 1 2022 Philadelphia \"Soul of the Nation\" speech was pro-democracy but widely criticized (Trump, McCarthy, WaPo board) as divisive/polarizing, and all four named bipartisan laws (Infrastructure, CHIPS, Respect for Marriage, ECA reform) were signed by Biden."
+              suggested_fix: "Replace bare homepage with deep link: https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2022/09/01/remarks-by-president-biden-on-the-continued-battle-for-the-soul-of-the-nation/"
 
   - category: 10
     name: "Long-tail consequences"
@@ -625,13 +896,19 @@ categories:
         era_context: "E11.5 — restoration within Post-Trump baseline"
         notes: "Restored traditional presidential dignity broadly. Late-term cognitive concerns affected public appearances. Generally dignified despite age challenges."
         evidence:
-          - citation: "Biden public conduct records 2021-2025"
+          - citation: "Biden public conduct records 2021-2025; https://en.wikipedia.org/wiki/Age_and_health_concerns_about_Joe_Biden; https://law.stanford.edu/press/the-definitive-list-of-the-20-presidential-norms-trump-broke-and-how-joe-biden-can-restore-them/"
             source_url: "https://www.whitehouse.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Biden substantially restored traditional presidential dignity post-Trump T1; age-related concerns about cognitive acuity emerged publicly in 2024."
+            claim: "Biden substantially restored traditional presidential dignity post-Trump T1; age-related cognitive concerns, public since 2019-2020, peaked after the June 27, 2024 debate, prompting his July 21, 2024 withdrawal."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the overstatement that cognitive concerns \"emerged\" in 2024 to note they were public since 2019-2020 and peaked after the June 27, 2024 debate, and added the two specific sources to the citation."
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 6
@@ -644,7 +921,14 @@ categories:
             tier: 2
             claim: "Biden rhetorical style was moderate and largely unifying though 'MAGA Republicans' framing was contested; major speeches (Soul of Nation, Inauguration) substantive."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Verifiable specifics check out: the \"Soul of the Nation\" (Sept 1, 2022) and inauguration (Jan 20, 2021) speeches are substantive major addresses, and the \"MAGA Republicans\"/\"semi-fascist\" framing was indeed widely contested (Trump/McCarthy + red-lighting/Marines backlash); \"moderate and largely unifying\" is a defensible interpretive judgment matching scholarly framing of Biden as a return to measured normalcy."
+              suggested_fix: "Replace bare homepage with deep links: https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2022/09/01/remarks-by-president-biden-on-the-continued-battle-for-the-soul-of-the-nation/ and the Jan 20, 2021 inaugural address; cf. https://en.wikipedia.org/wiki/Battle_for_the_Soul_of_the_Nation_speech for the contestation."
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 7
@@ -657,7 +941,14 @@ categories:
             tier: 2
             claim: "Biden observed traditional ceremonial standards including state funerals, foreign visits, and inauguration handover."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three named components check out: Biden eulogized at Carter's state funeral (Jan 2025), conducted numerous foreign/state visits with full protocol, and personally honored the inauguration handover by welcoming Trump for the customary White House tea and joint limo ride in Jan 2025."
+              suggested_fix: "Replace bare homepage with a deep link, e.g. https://en.wikipedia.org/wiki/State_funeral_of_Jimmy_Carter or the ABC News report on Biden seeing through the 2025 peaceful transfer of power (https://abcnews.go.com/Politics/live-updates/donald-trump-inauguration-2025/)."
       - id: "11.4"
         name: "Model behavior"
         good_score: 6
@@ -670,7 +961,14 @@ categories:
             tier: 2
             claim: "Biden's modeling of restored traditional presidency partly effective despite age-related complications during term."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Biden's \"return to normalcy\"/restored decorum theme, its only partial effectiveness (polarization persisted), and well-documented age-related complications; the evaluative, hedged claim is well-calibrated though the cited source is offline/vague."
+              suggested_fix: "https://en.wikipedia.org/wiki/Return_to_normalcy (decorum) plus https://en.wikipedia.org/wiki/Age_and_health_concerns_about_Joe_Biden (age complications)"
 
   - category: 12
     name: "Effect on populace"
@@ -688,7 +986,14 @@ categories:
             tier: 1
             claim: "Biden averaged ~42% Gallup approval term-overall; end-of-term ~40% reflected inflation concerns, age questions, and partisan polarization."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup confirms Biden's 42.2% term average and 40% final (Jan 2-15, 2025) approval, citing inflation and extreme partisan polarization; \"age questions\" isn't in this specific article but is well-documented and non-contradictory."
+              suggested_fix: "https://news.gallup.com/poll/655298/biden-job-approval-second-lowest-among-post-wwii-presidents.aspx"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 4
@@ -701,7 +1006,14 @@ categories:
             tier: 1
             claim: "Partisan polarization remained near historic highs during Biden term; Israel-Hamas war produced significant generational and cultural-political divides 2023-2024."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew data confirm partisan animosity at record highs (62% R / 54% D \"very unfavorable\" in 2022) and a stark generational divide on the Israel-Hamas war (under-30s far more pro-Palestinian; April 2024 Pew study), matching the 2024 campus protests."
+              suggested_fix: "Replace bare homepage with deep links: https://www.pewresearch.org/politics/2022/08/09/as-partisan-hostility-grows-signs-of-frustration-with-the-two-party-system/ and https://www.pewresearch.org/short-reads/2024/04/02/younger-americans-stand-out-in-their-views-of-the-israel-hamas-war/"
       - id: "12.3"
         name: "International standing"
         good_score: 6
@@ -714,7 +1026,14 @@ categories:
             tier: 1
             claim: "US favorability rebounded substantially under Biden per Pew Global Attitudes; Afghanistan withdrawal and Israel-Hamas war complicated international-standing trajectory."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Pew's 2021 report shows US favorability flipping from 34% to 62% and confidence in the president from 17% to 75% after Trump-to-Biden, sustained positive in 2023-2024, with Afghanistan and the Israel-Hamas war (median 31% approval) complicating but not reversing the rebound."
+              suggested_fix: "https://www.pewresearch.org/global/2021/06/10/americas-image-abroad-rebounds-with-transition-from-trump-to-biden/"
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 6
@@ -727,7 +1046,14 @@ categories:
             tier: 1
             claim: "Foreign-public sentiment toward US under Biden rebounded substantially in allied populations; Israel-Hamas war produced declining favorability in Global South 2023-2024."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Pew confirms substantial 2021 rebound in allied favorability (34%→62% global, +25pts in UK/France/Germany/Italy/Netherlands); MENA/Global-South favorability fell sharply after Oct 7 2023 (Tunisia to 9%, Jordan -23pts per Arab Barometer/Pew), though \"Global South\" is broader than the MENA-concentrated war effect."
+              suggested_fix: "Deep links: https://www.pewresearch.org/global/2021/06/10/americas-image-abroad-rebounds-with-transition-from-trump-to-biden/ and https://www.pewresearch.org/global/2024/06/11/views-of-the-u-s/"
 
   - category: 13
     name: "Immigration & demographics"
@@ -739,13 +1065,19 @@ categories:
         harm_score: 4
         notes: "Restored refugee admission ceiling. Family reunification task force for separated children. Comprehensive reform failed. Late-term enforcement shift."
         evidence:
-          - citation: "Refugee admission ceiling FY 2022-2025; family reunification task force"
+          - citation: "Refugee admission ceiling FY 2022-2025; family reunification task force (DHS fact sheet, Feb 2, 2023: https://www.dhs.gov/archive/news/2023/02/02/fact-sheet-review-family-reunification-task-force-second-anniversary-its)"
             source_url: "https://www.state.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Biden raised refugee admission ceiling from Trump-era 15K to 125K (FY 2022) but actual admissions lagged ceiling substantially; family reunification task force has reunited ~785 separated families."
+            claim: "Biden raised refugee admission ceiling from Trump-era 15K to 125K (FY 2022) but actual admissions lagged ceiling substantially; family reunification task force has reunified 2,926 separated children (3,924 identified) as of Feb 2023."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the unsupported \"~785 separated families\" figure with the DHS task force figure of 2,926 children reunified (3,924 identified) as of Feb 2023, and added the DHS source URL to the citation."
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -758,7 +1090,14 @@ categories:
             tier: 1
             claim: "Biden ended Title 42 in May 2023 after 3-year continuation; June 2024 executive order substantially restricted asylum at southern border under pressure from electoral concerns."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Title 42 ended May 11, 2023 (invoked March 2020, ~3-year span) and Biden's June 4, 2024 proclamation/212(f) rule substantially restricted southern-border asylum—both dates accurate; \"electoral concerns\" is defensible interpretive framing given pre-election timing."
+              suggested_fix: "Replace bare dhs.gov homepage with authoritative deep links: CRS report on the June 2024 proclamation https://www.congress.gov/crs-product/LSB11178 and NPR https://www.npr.org/2023/05/12/1175865631/biden-administration-ends-title-42-what-now"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 5
@@ -771,21 +1110,33 @@ categories:
             tier: 1
             claim: "Biden administration humanitarian parole admissions substantial (Afghans, Ukrainians, CHNV nationalities ~500K+ total); late-term asylum restrictions reduced parallel inflows."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CHNV parole reached ~532K by Sept/Oct 2024, plus ~77K Afghans (Operation Allies Welcome) and ~141K Ukrainians paroled, and Biden's June 2024 asylum proclamation drove border crossings to a four-year low—every element of the claim checks out."
+              suggested_fix: "Replace bare DHS homepage with a deep link, e.g. https://www.dhs.gov/news/2024/10/02/data-cuban-haitian-nicaraguan-and-venezuelan-parole-processes (CHNV data) and CRS R47654 for Afghan/Ukrainian parole totals."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 5
         harm_score: 3
         notes: "Immigration-driven labor force growth contributed to economic recovery. Foreign-born share rose to ~14.3% by 2024 — near all-time high. Demographic transition continued."
         evidence:
-          - citation: "Census 2024 American Community Survey foreign-born data; immigration economic-impact studies"
+          - citation: "Census 2024 American Community Survey foreign-born data (data.census.gov table S0501, ACSST1Y2024); immigration economic-impact studies"
             source_url: "https://www.census.gov/"
             source_type: statistic
             tier: 1
-            claim: "US foreign-born share rose to ~14.3% by 2024 (near all-time high); immigration was significant contributor to post-COVID labor-force recovery."
+            claim: "US foreign-born share rose to ~14.8% (50.2 million) by 2024 (an all-time high tying the 1890 peak); immigration was significant contributor to post-COVID labor-force recovery."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Updated the foreign-born share from the 2023 figure (~14.3%) to the correct 2024 ACS value (~14.8%, 50.2 million, a record tying the 1890 peak) and added the specific ACS table to the citation."
 calibration_summary:
   good_average_across_categories: 5.9
   harm_average_across_categories: 3.6

@@ -24,20 +24,33 @@ categories:
             tier: 1
             claim: "Clinton presided over longest economic expansion in US history to that point; unemployment reached 30-year low (3.8% in April 2000); ~22 million net jobs added."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NBER confirms the 1991-2001 expansion (120 mo) was the longest in US history to that point; BLS shows 3.8% unemployment in April 2000 (a ~30-year low); jobs added ~21-22.4M per FactCheck.org and White House data, making \"~22 million\" accurate."
+              suggested_fix: "For the unemployment series, a deep link is https://data.bls.gov/timeseries/LNS14000000 ; the longest-expansion claim is documented at https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 5
         harm_score: 4
         notes: "Top-decile share continued rising despite strong economy. EITC major expansion (1993). Some mobility improvement during late-1990s boom."
         evidence:
-          - citation: "Piketty & Saez income share data 1993-2001; OBRA 1993 EITC expansion"
+          - citation: "Piketty & Saez income share data 1993-2001 (Saez \"Striking it Richer,\" TabFig2022, https://eml.berkeley.edu/~saez/TabFig2022.xlsx); OBRA 1993 EITC expansion"
             source_url: "canonical"
             source_type: statistic
             tier: 1
-            claim: "Top 1% income share rose from ~14% (1992) to ~17% (2000) despite strong economy; EITC expansion partially offset inequality at bottom."
+            claim: "Top 1% income share (excl. capital gains) rose from ~13.5% (1992) to ~16.5% (2000) despite strong economy; EITC expansion partially offset inequality at bottom."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the top 1% income share figures to 13.5% (1992) and 16.5% (2000) excluding capital gains per official Saez/Piketty data, and updated the citation with the specific Saez source/URL."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 10
@@ -51,21 +64,33 @@ categories:
             tier: 1
             claim: "OBRA 1993 raised top marginal rate to 39.6% and increased gasoline tax, combined with PAYGO discipline and tech-boom revenue produced four consecutive surpluses (FY1998-2001)."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Every component checks out: OBRA 1993 raised the top rate from 31% to 39.6% and added a 4.3-cent gas tax, extended PAYGO, and FY1998-2001 were the only four consecutive surplus years since 1969 (~$69B/$236B peak/$128B)."
+              suggested_fix: "For a deeper authoritative link, use the OMB Historical Tables direct PDF (Table 1.1, Summary of Receipts, Outlays, and Surpluses or Deficits): https://www.whitehouse.gov/wp-content/uploads/2025/02/hist01z1_fy2026.xlsx"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 6
         harm_score: 3
         notes: "Real wages rose substantially during late-1990s tightening labor market. Minimum wage raised 1996. NAFTA labor displacement contested."
         evidence:
-          - citation: "BLS real wages data 1993-2001; Minimum Wage Increase Act 1996"
+          - citation: "Census real median household income 1993-2000 (P60-213, https://www2.census.gov/library/publications/2001/demographics/p60-213.pdf); BLS real median weekly earnings (FRED LES1252881600Q); Minimum Wage Increase Act 1996"
             source_url: "https://www.bls.gov/"
             source_type: statistic
             tier: 1
-            claim: "Real median wages rose ~15% during Clinton term, the strongest sustained real-wage growth since 1970s; NAFTA produced manufacturing job displacement that emerged as political issue subsequently."
+            claim: "Real median household income rose ~12-15% during Clinton term (1993-2000), with real median weekly earnings rising more modestly (~3-7%) amid the strongest sustained real-wage growth since 1970s; NAFTA produced manufacturing job displacement that emerged as political issue subsequently."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reattributed the \"~15%\" figure from BLS real median wages to real median household income (~12-15%, with weekly earnings up only ~3-7%) and updated the citation to the Census P60-213 source plus the FRED earnings series."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.4 Unipolar moment. Kosovo intervention (1999) without UN authorization. Somalia withdrawal after Mogadishu. Rwanda inaction. Bosnia eventual intervention."
@@ -83,7 +108,14 @@ categories:
             tier: 1
             claim: "Clinton successfully intervened in Bosnia (Dayton) and Kosovo; failed to intervene in Rwanda Genocide (800,000 deaths) — later called his 'greatest regret.'"
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Dayton Accords (Nov 1995), Kosovo bombing (Mar 24-Jun 10 1999), and Rwanda genocide (Apr-Jul 1994, 800k+ deaths) all confirmed; Clinton repeatedly called Rwanda non-intervention among his greatest regrets, though precise phrasing is \"one of\" his greatest regrets."
+              suggested_fix: "For Dayton/Kosovo deep link: https://history.state.gov/milestones/1993-2000/dayton ; Rwanda death toll/regret best sourced via Britannica (britannica.com/event/Rwanda-genocide-of-1994) and ABC/PBS Clinton interviews."
       - id: "2.2"
         name: "Alliance management"
         good_score: 7
@@ -96,20 +128,33 @@ categories:
             tier: 1
             claim: "Clinton oversaw first post-Cold-War NATO expansion to Poland, Hungary, Czech Republic; established framework for subsequent expansion that Russia later cited as grievance."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NATO and Wikipedia confirm Poland, Hungary, Czech Republic joined March 12, 1999 (first round of new members post-Cold War, under Clinton), Partnership for Peace launched Jan 1994, and Russia repeatedly cites NATO expansion as a grievance."
+              suggested_fix: "Deep link for nato.int homepage: https://www.nato.int/cps/en/natohq/topics_49212.htm (Enlargement and Article 10)"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 7
         harm_score: 3
         notes: "Oslo Accords (1993). Good Friday Agreement (1998). Camp David II (2000) failed. NPT extension. Strong soft power era."
         evidence:
-          - citation: "Oslo Accords September 13, 1993; Good Friday Agreement April 10, 1998"
+          - citation: "Oslo Accords September 13, 1993; Good Friday Agreement April 10, 1998 (https://history.state.gov/milestones/1993-2000/oslo)"
             source_url: "https://history.state.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Clinton brokered Oslo Accords (Israel-PLO) and Good Friday Agreement (Northern Ireland), two major peace processes; subsequent collapse of Oslo damaged legacy."
+            claim: "Clinton hosted the signing of and facilitated implementation of the Oslo Accords (Israel-PLO) and brokered the Good Friday Agreement (Northern Ireland), two major peace processes; subsequent collapse of Oslo damaged legacy."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reworded Oslo from \"brokered\" to \"hosted the signing of and facilitated implementation of\" (Norway brokered it), kept \"brokered\" for Good Friday, and added the State Dept Oslo milestone URL to the citation."
       - id: "2.4"
         name: "Civilian impact"
         good_score: 4
@@ -117,14 +162,19 @@ categories:
         era_context: "E2.4 — Rwanda inaction as principal harm vector"
         notes: "Rwanda Genocide (April-July 1994, ~800,000 deaths) — failure to intervene. Iraq sanctions civilian impact severe. Kosovo war ~500 civilian deaths from NATO bombing."
         evidence:
-          - citation: "UN Independent Inquiry on Rwanda (1999); Iraq sanctions impact studies"
+          - citation: "UN Independent Inquiry on Rwanda (1999); 1999 UNICEF Iraq survey, contradicted by Dyson & Cetorelli, BMJ Global Health (2017)"
             source_url: "https://www.un.org/"
             source_type: primary_document
             tier: 1
-            claim: "Clinton later acknowledged Rwanda non-intervention as his greatest foreign-policy regret; Iraq sanctions contributed to estimated 500,000+ Iraqi child deaths over 1990s."
+            claim: "Clinton later acknowledged Rwanda non-intervention as his greatest foreign-policy regret; a 1999 UNICEF survey attributed 500,000+ excess Iraqi child deaths to 1990s sanctions, but that figure has since been largely discredited (post-2003 surveys and a 2017 BMJ Global Health study found no such mortality rise, the original data likely manipulated by Saddam's regime)."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Reframed the 500,000 Iraqi child-death figure as a disputed/discredited 1999 UNICEF estimate rather than fact (contradicted by post-2003 surveys and BMJ 2017)."
   - category: 3
     name: "Civil rights & equality"
     category_notes: "Era E3.3 Consolidation → E3.4 LGBTQ+ expansion onset. Mixed: Don't Ask Don't Tell, DOMA on LGBTQ; strong Civil Rights Division. Crime Bill 1994 mass-incarceration controversial."
@@ -141,7 +191,14 @@ categories:
             tier: 1
             claim: "1994 Crime Bill expanded federal mandatory minimums, three-strikes law, prison construction funding; contributed substantially to mass-incarceration era with disproportionate impact on Black Americans."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "FactCheck.org, Wikipedia, and Brennan/Brookings confirm the 1994 Act (P.L. 103-322) created a federal three-strikes provision, expanded mandatory minimums, funded ~$8.7B in truth-in-sentencing prison construction, and contributed to the mass-incarceration era with disproportionate impact on Black Americans; \"substantially\" is defensible given scholarly caveats that incarceration predated 1994 and is mostly state-driven."
+              suggested_fix: "Deep link: https://www.congress.gov/bill/103rd-congress/house-bill/3355 (P.L. 103-322). Note the cited PRWORA 1996 law (P.L. 104-193) is extraneous—the claim text concerns only the 1994 Crime Bill."
       - id: "3.2"
         name: "Gender equity"
         good_score: 7
@@ -154,7 +211,14 @@ categories:
             tier: 1
             claim: "VAWA established federal framework for prosecuting gender-based violence; FMLA provided 12 weeks unpaid medical/family leave protection."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "VAWA was enacted Sept 1994 as Title IV of the Violent Crime Control Act, creating new federal crimes and a federal framework for gender-based violence; FMLA (PL 103-3, Feb 1993) provides 12 weeks unpaid job-protected leave—both citations accurate (minor nuance: VAWA went beyond \"prosecution\" to civil remedies/grants)."
+              suggested_fix: "https://www.congress.gov/bill/103rd-congress/house-bill/1 (FMLA, PL 103-3) and https://www.congress.gov/bill/103rd-congress/house-bill/3355 (VAWA, Title IV of the 1994 Crime Bill)"
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 3
@@ -168,7 +232,14 @@ categories:
             tier: 1
             claim: "Clinton signed DADT (1993) and DOMA (1996); these federal anti-LGBTQ laws were later repealed (DADT in 2010) and ruled unconstitutional (DOMA in Windsor 2013). EO 13087 (1998) extended federal civilian protections."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm Clinton signed DADT (10 USC 654, 1993) and DOMA (PL 104-199, 1996); the DADT Repeal Act passed Dec 2010, Windsor (June 26 2013) struck DOMA Sec. 3, and EO 13087 (May 28 1998) barred sexual-orientation discrimination in federal civilian employment."
+              suggested_fix: "Minor precision: DADT's repeal act was signed in 2010 but the policy did not end until Sept 20, 2011; Windsor invalidated DOMA Section 3 specifically (Section 2 stood until Obergefell 2015)."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 5
@@ -181,7 +252,14 @@ categories:
             tier: 1
             claim: "Olmstead established right to community-based services for disabled Americans; Clinton DOJ argued in support of broader ADA protection."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Olmstead v. L.C., 527 U.S. 581 (1999) held unjustified institutionalization violates ADA Title II's integration mandate, and Clinton's DOJ (SG Seth Waxman on the brief; Irving Gornstein arguing) filed an amicus brief urging affirmance to support broader ADA protection."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/527/581/ (and DOJ OSG amicus brief: https://www.justice.gov/osg/brief/olmstead-v-lc-amicus-merits)"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 6
@@ -194,7 +272,14 @@ categories:
             tier: 1
             claim: "EO 13175 established formal government-to-government consultation framework with tribes that subsequent administrations have continued."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EO 13175, signed by Clinton Nov 6, 2000, established the formal government-to-government tribal consultation framework, and Obama's Nov 5, 2009 memorandum (and later admins) directed continued/complete implementation of it."
+              suggested_fix: "https://www.federalregister.gov/documents/2000/11/09/00-29003/consultation-and-coordination-with-indian-tribal-governments"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -212,7 +297,14 @@ categories:
             tier: 1
             claim: "Section 230 of CDA (which survived Reno v. ACLU striking down speech-restriction portions) became foundational protection for internet intermediary speech."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Section 230 (CDA, Title V of Telecom Act 1996) was severable and survived Reno v. ACLU 521 U.S. 844 (1997), which struck down the CDA indecency provisions; it is widely recognized as foundational intermediary protection."
+              suggested_fix: "Replace bare homepage with deep link: https://www.govinfo.gov/content/pkg/USCODE-2011-title47/html/USCODE-2011-title47-chap5-subchapII-partI-sec230.htm (Section 230 statutory text) or https://supreme.justia.com/cases/federal/us/521/844/"
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 3
@@ -223,9 +315,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "AEDPA expanded federal surveillance authority and restricted habeas corpus review; CALEA required telecom infrastructure to support law-enforcement wiretap capability."
+            claim: "AEDPA restricted federal habeas corpus review (Congress stripped the administration's requested wiretap-expansion provisions); CALEA required telecom infrastructure to support law-enforcement wiretap capability."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Removed the overstated 'AEDPA expanded federal surveillance authority' clause; Clinton's signing statement notes Congress refused the requested wiretap expansions. CALEA point stands."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 5
@@ -238,7 +336,14 @@ categories:
             tier: 1
             claim: "Clinton prosecuted 78-day Kosovo air war without UN Security Council authorization (Russia/China veto) or formal congressional declaration; relied on NATO authorization."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Operation Allied Force ran 78 days (Mar 24-Jun 10, 1999) without UNSC authorization (Russia/China opposed); House defeated a war declaration 427-2 and tied 213-213 on authorizing strikes, so NATO authority was the sole basis—all specifics check out."
+              suggested_fix: "https://en.wikipedia.org/wiki/NATO_bombing_of_Yugoslavia"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 5
@@ -251,7 +356,14 @@ categories:
             tier: 1
             claim: "Clinton's deceptions about Lewinsky relationship led to impeachment by House (December 1998) on perjury and obstruction charges; acquitted by Senate February 1999."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: House impeached Clinton Dec 19, 1998 on perjury (228-206) and obstruction (221-212) tied to Lewinsky deceptions; Senate acquitted Feb 12, 1999 (45-55 and 50-50)."
+              suggested_fix: "https://www.archives.gov/legislative/features/clinton (deep link; or LOC guide guides.loc.gov/federal-impeachment/bill-clinton)"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -269,7 +381,14 @@ categories:
             tier: 1
             claim: "SCHIP covered ~5 million children under joint federal-state framework; HIPAA established healthcare privacy and portability standards."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "SCHIP (Balanced Budget Act 1997, PL 105-33) was designed to cover ~5M children and annual enrollment reached ~5.3M by FY2002; HIPAA (PL 104-191, 1996) did establish portability and privacy/security standards—both parts confirmed by HHS/MACPAC/CDC."
+              suggested_fix: "For deep links: https://www.macpac.gov/subtopic/history-and-impact-of-chip/ (SCHIP enrollment) and https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html (HIPAA privacy)."
       - id: "5.2"
         name: "Education"
         good_score: 6
@@ -282,7 +401,14 @@ categories:
             tier: 1
             claim: "Goals 2000 established federal education-standards framework continuing the Charlottesville summit movement."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Goals 2000 (P.L. 103-227, signed March 31, 1994) codified eight National Education Goals into a federal standards framework, directly continuing the 1989 Charlottesville education summit goals agreed by governors and President Bush."
+              suggested_fix: "https://www.congress.gov/bill/103rd-congress/house-bill/1804"
       - id: "5.3"
         name: "Safety net"
         good_score: 4
@@ -295,21 +421,33 @@ categories:
             tier: 1
             claim: "PRWORA replaced AFDC with TANF time-limited block grants; welfare rolls fell ~60% within decade; deep-poverty (below 50% poverty line) families rose substantially."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "HHS/CRS confirm PRWORA (1996) replaced AFDC's entitlement with the time-limited (5-yr) TANF block grant; caseloads fell ~58-67% within a decade; CBPP and Edin/Shaefer (and a PolitiFact \"Mostly True\") document deep/extreme-poverty families rising substantially, though that part counts only cash income and is contested by some analysts."
+              suggested_fix: "For a deep link, cite congress.gov CRS report R44668 (TANF legislative history) and CBPP's \"After 1996 Welfare Law, a Weaker Safety Net and More Children in Deep Poverty\" rather than the bare congress.gov homepage."
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 5
         harm_score: 3
         notes: "Empowerment Zones program. HOPE VI public housing reform — substantial demolition of public housing units. Strong economy lifted housing access overall."
         evidence:
-          - citation: "HOPE VI program HUD initiation 1992-1993"
+          - citation: "HOPE VI program HUD initiation 1992-1993; HUD User, HOPE VI Data Compilation and Analysis, https://www.huduser.gov/portal/sites/default/files/pdf/HOPE-VI-Data-Compilation-and-Analysis.pdf"
             source_url: "https://www.hud.gov/"
             source_type: historical_record
             tier: 2
-            claim: "HOPE VI demolished ~140,000 public housing units and rebuilt ~57,000, controversial reduction in public housing stock."
+            claim: "HOPE VI demolished ~98,000 public housing units and rebuilt ~57,000, controversial reduction in public housing stock."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the overstated demolition figure from ~140,000 to ~98,000 units and added the HUD User data source to the citation."
   - category: 6
     name: "Environmental stewardship"
     category_notes: "Era E6.3 Climate-aware emerging. Kyoto Protocol signed (not ratified). Mixed record. Antiquities Act use for national monuments. Failed BTU tax."
@@ -327,7 +465,14 @@ categories:
             tier: 1
             claim: "Clinton signed Kyoto Protocol but never submitted to Senate facing certain rejection per Byrd-Hagel (95-0); meaningful climate policy delayed by political opposition."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All specifics verified: Byrd-Hagel passed 95-0 on July 25, 1997 (S.Res.98); Clinton admin (Amb. Burleigh) signed Kyoto Nov 12, 1998 and never submitted it to the Senate, recognizing it lacked two-thirds support."
+              suggested_fix: "sourceUrl is a bare homepage; use a deep link such as https://en.wikipedia.org/wiki/Byrd%E2%80%93Hagel_Resolution or the Clinton White House signing statement https://clintonwhitehouse4.archives.gov/CEQ/19981112-7790.html"
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 6
@@ -340,7 +485,14 @@ categories:
             tier: 1
             claim: "Clinton EPA implemented 1990 CAA Amendments effectively; acid rain emissions fell substantially via cap-and-trade."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Title IV cap-and-trade Acid Rain Program was implemented under Clinton's EPA (Phase I 1995-99, Phase II 2000), cutting SO2 ~29% from 1990 by 2000 and far more later; one cited source (Clean Water Action Plan) is about water, not acid rain."
+              suggested_fix: "Replace the Clean Water Action Plan citation with EPA's Acid Rain Program / Title IV pages: https://www.epa.gov/acidrain/acid-rain-program and https://www.epa.gov/clean-air-act-overview/1990-clean-air-act-amendment-summary-title-iv"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 8
@@ -353,7 +505,14 @@ categories:
             tier: 1
             claim: "Clinton used Antiquities Act extensively to protect 5.7+ million acres; Roadless Rule protected ~58.5 million acres of national forests from logging and road-building."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CRS confirms Clinton designated/enlarged 22 monuments (~5.9M acres, second only to FDR), satisfying the \"5.7+ million\" floor; multiple authoritative sources confirm the Jan 2001 Roadless Rule protected 58.5M acres, and Grand Staircase-Escalante was designated Sept 18, 1996."
+              suggested_fix: "Replace bare homepage with deep link: https://www.everycrsreport.com/reports/RL30528.html (CRS, ~5.9M acres / 22 monuments) and https://www.federalregister.gov/documents/2001/01/12/01-726/special-areas-roadless-area-conservation (Roadless Rule, 58.5M acres)."
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 6
@@ -364,10 +523,15 @@ categories:
             source_url: "https://www.fws.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Yellowstone wolf reintroduction launched 1995 became iconic ESA success story; ESA enforcement strong throughout Clinton term."
+            claim: "Yellowstone wolf reintroduction launched 1995 became iconic ESA success story; ESA enforcement strong for most of Clinton term."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened \"strong throughout Clinton term\" to \"strong for most of Clinton term\" to account for the 1995-96 congressional listing moratorium."
   - category: 7
     name: "Crisis management"
     category_notes: "Oklahoma City response (1995) strong. Lewinsky scandal poorly handled. Asian Financial Crisis 1997-98 managed. Y2K transition smooth."
@@ -384,7 +548,14 @@ categories:
             tier: 1
             claim: "Clinton's Oklahoma City response set modern template for presidential crisis-unifying address; Rwanda non-response remained inactive during 100-day genocide."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Clinton's April 23, 1995 Oklahoma City prayer-service address is widely credited as the modern presidential crisis/mourner-in-chief template, and the Clinton administration's non-intervention during the ~100-day April-July 1994 Rwanda genocide is well-documented; dates and framing check out."
+              suggested_fix: "Replace bare homepage with deep links: https://www.presidency.ucsb.edu/documents/remarks-memorial-service-for-the-bombing-victims-oklahoma-city-oklahoma and https://www.clintonlibrary.gov/research/rwanda-topic-guide"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 6
@@ -397,7 +568,14 @@ categories:
             tier: 1
             claim: "Clinton's economic policy effectiveness was extraordinary; political crisis management (Lewinsky) was effective in retaining presidency but damaging to office."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All components check out: extraordinary economic record (22.7M jobs, FY1998-2001 surpluses, ~4% GDP growth), Senate acquittal Feb 12 1999 retaining the presidency, and well-documented damage to the office's dignity per historians."
+              suggested_fix: "For the offline \"canonical\" source, cite https://en.wikipedia.org/wiki/Economic_policy_of_the_Clinton_administration and https://en.wikipedia.org/wiki/Impeachment_trial_of_Bill_Clinton"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 2
@@ -411,7 +589,14 @@ categories:
             tier: 1
             claim: "Clinton's January 1998 denial of relationship with Monica Lewinsky was definitively contradicted by his August 1998 admission; impeachment followed for perjury and obstruction of justice."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Confirmed: Clinton denied the Lewinsky relationship Jan 26, 1998, admitted an improper relationship Aug 17, 1998, and the House impeached him Dec 19, 1998 on two articles (grand-jury perjury 228-206 and obstruction of justice 221-212)."
+              suggested_fix: "https://www.history.com/this-day-in-history/december-19/president-clinton-impeached (and Miller Center transcript: https://millercenter.org/the-presidency/presidential-speeches/january-26-1998-response-lewinsky-allegations)"
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 5
@@ -424,7 +609,14 @@ categories:
             tier: 2
             claim: "Long-term resolution of Clinton-era crises was bimodal: economic legacy durable, foreign-policy and personal-conduct legacies more contested."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Miller Center, Brookings) confirm Clinton's economic record (surpluses, ~21M jobs, record expansion) is widely held durable while foreign-policy (\"mixed,\" Rwanda) and personal-conduct (impeachment/Lewinsky) legacies are explicitly contested—matching the bimodal framing; only minor caveat is the fiscal surpluses themselves were later reversed."
+              suggested_fix: "https://millercenter.org/president/clinton/impact-and-legacy"
 
   - category: 8
     name: "Institutional integrity"
@@ -442,7 +634,14 @@ categories:
             tier: 1
             claim: "Starr Report documented Clinton-Lewinsky relationship and grounds for perjury/obstruction; Paula Jones case produced $850K settlement; Marc Rich pardon broadly criticized."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three components verify: Starr Report (Sept 1998) cited 11 impeachment grounds incl. perjury/obstruction over the Lewinsky affair; Jones case settled for $850,000 (Nov 13, 1998); Marc Rich pardon (Jan 20, 2001) drew bipartisan criticism incl. from Jimmy Carter."
+              suggested_fix: "archives.gov is a bare homepage; a deeper authoritative source is https://en.wikipedia.org/wiki/Starr_Report and https://en.wikipedia.org/wiki/Bill_Clinton_pardon_controversy"
       - id: "8.2"
         name: "Administration ethics"
         good_score: 4
@@ -453,9 +652,15 @@ categories:
             source_url: "https://en.wikipedia.org/wiki/Whitewater_controversy"
             source_type: primary_document
             tier: 2
-            claim: "The Clinton administration was subject to multiple Independent Counsel investigations: the Whitewater investigation under Kenneth Starr (1994-1998) produced 11 convictions of Clinton associates including James and Susan McDougal but found no conclusive evidence of wrongdoing by the Clintons themselves; HUD Secretary Henry Cisneros pleaded guilty to making false statements (a $10,000 fine, separate independent counsel). Continuous political pressure throughout the term."
+            claim: "The Clinton administration was subject to multiple Independent Counsel investigations: the Whitewater investigation under Kenneth Starr (1994-1998) produced convictions of 14-15 associates (40+ crimes total) including James and Susan McDougal but found no conclusive evidence of wrongdoing by the Clintons themselves; HUD Secretary Henry Cisneros pleaded guilty to making false statements (a $10,000 fine, separate independent counsel). Continuous political pressure throughout the term."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the understated \"11 convictions\" figure to \"convictions of 14-15 associates (40+ crimes total)\" per the fact-checker's finding, leaving all other wording and the citation unchanged."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 3
@@ -468,20 +673,33 @@ categories:
             tier: 1
             claim: "Clinton acquitted on both Articles (perjury 45-55 guilty, obstruction 50-50); first impeachment trial since 1868, defining institutional event of term."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm Clinton was acquitted Feb 12 1999 with perjury 45-55 and obstruction 50-50, and it was the first presidential impeachment trial since Andrew Johnson's in 1868."
+              suggested_fix: "Replace bare homepage with deep link: https://www.senate.gov/about/powers-procedures/impeachment/impeachment-clinton.htm"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 8
         harm_score: 2
         notes: "Two SCOTUS: Ruth Bader Ginsburg (1993), Stephen Breyer (1994). Both major justices serving decades. ~370 federal judges appointed."
         evidence:
-          - citation: "Ginsburg confirmation August 1993; Breyer confirmation August 1994"
+          - citation: "Ginsburg confirmation August 1993; Breyer confirmation July 1994"
             source_url: "https://www.supremecourt.gov/"
             source_type: historical_record
             tier: 1
-            claim: "Ginsburg and Breyer became major SCOTUS voices; Ginsburg served 27 years, Breyer 28 years; both widely respected as jurists."
+            claim: "Ginsburg and Breyer became major SCOTUS voices; Ginsburg served 27 years, Breyer 27 years; both widely respected as jurists."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected Breyer's tenure from 28 to 27 years in the claim and fixed his confirmation month from August to July 1994 in the citation."
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 7
@@ -494,7 +712,14 @@ categories:
             tier: 1
             claim: "Both Clinton SCOTUS picks confirmed with strong bipartisan support, last pre-modern era of broadly bipartisan SCOTUS confirmations."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Senate.gov roll calls and WaPo archives confirm Ginsburg 96-3 (Aug 3, 1993) and Breyer 87-9 (Jul 29, 1994), both strongly bipartisan; the \"last broadly bipartisan SCOTUS confirmations\" framing is well-supported versus later party-line votes."
+              suggested_fix: "Deep link for Ginsburg vote: https://www.senate.gov/legislative/LIS/roll_call_votes/vote1031/vote_103_1_00232.htm ; Breyer: https://www.senate.gov/legislative/LIS/roll_call_votes/vote1032/vote_103_2_00242.htm"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 6
@@ -507,7 +732,14 @@ categories:
             tier: 2
             claim: "Clinton SCOTUS appointees combined liberal substantive results with generally restraint-oriented procedural approach."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative scholarship confirms both Clinton appointees fit the \"liberal minimalist\" mold: Ginsburg is a Sunstein-labeled \"rational minimalist\"/incrementalist favoring narrow procedural rulings, and Breyer's \"judicial modesty\" gave him the Rehnquist Court's highest rate of deference to Congress, while both reached liberal substantive outcomes."
+              suggested_fix: "For a deep source, cite Cass Sunstein, One Case at a Time: Judicial Minimalism on the Supreme Court (1999), and Ginsburg's \"Speaking in a Judicial Voice,\" 67 N.Y.U. L. Rev. 1185 (1992)."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 6
@@ -520,7 +752,14 @@ categories:
             tier: 1
             claim: "Senate Republican delays on Clinton lower-court nominations escalated after 1994 election; Republican Judiciary Committee Chairman Hatch slowed confirmations substantially."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Senate Republican delays on Clinton lower-court nominees escalated after the 1994 election (rapid 1993-94 voice-vote confirmations gave way to sharply lower rates, e.g., 44% appellate in 1999-2000), with Judiciary Chairman Orrin Hatch slowing/strategically managing confirmations."
+              suggested_fix: "Replace bare senate.gov homepage with the CRS report \"Judicial Nominations by President Clinton\": https://www.everycrsreport.com/files/20060920_98-510_88077e9ff5c01687f3708148d5428c81f1834d1d.pdf"
 
   - category: 9
     name: "Democratic health"
@@ -538,7 +777,14 @@ categories:
             tier: 1
             claim: "Motor Voter Act required states to offer voter registration at motor-vehicle offices and welfare agencies; expanded voter rolls by millions."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NVRA (Pub. L. 103-31), signed by Clinton 5/20/1993, requires voter registration at DMVs (Sec. 5) and public-assistance/welfare agencies (Sec. 7); FEC reports ~27.5M new registration transactions in 1995-96, confirming millions added."
+              suggested_fix: "https://www.congress.gov/bill/103rd-congress/house-bill/2"
       - id: "9.2"
         name: "Press relationship"
         good_score: 4
@@ -552,6 +798,13 @@ categories:
             claim: "On NBC's Today (Jan 27 1998), then-First Lady Hillary Clinton characterized criticism of the president as a 'vast right-wing conspiracy' against him; the framing defined the administration's adversarial press posture during the impeachment era."
             direction: harm
             verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All load-bearing specifics confirmed (Jan 27 1998, NBC Today, Hillary Clinton, interviewer Matt Lauer, exact phrase \"vast right-wing conspiracy that has been conspiring against my husband\"); she framed the Lewinsky/Whitewater allegations rather than generic press \"criticism,\" a minor paraphrase, but the factual core is fully supported."
+              suggested_fix: "Washington Post archive link returns HTTP 403; the Wikipedia sourceUrl (https://en.wikipedia.org/wiki/Vast_right-wing_conspiracy) fully supports the claim and is a reliable deep link."
       - id: "9.3"
         name: "Political violence"
         good_score: 4
@@ -564,7 +817,14 @@ categories:
             tier: 1
             claim: "Oklahoma City bombing killed 168 — deadliest domestic terror attack in US history to that point; preceded by Ruby Ridge (1992) and Waco (1993) federal-resistance contexts."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "FBI and Britannica/History confirm the April 19, 1995 Oklahoma City bombing killed 168 (incl. 19 children), was the deadliest US homegrown terror attack to that point, and was motivated by Ruby Ridge (1992) and Waco (1993)."
+              suggested_fix: "https://www.fbi.gov/history/famous-cases/oklahoma-city-bombing"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 3
@@ -577,7 +837,14 @@ categories:
             tier: 1
             claim: "1994 Republican Revolution under Gingrich shifted Congress to highly polarized confrontation with Clinton administration; era of intensified partisan polarization."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "The 1994 Republican Revolution (Gingrich speakership, Contract with America, +54 House seats) is widely credited by scholars (Mann & Ornstein, Levitsky & Ziblatt, Mason) with intensifying partisan polarization and confrontation with Clinton (shutdowns, impeachment); claim is accurate, though polarization had been rising since the 1970s, with 1994 as a key accelerant."
+              suggested_fix: "https://en.wikipedia.org/wiki/Political_polarization_in_the_United_States"
 
   - category: 10
     name: "Long-tail consequences"
@@ -595,7 +862,14 @@ categories:
             tier: 1
             claim: "Most major Clinton-era legislation remains operational including SCHIP (became major children's insurance program), NAFTA (replaced by USMCA 2020), FMLA, EITC expansion framework."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All four named laws verified: SCHIP (1997, still CHIP, reauthorized to 2027), NAFTA (1993, replaced by USMCA July 2020 as stated), FMLA (Feb 1993, in effect), and EITC expansion (OBRA-93, Aug 1993) — dates and characterizations all accurate."
+              suggested_fix: "Cite specific deep links, e.g. https://en.wikipedia.org/wiki/Children's_Health_Insurance_Program and https://en.wikipedia.org/wiki/Omnibus_Budget_Reconciliation_Act_of_1993, since sourceUrl is \"canonical\"."
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 3
@@ -606,9 +880,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "1999 Glass-Steagall repeal enabled commercial-investment banking integration that contributed to 2008 financial crisis; Crime Bill mass-incarceration framework persisted through 2010s reform era."
+            claim: "The 1999 Glass-Steagall repeal enabled commercial-investment banking integration that some economists argue contributed to the 2008 financial crisis (a genuinely contested link); the Crime Bill's mass-incarceration framework persisted through the 2010s reform era."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Softened the GLBA-to-2008 causal claim to 'some economists argue' — the link is contested, not settled."
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 6
@@ -621,7 +901,14 @@ categories:
             tier: 2
             claim: "Clinton era spanned the dot-com boom defining Gen X economic experience and the mass-incarceration era affecting generations of Black families disproportionately."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both assertions check out: the 1993-2001 dot-com/'90s boom coincided with Clinton and shaped Gen X's economic coming-of-age, and Clinton's 1994 Crime Bill is widely documented as fueling a mass-incarceration era that fell disproportionately on Black families."
+              suggested_fix: "https://www.aclu.org/news/smart-justice/how-1994-crime-bill-fed-mass-incarceration-crisis (and https://en.wikipedia.org/wiki/1990s_United_States_boom) — replace the \"canonical\" placeholder with these deep links."
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 6
@@ -634,7 +921,14 @@ categories:
             tier: 1
             claim: "China WTO accession under Clinton administration enabled subsequent Chinese economic rise and US-China economic interdependence — long-term consequences mixed."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Clinton secured the 1999 US-China accession deal and 2000 PNTR enabling China's Dec 2001 WTO entry (formally under Bush), which kick-started China's rise and US-China interdependence with genuinely mixed effects (China Shock job losses vs. net economic gains)."
+              suggested_fix: "Replace bare wto.org with the deep link https://www.wto.org/english/thewto_e/acc_e/a1_chine_e.htm (WTO China accession page); the claim is sound."
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -653,7 +947,14 @@ categories:
             tier: 1
             claim: "Lewinsky scandal involved sexual relationship in Oval Office and subsequent perjury; era-defining decline in public expectation of presidential personal dignity."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Starr Report (delivered Sept 1998) and Aug 17, 1998 grand jury testimony are accurate; encounters occurred in the Oval Office area, and the perjury basis is documented (House perjury article, Judge Wright's civil-contempt finding for false testimony, 5-year law-license suspension) — though Clinton was acquitted by the Senate and never criminally convicted."
+              suggested_fix: "For deep source, link the Starr Report itself: https://www.govinfo.gov/app/details/GPO-CDOC-105hdoc310 (archives.gov is a bare homepage)."
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 7
@@ -666,7 +967,14 @@ categories:
             tier: 1
             claim: "Clinton's Oklahoma City speech became modern template for presidential crisis-unifying address; rhetorical skill consistently high."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "April 23, 1995 OKC memorial speech (date/speaker/venue confirmed by APP and Clinton Library) is widely cited by Miller Center, CAP and scholars as a defining consoler-in-chief/crisis-unifying model alongside Reagan's Challenger address; \"template\" is interpretive but consistent with consensus, and Clinton's high rhetorical reputation is well-established."
+              suggested_fix: "https://www.presidency.ucsb.edu/documents/remarks-memorial-service-for-the-bombing-victims-oklahoma-city-oklahoma"
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 6
@@ -679,7 +987,14 @@ categories:
             tier: 1
             claim: "Marc Rich pardon on last day of term (financial-fugitive whose ex-wife had donated to Clinton causes) broadly criticized as abuse of pardon power."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Clinton's Jan 20, 2001 pardon of fugitive Marc Rich—whose ex-wife Denise Rich donated to Clinton library and Hillary's Senate campaign—was widely condemned (NYT called it \"a shocking abuse of presidential power\"; Carter called pardons \"disgraceful\")."
+              suggested_fix: "Replace bare archives.gov homepage with a specific deep link, e.g. https://en.wikipedia.org/wiki/Bill_Clinton_pardon_controversy"
       - id: "11.4"
         name: "Model behavior"
         good_score: 3
@@ -692,7 +1007,14 @@ categories:
             tier: 1
             claim: "Clinton's post-presidency global health and humanitarian work via Clinton Foundation has been substantial; personal-conduct legacy more contested."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Clinton Foundation (founded 2001 as William J. Clinton Presidential Foundation) and CHAI have delivered substantial global health work (tens of millions reached on HIV/AIDS, malaria, TB), and Clinton's personal-conduct legacy (Lewinsky/1998 impeachment, #MeToo reassessment) is genuinely contested—both parts and the 2001 date check out."
+              suggested_fix: "Replace bare homepage with deep links: https://www.clintonfoundation.org/about-the-clinton-foundation/ and https://en.wikipedia.org/wiki/Clinton_Foundation (founding/CHAI impact); for the contested-conduct half, https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal"
 
   - category: 12
     name: "Effect on populace"
@@ -710,7 +1032,14 @@ categories:
             tier: 1
             claim: "Clinton ended term with 65% Gallup approval — highest end-of-term rating since Eisenhower; economic prosperity drove approval despite impeachment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup's Jan 5-7, 2001 poll showed 65% approval in Clinton's final week (the Jan 10-14 final reading was 66%); Gallup confirms it was the highest end-of-term rating since at least Eisenhower (actually FDR) and attributes it to economic stewardship outweighing post-Lewinsky/impeachment character concerns."
+              suggested_fix: "https://news.gallup.com/poll/4657/clintons-job-approval-legacy.aspx"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 4
@@ -721,36 +1050,53 @@ categories:
             source_url: "https://www.pewresearch.org/"
             source_type: statistic
             tier: 1
-            claim: "Partisan polarization measurably increased during Clinton term; impeachment-era partisan-feeling-thermometer gap widened substantially."
+            claim: "Partisan polarization rose during the Clinton term and his impeachment was sharply party-line; the marked widening of partisan feeling-thermometer gaps was largely a post-1994, multi-decade trend rather than an impeachment-era jump."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Softened the 'impeachment-era thermometer gap widened substantially' claim; ANES affective polarization plateaued in the 1990s and the widening is a longer-run trend."
       - id: "12.3"
         name: "International standing"
         good_score: 7
         harm_score: 3
         notes: "Strong global standing despite Lewinsky scandal. Unipolar moment continued. Kosovo war damaged some standing. Booming economy attracted global respect."
         evidence:
-          - citation: "Pew global polling late 1990s"
+          - citation: "Pew \"What the World Thinks in 2002,\" 2000 baseline favorability (https://www.pewresearch.org/global/2002/12/04/chapter-4-global-publics-view-the-united-states/)"
             source_url: "https://www.pewresearch.org/"
             source_type: historical_record
             tier: 2
             claim: "US international standing remained strong globally during Clinton term; unipolar-moment foreign-policy projection continued."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the anachronistic \"Pew global polling late 1990s\" citation with Pew's \"What the World Thinks in 2002\" report and its 2000 favorability baseline, leaving the claim unchanged."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 7
         harm_score: 3
         notes: "Strong globally. Lewinsky scandal more amusing than damaging internationally. NATO expansion popular in new members; resented in Russia."
         evidence:
-          - citation: "Late-1990s international polling on US"
+          - citation: "Late-1990s international polling on US (1999/2000 USIA favorability, cited in Pew: https://www.pewresearch.org/global/2010/06/17/chapter-1-views-of-the-u-s-and-american-foreign-policy-3/)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Foreign public sentiment toward US under Clinton was strongly favorable globally outside of select adversary nations."
+            claim: "Foreign public sentiment toward US under Clinton was strongly favorable across major allies, though it was lukewarm or low in some non-adversary nations such as Pakistan, Turkey, and Russia and across the Muslim Middle East."
             direction: good
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"favorable globally outside of select adversary nations\" to acknowledge lukewarm/low sentiment among non-adversaries (Pakistan, Turkey, Russia, Muslim Middle East), and updated the citation with the Pew/USIA source URL."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "IIRIRA 1996 dramatically expanded enforcement. NAFTA shifted migration patterns. Mixed record."
@@ -767,7 +1113,14 @@ categories:
             tier: 1
             claim: "IIRIRA dramatically expanded grounds for deportation, established expedited removal, and created bars on reentry — major restrictive immigration reform."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "IIRIRA (Pub. L. 104-208), signed by Clinton on Sept 30, 1996, is confirmed by Wikipedia/CRS to have expanded deportation grounds (aggravated felony threshold lowered to 1 year, applied retroactively), established expedited removal, and created 3/10-year reentry bars."
+              suggested_fix: "https://en.wikipedia.org/wiki/Illegal_Immigration_Reform_and_Immigrant_Responsibility_Act_of_1996"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 3
@@ -780,7 +1133,14 @@ categories:
             tier: 1
             claim: "Border Patrol doubled in size during Clinton term; IIRIRA expanded interior enforcement framework; Operation Gatekeeper hardened San Diego border."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "All three parts verified: southern-border Border Patrol grew ~3,555 (1992) to ~8,580 (2000), >doubling; IIRIRA 1996 expanded interior enforcement (expedited removal, mandatory detention, 287(g)); Operation Gatekeeper launched Oct 1994 hardening the San Diego sector."
+              suggested_fix: "Source is a bare homepage; better deep links: https://en.wikipedia.org/wiki/Operation_Gatekeeper and https://en.wikipedia.org/wiki/Illegal_Immigration_Reform_and_Immigrant_Responsibility_Act_of_1996 and TRAC https://tracreports.org/immigration/reports/143/"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 5
@@ -791,9 +1151,15 @@ categories:
             source_url: "https://www.dhs.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Wet-Foot/Dry-Foot policy returned Haitians intercepted at sea while admitting those reaching land; IIRIRA tightened asylum eligibility standards."
+            claim: "Wet-Foot/Dry-Foot policy admitted Cubans reaching land while Haitians intercepted at sea were repatriated without the dry-foot benefit; IIRIRA tightened asylum eligibility standards."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the claim to attribute the dry-foot land-admission benefit to Cubans, with Haitians repatriated at sea, rather than admitting Haitians reaching land."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 5
@@ -806,7 +1172,14 @@ categories:
             tier: 1
             claim: "Foreign-born population share rose from ~8% (1993) to ~11% (2000); H-1B annual cap raised from 65K to 195K during late-1990s tech boom."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census shows foreign-born share 7.9% (1990)→11.1% (2000), so ~8%/~11% holds; H-1B cap went 65K→115K (1998 ACWIA, signed Clinton)→195K (AC21, signed Clinton Oct 2000), both endpoints correct, though the 195K cap was effective FY2001-2003 rather than strictly \"late-1990s.\""
+              suggested_fix: "https://www.census.gov/library/working-papers/2006/demo/POP-twps0081.html"
 
 calibration_summary:
   good_average_across_categories: 5.5

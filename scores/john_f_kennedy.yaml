@@ -20,13 +20,19 @@ categories:
         low_confidence: false
         notes: "Real GDP grew ~5%/year average; unemployment fell from 6.7% (Jan 1961) to 5.5% (Nov 1963)."
         evidence:
-          - citation: "BEA real GDP series 1961-1963; BLS unemployment data"
+          - citation: "BEA NIPA Table 1.1.1 real GDP series 1961-1963 (https://fred.stlouisfed.org/series/GDPCA); BLS civilian unemployment series LNS14000000 (https://www.bls.gov/cps/)"
             source_url: "https://www.bea.gov/"
             source_type: statistic
             tier: 1
-            claim: "Strong recovery from 1960-61 recession; sustained growth and unemployment decline across the term."
+            claim: "Strong recovery from 1960-61 recession; sustained growth and a net unemployment decline (6.6% to 5.5%) across the term despite a mid-1961 peak."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened \"unemployment decline across the term\" to a net decline (6.6% to 5.5%) despite a mid-1961 peak, and updated the citation with specific BEA/BLS series IDs and deep links."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 6
@@ -40,7 +46,14 @@ categories:
             tier: 1
             claim: "Income inequality remained low; Kennedy proposed substantial top-rate cut that LBJ later enacted, partially ending the high-progressive-tax era."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Piketty-Saez show top income shares at historically low postwar levels in 1961-63; Kennedy proposed cutting the top rate (91%→65%), and LBJ enacted the Revenue Act of 1964 (Feb 26, 1964) lowering it 91%→70%, partially ending the high-progressive era—all components verified."
+              suggested_fix: "For a deep link on the tax portion: https://en.wikipedia.org/wiki/Revenue_Act_of_1964 (note enacted cut was 91%→70%, vs Kennedy's proposed 91%→65%)."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 6
@@ -54,7 +67,14 @@ categories:
             tier: 1
             claim: "Debt-to-GDP fell modestly during Kennedy term despite tax-cut planning; strong economy held fiscal trajectory positive."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "OMB/GAO data confirm debt-to-GDP fell modestly under JFK (public debt 45.6% FY1960 to 42.4% FY1963; gross 55.2% FY1961 to 51.8% FY1963), amid ~5-6% real growth, while the 1963 tax-cut proposal (Revenue Act of 1964) was being planned."
+              suggested_fix: "Use the deep link to OMB Historical Table 7.1 (Federal Debt at End of Year as % of GDP): https://www.whitehouse.gov/omb/budget/historical-tables/ — Table 7.1"
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 6
@@ -66,10 +86,15 @@ categories:
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Equal Pay Act 1963 prohibited gender-based wage discrimination, the first federal anti-discrimination law of the modern civil-rights era."
+            claim: "Equal Pay Act 1963 prohibited gender-based wage discrimination, one of the first federal anti-discrimination laws of the modern civil-rights era."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"the first\" superlative to \"one of the first,\" leaving all other wording and the citation unchanged."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.3 high Cold War. Cuban Missile Crisis (October 1962) successful crisis management; Bay of Pigs (April 1961) failure; Vietnam advisory escalation from ~700 (1961) to ~16,000 (1963)."
@@ -88,7 +113,14 @@ categories:
             tier: 1
             claim: "Kennedy resolved the most dangerous nuclear-confrontation crisis of the Cold War (October 1962) but increased Vietnam advisor presence ~22-fold during his term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Cuban Missile Crisis (Oct 16-28, 1962) is universally cited as the Cold War's closest brush with nuclear war and Kennedy resolved it via the quarantine/negotiated settlement; Vietnam advisors rose from ~700-900 (Jan 1961) to ~16,000 by end of 1963, so \"~22-fold\" is a defensible approximation (16,000/700 ≈ 23x)."
+              suggested_fix: "https://www.jfklibrary.org/learn/education/teachers/curricular-resources/military-advisors-in-vietnam-1963"
       - id: "2.2"
         name: "Alliance management"
         good_score: 7
@@ -102,7 +134,14 @@ categories:
             tier: 1
             claim: "Kennedy strengthened NATO commitment through Berlin Wall crisis and launched the Alliance for Progress development framework for Latin America."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both prongs verified: Kennedy's 1961 Berlin crisis response extended the NATO shield to West Berlin with ~148,000 reinforcements and higher conventional/defense outlays, the June 26, 1963 Berlin speech reaffirmed the Atlantic alliance, and the Alliance for Progress was launched via the Charter of Punta del Este (Aug 17, 1961)."
+              suggested_fix: "Use deep links: https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/alliance-for-progress and https://www.jfklibrary.org/archives/other-resources/john-f-kennedy-speeches/berlin-w-germany-rudolph-wilde-platz-19630626"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 7
@@ -116,7 +155,14 @@ categories:
             tier: 1
             claim: "Limited Test Ban Treaty ended atmospheric nuclear testing by signatories; Peace Corps became enduring US soft-power institution."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept milestone confirms LTBT (Aug 5, 1963) banned atmospheric/space/underwater tests by signatories; Peace Corps (P.L. 87-293, signed Sept 22, 1961) remains active in 60+ countries with ~250k volunteers as enduring soft-power institution."
+              suggested_fix: "Deep link for LTBT: https://history.state.gov/milestones/1961-1968/limited-ban"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 4
@@ -124,14 +170,19 @@ categories:
         low_confidence: false
         notes: "Bay of Pigs casualties limited. Vietnam buildup civilian impact small but seeded LBJ-era escalation."
         evidence:
-          - citation: "Bay of Pigs invasion records April 1961"
+          - citation: "Bay of Pigs invasion records April 1961 (https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-bay-of-pigs)"
             source_url: "https://www.cia.gov/"
             source_type: primary_document
             tier: 2
-            claim: "Bay of Pigs operation resulted in 118 exile deaths and 1,202 captures; small relative civilian-impact toll but set Cuba relationship pattern."
+            claim: "Bay of Pigs operation resulted in 114 exile deaths and 1,202 captures; small relative civilian-impact toll but set Cuba relationship pattern."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the exile deaths figure from 118 to the standard 114 and replaced the bare CIA homepage with a deep JFK Library link."
   - category: 3
     name: "Civil rights & equality"
     category_notes: "Era E3.2 Civil Rights Revolution mid. Slow start; accelerated 1963. Federalized Alabama National Guard (June 1963). Proposed Civil Rights Act (passed under LBJ 1964)."
@@ -149,7 +200,14 @@ categories:
             tier: 1
             claim: "Kennedy's June 11, 1963 civil rights speech and proposed legislation laid groundwork for Civil Rights Act of 1964; earlier-term enforcement was slower."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy's June 11, 1963 address proposing civil rights legislation (submitted as H.R. 7152, basis for the 1964 Act) and Executive Order 11111 federalizing the Alabama Guard that same day are both confirmed by JFK Library, LOC, and the American Presidency Project; \"slower earlier-term enforcement\" is a defensible interpretive characterization."
+              suggested_fix: "https://www.jfklibrary.org/learn/about-jfk/historic-speeches/televised-address-to-the-nation-on-civil-rights"
       - id: "3.2"
         name: "Gender equity"
         good_score: 6
@@ -161,9 +219,15 @@ categories:
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Commission report (1963) documented systematic gender discrimination and laid groundwork for subsequent legislation including Equal Pay Act and Title VII gender protections."
+            claim: "Commission report (1963) documented systematic gender discrimination, while the Commission's 1961-63 work endorsed the Equal Pay Act and laid groundwork for subsequent legislation including Title VII gender protections."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reattributed Equal Pay Act groundwork from the Oct 1963 report to the Commission's 1961-63 work (which endorsed it), since the Act was signed in June 1963 before the report."
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 0
@@ -177,7 +241,14 @@ categories:
             tier: 2
             claim: "Federal anti-LGBTQ employment policy continued throughout Kennedy term with no reform action."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library Archives and National Archives confirm EO 10450's anti-homosexual federal employment ban continued in full force through 1961-1963 with no Kennedy reform action; Kameny's appeals were ignored and CSC reaffirmed the policy."
+              suggested_fix: "https://jfk.blogs.archives.gov/2021/06/02/kameny-jfk-lgbtq-rights/"
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 6
@@ -191,7 +262,14 @@ categories:
             tier: 1
             claim: "1963 Act funded community mental health centers and intellectual-disability services; major federal disability-services expansion."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Public Law 88-164, signed by JFK on Oct 31, 1963 (his last bill), funded both community mental health centers and mental retardation/intellectual-disability facilities — a major federal disability-services expansion, exactly as claimed."
+              suggested_fix: "https://www.congress.gov/bill/88th-congress/senate-bill/1576"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 4
@@ -205,7 +283,14 @@ categories:
             tier: 2
             claim: "Tribal policy era-typical under Kennedy; no major reform but also no major escalation of termination."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: medium
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The major termination wave was Eisenhower-1950s; under Kennedy only minor terminations proceeded (Ponca, 1962) with no escalation and no major statutory reform (real shift came under LBJ/Nixon), so \"transitional/era-typical, no major reform, no major escalation\" is well-supported, though his Task Force leaned slightly more reformist than \"era-typical.\""
+              suggested_fix: "https://www.bia.gov/as-ia/opa/online-press-release/new-trail-indians-endorsed-secretary-udall (1961 Udall Task Force: development over termination)"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -224,7 +309,14 @@ categories:
             tier: 1
             claim: "Kennedy held 64 live televised press conferences across 2.8 years, institutionalizing the modern televised-press-relationship model."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library and GovInfo confirm Kennedy held 64 news conferences (last labeled \"News Conference 64, Nov 14, 1963\") spanning Jan 1961-Nov 1963 (~2.8 yrs), and was the first president to hold live unedited televised conferences, supporting the institutionalization claim."
+              suggested_fix: "Deep link for the bare homepage: https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/john-f-kennedy-and-the-press"
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 2
@@ -238,7 +330,14 @@ categories:
             tier: 1
             claim: "RFK authorized FBI wiretaps on Martin Luther King Jr. and other civil rights leaders; major institutional civil-liberties failure."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "AG Robert Kennedy authorized FBI wiretaps on MLK (signed Oct 10, 1963), covering King's home/SCLC offices and advisors per Stanford King Institute and APM Reports; \"other civil rights leaders\" slightly overstates a scope centered on King and his associates (Levison/O'Dell)."
+              suggested_fix: "Deep link the bare FBI homepage to the MLK file: https://vault.fbi.gov/Martin%20Luther%20King%2C%20Jr."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 5
@@ -252,7 +351,14 @@ categories:
             tier: 1
             claim: "Cuban Missile Crisis showed consultative crisis management; Bay of Pigs showed the opposite pattern earlier in term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: Irving Janis's classic groupthink analysis and the declassified, secretly-recorded ExComm transcripts (released mid-1990s) establish that the Oct 1962 Cuban Missile Crisis showed consultative deliberation while the April 1961 Bay of Pigs (earlier in term) showed the opposite groupthink pattern."
+              suggested_fix: "Deep link the bare homepage to https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis (and ExComm tapes: https://en.wikipedia.org/wiki/EXCOMM)."
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 5
@@ -266,7 +372,14 @@ categories:
             tier: 1
             claim: "Kennedy took public responsibility for Bay of Pigs failure ('victory has 100 fathers; defeat is an orphan'); set transparency precedent for crisis ownership."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library transcript (News Conference 10, April 21, 1961) and the American Presidency Project confirm Kennedy said \"victory has a hundred fathers and defeat is an orphan\" and \"I'm the responsible officer of the Government,\" publicly owning the Bay of Pigs failure on that date."
+              suggested_fix: "Deep link for the bare JFK Library homepage: https://www.jfklibrary.org/archives/other-resources/john-f-kennedy-press-conferences/news-conference-10"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -285,7 +398,14 @@ categories:
             tier: 1
             claim: "Kennedy's Medicare proposal failed in Senate but laid groundwork for LBJ's 1965 enactment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy's Medicare (King-Anderson) bill was defeated in the Senate 52-48 on July 17, 1962—Kennedy himself said it \"was defeated in the United States Senate\"—after his May 20, 1962 Madison Square Garden rally; it was reintroduced and enacted under LBJ in 1965, confirming all claim elements."
+              suggested_fix: "Replace bare homepage with deep link: https://www.jfklibrary.org/asset-viewer/archives/jfkwha-096 (May 20, 1962 NY rally address) or American Presidency Project statement on the bill's Senate defeat: https://www.presidency.ucsb.edu/documents/statement-the-president-the-defeat-the-medical-care-bill"
       - id: "5.2"
         name: "Education"
         good_score: 6
@@ -299,7 +419,14 @@ categories:
             tier: 1
             claim: "Higher Education Facilities Act provided federal funding for college construction; era-typical education investment."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PL 88-204 (Dec 16, 1963) did fund college facility construction and was JFK's championed education bill, though it was signed posthumously by LBJ after Congress passed it and JFK's Nov 22 assassination."
+              suggested_fix: "Deep link: https://www.congress.gov/bill/88th-congress/house-bill/6143 ; note nuance that LBJ signed it Dec 16, 1963 after JFK's death, though JFK proposed/championed it."
       - id: "5.3"
         name: "Safety net"
         good_score: 5
@@ -314,6 +441,13 @@ categories:
             claim: "Kennedy launched Food Stamp pilot program that expanded substantially under LBJ and Nixon."
             direction: good
             verification_status: pending
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "USDA/FNS and other authoritative sources confirm JFK initiated the food stamp pilot program (first stamps issued May 29, 1961), made permanent under LBJ (1964 Act) and expanded most dramatically under Nixon (3M to 15M recipients, 1969-1974)."
+              suggested_fix: "Replace bare homepage with deep link: https://www.fna.usda.gov/snap/history"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 5
@@ -327,7 +461,14 @@ categories:
             tier: 2
             claim: "1961 Housing Act expanded federal housing programs modestly; redlining practices continued."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "PL 87-70 (June 30, 1961) did expand federal housing programs (mortgage insurance, low-interest loans, urban renewal, public/college/farm housing) and redlining continued until the 1968 Fair Housing Act; only \"modestly\" slightly understates the official \"most far-reaching since 1949\" framing."
+              suggested_fix: "https://www.govinfo.gov/content/pkg/STATUTE-75/pdf/STATUTE-75-Pg149.pdf"
 
   - category: 6
     name: "Environmental stewardship"
@@ -353,7 +494,14 @@ categories:
             tier: 1
             claim: "1963 Clean Air Act expanded the 1955 framework with limited federal enforcement authority."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The 1963 Clean Air Act (PL 88-206) did expand the research-only 1955 framework into the first federal air-pollution control law with a limited federal abatement/enforcement role; note it was signed by LBJ Dec 17, 1963 (after JFK's death) but developed under Kennedy."
+              suggested_fix: "https://www.epa.gov/clean-air-act-overview/evolution-clean-air-act"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 5
@@ -367,7 +515,14 @@ categories:
             tier: 1
             claim: "Cape Cod National Seashore created via 1961 act; Wilderness Act in active drafting throughout Kennedy term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK signed Cape Cod National Seashore into law Aug 7, 1961 as PL 87-126 (S. 857), and the Wilderness Act (66 drafts 1956-1964, Senate passage 1963) was indeed in active legislative drafting throughout Kennedy's 1961-1963 term."
+              suggested_fix: "https://www.nps.gov/caco/learn/historyculture/establishment-of-the-seashore.htm"
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 5
@@ -381,7 +536,14 @@ categories:
             tier: 1
             claim: "Kennedy's Science Advisory Committee report (1963) validated Silent Spring concerns about pesticides; foundational for subsequent DDT ban."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK asked PSAC to investigate Carson's claims; its May 15, 1963 \"Use of Pesticides\" report vindicated Silent Spring's pesticide/DDT concerns and is widely credited as foundational to the 1972 EPA DDT ban."
+              suggested_fix: "https://www.jfklibrary.org/asset-viewer/archives/jfkpof-087-003"
 
   - category: 7
     name: "Crisis management"
@@ -400,7 +562,14 @@ categories:
             tier: 1
             claim: "Cuban Missile Crisis resolution in 13 days set modern crisis-decision-cycle template; Bay of Pigs failure was speed-without-deliberation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library/State Dept/Archives confirm the 13-day crisis (Oct 16-28, 1962) and ExComm's deliberative model as a crisis-decision template; Bay of Pigs is the canonical \"failure of deliberation\"/groupthink case, so the contrast holds, though scholars stress suppressed deliberation more than literal \"speed.\""
+              suggested_fix: "Deep link: https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 6
@@ -414,7 +583,14 @@ categories:
             tier: 1
             claim: "Cuban Missile Crisis ended without escalation; Soviet withdrawal of missiles in exchange for Turkey-Jupiter withdrawal and non-invasion pledge."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept Office of the Historian and JFK Library confirm the crisis ended Oct 28, 1962 without escalation via Soviet missile withdrawal for a US non-invasion pledge plus secret Jupiter/Turkey removal; Bay of Pigs dates also correct."
+              suggested_fix: "Replace bare homepage with https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis (or https://history.state.gov/milestones/1961-1968/cuban-missile-crisis)"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 6
@@ -428,7 +604,14 @@ categories:
             tier: 1
             claim: "Kennedy publicly accepted responsibility for Bay of Pigs failure; Cuban Missile Crisis address (October 22, 1962) communicated nuclear-war stakes clearly."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy publicly took sole responsibility for Bay of Pigs at his April 21, 1961 press conference, and his Oct 22, 1962 televised address explicitly framed nuclear-war stakes (\"threat to peace,\" \"worldwide nuclear war\"), both confirmed by authoritative sources; only minor imprecision is that the 1962 speech was a formal address, not a press conference."
+              suggested_fix: "Deep link for source: https://www.jfklibrary.org/learn/about-jfk/historic-speeches/address-during-the-cuban-missile-crisis"
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 6
@@ -442,7 +625,14 @@ categories:
             tier: 1
             claim: "Cuban Missile Crisis aftermath produced Moscow-Washington hotline and LTBT, durable nuclear-confidence-building infrastructure."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept and corroborating sources confirm the Hot Line Agreement (signed June 20, 1963) and LTBT (signed Aug 5, 1963) both emerged from the Cuban Missile Crisis as durable confidence-building measures; all dates and the causal linkage are accurate."
+              suggested_fix: "Deep link: https://history.state.gov/milestones/1961-1968/limited-ban (and history.state.gov for the Hot Line Agreement)"
 
   - category: 8
     name: "Institutional integrity"
@@ -461,7 +651,14 @@ categories:
             tier: 1
             claim: "Church Committee documented Kennedy's relationship with Judith Exner, who simultaneously had ties to Mafia figures Sam Giancana and Johnny Roselli — major personal-conduct issue concealed at the time."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The Church Committee's Dec 1975 interim report referenced a \"close friend\" of Kennedy (Exner, name leaked to Washington Post) who was also close to mobsters Giancana and Roselli; relationships overlapped in 1960-61 and were concealed during his presidency."
+              suggested_fix: "Deep-link to the Church Committee's \"Alleged Assassination Plots Involving Foreign Leaders\" interim report or Senate Intelligence Committee historical page, e.g. https://www.intelligence.senate.gov/resources/intelligence-related-commissions ; note the report described Exner anonymously as a \"close friend,\" with her name publicized via press leaks."
       - id: "8.2"
         name: "Administration ethics"
         good_score: 7
@@ -475,7 +672,14 @@ categories:
             tier: 2
             claim: "Kennedy administration broadly avoided financial-corruption scandals; RFK appointment as AG was the principal nepotism criticism."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the RFK-as-AG nepotism criticism was the principal one (The Nation: \"greatest example of nepotism this land has ever seen\"); no substantiated cabinet-level financial-corruption scandal occurred—the Korth/TFX conflict allegation was resolved with no finding of impropriety—supporting \"broadly avoided.\""
+              suggested_fix: "For deep-link verification cite https://en.wikipedia.org/wiki/Robert_F._Kennedy (appointment/nepotism) and https://en.wikipedia.org/wiki/Fred_Korth (TFX conflict allegation, exonerated)."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 7
@@ -483,13 +687,19 @@ categories:
         low_confidence: false
         notes: "Generally respected institutional norms. Some unilateralism on Bay of Pigs. No major norm violations."
         evidence:
-          - citation: "Kennedy administration records; standard scholarship"
+          - citation: "Kennedy administration records; standard scholarship; Church Committee findings (https://en.wikipedia.org/wiki/List_of_allegations_of_misuse_of_the_Internal_Revenue_Service; https://www.cjr.org/the_feature/jfk_new_york_times_surveillance.php)"
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "Kennedy respected presidential norms despite some controversial unilateral actions; no major institutional integrity failures during term."
+            claim: "Kennedy generally observed presidential norms but engaged in documented institutional-integrity failures, including the IRS Ideological Organizations Project targeting political opponents and FBI wiretapping of MLK and journalists."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the \"no major integrity failures\" overstatement with the documented IRS Ideological Organizations Project and FBI wiretapping of MLK/journalists, and added the Church Committee/CJR deep sources to the citation."
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 7
@@ -497,13 +707,19 @@ categories:
         low_confidence: false
         notes: "Two SCOTUS appointments: Byron White, Arthur Goldberg. Both qualified, mid-tier influence. ~125 lower-court appointments."
         evidence:
-          - citation: "White and Goldberg confirmations 1962; standard SCOTUS scholarship"
+          - citation: "White and Goldberg confirmations 1962; standard SCOTUS scholarship; https://supremecourthistory.org/associate-justices/byron-r-white-1962-1993/ and https://supremecourthistory.org/associate-justices/arthur-j-goldberg-1962-1965/"
             source_url: "https://www.supremecourt.gov/"
             source_type: historical_record
             tier: 1
-            claim: "White and Goldberg were professionally qualified SCOTUS appointees; both served durably though without era-defining influence."
+            claim: "White and Goldberg were professionally qualified SCOTUS appointees; White served durably (31 years) while Goldberg resigned after under three years for a UN post."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the false claim that both justices served durably by noting White's long tenure versus Goldberg's brief one and dropping the overstated \"without era-defining influence\" assertion, and added the two Supreme Court Historical Society sources to the citation."
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 5
@@ -517,7 +733,14 @@ categories:
             tier: 2
             claim: "Selection process standard for era; some political considerations in both nominations."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK's only two SCOTUS picks were White (longtime political loyalist/Deputy AG) and Goldberg (filling the \"Jewish seat\"), so political considerations factored into both, and the loyalty/identity-driven process was typical for the era—claim is accurate."
+              suggested_fix: "https://en.wikipedia.org/wiki/John_F._Kennedy_Supreme_Court_candidates"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 5
@@ -529,9 +752,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "Kennedy's two appointees fit within Warren Court's activist majority on civil rights, more cautious on criminal procedure."
+            claim: "Kennedy's two appointees fit within Warren Court's activist majority on civil rights, but split on criminal procedure: White was more cautious (Miranda dissent) while Goldberg was activist (Escobedo majority)."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the incorrect blanket \"more cautious on criminal procedure\" with the split: White cautious (Miranda dissent), Goldberg activist (Escobedo majority)."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 7
@@ -545,7 +774,14 @@ categories:
             tier: 2
             claim: "Both Kennedy SCOTUS confirmations proceeded smoothly with broad Senate support."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both JFK SCOTUS nominees were confirmed by quick voice votes in 1962—White (Apr 11, 8 days, no opposition) and Goldberg (Sep 25, only Strom Thurmond opposed)—confirming smooth confirmations with broad Senate support."
+              suggested_fix: "https://www.senate.gov/about/powers-procedures/nominations/nominations-supreme-court.htm"
 
   - category: 9
     name: "Democratic health"
@@ -564,7 +800,14 @@ categories:
             tier: 1
             claim: "24th Amendment proposed during Kennedy term banned poll taxes in federal elections; ratification completed shortly after his death."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the 24th Amendment was proposed by Congress Aug 27, 1962 (Kennedy's term, his administration urged adoption), bans federal-election poll taxes, and was ratified Jan 23, 1964, about two months after JFK's Nov 22, 1963 death."
+              suggested_fix: "https://www.archives.gov/milestone-documents/24th-amendment"
       - id: "9.2"
         name: "Press relationship"
         good_score: 8
@@ -578,7 +821,14 @@ categories:
             tier: 1
             claim: "Kennedy held a press conference approximately every 16 days during his term; televised format created modern presidential-press dynamic."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library and other authoritative sources confirm Kennedy held 64 news conferences (Jan 1961–Nov 1963, ~2.8 yrs), averaging one every sixteen days, and pioneered the first live televised presidential press conference."
+              suggested_fix: "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/john-f-kennedy-and-the-press"
       - id: "9.3"
         name: "Political violence"
         good_score: 5
@@ -592,7 +842,14 @@ categories:
             tier: 1
             claim: "President Kennedy was assassinated November 22, 1963; era of high political violence including civil rights movement attacks."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK was assassinated Nov 22, 1963 (Warren Commission, report 1964, confirmed via archives.gov) and 1963 saw high political/civil-rights violence (Medgar Evers June 12, 16th St Baptist Church bombing Sept 15); the cited report covers only the assassination, not the broader civil-rights attacks, but the claim is accurate."
+              suggested_fix: "https://www.archives.gov/research/jfk/warren-commission-report/intro"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 6
@@ -606,7 +863,14 @@ categories:
             tier: 1
             claim: "Kennedy averaged ~70% Gallup approval through term; generally unifying figure despite civil rights tensions."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup directly states Kennedy's \"70% average job approval rating for his roughly 1,000 days in office is the highest of any president in Gallup's history,\" and the unifying-but-civil-rights-tension framing matches the record (sharp 1963 Southern drop)."
+              suggested_fix: "https://news.gallup.com/poll/165902/americans-rate-jfk-top-modern-president.aspx"
 
   - category: 10
     name: "Long-tail consequences"
@@ -625,7 +889,14 @@ categories:
             tier: 1
             claim: "Peace Corps, LTBT, Cuban Missile Crisis hotline framework, and Kennedy-proposed legislation enacted under LBJ form durable Kennedy-era legacy."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All four legacy components verify: Peace Corps (EO 10924, Mar 1961, still operating), LTBT (signed Aug 1963, ratified, still in force), Moscow-Washington hotline (June/Aug 1963, post-Cuban Missile Crisis), and JFK-proposed Revenue Act + Civil Rights Act of 1964 signed by LBJ."
+              suggested_fix: "sourceUrl is a bare homepage covering only Peace Corps; use deeper links e.g. https://www.peacecorps.gov/about-the-agency/history/founding-moment/ and https://history.state.gov/milestones/1961-1968/limited-ban for the broader claim."
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 4
@@ -639,7 +910,14 @@ categories:
             tier: 1
             claim: "Kennedy-era MLK wiretap authorization continued FBI political-surveillance pattern documented by Church Committee."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Church Committee Final Report (1976) documents AG Robert Kennedy's Oct 1963 authorization of FBI wiretaps on MLK's home and SCLC offices, situating it within the FBI's continuing multi-administration political-surveillance pattern (COINTELPRO began 1956), exactly as claimed."
+              suggested_fix: "Use a deep link to the Church Committee final report rather than the senate.gov homepage, e.g. https://www.senate.gov/about/powers-procedures/investigations/church-committee.htm or the report text at https://loveman.sdsu.edu/docs/1976Churchcommittee.pdf"
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 7
@@ -654,7 +932,14 @@ categories:
             tier: 2
             claim: "Kennedy assassination defined a generational political moment with lasting cultural impact disproportionate to his actual policy enactment."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (AEI/Barone, Sixth Floor Museum, Scholars Strategy Network) confirm JFK's assassination was a generation-defining moment whose cultural memory and 90% retrospective approval far exceed his cautious, limited legislative record."
+              suggested_fix: "https://www.aei.org/articles/how-jfks-assassination-changed-american-politics/"
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 5
@@ -669,7 +954,14 @@ categories:
             tier: 1
             claim: "Kennedy-era decisions on Cuba (embargo) and Vietnam (advisor escalation) shaped subsequent decades of US foreign policy in those regions."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy's Feb 1962 Proclamation 3447 imposed the all-trade Cuba embargo still in effect today, and he raised Vietnam advisors from ~900 to ~16,000 (1961-63); both decisions verifiably shaped decades of US policy, with only the minor caveat that Eisenhower had partial 1960 restrictions and the 1964-75 war escalation occurred under Johnson/Nixon."
+              suggested_fix: "https://history.state.gov/milestones/1961-1968/cuba"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -688,7 +980,14 @@ categories:
             tier: 1
             claim: "Kennedy established the modern image of telegenic presidential dignity; public conduct maintained high formal standards despite private conduct."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Historians (Brinkley: \"first true television president\"; Watson: \"dignified, statesmanlike persona\") and TIME/PBS confirm JFK set the modern telegenic-dignity template, and the documented split between his polished public image and concealed private affairs matches the claim's \"despite private conduct\" framing."
+              suggested_fix: "For the offline \"canonical\" sourceUrl, a specific deep link could be https://time.com/4795637/jfk-television/ or https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/john-f-kennedy-and-the-press"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 9
@@ -702,7 +1001,14 @@ categories:
             tier: 1
             claim: "Kennedy's inaugural address and major foreign-policy speeches established him as one of the most quoted presidential orators in US history."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm JFK's Jan 20, 1961 inaugural is among the few most-quoted/memorable presidential inaugurals (yielding \"ask not...\" and \"pay any price\") and his June 10, 1963 American University speech is regarded as one of his finest, supporting his status as a top presidential orator."
+              suggested_fix: "For a deep link: https://www.jfklibrary.org/learn/about-jfk/historic-speeches/inaugural-address"
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 8
@@ -716,7 +1022,14 @@ categories:
             tier: 2
             claim: "Jacqueline Kennedy's White House restoration project established modern presidential-residence preservation tradition."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "JFK Library, National Archives, and White House Historical Association confirm Jacqueline Kennedy's 1961-62 restoration created the lasting preservation framework: Public Law 87-286 (1961) museum status, the Office of the Curator, the White House Historical Association, and the 1964 Committee for the Preservation of the White House that binds all administrations."
+              suggested_fix: "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-white-house-restoration"
       - id: "11.4"
         name: "Model behavior"
         good_score: 6
@@ -730,7 +1043,14 @@ categories:
             tier: 2
             claim: "Kennedy's public presidential model influenced subsequent presidents; private conduct later revelations complicated the legacy."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both clauses verified: scholarship credits JFK's televised public model as a template for Reagan/Clinton/Obama/Trump, and 1970s-onward revelations of affairs (e.g., Judith Campbell/mob ties) complicated his legacy."
+              suggested_fix: "https://theconversation.com/when-image-trumps-ideology-how-jfk-created-the-template-for-the-modern-presidency-78073"
 
   - category: 12
     name: "Effect on populace"
@@ -743,13 +1063,19 @@ categories:
         low_confidence: false
         notes: "High approval (~70% average). Camelot-era national optimism. Assassination devastating but during-term morale strong."
         evidence:
-          - citation: "Gallup approval ratings 1961-1963"
+          - citation: "Gallup, \"Highest Gallup Presidential Job Approval Ratings,\" https://news.gallup.com/poll/271628/highest-gallup-presidential-job-approval-rating.aspx"
             source_url: "https://news.gallup.com/"
             source_type: statistic
             tier: 1
-            claim: "Kennedy maintained ~70% Gallup approval throughout term; among highest sustained approval ratings of modern era."
+            claim: "Kennedy averaged ~70% Gallup approval over his term; among highest sustained approval ratings of modern era."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Changed \"maintained ~70% throughout term\" to \"averaged ~70% over his term\" to reflect that 70% was a term average, and updated the citation to the Gallup highest-approval page."
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 5
@@ -763,7 +1089,14 @@ categories:
             tier: 1
             claim: "Kennedy term saw rising civil rights mobilization with both unifying (March on Washington) and dividing (Birmingham, segregationist resistance) effects."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (JFK Library, NPS, LOC) confirm 1963 saw the unifying March on Washington alongside the divisive Birmingham campaign and segregationist resistance (Wallace's schoolhouse stand) under JFK's term, exactly as stated."
+              suggested_fix: "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/civil-rights-movement"
       - id: "12.3"
         name: "International standing"
         good_score: 8
@@ -771,13 +1104,19 @@ categories:
         low_confidence: false
         notes: "Cuban Missile Crisis resolution boosted standing dramatically. Berlin commitment. Peace Corps soft power."
         evidence:
-          - citation: "USIA international polling 1961-1963"
+          - citation: "USIA international polling 1961-1963; USIA Worldwide Survey, July 1963, https://www.jfklibrary.org/asset-viewer/archives/jfkpof-091a-003"
             source_url: "canonical"
             source_type: historical_record
             tier: 1
-            claim: "Kennedy's international standing peaked after Cuban Missile Crisis resolution; remained high through assassination."
+            claim: "Kennedy's international standing peaked after Cuban Missile Crisis resolution; remained generally favorable through assassination, though July 1963 USIA surveys found mixed views, with many publics believing the US trailed the USSR militarily."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the \"remained high\" overstatement to note the mixed July 1963 USIA findings (many publics thought the US trailed the USSR militarily) and added the specific JFK Library survey URL to the citation."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 8
@@ -791,7 +1130,14 @@ categories:
             tier: 1
             claim: "Kennedy's death produced unprecedented international mourning; foreign-public sentiment was extraordinarily favorable to Kennedy personally."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm massive worldwide mourning (official mourning periods in many nations, global condolence books, satellite-broadcast funeral, sobbing crowds on the Champs-Elysees, Queen Elizabeth's unprecedented Runnymede land grant, sympathy across the Iron Curtain), strongly supporting extraordinary favorable foreign-public sentiment toward Kennedy personally."
+              suggested_fix: "For a deep-link citation: https://en.wikipedia.org/wiki/Reactions_to_the_assassination_of_John_F._Kennedy"
 
   - category: 13
     name: "Immigration & demographics"
@@ -810,7 +1156,14 @@ categories:
             tier: 1
             claim: "Kennedy's 1963 immigration reform proposal laid the groundwork for Hart-Celler Act of 1965, which ended national-origins quota system."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy did send an immigration reform message/draft bill to Congress on July 23, 1963 that became the basis for the Hart-Celler Act of 1965, which abolished the national-origins quota system; date, names, and causal link all confirmed by multiple authoritative sources."
+              suggested_fix: "Replace bare homepage with deep link: https://www.jfklibrary.org/asset-viewer/archives/jfkpof-051-021 (JFK's July 23, 1963 Special Message to Congress on Immigration) or https://en.wikipedia.org/wiki/Immigration_and_Nationality_Act_of_1965"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -824,7 +1177,14 @@ categories:
             tier: 2
             claim: "Bracero Program continued under Kennedy; era-typical immigration enforcement levels."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Kennedy extended the Bracero Program in Oct 1961 (PL 87-345) and it continued through his term, expiring Dec 1964 under Johnson; enforcement was era-typical (~122k deportations over the term, far below Eisenhower's Operation Wetback peak), so the claim holds as stated."
+              suggested_fix: "https://www.uscis.gov/about-us/our-history/history-office-and-library/featured-stories-from-the-uscis-history-office-and-library/the-bracero-program"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 6
@@ -836,9 +1196,15 @@ categories:
             source_url: "canonical"
             source_type: historical_record
             tier: 1
-            claim: "Cuban Refugee Program admitted approximately 250,000 Cuban refugees 1961-1965; established Cold War political-refugee framework."
+            claim: "Cuban Refugee Program admitted approximately 250,000 Cuban refugees 1959-1962; established Cold War political-refugee framework."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the date range for the ~250,000 figure from 1961-1965 to 1959-1962 to match the documented Golden Exile arrivals."
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 4
@@ -852,7 +1218,14 @@ categories:
             tier: 1
             claim: "US foreign-born share remained at 20th-century low (~5%) during Kennedy term; demographic transition began post-Hart-Celler."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census data confirms foreign-born share was ~5% in 1960 (9.7M, lowest band of the century, low of 4.7% in 1970) and that the Hart-Celler Act (1965) triggered the subsequent rise to ~14%, supporting both parts of the claim."
+              suggested_fix: "Replace bare homepage with deep link: https://www.census.gov/library/working-papers/1999/demo/POP-twps0029.html (Historical Census Statistics on the Foreign-Born Population, 1850-1990)"
 
 calibration_summary:
   good_average_across_categories: 5.6

@@ -26,7 +26,14 @@ categories:
             tier: 1
             claim: "Unemployment averaged 4.0% across Truman's term, with reconversion producing a brief mild recession in 1948-49 but no postwar depression as feared."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Annual unemployment 1945-1953 (1.9/3.9/3.9/3.8/5.9/5.3/3.3/3.0/2.9) averages ~3.8-4.2% depending on period, so \"~4.0%\" is accurate; NBER dates a mild Nov1948-Oct1949 reconversion recession (1949 GNP slightly above 1948) with no feared postwar depression—all confirmed."
+              suggested_fix: "https://www.bls.gov/cps/cpsaat01.htm (commonly cited BLS-only Truman average is ~4.2%; 4.0% is within range but methodology-dependent)"
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 7
@@ -40,7 +47,14 @@ categories:
             tier: 1
             claim: "Top-decile income share remained at ~33% throughout Truman years; mass GI Bill usage drove unprecedented social mobility."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Piketty-Saez annual table shows top-decile share (excl. capital gains) at 32.6-33.9% across 1945-1950 (~33% avg, dipping to 31.4% by 1953), and GI Bill usage (~7.8M of 16M vets in education; vets ~half of 1947 college admissions) driving social mobility is well-documented."
+              suggested_fix: "For sourceUrl use Piketty-Saez table: https://eml.berkeley.edu/~saez/piketty-saezOUP04US.pdf (note their prose rounds the whole 1945-1970s era to \"31-32%,\" and the share was trending down to 31.4% by 1953)."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 7
@@ -54,7 +68,14 @@ categories:
             tier: 1
             claim: "Debt-to-GDP ratio fell from ~120% (1945) to ~70% (1953), driven by GDP growth rather than debt reduction — exceptional fiscal trajectory."
             direction: good
-            verification_status: pending
+            verification_status: verified
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "OMB Table 7.1 confirms gross federal debt-to-GDP fell from 117.5% (FY1945) to 71.2% (FY1953) while nominal debt stayed nearly flat (~$251B to ~$266B), so the drop was GDP-growth driven; \"~120%\" mildly overstates the precise 117.5% but the \"~\" makes it fair."
+              suggested_fix: "Deep link to cited figures: https://www.govinfo.gov/content/pkg/BUDGET-2003-TAB/html/BUDGET-2003-TAB-9-1.htm (Table 7.1); optionally state 117.5%->71.2% gross, or 106.3%->58.5% debt held by public."
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 5
@@ -62,14 +83,19 @@ categories:
         low_confidence: false
         notes: "Taft-Hartley Act (1947) passed over Truman's veto, rolling back Wagner Act protections. Truman opposed but lacked votes. Wage growth strong during boom."
         evidence:
-          - citation: "Labor Management Relations Act (Taft-Hartley), Public Law 80-101 (1947); Truman veto message June 20, 1947"
+          - citation: "Labor Management Relations Act (Taft-Hartley), Public Law 80-101 (1947); Truman veto message June 20, 1947 (American Presidency Project: https://www.presidency.ucsb.edu/documents/veto-the-taft-hartley-labor-bill); override vote per https://www.senate.gov/legislative/vetoes/TrumanHS.htm"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Truman vetoed Taft-Hartley as 'dangerous to the freedom of speech and to our democratic society'; Congress overrode by 68-25 in the Senate."
+            claim: "Truman vetoed Taft-Hartley as 'a dangerous intrusion on free speech' and 'a clear threat to the successful working of our democratic society'; Congress overrode by 68-25 in the Senate."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the fabricated composite veto quote with Truman's actual words and added the American Presidency Project and Senate override source URLs to the citation."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.2 WWII end → E2.3 Cold War start. Truman defines the early Cold War: containment doctrine, NATO, Marshall Plan, Berlin Airlift, Korean War. Atomic bomb decisions and Korean War civilian impact are the principal harms."
@@ -88,7 +114,14 @@ categories:
             tier: 1
             claim: "Truman authorized atomic bomb use against Hiroshima and Nagasaki, ending WWII; subsequently committed US forces to Korea without congressional declaration, establishing a precedent for undeclared executive war."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three elements confirmed: Truman authorized the Hiroshima (Aug 6) and Nagasaki (Aug 9) 1945 atomic bombings ending WWII, and committed US forces to Korea in June 1950 without congressional declaration, which CFR and scholar Lou Fisher cite as the key precedent for undeclared executive war; the July 25, 1945 diary entry is authentic."
+              suggested_fix: "Deep link for atomic-bomb decision: https://www.trumanlibrary.gov/education/presidential-inquiries/decision-drop-atomic-bomb ; Korea: https://www.trumanlibrary.gov/education/presidential-inquiries/united-nations-korea"
       - id: "2.2"
         name: "Alliance management"
         good_score: 10
@@ -103,7 +136,14 @@ categories:
             tier: 1
             claim: "Truman's signature on NATO and the Marshall Plan created the institutional architecture of the Western alliance that defined the next 75+ years of US foreign policy."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Verified: North Atlantic Treaty signed April 4, 1949 with 12 founding members, and Truman signed the Marshall Plan (Economic Cooperation Act of 1948, PL 80-472) on April 3, 1948; both are the consensus institutional foundation of the Western alliance, though technically Dean Acheson (not Truman) signed the NATO treaty text."
+              suggested_fix: "https://history.state.gov/milestones/1945-1952/nato"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 8
@@ -117,7 +157,14 @@ categories:
             tier: 1
             claim: "The Berlin Airlift delivered ~2.3 million tons of supplies over 277,000+ flights during Soviet blockade, breaking the blockade without military escalation — defining early-Cold-War soft-power victory."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Wikipedia, State Dept, AMC Museum) confirm ~2.3M tons (2,325,509) over 277,569+ flights, blockade lifted 12 May 1949 without military escalation under Truman."
+              suggested_fix: "https://history.state.gov/milestones/1945-1952/berlin-airlift"
       - id: "2.4"
         name: "Civilian impact"
         good_score: 2
@@ -130,10 +177,15 @@ categories:
             source_url: "canonical"
             source_type: statistic
             tier: 1
-            claim: "Approximately 210,000 immediate deaths from atomic bombings (1945) plus 2-3 million Korean War civilian casualties — among the highest civilian-impact totals of any modern presidency."
+            claim: "Approximately 210,000 deaths by the end of 1945 from the atomic bombings (immediate first-day deaths were ~80,000-120,000), plus an estimated 2-3 million Korean War civilian casualties — among the highest civilian-impact totals of any modern presidency."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected '210,000 immediate deaths' to 'by end of 1945' (first-day deaths ~80-120k); Korea 2-3M (Lewy) and atomic totals otherwise corroborated."
   - category: 3
     name: "Civil rights & equality"
     category_notes: "Era E3.1 Pre-Brown. Substantial good for era on racial equity (EO 9981 desegregating military, anti-poll-tax support, 1948 platform civil rights plank). Defining harm: Lavender Scare federal employment purges of gay Americans."
@@ -152,7 +204,14 @@ categories:
             tier: 1
             claim: "EO 9981 ordered desegregation of the US armed forces; the first major federal civil rights action since Reconstruction and the institutional precursor to broader 1960s civil rights legislation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "National Archives and Truman Library confirm EO 9981 (signed July 26, 1948) desegregated the armed forces and that the 1947 To Secure These Rights report preceded it and it presaged 1960s civil rights laws; the \"first since Reconstruction\" superlative is defensible but some sources credit Truman's earlier EO 9808 or FDR's EO 8802."
+              suggested_fix: "https://www.archives.gov/milestone-documents/executive-order-9981"
       - id: "3.2"
         name: "Gender equity"
         good_score: 4
@@ -160,13 +219,19 @@ categories:
         low_confidence: true
         notes: "Era-typical. Post-war pushed women out of wartime workforce. No major federal gender-equity action."
         evidence:
-          - citation: "May, 'Homeward Bound: American Families in the Cold War Era' (1988)"
+          - citation: "May, 'Homeward Bound: American Families in the Cold War Era' (1988), https://archive.org/details/homewardboundame02maye"
             source_url: "canonical"
             source_type: academic
             tier: 2
-            claim: "The Truman era saw active federal and cultural campaigns to return women to domestic roles after wartime workforce mobilization, era-typical for the period."
+            claim: "The Truman era saw active cultural and media campaigns (advertising, magazines, postwar reconversion), with federal propaganda playing a supporting role, to return women to domestic roles after wartime workforce mobilization, era-typical for the period."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the \"active federal\" campaign as cultural and media campaigns with federal propaganda in a supporting role, per May's domestic-containment framing, and added the deeper archive.org URL to the citation."
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 0
@@ -178,9 +243,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Federal employment purges under Truman's loyalty program targeted suspected gay employees alongside suspected communists; an estimated 5,000-10,000 federal workers were fired or forced to resign on sexuality grounds during 1947-1953."
+            claim: "Federal employment purges under Truman's loyalty program targeted suspected gay employees alongside suspected communists; during 1947-1953 roughly 1,700 applicants were denied on sexuality grounds and over 425 State Department employees were fired or forced to resign, the opening phase of a broader Cold War-era Lavender Scare that ultimately cost an estimated 5,000-10,000 federal workers their jobs."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Scoped the Truman-era (1947-1953) figures to the documented ~1,700 applicants denied and 425+ State Dept firings, attributing the larger 5,000-10,000 estimate to the broader Cold War-era Lavender Scare rather than Truman's tenure alone."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 4
@@ -194,7 +265,14 @@ categories:
             tier: 2
             claim: "VA hospital and rehabilitation services expanded substantially during Truman years to serve millions of returning WWII veterans."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "VA's official history confirms substantial post-WWII expansion under Truman: ~80+ hospitals added (1946-1958), the 1946 Department of Medicine and Surgery Act (PL 79-293), Bradley's modernization, and service to 12M+ veterans, matching the claim."
+              suggested_fix: "https://department.va.gov/history/featured-stories/the-history-of-cfm-part-3-post-world-war-ii-updates-to-vas-medical-facilities-1940s-1950s/"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 5
@@ -208,7 +286,14 @@ categories:
             tier: 1
             claim: "The Indian Claims Commission opened a 30-year process for tribal nations to seek federal redress for treaty violations; concurrently the administration's policy intellectual framework moved toward the termination doctrine formalized in 1953."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman signed the Indian Claims Commission Act (PL 79-726) Aug 13, 1946, creating a redress process for treaty violations that ran 1946-1978 (~32 yrs, claim says \"30-year\"), while the 1948 Hoover Commission task force and 1953 HCR 108 formalized termination doctrine."
+              suggested_fix: "Optionally state \"32-year process\" (1946-1978) rather than \"30-year\"; deep link: https://www.trumanlibrary.gov/library/public-papers/204/statement-president-upon-signing-bill-creating-indian-claims-commission"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -228,7 +313,14 @@ categories:
             tier: 1
             claim: "Truman's Justice Department prosecuted Communist Party USA leaders under the Smith Act for advocacy of communist doctrine, establishing post-WWII speech-prosecution precedent."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Dennis v. US, 341 U.S. 494 (1951), confirms Truman's DOJ prosecuted 11 CPUSA leaders under the Smith Act (Foley Square, 1948-49) and the Court upheld it as Cold War speech precedent; the formal charge was conspiracy to advocate violent overthrow, so \"advocacy of communist doctrine\" is a slight simplification but captures the practical basis."
+              suggested_fix: "For a deep source: https://en.wikipedia.org/wiki/Smith_Act_trials_of_Communist_Party_leaders (note charge was conspiracy to teach/advocate violent overthrow, not abstract communist doctrine)."
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 1
@@ -236,13 +328,19 @@ categories:
         low_confidence: false
         notes: "Federal Loyalty Program (EO 9835, 1947) authorized investigations of millions of federal workers. CIA established (1947) — National Security Act. FBI surveillance of activists expanded."
         evidence:
-          - citation: "Executive Order 9835, signed March 21, 1947 (Federal Loyalty Program); National Security Act of 1947, Public Law 80-253"
+          - citation: "Executive Order 9835, signed March 21, 1947 (Federal Loyalty Program); National Security Act of 1947, Public Law 80-253; Truman Library, \"Truman's Loyalty Program\" (https://www.trumanlibrary.gov/education/presidential-inquiries/trumans-loyalty-program)"
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Truman's loyalty program ultimately investigated 4.7 million federal employees and fired or pressured ~3,500 to resign; institutional foundation for two decades of Cold War surveillance overreach."
+            claim: "Truman's loyalty program ultimately screened ~5 million federal employees and led to ~2,700 dismissals and ~12,000 resignations; institutional foundation for two decades of Cold War surveillance overreach."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the loyalty-program figures to ~5 million screened, ~2,700 dismissals, and ~12,000 resignations, and added the Truman Library deep link to the citation."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 3
@@ -256,7 +354,14 @@ categories:
             tier: 1
             claim: "Truman's seizure of US steel mills was struck down 6-3 by the Supreme Court as exceeding executive authority; Youngstown remains the definitive limit on presidential domestic emergency powers."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Youngstown (343 U.S. 579) struck down Truman's EO 10340 (Apr 8, 1952) steel seizure 6-3 for lacking statutory/constitutional authority, and is the landmark precedent limiting presidential domestic power; all figures, dates, and citation verified."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/343/579/"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 3
@@ -264,14 +369,19 @@ categories:
         low_confidence: true
         notes: "Pre-FOIA. Atomic Energy Act (1946) created extensive classification regime. National Security Act (1947) institutionalized executive-branch secrecy."
         evidence:
-          - citation: "Atomic Energy Act of 1946, Public Law 79-585; classification system expansion 1946-1953"
+          - citation: "Atomic Energy Act of 1946, Public Law 79-585; classification system expansion 1946-1954"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Atomic Energy Act established the most extensive peacetime classification regime in US history, with born-secret doctrine for nuclear information."
+            claim: "Atomic Energy Act established an unprecedented peacetime classification regime that classified nuclear information at birth, with born-secret doctrine for nuclear information."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the unverified \"most extensive...in US history\" superlative to \"unprecedented\" and corrected the expansion window from 1946-1953 to 1946-1954 in the citation."
   - category: 5
     name: "Domestic welfare & health"
     category_notes: "Fair Deal (1948) extended New Deal philosophy. Universal health insurance proposed but defeated by AMA. Housing Act 1949 was major federal housing investment. Social Security expansion 1950."
@@ -289,7 +399,14 @@ categories:
             tier: 1
             claim: "Truman's 1945-1948 national health insurance proposal was the first major federal universal coverage attempt; defeat by AMA campaign set the political template for healthcare reform fights through 2010."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman's Nov 19 1945 message was the first U.S. presidential proposal of comprehensive national health insurance to Congress; the AMA's \"socialized medicine\" PR campaign (1,800 allied orgs) defeated it and set the durable framing/coalition template for reform fights through the 2010 ACA, all confirmed by Truman Library, PBS, History.com, and NIH/PMC sources."
+              suggested_fix: "https://www.trumanlibrary.gov/library/public-papers/192/special-message-congress-recommending-comprehensive-health-program (Nov 19, 1945 message; note TR's 1912 platform endorsed the idea earlier, but Truman's was the first formal federal proposal to Congress)"
       - id: "5.2"
         name: "Education"
         good_score: 6
@@ -303,7 +420,14 @@ categories:
             tier: 1
             claim: "The Truman Commission report laid the intellectual foundation for the massive 1950s-60s expansion of public higher education and community colleges."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The 1947-48 Truman Commission report (6 vols., \"Higher Education for American Democracy\") is documented by historians as a \"blueprint\" that popularized \"community college\" and laid the intellectual foundation for the postwar expansion of public higher education, matching the claim and citation; actual policy followed later, so its role was ideological/foundational as stated."
+              suggested_fix: "https://en.wikipedia.org/wiki/Higher_Education_for_American_Democracy"
       - id: "5.3"
         name: "Safety net"
         good_score: 8
@@ -317,7 +441,14 @@ categories:
             tier: 1
             claim: "1950 amendments expanded Social Security coverage to ~10 million additional workers and increased benefits substantially; Housing Act 1949 authorized 810,000 public housing units (most never built but historic federal commitment)."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "SSA sources confirm the 1950 amendments added ~10M workers and raised benefits ~77% (first general increase); multiple sources confirm the Housing Act of 1949 authorized 810,000 public housing units (over six years), most never built—a landmark federal commitment."
+              suggested_fix: "Use deep links instead of the bare homepage: SSA https://www.ssa.gov/policy/docs/ssb/v13n10/v13n10p3.pdf (1950 amendments summary) and Housing Act P.L. 81-171 https://www.ssa.gov/OP_Home/comp2/F081-171.html"
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 7
@@ -331,7 +462,14 @@ categories:
             tier: 1
             claim: "Housing Act 1949 declared 'a decent home and a suitable living environment for every American family' as national policy; FHA continued explicitly racist underwriting through Truman's term."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Housing Act of 1949 (P.L. 81-171, signed July 15, 1949) declares the verbatim national objective of \"a decent home and a suitable living environment for every American family\"; FHA's Underwriting Manual promoted racial covenants and Commissioner Richards said Shelley v. Kraemer would \"in no way affect\" FHA programs, so discriminatory underwriting persisted through Truman's term (1945–Jan 1953)."
+              suggested_fix: "Deep link the statute: https://www.govinfo.gov/content/pkg/STATUTE-63/pdf/STATUTE-63-Pg413.pdf (Housing Act of 1949, 63 Stat. 413), and FHA redlining source https://www.federalreservehistory.org/essays/redlining"
 
   - category: 6
     name: "Environmental stewardship"
@@ -357,7 +495,14 @@ categories:
             tier: 1
             claim: "First federal legislation directly addressing water pollution; established federal grants to states for water-pollution research and control."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EPA and Congress.gov CRS confirm the 1948 FWPCA (P.L. 80-845, signed by Truman 6/30/1948) was the first major federal water-pollution law and authorized federal grants/funds to states for water-pollution research, studies, and control."
+              suggested_fix: "https://www.congress.gov/crs-product/RL30030 (or https://www.epa.gov/laws-regulations/history-clean-water-act) instead of the bare congress.gov homepage."
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 5
@@ -365,28 +510,39 @@ categories:
         low_confidence: true
         notes: "Continued FDR-era conservation programs. Modest park additions. Era-typical."
         evidence:
-          - citation: "National Park Service additions 1945-1953; Department of the Interior reports"
+          - citation: "National Park Service additions 1945-1953; Department of the Interior reports; Everglades dedication, National Park Service (https://www.nps.gov/museum/exhibits/ever/truman.html)"
             source_url: "https://www.nps.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Park system additions continued at modest pace under Truman; no major new conservation initiatives."
+            claim: "Park system additions continued at modest pace under Truman; he dedicated Everglades National Park (1947) and created the Bureau of Land Management (1946), but undertook few other major conservation initiatives."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"no major new conservation initiatives\" to acknowledge Truman's 1947 Everglades NP dedication and 1946 creation of the BLM, and added the NPS Everglades source to the citation."
       - id: "6.4"
         name: "Biodiversity & wildlife"
-        good_score: 5
+        good_score: 2
         harm_score: 1
         low_confidence: true
         notes: "Era-typical conservation continued. Fish and Wildlife Service reorganization."
         evidence:
-          - citation: "Reorganization Plan No. 3 of 1946 establishing US Fish and Wildlife Service"
+          - citation: "FWS agency history (Reorganization Plan No. III of 1940, under FDR)"
             source_url: "https://www.fws.gov/"
             source_type: primary_document
             tier: 2
-            claim: "1946 reorganization merged Bureau of Fisheries and Bureau of Biological Survey into US Fish and Wildlife Service."
+            claim: "The US Fish and Wildlife Service was created by FDR's Reorganization Plan No. III of 1940 (effective June 30, 1940), not a 1946 Truman plan; no major FWS-creating reorganization occurred under Truman."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "FWS was created under FDR (1940), not Truman. Score adjusted per review: good 5->2 (only minor verified Truman wildlife actions, e.g. EO 9670/9790 refuges)."
   - category: 7
     name: "Crisis management"
     category_notes: "Multiple major crises: reconversion, Berlin Airlift, Soviet atomic bomb (1949), Korean War, MacArthur firing, steel seizure."
@@ -404,7 +560,14 @@ categories:
             tier: 1
             claim: "Truman committed US naval and air forces to Korea within 48 hours of North Korea's June 25, 1950 invasion; ground forces within 5 days."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman approved air/naval forces at the June 26 evening Blair House meeting (announced June 27), within ~48 hours of the June 25 invasion, and committed ground forces June 30 (5 days); dates and intervals all check out per multiple authoritative sources."
+              suggested_fix: "https://www.trumanlibrary.gov/library/public-papers/173/statement-president-situation-korea"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 7
@@ -418,7 +581,14 @@ categories:
             tier: 1
             claim: "Marshall Plan disbursed $13.3B (1948-1951) to 16 European nations, contributing to Western European economic recovery and stabilization."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources (Wikipedia, Statista, Eichengreen's EH.net entry titled \"The Marshall Plan, 1948-1951\") confirm $13.3B in ECA grants/loans to 16 OEEC nations aiding Western European recovery; the full disbursement actually ran to June 1952, so \"1948-1951\" is marginally narrow but matches the cited Eichengreen framing."
+              suggested_fix: "https://eh.net/encyclopedia/the-marshall-plan-1948-1951/"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 7
@@ -432,7 +602,14 @@ categories:
             tier: 1
             claim: "Truman publicly characterized Korean War as a 'police action' rather than war to avoid congressional declaration requirement; semantic choice with long constitutional consequences."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Truman publicly embraced the \"police action\" framing (a reporter first offered the phrase at the June 29, 1950 presser and Truman agreed), declined to seek a congressional war declaration, and set a lasting precedent for undeclared presidential war-making."
+              suggested_fix: "Deep link: https://constitution.congress.gov/browse/essay/artI-S8-C11-2-5-9/ALDE_00013924/ (Constitution Annotated on the Korean \"police action\" and the Declare War Clause); note the phrase was first voiced by a reporter and assented to by Truman."
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 6
@@ -446,7 +623,14 @@ categories:
             tier: 1
             claim: "Truman left office with Korean War still in active combat; armistice was negotiated by Eisenhower administration."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman's term ended Jan 20, 1953 with Korea in active combat; the armistice was signed July 27, 1953 (~6 months into Eisenhower's term, pushed through by his administration), and NSC-68 was presented to Truman April 7, 1950 — all specifics in the claim/citation are accurate."
+              suggested_fix: "https://history.state.gov/milestones/1953-1960/korean-war-2"
 
   - category: 8
     name: "Institutional integrity"
@@ -463,9 +647,15 @@ categories:
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Truman left office with modest personal finances; no contemporary or subsequent scholarship identifies significant personal corruption."
+            claim: "Truman is traditionally portrayed as leaving office with modest personal finances (though revisionist scholarship contests this); no contemporary or subsequent scholarship identifies significant personal corruption."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the \"modest finances\" assertion to note it is the traditional view that revisionist scholarship contests, while leaving the personal-corruption point intact."
       - id: "8.2"
         name: "Administration ethics"
         good_score: 4
@@ -477,9 +667,15 @@ categories:
             source_url: "https://www.senate.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Truman's late-term saw multiple administration scandals: ~166 IRS officials were removed for corruption, three Cabinet-level aides forced out, contributing substantially to Truman's 22% approval at end of term."
+            claim: "Truman's late-term saw multiple administration scandals: ~166 IRS officials were removed for corruption, Attorney General McGrath and several senior officials forced out, contributing substantially to Truman's 22% approval at end of term."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the overstated \"three Cabinet-level aides forced out\" with the accurate \"Attorney General McGrath and several senior officials forced out,\" since only one true Cabinet member was removed."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 5
@@ -493,7 +689,14 @@ categories:
             tier: 1
             claim: "Truman declined to run in 1952 despite being eligible under the 22nd Amendment's grandfather clause, restoring two-term-limit norm voluntarily."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman, exempt under the 22nd Amendment's grandfather clause (sitting president when Congress proposed it), announced March 29, 1952 he would not seek reelection; he'd recorded the decision earlier (1950 note: \"eight years is enough\"), so the voluntary two-term-norm framing holds despite his prior NH primary loss to Kefauver."
+              suggested_fix: "https://www.trumanlibrary.gov/library/public-papers/76/address-jefferson-jackson-day-dinner"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 4
@@ -507,7 +710,14 @@ categories:
             tier: 2
             claim: "Truman's four SCOTUS appointments are typically ranked among the lowest-quality cohorts; all four were personal friends or political allies."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Verified: Truman's four appointees (Vinson, Burton, Clark, Minton) were friends/Senate allies, and the cited Blaustein-Mersky 1970 ratings rank three of them (Vinson—the only chief justice so rated, Burton, Minton) as \"failures,\" making Truman's the lowest-quality cohort."
+              suggested_fix: "Replace bare homepage with a deep source, e.g. https://en.wikipedia.org/wiki/Harry_S._Truman_Supreme_Court_candidates or the Blaustein-Mersky discussion in https://scholarship.law.umn.edu/cgi/viewcontent.cgi?article=2119&context=mlr"
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 3
@@ -521,11 +731,18 @@ categories:
             tier: 2
             claim: "Truman's SCOTUS selections were widely criticized at the time and by subsequent scholarship as cronyism; Truman openly valued friendship and reliability over jurisprudential qualifications."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Truman's four SCOTUS appointees (Burton, Vinson, Clark, Minton) were personal friends drawing contemporary \"cronyism\" charges (NYT, New Republic, Ickes) and later scholarship labeling them \"Truman cronies\" given poor ratings; McCullough 1992 is a valid biography source."
+              suggested_fix: "Cite deep links: https://en.wikipedia.org/wiki/Harry_S._Truman_Supreme_Court_candidates and https://www.trumanlibraryinstitute.org/tru-history-scotus/"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
-        good_score: 5
-        harm_score: 3
+        good_score: 3
+        harm_score: 4
         low_confidence: true
         notes: "Vinson Court was generally restraint-oriented except in Smith Act prosecutions. Steel seizure case (Youngstown) showed Court would constrain executive."
         evidence:
@@ -533,9 +750,15 @@ categories:
             source_url: "canonical"
             source_type: primary_document
             tier: 1
-            claim: "Truman appointees in Dennis upheld Smith Act prosecutions (deferential to executive on national security); same justices in Youngstown constrained executive on domestic seizure."
+            claim: "In Youngstown (1952) the Supreme Court constrained Truman's steel seizure 6-3; his own appointees split - Vinson (CJ) and Minton dissented to uphold the seizure (consistent with their pro-executive Dennis votes), while Burton and Clark joined the majority limiting the President."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Original framing inverted (Truman's appointees dissented to back the seizure). Score adjusted per review: good 5->3, harm 3->4 (executive overreach rebuked 6-3, mitigated by prompt compliance)."
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 6
@@ -543,14 +766,19 @@ categories:
         low_confidence: false
         notes: "Routine confirmations; all four SCOTUS picks confirmed without major Senate conflict. Pre-modern confirmation politics."
         evidence:
-          - citation: "Senate confirmation votes 1945-1949 for Burton, Vinson, Clark, Minton"
+          - citation: "Senate confirmation votes 1945-1949 for Burton, Vinson, Clark, Minton; https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm"
             source_url: "https://www.senate.gov/"
             source_type: historical_record
             tier: 2
-            claim: "All four Truman SCOTUS nominees confirmed via standard Senate process with no significant opposition or filibuster."
+            claim: "All four Truman SCOTUS nominees confirmed via standard Senate process with no filibuster, though Minton's 1949 nomination drew significant opposition (confirmed 48-16)."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the \"no significant opposition\" overstatement by noting Minton's contested 48-16 confirmation, and added the Senate deep link to the citation."
   - category: 9
     name: "Democratic health"
     category_notes: "Strong civil-rights leadership accelerated Dixiecrat split. Loyalty program created climate for McCarthyism. 1948 election survived 'whistlestop' campaign against polls."
@@ -568,7 +796,14 @@ categories:
             tier: 1
             claim: "1948 platform's civil rights plank caused Mississippi and Alabama delegations to walk out and form Dixiecrat Party — testifying to the substance of Truman's civil-rights commitments."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the 1948 Democratic platform's strong civil rights plank (adopted 651.5-582.5) caused the entire Mississippi delegation (22) plus 13 Alabama delegates to walk out July 15 and form the Dixiecrat Party under Strom Thurmond; only nuance is Alabama's walkout was partial, not its full delegation."
+              suggested_fix: "https://en.wikipedia.org/wiki/1948_Democratic_National_Convention"
       - id: "9.2"
         name: "Press relationship"
         good_score: 5
@@ -582,7 +817,14 @@ categories:
             tier: 2
             claim: "Truman's combative public letter threatening Hume after a negative review of his daughter's vocal performance was an iconic moment of personal-vs-press friction."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman Library, Wikipedia, and TIME confirm Truman's December 1950 letter to Washington Post critic Paul Hume after his review of Margaret Truman's singing, which explicitly threatened Hume (\"you'll need a new nose...black eyes\")—an iconic press-friction moment."
+              suggested_fix: "https://www.trumanlibrary.gov/education/trivia/letter-truman-defends-daughter-singing"
       - id: "9.3"
         name: "Political violence"
         good_score: 6
@@ -596,7 +838,14 @@ categories:
             tier: 1
             claim: "Truman survived an assassination attempt by Puerto Rican nationalists Oscar Collazo and Griselio Torresola at Blair House; White House Police Officer Leslie Coffelt killed defending."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Truman survived the Nov 1, 1950 Blair House attack by Collazo and Torresola, and WH Police Officer Leslie Coffelt was killed defending (he fatally shot Torresola, then died ~4 hours later)."
+              suggested_fix: "sourceUrl is a bare homepage; use a deep link such as https://en.wikipedia.org/wiki/Attempted_assassination_of_Harry_S._Truman or https://prologue.blogs.archives.gov/2015/11/01/the-plot-to-kill-president-truman/"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 4
@@ -604,14 +853,19 @@ categories:
         low_confidence: false
         notes: "McCarthyism took off under Truman (1950 onward). Loyalty program created climate. Truman publicly opposed McCarthy but era of anti-communist persecution began under his watch."
         evidence:
-          - citation: "Truman's 'Asiatic Hitler' speech against McCarthy, March 30, 1950; subsequent McCarthy hearings"
+          - citation: "Truman's March 30, 1950 Key West news conference, calling McCarthy \"the greatest asset that the Kremlin has\" (https://www.presidency.ucsb.edu/documents/the-presidents-news-conference-key-west-4); subsequent McCarthy hearings"
             source_url: "https://www.trumanlibrary.gov/"
             source_type: primary_document
             tier: 1
             claim: "Truman publicly denounced McCarthy by name from 1950 onward but his own loyalty program had legitimized the political category of 'communist sympathizer' as basis for federal action."
             direction: harm
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the misattributed \"Asiatic Hitler\" speech label with the accurate March 30, 1950 Key West news conference source and the verified \"greatest asset that the Kremlin has\" quote."
   - category: 10
     name: "Long-tail consequences"
     category_notes: "Cold War architecture (NATO, Marshall Plan, Truman Doctrine) defined US foreign policy for 45+ years. Loyalty program legacy in surveillance state. Korea unresolved 70+ years."
@@ -629,7 +883,14 @@ categories:
             tier: 1
             claim: "Major Truman foreign-policy institutions (NATO, Marshall Plan logic, containment doctrine) persisted as US strategic framework through the entire Cold War."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm NATO (founded April 4, 1949) has operated continuously and that Truman-era containment was \"embraced by nine presidents and endured to the end of the Cold War,\" with the Marshall Plan and Social Security Amendments of 1950 also persisting."
+              suggested_fix: "Replace bare homepage with deep link: https://www.nato.int/cps/en/natohq/declassified_139339.htm (NATO's founding history)"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 3
@@ -637,13 +898,19 @@ categories:
         low_confidence: false
         notes: "Loyalty program legitimized post-Cold-War surveillance state. Korean War set undeclared-executive-war precedent. Lavender Scare federal employment ban persisted through 1995 (Clinton EO 12968)."
         evidence:
-          - citation: "Federal employment LGBTQ ban (EO 10450, Eisenhower 1953) directly continuing Truman-era logic; rescinded by EO 12968 (1995)"
+          - citation: "Federal employment LGBTQ ban (EO 10450, Eisenhower 1953) directly continuing Truman-era logic; general employment ban ended by the Civil Service Commission in 1975, security-clearance discrimination barred by EO 12968 (1995) (https://en.wikipedia.org/wiki/Executive_Order_12968, https://en.wikipedia.org/wiki/Executive_Order_10450)"
             source_url: "canonical"
             source_type: primary_document
             tier: 1
-            claim: "Federal employment discrimination against LGBTQ employees originated in Truman-era loyalty program logic, was formalized by Eisenhower's EO 10450, and persisted until 1995."
+            claim: "Federal employment discrimination against LGBTQ employees originated in Truman-era loyalty program logic, was formalized by Eisenhower's EO 10450, and—while the general employment ban was ended by the Civil Service Commission in 1975—persisted in security-clearance access until 1995."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the \"persisted until 1995\" claim to distinguish the two tracks—general employment ban ended by the Civil Service Commission in 1975 versus security-clearance discrimination barred by EO 12968 in 1995—and updated the citation accordingly."
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 8
@@ -657,7 +924,14 @@ categories:
             tier: 1
             claim: "The 1946-1964 Baby Boom occurred substantially within an economic and housing infrastructure built under Truman; postwar US suburban expansion peaked in 1950s on FHA terms set in 1940s."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census/historical sources confirm the 1946-1964 Baby Boom, 1950s suburban peak, and FHA/VA terms (1948 30-yr mortgages, 1949 Housing Act under Truman's Fair Deal; FHA-VA subsidy peaked 40.7% in 1955; homeownership 44%→62% 1940-1960), though \"built under Truman\" is mildly generous since FHA itself dates to 1934."
+              suggested_fix: "Optional deep links: https://www.census.gov/library/visualizations/time-series/demo/baby-boom.html and https://en.wikipedia.org/wiki/Housing_Act_of_1949"
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 8
@@ -671,7 +945,14 @@ categories:
             tier: 1
             claim: "Korean Peninsula remains divided at the 38th parallel 73 years after the 1953 armistice that Truman set up but did not sign."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Armistice talks began July 1951 under Truman who left office before the 27 July 1953 signing (done by military commanders, no head of state), Korea stays divided ~73 years later; only minor imprecision is that the actual border is the Military Demarcation Line roughly approximating, not literally, the 38th parallel."
+              suggested_fix: "https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -690,7 +971,14 @@ categories:
             tier: 2
             claim: "Truman established the modern 'plain-spoken Midwestern' presidential style while maintaining ceremonial dignity."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "McCullough's biography and other authoritative sources confirm Truman's plain-spoken Missouri/Midwestern style plus documented respect for the office's dignity (e.g., refusing to \"commercialize on the prestige and dignity of the office\"); only the interpretive word \"modern\" is mildly subjective."
+              suggested_fix: "Optional deep link supporting the claim: https://www.simonandschuster.com/books/Truman/David-McCullough/9780671869205"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 6
@@ -704,7 +992,14 @@ categories:
             tier: 1
             claim: "Truman's combative rhetoric in 1948 — particularly attacks on the 'Do-Nothing 80th Congress' — was era-aggressive but factually grounded."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman's 1948 whistle-stop attacks on the \"Do-Nothing 80th Congress\" are well-documented and grounded in its blocking of his Fair Deal/Turnip-Day agenda, though \"do-nothing\" was itself an overstatement given the Congress passed the Marshall Plan, Taft-Hartley, and 900+ bills."
+              suggested_fix: "Deep link: https://www.trumanlibrary.gov/education/presidential-inquiries/1948-whistle-stop-campaign (Truman Library homepage is a bare landing page); cross-check senate.gov \"Turnip Day\" Session and Wikipedia 80th Congress for the legislative record."
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 7
@@ -718,7 +1013,14 @@ categories:
             tier: 2
             claim: "Truman oversaw the complete structural rebuild of the White House (1948-1952) while temporarily residing at Blair House, preserving the structure for successors."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources (Wikipedia, Truman Library, WHHA) confirm Truman oversaw a full interior gut-and-rebuild of the White House behind preserved exterior walls, living at Blair House from late Nov 1948 until returning March 27, 1952, saving the near-collapsing structure."
+              suggested_fix: "https://en.wikipedia.org/wiki/White_House_Reconstruction"
       - id: "11.4"
         name: "Model behavior"
         good_score: 7
@@ -732,7 +1034,14 @@ categories:
             tier: 2
             claim: "Truman lived modestly in retirement, refusing corporate positions and speaking fees as inappropriate to the dignity of the former office — a model later abandoned."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Well-documented that Truman lived modestly in Independence and declined corporate board seats and product endorsements, saying he would not \"commercialize on the prestige and dignity of the office\"; the cited Truman Library was indeed dedicated July 6, 1957, though \"speaking fees\" is a slight extension and a minority source disputes (only) the degree of his poverty, not the principled refusal."
+              suggested_fix: "https://en.wikipedia.org/wiki/Harry_S._Truman_Presidential_Library_and_Museum"
 
   - category: 12
     name: "Effect on populace"
@@ -745,13 +1054,19 @@ categories:
         low_confidence: false
         notes: "Mixed: postwar prosperity boosted morale, but Korean War, McCarthyism, and end-of-term scandals dragged. 22% Gallup approval at end of term, lowest since polling began."
         evidence:
-          - citation: "Gallup approval ratings 1945-1953 (varied 32-87%); 22% final number"
+          - citation: "Gallup approval ratings 1945-1953; 32% final (Dec 1952), 22% low (Feb 1952)"
             source_url: "https://news.gallup.com/"
             source_type: statistic
             tier: 1
-            claim: "Truman ended term with 22% Gallup approval, the lowest of any president measured at end-of-term to that point."
+            claim: "Truman ended his term with 32% Gallup approval (his all-time low of 22% came in a single February 1952 poll, mid-presidency), among the lowest end-of-term ratings to that point."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the figure: Truman left office at 32% (Dec 1952); 22% was a mid-term low (Feb 1952), not the end-of-term number."
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 4
@@ -765,7 +1080,14 @@ categories:
             tier: 1
             claim: "McCarthyism era began under Truman with the loyalty program legitimizing communist-sympathizer accusations, contributing to widespread political-social distrust through the 1950s."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Truman's EO 9835 loyalty program (March 1947) preceded McCarthy's 1950 speech, institutionalized guilt-by-association/communist-sympathizer accusations, and is documented by the National Archives and Schrecker (1998) as a key precursor that spurred McCarthyism and 1950s distrust."
+              suggested_fix: "For the offline \"canonical\" source, a verifiable deep link is the National Archives \"Prelude to McCarthyism\" article: https://www.archives.gov/publications/prologue/2006/fall/agloso.html"
       - id: "12.3"
         name: "International standing"
         good_score: 8
@@ -773,13 +1095,19 @@ categories:
         low_confidence: false
         notes: "US as undisputed Western leader; Marshall Plan and NATO produced enormous European goodwill. Atomic monopoly ended (1949) reducing primacy. Korea reduced standing in some quarters."
         evidence:
-          - citation: "Marshall Plan recipient nations' contemporary reception; 1948-1952 polling in Europe"
+          - citation: "Marshall Plan recipient nations' contemporary reception; 1948-1952 USIA/USIS polling in Europe (Roper Center USIA Digital Report Collection, https://ropercenter.cornell.edu/usia-digital-report-collection) and OMGUS German survey data"
             source_url: "canonical"
             source_type: historical_record
             tier: 1
-            claim: "European public opinion polled by USIS in 1949-1952 showed strong favorability toward US in Marshall Plan recipient countries; sharp drop in Soviet bloc."
+            claim: "European public opinion polled by USIS in 1949-1952 showed strong favorability toward US in Marshall Plan recipient countries."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Dropped the unsupported \"sharp drop in Soviet bloc\" clause (no such polling existed) and updated the citation to point to the Roper Center USIA Digital Report Collection and OMGUS survey data."
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 6
@@ -787,14 +1115,19 @@ categories:
         low_confidence: true
         notes: "Western Europe favorable; postcolonial world mixed (China 'loss' contested in Asia); Soviet bloc adversarial."
         evidence:
-          - citation: "USIS public-opinion surveys 1948-1953"
+          - citation: "USIS public-opinion surveys 1948-1953; FRUS 1952-1954 v1 pt2 d222 (https://history.state.gov/historicaldocuments/frus1952-54v01p2/d222); Roper Center USIA collection (https://ropercenter.cornell.edu/usia)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Foreign-public-opinion data for Truman era is limited but available USIS surveys show favorable Western European reception, mixed elsewhere."
+            claim: "Foreign-public-opinion data for Truman era is limited but available USIS surveys show Western European reception was favorable in the early Marshall Plan years but turned mixed-to-unfavorable by 1952-53, mixed elsewhere."
             direction: good
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"favorable Western European reception\" to favorable in early Marshall Plan years but mixed-to-unfavorable by 1952-53, and added the FRUS and Roper Center sources to the citation."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "Mixed record: Displaced Persons Act (1948) substantial refugee admission; McCarran-Walter Act 1952 passed over Truman veto kept restrictive national-origins system."
@@ -810,9 +1143,15 @@ categories:
             source_url: "https://www.trumanlibrary.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Truman vetoed McCarran-Walter as 'rigid, racial discrimination' that 'denies the basic premise of democracy'; Congress overrode his veto and the discriminatory national-origins quota system persisted until 1965."
+            claim: "Truman vetoed McCarran-Walter, saying the quota system \"discriminates, deliberately and intentionally, against many of the peoples of the world\" and \"violates the great political doctrine of the Declaration of Independence that 'all men are created equal'\"; Congress overrode his veto and the discriminatory national-origins quota system persisted until 1965."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Replaced the two fabricated quoted phrases with Truman's verbatim language from the veto message, preserving all other wording."
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -826,7 +1165,14 @@ categories:
             tier: 2
             claim: "Truman-era immigration enforcement was era-typical and less aggressive than the subsequent Eisenhower-era Operation Wetback."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm Truman-era enforcement followed the era's rising trend (~727,000 actions by 1952) but was less aggressive than Eisenhower's militarized 1954 Operation Wetback (peak ~1.1M actions, command teams/planes/buses); only nuance is Truman's enforcement was already escalating sharply, not gentle."
+              suggested_fix: "Cite a specific deep source rather than the USCIS homepage, e.g. https://www.factcheck.org/2010/07/hoover-truman-ike-mass-deporters/ or https://en.wikipedia.org/wiki/Operation_Wetback"
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 6
@@ -840,7 +1186,14 @@ categories:
             tier: 1
             claim: "Displaced Persons Act admitted ~400,000 refugees 1948-1952, partially redressing the wartime refugee admission failures; the largest US refugee admission program of the pre-1980 era."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm ~400,000 DPs admitted (393,542 by the June 30, 1952 cutoff, more under extensions) and the cited PL 80-774 / PL 81-555 numbers; the \"largest pre-1980 program\" superlative is not stated in one source but is consistent with standard immigration history."
+              suggested_fix: "https://en.wikipedia.org/wiki/Displaced_Persons_Act"
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 4
@@ -852,10 +1205,15 @@ categories:
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Bracero Program continued under Truman bringing tens of thousands of Mexican workers annually; total US foreign-born population at historical lows during 1945-1953."
+            claim: "Bracero Program continued under Truman bringing tens of thousands of Mexican workers annually; total US foreign-born population near multi-decade lows during 1945-1953."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the overstated \"historical lows\" to \"near multi-decade lows,\" since the true record low for foreign-born share came in 1970, not the Truman era."
 calibration_summary:
   good_average_across_categories: 5.7
   harm_average_across_categories: 3.5

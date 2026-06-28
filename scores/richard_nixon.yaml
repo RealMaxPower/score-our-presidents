@@ -26,7 +26,14 @@ categories:
             tier: 1
             claim: "Stagflation onset under Nixon: inflation rose from 5.5% (1969) to 11% (1974) while unemployment also rose, breaking the Phillips Curve relationship that had defined postwar macroeconomic management."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "BLS/CPI data confirm annual inflation rose from 5.5% (1969) to 11.0% (1974) and unemployment also rose (3.5%→5.6% annual avg), matching the claim; the resulting simultaneous rise is the textbook stagflation/Phillips-Curve breakdown."
+              suggested_fix: "Cite a deep link, e.g. https://www.usinflationcalculator.com/inflation/historical-inflation-rates/ for CPI and FRED UNRATE (https://fred.stlouisfed.org/series/UNRATE) for unemployment, since sourceUrl is a bare BLS homepage."
       - id: "1.2"
         name: "Inequality & mobility"
         good_score: 5
@@ -34,13 +41,19 @@ categories:
         low_confidence: false
         notes: "Inequality relatively flat. End of Great Compression. Earned Income Tax Credit proposed (later enacted under Ford). SSI replacement of state programs reduced inequality at the bottom."
         evidence:
-          - citation: "Piketty & Saez income share data 1969-1974"
+          - citation: "Piketty & Saez income share data 1969-1974 (https://eml.berkeley.edu/~saez/saez-UStopincomes-2022.pdf; WID at https://wid.world/country/usa/)"
             source_url: "canonical"
             source_type: statistic
             tier: 1
-            claim: "Top-decile income share remained ~33-34% throughout Nixon years; Great Compression continued holding but ending."
+            claim: "Top-decile income share remained ~32-33% throughout Nixon years; Great Compression continued holding but ending."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Lowered the overstated top-decile share from \"~33-34%\" to \"~32-33%\" per the note, and added the deeper Saez 2022 and WID source URLs to the citation."
       - id: "1.3"
         name: "Fiscal trajectory"
         good_score: 4
@@ -48,13 +61,19 @@ categories:
         low_confidence: false
         notes: "Closed gold window August 15, 1971 ending Bretton Woods fixed-exchange-rate system. Deficits returned. Wage-price controls (Aug 1971-Apr 1974) controversial."
         evidence:
-          - citation: "Executive Order 11615 (Nixon Shock), August 15, 1971; OMB Historical Tables"
+          - citation: "Nixon Shock, August 15, 1971: suspension of dollar-gold convertibility (presidential directive); Executive Order 11615 imposed the 90-day wage/price freeze and Proclamation 4074 the 10% import surcharge. See https://history.state.gov/milestones/1969-1976/nixon-shock; OMB Historical Tables"
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
             claim: "The Nixon Shock ended the Bretton Woods gold standard, restructuring international monetary system; effects on US fiscal trajectory mixed but the structural change was profound."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the citation so the gold-convertibility suspension is cited as a separate directive rather than EO 11615 (the wage/price freeze), added Proclamation 4074 and the State Dept milestone URL, and left the claim text unchanged."
       - id: "1.4"
         name: "Worker conditions & wages"
         good_score: 6
@@ -62,14 +81,19 @@ categories:
         low_confidence: false
         notes: "OSHA created (1970) — major worker-safety federal expansion. Wage-price controls had mixed labor effects. Real wages flat to declining."
         evidence:
-          - citation: "Occupational Safety and Health Act of 1970, Public Law 91-596"
+          - citation: "Occupational Safety and Health Act of 1970, Public Law 91-596; OSHA Commonly Used Statistics, https://www.osha.gov/data/commonstats"
             source_url: "https://www.congress.gov/"
             source_type: primary_document
             tier: 1
-            claim: "OSHA Act created federal workplace-safety regulation, the major worker-protection federal expansion of the era; ~50% reduction in workplace fatalities over subsequent decades attributed to OSHA."
+            claim: "OSHA Act created federal workplace-safety regulation, the major worker-protection federal expansion of the era; ~60% reduction in workplace fatalities (from ~38 deaths/day in 1970 to ~15/day in 2023) attributed to OSHA."
             direction: good
-            verification_status: pending
-
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Revised the understated \"~50%\" fatality reduction to OSHA's own ~60% figure (38 deaths/day in 1970 to 15/day in 2023) and added the OSHA commonstats deep link to the citation."
   - category: 2
     name: "Foreign policy & war"
     category_notes: "Era E2.3 Cold War. Opening to China and detente with USSR are era-defining good. Cambodia bombing and continued Vietnam War civilian impact are era-10-harm. Paris Peace Accords (1973) ended US Vietnam involvement."
@@ -88,7 +112,14 @@ categories:
             tier: 1
             claim: "Nixon ended US combat involvement in Vietnam via Paris Accords while simultaneously expanding war to Cambodia and Laos in secret bombing campaigns concealed from Congress."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Paris Accords (Jan 27, 1973), Operation Menu secret Cambodia bombing (1969-70) with falsified reports to Congress, and concealed Laos bombing are all well-documented; only the \"simultaneously\" framing is loose since Menu ended ~1970, years before the 1973 Accords."
+              suggested_fix: "https://en.wikipedia.org/wiki/Operation_Menu"
       - id: "2.2"
         name: "Alliance management"
         good_score: 8
@@ -102,7 +133,14 @@ categories:
             tier: 1
             claim: "Nixon's strategic triangulation and SALT I represented the largest restructuring of Cold War alliance dynamics since the 1940s; ABM Treaty constrained nuclear arms race until US withdrawal in 2002."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "State Dept and Arms Control sources confirm the 1972 ABM Treaty (signed by Nixon/Brezhnev) and SALT I Interim Agreement as the crowning achievement of détente/triangulation, with the ABM Treaty in force until the US withdrawal effective June 2002; the \"largest restructuring since the 1940s\" is defensible interpretive framing."
+              suggested_fix: "Deep link: https://history.state.gov/milestones/1969-1976/salt"
       - id: "2.3"
         name: "Diplomacy & soft power"
         good_score: 9
@@ -110,13 +148,19 @@ categories:
         low_confidence: false
         notes: "Opening to China (February 1972 Beijing visit) ended 22-year diplomatic freeze. Detente architecture with USSR. Moscow Summit (May 1972). Era-defining diplomatic transformation."
         evidence:
-          - citation: "Shanghai Communiqué (February 28, 1972); Nixon-Mao meeting February 21, 1972"
+          - citation: "Shanghai Communiqué (February 27, 1972, signed in Shanghai); Nixon-Mao meeting February 21, 1972; https://history.state.gov/milestones/1969-1976/rapprochement-china"
             source_url: "https://history.state.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Nixon's 1972 China visit ended 22 years of US-PRC diplomatic separation and reshaped Cold War strategic balance; among the most consequential diplomatic openings in 20th century US foreign policy."
+            claim: "Nixon's 1972 China visit ended more than two decades of US-PRC diplomatic separation and reshaped Cold War strategic balance; among the most consequential diplomatic openings in 20th century US foreign policy."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the Shanghai Communiqué date from February 28 to February 27, 1972 with the State Department deep link, and softened \"22 years\" to \"more than two decades\" per the note's approximation flag."
       - id: "2.4"
         name: "Civilian impact"
         good_score: 2
@@ -125,14 +169,19 @@ categories:
         era_context: "E2.3 — score within era's mass-war norms"
         notes: "Cambodia bombing dropped ~500,000 tons of bombs (1969-1973), destabilizing Cambodia and contributing to conditions for Khmer Rouge ascent. Continued Vietnam civilian casualties. Christmas bombing of Hanoi/Haiphong (December 1972)."
         evidence:
-          - citation: "Owen & Kiernan, 'Bombs Over Cambodia' (Walrus 2006); declassified Air Force bombing records"
+          - citation: "Owen & Kiernan, 'Bombs Over Cambodia' (The Walrus, 2006), tonnage revised down by the authors in 2010; declassified US Air Force bombing records"
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "US dropped approximately 2.7 million tons of bombs on Cambodia 1965-1973 with the bulk under Nixon; the bombing campaign is widely linked to destabilization that enabled the Khmer Rouge takeover and subsequent genocide."
+            claim: "US dropped on the order of 500,000 tons of bombs on Cambodia from 1969-1973 under Nixon (an earlier 2.7-million-ton figure was retracted by its authors in 2010 as a database error); the bombing is widely linked to destabilization that enabled the Khmer Rouge takeover and subsequent genocide."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Replaced retracted 2.7M-ton figure with ~500,000 tons per Owen & Kiernan's 2010 correction; bulk-under-Nixon and Khmer Rouge linkage corroborated."
   - category: 3
     name: "Civil rights & equality"
     category_notes: "Era E3.2/E3.3 transition. Substantial good on Title IX, disability rights (Rehab Act 1973), tribal self-determination policy. Mixed on racial equity: enforced school desegregation but used Southern Strategy rhetoric."
@@ -151,7 +200,14 @@ categories:
             tier: 1
             claim: "The Philadelphia Plan was the first federal affirmative action requirement; school desegregation in the South accelerated dramatically under Nixon-era enforcement (e.g., Alexander v. Holmes 1969)."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Authoritative sources confirm the Revised Philadelphia Plan (June 1969) as the first federal affirmative action requirement with mandatory goals/timetables, and Alexander v. Holmes (1969) drove dramatic Southern desegregation (~68-70% of Black students in segregated schools in 1968 to ~8-18% by 1972); only the citation \"DOL Order 4, 1969\" is imprecise (Order No. 4 was 1970)."
+              suggested_fix: "Fix citation: the Philadelphia Plan order was issued June 27, 1969; the broader DOL \"Order No. 4\" was issued in 1970 (Revised Order No. 4 in 1971). See https://en.wikipedia.org/wiki/Revised_Philadelphia_Plan and https://en.wikipedia.org/wiki/Alexander_v._Holmes_County_Board_of_Education"
       - id: "3.2"
         name: "Gender equity"
         good_score: 7
@@ -165,7 +221,14 @@ categories:
             tier: 1
             claim: "Title IX transformed federal anti-discrimination law in education, with major downstream effects on women's athletics, professional schools, and education access."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Title IX (Education Amendments of 1972, PL 92-318, signed by Nixon June 23 1972) is authoritatively documented as transforming federal anti-discrimination law in education with major downstream effects on women's athletics (HS girl athletes 295K→3M+), professional schools (med school ~9.6%→50.5% female), and education access."
+              suggested_fix: "https://www.congress.gov/bill/92nd-congress/senate-bill/659 (or LOC guide: https://guides.loc.gov/title-IX-law-library-resources/primary-sources)"
       - id: "3.3"
         name: "LGBTQ+ rights"
         good_score: 1
@@ -173,13 +236,19 @@ categories:
         low_confidence: false
         notes: "EO 10450 still in force throughout Nixon years. Era-typical hostility. Stonewall (1969) and rising gay rights movement received no federal support."
         evidence:
-          - citation: "EO 10450 continuation; Stonewall riots June 1969"
+          - citation: "EO 10450 continuation; Stonewall riots June 1969; Society for Individual Rights, Inc. v. Hampton (N.D. Cal. 1973), CSC directive revised Dec 1973, https://openjurist.org/528/f2d/905/society-for-individual-rights-inc-v-hampton"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Federal anti-LGBTQ employment discrimination policy continued throughout Nixon years with no administration action toward reform."
+            claim: "Federal anti-LGBTQ employment discrimination policy persisted through most of the Nixon years with no administration-initiated reform, relaxed only under court compulsion when the Civil Service Commission revised its directive in December 1973."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Softened the \"continued throughout / no action\" overstatement to note the policy was relaxed under court compulsion via the Dec 1973 CSC revision, and added the SIR v. Hampton citation."
       - id: "3.4"
         name: "Disability & other protected classes"
         good_score: 7
@@ -193,7 +262,14 @@ categories:
             tier: 1
             claim: "Section 504 of the Rehabilitation Act was the first federal civil rights protection on the basis of disability and the direct precursor to the Americans with Disabilities Act 17 years later."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Section 504 of the Rehabilitation Act of 1973 (PL 93-112, signed by Nixon Sept 26 1973) is the first federal civil rights protection for disability and direct precursor to the ADA (1990); 1990-1973 = 17 years, all accurate."
+              suggested_fix: "https://www.congress.gov/bill/93rd-congress/house-bill/8070"
       - id: "3.5"
         name: "Tribal & indigenous policy"
         good_score: 8
@@ -207,7 +283,14 @@ categories:
             tier: 1
             claim: "Nixon's 1970 message formally ended 17-year termination policy and committed federal government to tribal self-determination; restored ~48,000 acres of Blue Lake sacred land to Taos Pueblo, the first major tribal-land restoration."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Nixon's July 8, 1970 message repudiated the 1953-1970 (17-year) termination policy and embraced self-determination; PL 91-550 (signed Dec 15, 1970) restored ~48,000 acres of Blue Lake to Taos Pueblo, widely called the first land-rather-than-money tribal restoration."
+              suggested_fix: "https://text-message.blogs.archives.gov/2020/11/10/righting-a-wrong-the-return-of-blue-lake-to-the-taos-pueblo/"
 
   - category: 4
     name: "Civil liberties & rule of law"
@@ -226,7 +309,14 @@ categories:
             tier: 1
             claim: "The Nixon administration maintained a list of political 'enemies' for IRS audit and other federal retaliation; Ellsberg's prosecution was dismissed when the administration's own breaking-and-entering of his psychiatrist's office was revealed."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Dean's \"enemies list\" (public June 1973) explicitly aimed to use IRS audits, grants, contracts, and prosecution against foes (basis for Article 2 of impeachment), and Judge Byrne dismissed Ellsberg's case May 11, 1973 over the Plumbers' break-in at Dr. Fielding's office; one caveat is the IRS audits were mostly intended, not executed (Treasury blocked them)."
+              suggested_fix: "https://www.archives.gov/research/investigations/watergate/misuse-of-irs.html"
       - id: "4.2"
         name: "Search, seizure, and surveillance"
         good_score: 1
@@ -238,9 +328,15 @@ categories:
             source_url: "https://www.senate.gov/"
             source_type: primary_document
             tier: 1
-            claim: "The White House Plumbers unit committed multiple felonies including burglary of Daniel Ellsberg's psychiatrist (September 1971) and the Watergate complex break-ins (May-June 1972) at presidential direction."
+            claim: "The White House Plumbers unit committed the September 1971 burglary of Daniel Ellsberg's psychiatrist (authorized by Krogh and Ehrlichman); the May-June 1972 Watergate break-ins were carried out by CRP operatives. Nixon's proven personal crime was directing the cover-up, not ordering the break-ins themselves."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Removed 'at presidential direction' (unproven for the break-ins; Fielding burglary authorized by Krogh/Ehrlichman, Watergate run by CRP); underlying felonies corroborated."
       - id: "4.3"
         name: "Executive restraint"
         good_score: 1
@@ -254,7 +350,14 @@ categories:
             tier: 1
             claim: "Two major congressional responses — War Powers Resolution and Impoundment Control Act — directly constrained presidential power as reaction to Nixon's expansions; the War Powers Act was specifically designed to prevent future secret wars like Cambodia."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources (Nixon Library, House History, Wikipedia) confirm both the War Powers Resolution (PL 93-148, passed over Nixon's veto Nov 7 1973) and the Impoundment Control Act of 1974 were direct congressional reactions to Nixon's overreach, with the WPR specifically driven by the secret Cambodia bombings; note only the WPR was over a veto (Nixon signed the Impoundment Act July 12 1974), which the claim correctly attributes."
+              suggested_fix: "https://history.house.gov/Historical-Highlights/1951-2000/Congressional-Budget-and-Impoundment-Control-Act-of-1974/ and https://www.nixonlibrary.gov/news/war-powers-resolution-1973"
       - id: "4.4"
         name: "Transparency & FOIA"
         good_score: 1
@@ -268,7 +371,14 @@ categories:
             tier: 1
             claim: "Nixon's resistance to disclosing White House tapes led to unanimous Supreme Court ruling in US v. Nixon and direct congressional response strengthening FOIA over Ford's veto."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "US v. Nixon, 418 U.S. 683 (1974) unanimously (8-0, Rehnquist recused) ordered the tapes released, and the 1974 FOIA Amendments (PL 93-502) were a Watergate-era strengthening passed over Ford's veto (House 371-31, Senate 65-27), all confirming the claim."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/418/683/"
 
   - category: 5
     name: "Domestic welfare & health"
@@ -287,7 +397,14 @@ categories:
             tier: 1
             claim: "Nixon's National Cancer Act 1971 substantially expanded NIH cancer research funding; HMO Act of 1973 shaped US managed-care system for decades."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Both citations verified: National Cancer Act of 1971 (P.L. 92-218, signed Dec 23 1971) drove federal cancer-research funding from ~$500M to $6.5B, and the HMO Act of 1973 (P.L. 93-222, signed Dec 29 1973) is widely credited as the catalyst for US managed care."
+              suggested_fix: "For deep verification, use https://www.congress.gov/bill/92nd-congress/senate-bill/1828 (Cancer Act) and https://www.govtrack.us/congress/bills/93/s14 (HMO Act) instead of the bare congress.gov homepage."
       - id: "5.2"
         name: "Education"
         good_score: 6
@@ -301,7 +418,14 @@ categories:
             tier: 1
             claim: "Pell Grants (originally BEOG) created in 1972 became foundational federal need-based undergraduate aid program for the next 50+ years."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Multiple authoritative sources confirm Nixon signed the Education Amendments of 1972 (PL 92-318, June 23, 1972) creating BEOG, renamed Pell Grants in 1980, which remained the foundational federal need-based undergraduate aid program 50+ years (50th anniversary in 2022)."
+              suggested_fix: "Replace bare homepage with deep link: https://www.govinfo.gov/content/pkg/STATUTE-86/pdf/STATUTE-86-Pg235.pdf (Public Law 92-318, 86 Stat. 235); also CRS primer https://www.congress.gov/crs-product/R45418"
       - id: "5.3"
         name: "Safety net"
         good_score: 7
@@ -309,13 +433,19 @@ categories:
         low_confidence: false
         notes: "Supplemental Security Income (SSI) Act of 1972 replaced state-administered programs with federal program for elderly, blind, and disabled poor. Food Stamp Program nationalized. Social Security inflation indexing (1972)."
         evidence:
-          - citation: "Social Security Amendments of 1972, Public Law 92-603 (creating SSI)"
+          - citation: "Social Security Amendments of 1972, Public Law 92-603 (creating SSI), https://www.ssa.gov/history/1972amend.html; automatic COLA indexing from Public Law 92-336 (July 1, 1972), https://www.ssa.gov/history/Nixon72.html"
             source_url: "https://www.ssa.gov/"
             source_type: primary_document
             tier: 1
-            claim: "SSI federalized welfare for elderly, blind, and disabled Americans, replacing widely varying state programs with uniform federal benefits; Social Security inflation indexing in the same Act protected retirees from 1970s inflation."
+            claim: "SSI federalized welfare for elderly, blind, and disabled Americans, replacing widely varying state programs with uniform federal benefits; automatic Social Security inflation indexing, enacted in a separate 1972 law, protected retirees from 1970s inflation."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Corrected the indexing attribution so COLA is credited to the separate 1972 law (P.L. 92-336) rather than the same SSI Act, and updated the citation accordingly."
       - id: "5.4"
         name: "Housing & cost of living"
         good_score: 5
@@ -329,7 +459,14 @@ categories:
             tier: 1
             claim: "Section 8 vouchers became the central federal low-income housing program for next 50+ years; Nixon administration's earlier housing moratorium suspended new public housing construction for political reasons."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "CRS and Wikipedia confirm Section 8 was created by the 1974 Act (P.L. 93-383) and became HUD's largest low-income rental-assistance program (still central in 2026, 50+ yrs), and Nixon's Jan 5, 1973 moratorium suspended new public/subsidized housing construction."
+              suggested_fix: "For congress.gov homepage, deep-link: https://www.congress.gov/bill/93rd-congress/senate-bill/3066 (HCDA of 1974); \"political reasons\" is a defensible but interpretive framing of Nixon's cost/quality rationale."
 
   - category: 6
     name: "Environmental stewardship"
@@ -349,7 +486,14 @@ categories:
             tier: 2
             claim: "Atmospheric CO2 measurement at Mauna Loa continued through Nixon years but federal climate policy did not exist; era-typical."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Mauna Loa's CO2 record ran continuously through the Nixon years (1969-74, only gaps being a 1964 funding lapse and 2022 lava), and while Nixon's circle showed climate awareness (Moynihan's 1969 memo, a 1971 monitoring proposal) no federal greenhouse-gas/climate policy was enacted—matching the claim's \"pre-policy awareness only.\""
+              suggested_fix: "For deep links: https://keelingcurve.ucsd.edu/ and https://nsarchive.gwu.edu/briefing-book/climate-change-transparency-project/2024-04-26/carbon-dioxide-problem-nixons-inner"
       - id: "6.2"
         name: "Air & water regulation"
         good_score: 10
@@ -364,7 +508,14 @@ categories:
             tier: 1
             claim: "EPA creation and Clean Air Act/Clean Water Act enactment in 1970-1972 established the modern US environmental regulatory regime; among the largest regulatory expansions of any administration."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EPA (Reorg Plan No. 3, eff. Dec 2 1970), Clean Air Act (PL 91-604, signed Dec 31 1970) and FWPCA Amendments (PL 92-500, Oct 18 1972) are all verified; one nuance: the 1972 CWA was enacted over Nixon's veto, but the law numbers, dates, and \"modern regulatory regime\" framing are accurate."
+              suggested_fix: "https://www.epa.gov/history/origins-epa"
       - id: "6.3"
         name: "Public lands & conservation"
         good_score: 9
@@ -378,7 +529,14 @@ categories:
             tier: 1
             claim: "NEPA and ESA together established the core environmental-review and species-protection frameworks that have shaped federal land-use decisions for 50+ years."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "NEPA (PL 91-190, signed Jan 1, 1970) created the environmental-review/EIS framework and ESA (PL 93-205, signed Dec 28, 1973) the species-protection framework, both signed by Nixon and both still shaping federal land-use 50+ years on, matching the citation exactly."
+              suggested_fix: "https://www.congress.gov/bill/93rd-congress/senate-bill/1983"
       - id: "6.4"
         name: "Biodiversity & wildlife"
         good_score: 10
@@ -392,7 +550,14 @@ categories:
             tier: 1
             claim: "ESA established the federal threatened/endangered species listing process and recovery framework; widely considered the world's most stringent species-protection law."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ESA (PL 93-205, signed by Nixon 12/28/1973) establishes the Section 4 threatened/endangered listing process and recovery plans, and is widely called the world's strongest/most comprehensive species-protection law (per SCOTUS and Wikipedia)."
+              suggested_fix: "Replace bare homepage with deep link: https://www.congress.gov/bill/93rd-congress/senate-bill/1983 (or https://en.wikipedia.org/wiki/Endangered_Species_Act_of_1973)"
 
   - category: 7
     name: "Crisis management"
@@ -411,7 +576,14 @@ categories:
             tier: 1
             claim: "Yom Kippur War crisis was managed effectively with rapid Israel airlift; Watergate was actively covered up rather than confronted for over two years."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Operation Nickel Grass (Oct 1973) was a rapid, effective airlift Nixon ordered ~Oct 9-13 that helped save Israel; the Watergate cover-up ran from the June 17, 1972 break-in to the Aug 8-9, 1974 resignation (~26 months, \"over two years\"), both as claimed."
+              suggested_fix: "For sourceUrl, deep links: https://en.wikipedia.org/wiki/Operation_Nickel_Grass and https://www.britannica.com/event/Watergate-Scandal"
       - id: "7.2"
         name: "Effectiveness of action"
         good_score: 5
@@ -425,7 +597,14 @@ categories:
             tier: 1
             claim: "Watergate cover-up failed completely, producing the first presidential resignation in US history; multiple senior officials convicted."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: Nixon resigned Aug 9, 1974 as the first US president to do so after the Watergate cover-up collapsed, and senior officials Mitchell, Haldeman, and Ehrlichman were convicted (41+ total Watergate convictions)."
+              suggested_fix: "https://www.archives.gov/education/lessons/watergate-constitution (or https://visit.archives.gov/whats-on/explore-exhibits/president-resigns-50-years-later) for a specific deep link instead of the bare archives.gov homepage"
       - id: "7.3"
         name: "Honesty with the public during crisis"
         good_score: 1
@@ -438,9 +617,15 @@ categories:
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "The Smoking Gun tape proved Nixon had personally directed the FBI cover-up of Watergate from June 23, 1972 — contradicting two years of public denials; release forced resignation within days."
+            claim: "The 'Smoking Gun' tape (recorded June 23, 1972; released August 5, 1974) showed Nixon approving a plan to use the CIA to obstruct the FBI's Watergate investigation — contradicting two years of public denials; its release forced his resignation within days."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Reworded 'personally directed the FBI cover-up' to 'approved using the CIA to obstruct the FBI investigation' per the tape; dates corroborated."
       - id: "7.4"
         name: "Long-term resolution of the crisis"
         good_score: 5
@@ -454,7 +639,14 @@ categories:
             tier: 1
             claim: "Cambodia bombing campaign destabilization is widely attributed by scholars as a major contributing factor to the Khmer Rouge takeover and subsequent genocide (~1.7-2 million deaths)."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Scholars (Kiernan, Ignatieff, Jones, Grandin, Chandler) widely attribute Khmer Rouge rise partly to US bombing destabilization, and the ~1.7-2M genocide death toll sits within standard 1.5-2.2M estimates; minor dissent (Etcheson) but the hedged \"contributing factor\" wording is accurate."
+              suggested_fix: "https://en.wikipedia.org/wiki/Khmer_Rouge#Rise_to_power"
 
   - category: 8
     name: "Institutional integrity"
@@ -474,7 +666,14 @@ categories:
             tier: 1
             claim: "Three articles of impeachment voted out of House Judiciary Committee (obstruction of justice, abuse of power, contempt of Congress); Smoking Gun tape proved direct presidential involvement in obstruction."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "House Judiciary Committee did adopt three articles—obstruction of justice, abuse of power, contempt of Congress (July 27-30, 1974)—and the June 23, 1972 \"Smoking Gun\" tape (Nixon ordering CIA to halt the FBI Watergate probe) proved his direct obstruction involvement; only nuance is the articles passed July 27/29/30, not all on July 27."
+              suggested_fix: "https://www.archives.gov/research/investigations/watergate — and the Smoking Gun transcript at https://watergate.info/1972/06/23/the-smoking-gun-tape.html/"
       - id: "8.2"
         name: "Administration ethics"
         good_score: 1
@@ -486,9 +685,15 @@ categories:
             source_url: "https://www.archives.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Approximately 48 Nixon administration officials were convicted of Watergate-related crimes, including a sitting Attorney General — unprecedented in US presidential history."
+            claim: "Approximately 69 people were charged and 48 convicted of Watergate-related crimes, including former Attorney General John Mitchell — the first former US Attorney General imprisoned; unprecedented in US presidential history."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Corrected to 69 charged / 48 convicted, and John Mitchell as FORMER (not sitting) AG — first former US AG imprisoned."
       - id: "8.3"
         name: "Norm adherence"
         good_score: 1
@@ -503,7 +708,14 @@ categories:
             tier: 1
             claim: "Nixon fired Special Prosecutor Archibald Cox after Cox refused to drop subpoena for White House tapes; AG Richardson and Deputy AG Ruckelshaus resigned rather than comply with the firing order — defining institutional-norm-breaking event of modern presidency."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources (Wikipedia, History.com, NPR, Britannica) confirm Nixon fired Cox on Oct 20, 1973 after Cox refused the Stennis Compromise on the tapes subpoena, and that AG Richardson and Deputy AG Ruckelshaus resigned rather than comply; widely described as a defining norm-breaking event."
+              suggested_fix: "https://en.wikipedia.org/wiki/Saturday_Night_Massacre"
       - id: "8.4"
         name: "Judicial appointment quality"
         good_score: 6
@@ -517,7 +729,14 @@ categories:
             tier: 1
             claim: "Nixon's four confirmed appointees were of mixed quality (Burger weak, Rehnquist long-tenured and influential); two failed nominations (Haynsworth, Carswell) were the first SCOTUS rejections since 1930."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Verified: Nixon's four confirmees (Burger, Blackmun, Powell, Rehnquist) match, Burger is widely scored a weak CJ while Rehnquist served 33 yrs/19 as influential CJ, and Haynsworth (55-45, 1969) then Carswell (51-45, 1970) were the first SCOTUS rejections since John J. Parker in 1930."
+              suggested_fix: "Replace bare homepage with deep links: https://en.wikipedia.org/wiki/Richard_Nixon_Supreme_Court_candidates and https://constitutioncenter.org/blog/on-this-day-the-senate-denies-a-nixon-supreme-court-nominee"
       - id: "8.5"
         name: "Judicial appointment selection ethics"
         good_score: 4
@@ -531,7 +750,14 @@ categories:
             tier: 1
             claim: "Two successive Nixon SCOTUS nominees rejected by Senate on quality/ethics grounds — Haynsworth for ethics violations, Carswell for mediocrity (Senator Hruska's defense: 'Even if he were mediocre, there are a lot of mediocre judges')."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: Haynsworth rejected 45-55 (Nov 21, 1969) over conflict-of-interest/ethics, Carswell rejected 45-51 (Apr 8, 1970) amid mediocrity criticism; Hruska's quote is accurately paraphrased, though Carswell's rejection also hinged on his earlier white-supremacy statements, not mediocrity alone."
+              suggested_fix: "Deep link for the bare homepage: https://www.senate.gov/about/powers-procedures/nominations/nominations-supreme-court-failed.htm"
       - id: "8.6"
         name: "Judicial activism vs. restraint posture"
         good_score: 5
@@ -545,7 +771,14 @@ categories:
             tier: 1
             claim: "Nixon-appointed Blackmun wrote Roe v. Wade decision, joined by Burger and Powell; Burger Court generally pulled back from Warren Court activism but produced major activist rulings on abortion."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: Nixon-appointee Blackmun authored the 7-2 Roe v. Wade (410 U.S. 113, 1973) majority, joined by Burger and Powell; Burger Court is standardly characterized as restraint-leaning yet activist on abortion."
+              suggested_fix: "https://supreme.justia.com/cases/federal/us/410/113/"
       - id: "8.7"
         name: "Confirmation-process conduct"
         good_score: 4
@@ -559,7 +792,14 @@ categories:
             tier: 1
             claim: "Nixon's two SCOTUS rejections (Haynsworth, Carswell) and two confirmation losses (followed by Blackmun, Powell, Rehnquist successes) demonstrated post-Warren-era contestability of SCOTUS confirmations."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Haynsworth (rejected 55-45, Nov 1969) and Carswell (rejected 51-45, Apr 1970) were both Senate-rejected, followed by Blackmun (94-0), Powell (89-1), and Rehnquist (68-26) confirmations, exactly as claimed in the post-Warren era."
+              suggested_fix: "https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm"
 
   - category: 9
     name: "Democratic health"
@@ -578,7 +818,14 @@ categories:
             tier: 1
             claim: "VRA extension and 26th Amendment both occurred under Nixon administration; 26th Amendment extended voting franchise to 18-year-olds."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Confirmed: VRA Amendments of 1970 (P.L. 91-285, 84 Stat. 314) signed by Nixon June 22, 1970, and 26th Amendment (certified July 1, 1971) lowering voting age to 18 both occurred under Nixon; all figures/dates accurate."
+              suggested_fix: "For congress.gov homepage, deep links: https://constitution.congress.gov/browse/essay/amdt26-2-4/ALDE_00013941/ (26th Amdt) and https://www.congress.gov/bill/91st-congress/house-bill/4249 (P.L. 91-285)."
       - id: "9.2"
         name: "Press relationship"
         good_score: 1
@@ -592,7 +839,14 @@ categories:
             tier: 1
             claim: "Nixon White House systematically used IRS, FBI, and rhetorical attacks against press critics; Enemies List included multiple journalists targeted for federal retaliation."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm all elements: the Enemies List (~50 journalists incl. Daniel Schorr \"a real media enemy\") entered Watergate evidence via Dean's June 27 1973 testimony, Article II of impeachment charged IRS/FBI misuse \"in violation of constitutional rights,\" and Agnew's 1969-73 speeches attacked the press; only caveat is a 1973 finding the IRS didn't actually audit most listed people (intent/direction well-documented)."
+              suggested_fix: "Replace bare homepage with a deep link, e.g. https://www.archives.gov/research/investigations/watergate or the Article II impeachment text; corroborating: https://www.history.com/articles/richard-nixon-enemies-list-who-was-on-it"
       - id: "9.3"
         name: "Political violence"
         good_score: 2
@@ -606,7 +860,14 @@ categories:
             tier: 1
             claim: "National Guard killed four anti-war student protesters at Kent State four days after Nixon's Cambodia invasion announcement; subsequent Church Committee investigation found extensive FBI political surveillance under Nixon."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Ohio National Guard killed four students at Kent State on May 4, 1970, exactly four days after Nixon's April 30 Cambodia invasion announcement; the Church Committee (final report April 26, 1976) documented extensive FBI political surveillance including COINTELPRO and the Nixon-approved Huston Plan—only nuance is COINTELPRO began in 1956 across multiple administrations, not solely \"under Nixon.\""
+              suggested_fix: "Kent State facts: https://en.wikipedia.org/wiki/Kent_State_shootings ; Church Committee: https://www.senate.gov/about/powers-procedures/investigations/church-committee.htm"
       - id: "9.4"
         name: "Polarization contribution"
         good_score: 2
@@ -620,7 +881,14 @@ categories:
             tier: 1
             claim: "Nixon's Southern Strategy and Silent Majority framing systematically realigned US partisan politics around racial and cultural lines, with long-lasting polarization effects."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Phillips' \"The Emerging Republican Majority\" (1969) and mainstream scholarship (e.g., Valentino & Sears) support that Nixon's Southern Strategy/Silent Majority appeals drove a racially-rooted partisan realignment with lasting polarization, though some historians (Lassiter) debate timing/extent."
+              suggested_fix: "For the offline \"canonical\" source, cite the published year as 1969 and consider linking https://en.wikipedia.org/wiki/Southern_strategy plus Valentino & Sears (2005) for the racial-conservatism realignment evidence."
 
   - category: 10
     name: "Long-tail consequences"
@@ -639,7 +907,14 @@ categories:
             tier: 1
             claim: "Nixon's environmental legislation framework remains operational 50+ years later, with subsequent amendments extending rather than replacing the original structure."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "EPA (operational since Dec 1970), Clean Air Act (Nixon 1970; EPA states 1970 \"basic structure\" revised in 1977 and 1990 as amendments), and ESA (1973, never repealed, only amended) all confirm a durable Nixon-era framework extended rather than replaced."
+              suggested_fix: "Replace bare homepage with deep link: https://www.epa.gov/clean-air-act-overview/evolution-clean-air-act"
       - id: "10.2"
         name: "Institutional damage that persisted"
         good_score: 2
@@ -653,7 +928,14 @@ categories:
             tier: 1
             claim: "US public trust in government fell from ~75% (1964) to ~36% (1974) directly through Watergate era and has never fully recovered; long-term institutional credibility damage."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Pew's 1958-2025 trust time series confirms the figures exactly: 77% (≈75%) in 1964 (all-time high), 36% in 1974, attributed to Watergate plus Vietnam/economy, and never recovered to 1960s levels—though \"directly through Watergate\" slightly understates the concurrent Vietnam-era erosion."
+              suggested_fix: "https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/"
       - id: "10.3"
         name: "Generational & demographic impact"
         good_score: 3
@@ -667,7 +949,14 @@ categories:
             tier: 1
             claim: "Generational trust-in-government decline began under Vietnam and crystallized under Watergate; effects persistent across multiple subsequent generations."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "ANES/Pew trust series confirms trust peaked at 77% in 1964, eroded during Vietnam, fell to 36% by Dec 1974 post-Watergate, and has stayed persistently low (never above ~30% since 2007) across decades and demographic groups."
+              suggested_fix: "Replace bare ANES homepage with deep link to the canonical compiled series: https://www.pewresearch.org/politics/2025/12/04/public-trust-in-government-1958-2025/"
       - id: "10.4"
         name: "Geopolitical aftermath"
         good_score: 6
@@ -681,7 +970,14 @@ categories:
             tier: 1
             claim: "The 1972 China opening enabled 50 years of US-China engagement that produced both economic interdependence and the rise of a peer competitor — long-term consequences mixed."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Nixon's Feb 1972 China visit (State Dept Office of the Historian), the ~50-year engagement era, resulting economic interdependence, and China's rise as a peer competitor with \"mixed\" long-term consequences are all confirmed by mainstream scholarship; Kissinger's \"On China\" (2011) is correctly cited."
+              suggested_fix: "https://history.state.gov/milestones/1969-1976/rapprochement-china"
 
   - category: 11
     name: "Decorum & conduct of office"
@@ -700,7 +996,14 @@ categories:
             tier: 1
             claim: "First presidential resignation in US history; subsequently released tapes revealed routine profanity, ethnic slurs, and antisemitic remarks in private White House conversations."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-27
+              note: "Authoritative sources confirm Nixon was the first US president to resign (address Aug 8, 1974) and that released White House tapes (transcripts from 1974 through the Nixon Library's 2010 and Aug 2013 batches) revealed routine profanity, ethnic slurs, and antisemitic remarks."
+              suggested_fix: "https://www.nixonlibrary.gov/white-house-tapes"
       - id: "11.2"
         name: "Rhetoric & tone"
         good_score: 3
@@ -714,7 +1017,14 @@ categories:
             tier: 1
             claim: "Tape transcripts revealed Nixon's private rhetoric included routine profanity, ethnic and racial slurs, and directives for retaliation against political opponents — sharply at odds with public dignity."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Nixon White House tapes/transcripts (1971-73) are well-documented as containing routine profanity (\"[EXPLETIVE DELETED]\"), anti-Semitic/racial slurs, and recorded directives to weaponize the IRS against political enemies, contrasting his staid public image."
+              suggested_fix: "Deep link: https://www.nixonlibrary.gov/white-house-tapes (or Miller Center Presidential Recordings Program) for the specific declassified tape transcripts."
       - id: "11.3"
         name: "Respect for tradition & ceremony"
         good_score: 2
@@ -722,13 +1032,19 @@ categories:
         low_confidence: false
         notes: "Resigned in disgrace (first time). Pardoned a month later (Ford). Tradition-breaking pattern. Some ceremonial duties handled well."
         evidence:
-          - citation: "Ford pardon of Nixon, Proclamation 4311 (September 8, 1974)"
+          - citation: "Ford pardon of Nixon, Proclamation 4311 (September 8, 1974), https://www.presidency.ucsb.edu/documents/proclamation-4311-granting-pardon-richard-nixon"
             source_url: "https://www.fordlibrarymuseum.gov/"
             source_type: primary_document
             tier: 1
-            claim: "Nixon's resignation and subsequent Ford pardon broke a 185-year tradition of presidents either completing terms or leaving via impeachment trial."
+            claim: "Nixon's resignation and subsequent Ford pardon broke a 185-year tradition of presidents leaving office only by completing a term or dying in office."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed the broken tradition as presidents leaving office only by completing a term or dying in office (removing the inaccurate \"impeachment trial\" claim) and added the UCSB source URL to the citation."
       - id: "11.4"
         name: "Model behavior"
         good_score: 1
@@ -740,10 +1056,15 @@ categories:
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Carter campaign in 1976 ran explicitly against Nixon-era conduct; the 'never lie' standard became campaign template for subsequent decades."
+            claim: "Carter's 1976 campaign ran explicitly against Nixon-era conduct (the 'I will never lie to you' pledge); Watergate durably raised public expectations of presidential honesty and disclosure in the decades that followed."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-27
+              note: "Softened the 'campaign template for decades' overstatement; Carter 1976 anti-Nixon framing corroborated."
   - category: 12
     name: "Effect on populace"
     category_notes: "Watergate destroyed national morale. End-of-term approval ~24%. Silent Majority polarization. China opening boosted international standing temporarily."
@@ -761,21 +1082,34 @@ categories:
             tier: 1
             claim: "Nixon's approval fell from 67% peak (post-1972 election) to 24% at resignation; one of the largest declines in presidential approval history."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Gallup data (American Presidency Project) confirms 67% peak (Jan 26-29, 1973, post-1972 election) falling to 24% at resignation (Aug 2-5, 1974), a 43-point drop among the largest in presidential approval history."
+              suggested_fix: "https://www.presidency.ucsb.edu/statistics/data/richard-m-nixon-public-approval"
       - id: "12.2"
         name: "Social cohesion vs. division"
         good_score: 3
-        harm_score: 6
+        harm_score: 4
         low_confidence: false
         notes: "Silent Majority framing intentionally polarized. Anti-war movement vs. administration. Counterculture vs. traditional. Vietnam-era social fracture peaked under Nixon."
         evidence:
-          - citation: "Putnam, 'Bowling Alone' (2000); Skocpol, 'Diminished Democracy' (2003) — both trace social-capital decline to Nixon era"
+          - citation: "Putnam, 'Bowling Alone' (2000); Skocpol, 'Diminished Democracy' (2003)"
             source_url: "canonical"
             source_type: academic
             tier: 1
-            claim: "Social-capital and social-trust decline trace to Vietnam-Watergate era; standard sociological scholarship identifies Nixon presidency as inflection point."
+            claim: "Social-capital and social-trust decline is generally dated to the post-1965 era; major scholarship (Putnam, Skocpol) attributes it mainly to generational change, television, and structural shifts rather than identifying the Nixon presidency specifically as the inflection point."
             direction: harm
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Putnam/Skocpol attribute the social-trust decline to generational/TV/structural causes, not Nixon specifically. Score adjusted per review: harm 6->4 (Watergate real but contributory, not singular)."
       - id: "12.3"
         name: "International standing"
         good_score: 6
@@ -789,7 +1123,14 @@ categories:
             tier: 2
             claim: "US international standing mixed under Nixon: improved via China/USSR diplomacy, damaged via continued Vietnam involvement and US support for Chilean coup against Allende."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "All three prongs hold: 1972 China visit/Shanghai Communiqué and SALT/ABM détente improved standing; Cambodia/Laos bombing fueled international suspicion; US covertly destabilized Allende (\"make the economy scream\") and the Sept 11, 1973 coup date is correct, though declassified records show no direct US execution of the coup itself."
+              suggested_fix: "Citation cites \"Pew Global Attitudes,\" which is anachronistic (Pew began ~2001); rely on the contemporaneous USIA foreign-opinion surveys instead, e.g. https://nsarchive.gwu.edu/briefing-book/chile/2022-09-12/coup-chile-what-did-nixon-know-and-when-did-he-know-it"
       - id: "12.4"
         name: "Foreign public sentiment"
         good_score: 5
@@ -797,14 +1138,19 @@ categories:
         low_confidence: true
         notes: "Mixed. Strong with China and partial USSR. Hostile in Vietnam, Cambodia, Chile, post-Allende Chile. Watergate damaged credibility internationally."
         evidence:
-          - citation: "USIS surveys 1969-1974; international press coverage of Watergate"
+          - citation: "USIA foreign-opinion survey archive (Roper Center, https://ropercenter.cornell.edu/usia-digital-report-collection); documented regional/credibility impact in \"Nixon's Watergate Scandal and NATO\" (https://americandiplomacy.web.unc.edu/2020/11/nixons-watergate-scandal-and-nato/)"
             source_url: "canonical"
             source_type: historical_record
             tier: 2
-            claim: "Foreign public sentiment varied by region during Nixon years; Watergate broadly damaged US credibility as 'shining city on a hill.'"
+            claim: "Foreign public sentiment varied by region during Nixon years; Watergate broadly damaged US credibility abroad."
             direction: harm
-            verification_status: pending
-
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Removed the unverifiable editorial \"shining city on a hill\" framing and replaced the vague survey attribution with the documented USIA archive and NATO-impact sources from the fix."
   - category: 13
     name: "Immigration & demographics"
     category_notes: "Era-typical. Hart-Celler in effect throughout. No major reform or major enforcement action. Bracero ended just before Nixon."
@@ -822,7 +1168,14 @@ categories:
             tier: 2
             claim: "Hart-Celler-era immigration policy continued largely unchanged through Nixon years."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "The 1965 Hart-Celler legal-immigration framework (preference system, hemispheric caps) saw no major statutory amendments during 1969-1974; the next changes came in 1976/1978 after Nixon, so the claim is accurate (Nixon's actions were enforcement/border-focused, not legal-immigration reform)."
+              suggested_fix: "Replace bare homepage with a deep source, e.g. https://history.house.gov/Historical-Highlights/1951-2000/Immigration-and-Nationality-Act-of-1965/ or https://www.migrationpolicy.org/article/fifty-years-1965-immigration-and-nationality-act-continues-reshape-united-states"
       - id: "13.2"
         name: "Enforcement & treatment of unauthorized migrants"
         good_score: 4
@@ -830,13 +1183,19 @@ categories:
         low_confidence: true
         notes: "Era-typical enforcement. Bracero Program ended 1964 (Johnson era) shifted undocumented patterns. Border Patrol expansion modest."
         evidence:
-          - citation: "INS Border Patrol records 1969-1974"
+          - citation: "INS/DHS yearbook Border Patrol records 1969-1974 (https://www.dhs.gov/ohss/topics/immigration/yearbook)"
             source_url: "https://www.uscis.gov/"
             source_type: historical_record
             tier: 2
-            claim: "Border Patrol enforcement modest under Nixon, with post-Bracero undocumented migration patterns emerging."
+            claim: "Border Patrol enforcement escalated sharply under Nixon, with post-Bracero undocumented migration patterns emerging."
             direction: harm
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: human
+              checked_at: 2026-06-28
+              note: "Reframed \"modest\" enforcement to \"escalated sharply\" to reflect the sharp rise in Border Patrol apprehensions, and updated the citation to the official DHS yearbook source."
       - id: "13.3"
         name: "Refugee & asylum policy"
         good_score: 5
@@ -850,7 +1209,14 @@ categories:
             tier: 2
             claim: "Refugee admissions continued at Cold War levels; major Indochinese refugee crisis emerged just after Nixon resignation."
             direction: good
-            verification_status: pending
+            verification_status: not_applicable
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Cuban Freedom Flights/parole admissions continued under Nixon (until April 1973) and the Indochinese crisis erupted with Saigon's fall (April 1975), with ~130k refugees admitted under Ford via the May 1975 Indochina Migration and Refugee Assistance Act; one nuance is Cuban flows tapered in the early 1970s rather than holding flat."
+              suggested_fix: "https://en.wikipedia.org/wiki/Indochina_Migration_and_Refugee_Assistance_Act"
       - id: "13.4"
         name: "Demographic and labor-market impact"
         good_score: 4
@@ -864,7 +1230,14 @@ categories:
             tier: 1
             claim: "Foreign-born share of US population reached its 20th-century low (~4.7%) in 1970 census; subsequent rise begins post-Nixon."
             direction: good
-            verification_status: pending
+            verification_status: shallow
+            fact_check:
+              status: supported
+              confidence: high
+              checked_by: agent
+              checked_at: 2026-06-28
+              note: "Census Bureau historical data confirms 1970 foreign-born share was exactly 4.7% (9.6M), an all-time record low, rising to 6.2% (1980) and 7.9% (1990) post-Nixon, exactly as claimed."
+              suggested_fix: "https://www.census.gov/library/working-papers/1999/demo/POP-twps0029.html"
 
 calibration_summary:
   good_average_across_categories: 4.4
