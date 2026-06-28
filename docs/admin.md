@@ -47,7 +47,7 @@ pnpm db:studio
 # → open UserProfile, toggle isAdmin to true on the row you want
 
 # Option B — direct SQL
-psql "$DATABASE_URL_UNPOOLED" -c \
+psql "$POSTGRES_URL_NON_POOLING" -c \
   "UPDATE user_profiles SET \"isAdmin\" = true WHERE email = 'you@example.com';"
 ```
 

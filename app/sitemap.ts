@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/site-config";
 
 // Render the sitemap at request time, not at build time. It enumerates URLs
 // from the database, and the build machine cannot always reach the DB (paused
-// Supabase, direct-vs-pooled connection). Generating on demand means:
+// Neon compute, direct-vs-pooled connection). Generating on demand means:
 //   - the build never queries the DB, so a build-time outage can't fail it;
 //   - the sitemap is always fully populated, since the runtime server can
 //     reach the DB (unlike a build-time static export, which would bake in an

@@ -69,7 +69,7 @@ pnpm dev                   # http://localhost:3000
 
 Want dev login accounts too? `pnpm tsx db/seed-dev-users.ts` creates `max@`/`alex@`/`newbie@example.com`.
 
-See [SETUP.md](SETUP.md) for prerequisites, Supabase setup, and troubleshooting.
+See [SETUP.md](SETUP.md) for prerequisites, Neon setup, and troubleshooting.
 
 ### What's working today
 
@@ -93,12 +93,12 @@ pnpm verify-rankings       # python3 scripts/compute_rankings.py
 |---|---|
 | App | Next.js 15.5 (App Router) · React 19 · TypeScript strict |
 | Styling | Tailwind 3 · custom palette (cream/charcoal/rust — deliberately not partisan red/blue) |
-| Data | Prisma 5 → Postgres 16 (Docker locally; Supabase in prod via the Supavisor pooler) |
+| Data | Prisma 5 → Postgres 16 (Docker locally; Neon in prod via its transaction pooler) |
 | Auth | NextAuth.js v5 — Credentials (dev) / Google / Resend; JWT sessions |
 | Rate limit | Upstash Redis sliding window (in-process fallback in dev) |
 | Observability | Sentry (server + opt-in client), DSN gated by env, off by default |
 | Tests | Vitest (unit); Playwright (E2E) planned |
-| Hosting | Vercel · Supabase · Upstash · Sentry · Fly.io (workers, deferred) |
+| Hosting | Vercel · Neon · Upstash · Sentry · Fly.io (workers, deferred) |
 
 ## Repo layout
 
@@ -117,7 +117,7 @@ docs/             methodology/ (spec, era benchmarks, weight validation), admin.
 ## Documentation
 
 - **[SETUP.md](SETUP.md)** — local dev, troubleshooting, useful scripts.
-- **[DEPLOYMENT.md](DEPLOYMENT.md)** — production runbook (Vercel + Supabase + Upstash + Sentry): env vars, first-deploy sequence, verification, rollback.
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** — production runbook (Vercel + Neon + Upstash + Sentry): env vars, first-deploy sequence, verification, rollback.
 - **[docs/admin.md](docs/admin.md)** — operator guide for `/admin/*`: bootstrap, unlock flow, moderation.
 - **[docs/methodology/](docs/methodology)** — the canonical spec, era-anchored rubric, cross-president calibration, and the published-methodology defense for the nine weight vectors.
 - **[architecture-v1.md](architecture-v1.md)** — full architecture (planning-era doc; live stack per DEPLOYMENT.md).

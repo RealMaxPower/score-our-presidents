@@ -6,7 +6,7 @@ How to go from "open this folder in VS Code" to a running app at localhost:3000.
 
 - **Node 20 or higher** (`node --version`). Install via [nvm](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/).
 - **pnpm 9+** (`pnpm --version`). Install via `corepack enable && corepack prepare pnpm@9.10.0 --activate` or `npm install -g pnpm`.
-- **Docker** (for the local Postgres). Or use Supabase — see Option B below.
+- **Docker** (for the local Postgres). Or use Neon — see Option B below.
 - **Python 3.10+** (optional — only if you want to verify rankings via `scripts/compute_rankings.py`).
 
 ## Postgres options
@@ -24,12 +24,12 @@ docker compose up -d
 postgresql://postgres:postgres@localhost:5435/presidential_scoring
 ```
 
-### Option B — Supabase free tier (matches production)
+### Option B — Neon free tier (matches production)
 
-1. Sign up at [supabase.com](https://supabase.com) and create a project
-2. **Project Settings → Database → Connection string**:
-   - Pooled (Supavisor, port 6543) → `DATABASE_URL`. Append `?pgbouncer=true&connection_limit=1` if you'll also point a deployed app at it
-   - Direct (port 5432) → `DATABASE_URL_UNPOOLED`. Used by `prisma migrate deploy` and read by Prisma as `directUrl`
+1. Sign up at [neon.tech](https://neon.tech) and create a project
+2. From the Neon console → **Connect**:
+   - Pooled (host ends in `-pooler`) → `DATABASE_URL`. Append `?sslmode=require&pgbouncer=true&connect_timeout=15` if you'll also point a deployed app at it
+   - Direct (same host without `-pooler`) → `POSTGRES_URL_NON_POOLING`. Used by `prisma migrate deploy` and read by Prisma as `directUrl`
 
 ## First-time setup
 
@@ -39,7 +39,7 @@ pnpm install
 
 # 2. Configure env
 cp .env.example .env
-# Edit .env: set DATABASE_URL (and DATABASE_URL_UNPOOLED for Supabase).
+# Edit .env: set DATABASE_URL (and POSTGRES_URL_NON_POOLING for Neon).
 # Leave NEXTAUTH_SECRET as the placeholder for dev; lib/env.ts only enforces
 # a real secret at production server start (NEXT_PHASE=phase-production-server).
 

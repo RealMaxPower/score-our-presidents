@@ -2,7 +2,7 @@
 
 How to deploy Score Our Presidents (the Presidential Scoring Framework) to production.
 
-**Target stack:** Vercel (Next.js + Vercel Analytics) · Supabase (Postgres) · Upstash (Redis) · Sentry (errors) · Fly.io (workers — planned target, not yet built or deployed)
+**Target stack:** Vercel (Next.js + Vercel Analytics) · Neon (Postgres) · Upstash (Redis) · Sentry (errors) · Fly.io (workers — planned target, not yet built or deployed)
 
 **Audience:** Marshall Cahill + future contributors. Assumes you can clone the repo, have `pnpm` and `psql` locally, and have admin access to the accounts below.
 
@@ -31,7 +31,7 @@ Create these once. Free tiers are fine for prod test; paid tiers noted where the
 | Service | Tier for prod test | Why |
 |---|---|---|
 | [Vercel](https://vercel.com) | Hobby (free) | App hosting |
-| [Supabase](https://supabase.com) | Free | Postgres + connection pooler |
+| [Neon](https://neon.tech) | Free | Serverless Postgres + connection pooler |
 | [Upstash](https://upstash.com) | Free | Redis for rate limits |
 | [Resend](https://resend.com) | Free (100/day) | Magic-link email — only if using the Resend auth provider |
 | [Google Cloud Console](https://console.cloud.google.com) | Free | OAuth credentials — only if using Google sign-in |
@@ -46,17 +46,18 @@ You need at least one auth provider — Google OR Resend, both fine.
 
 Do these in any order. All are independent.
 
-### 2.1 Supabase
+### 2.1 Neon
 
-1. Create a new project. Region: pick the one closest to `iad1` (US East 1) since [vercel.json](vercel.json) pins the app to `iad1`. Mismatched regions add ~80ms per query.
-2. From **Project Settings → Database → Connection string**:
-   - **Connection pooling** (Transaction mode, port 6543) → save as `DATABASE_URL`. **Append `?pgbouncer=true&connection_limit=1`** to the end. This is mandatory for Vercel serverless — without it the pool exhausts under load.
-   - **Direct connection** (port 5432) → save as `DATABASE_URL_UNPOOLED`. Used by `prisma migrate deploy` and any future Fly.io workers.
-3. The database is empty. Migrations + seed run in [step 4.3](#43-run-migrations--seed).
+1. Create a new project. Region: pick **AWS US East (N. Virginia)** to match `iad1` since [vercel.json](vercel.json) pins the app to `iad1`. Mismatched regions add ~80ms per query.
+2. From the Neon console → **Connect** (the connection-string panel):
+   - **Pooled connection** (host ends in `-pooler`) → save as `DATABASE_URL`. **Append `?sslmode=require&pgbouncer=true&connect_timeout=15`.** `pgbouncer=true` is required for the transaction pooler; `connect_timeout=15` lets the first query wait out a scale-to-zero resume instead of throwing "Can't reach database server" (Prisma P1001 — see [lib/prisma.ts](lib/prisma.ts)).
+   - **Direct connection** (same host **without** `-pooler`) → save as `POSTGRES_URL_NON_POOLING`. Used by `prisma migrate deploy` and any future Fly.io workers; the transaction pooler can't run migrations.
+3. Neon **scales the compute to zero** when idle (default after 5 min). The first request after idle pays a one-time resume latency — expected, and absorbed by the connect timeout plus the retry in [lib/prisma.ts](lib/prisma.ts).
+4. The database is empty. Migrations + seed run in [step 4.3](#43-run-migrations--seed).
 
 ### 2.2 Upstash
 
-1. Create a new Redis database. Region: same as Supabase.
+1. Create a new Redis database. Region: same as Neon.
 2. **Eviction:** disable (rate-limit keys must not be evicted under memory pressure).
 3. From **REST API**:
    - `UPSTASH_REDIS_REST_URL`
@@ -119,8 +120,8 @@ In the import flow (or later under **Settings → Environment Variables**), set 
 
 | Variable | Value |
 |---|---|
-| `DATABASE_URL` | Supabase pooled URL + `?pgbouncer=true&connection_limit=1` |
-| `DATABASE_URL_UNPOOLED` | Supabase direct URL |
+| `DATABASE_URL` | Neon pooled URL (`-pooler` host) + `?sslmode=require&pgbouncer=true&connect_timeout=15` |
+| `POSTGRES_URL_NON_POOLING` | Neon direct URL (non-`-pooler` host) + `?sslmode=require` |
 | `NEXTAUTH_SECRET` | The 32+ char value from [step 2.6](#26-generate-nextauth_secret) |
 | `NEXTAUTH_URL` | `https://<your-vercel-prod-domain>` (update after [step 6](#6-custom-domain)) |
 | `NEXT_PUBLIC_SITE_URL` | Same as `NEXTAUTH_URL` |
@@ -149,7 +150,7 @@ The full validation rules live in [lib/env.ts](lib/env.ts). If you get an `Inval
 
 ### 3.3 Region
 
-[vercel.json](vercel.json) pins functions to `iad1` (US East 1). If your Supabase project is in a different region, change the `regions` array to match.
+[vercel.json](vercel.json) pins functions to `iad1` (US East 1). If your Neon project is in a different region, change the `regions` array to match.
 
 ---
 
@@ -171,12 +172,12 @@ The site loads, but most pages will 500. This is expected — the database has n
 
 ### 4.3 Run migrations + seed
 
-From your laptop, with the **direct** (unpooled) URL — Supabase's pooler doesn't support `prisma migrate`:
+From your laptop, with the **direct** (unpooled) URL — Neon's transaction pooler doesn't support `prisma migrate`:
 
 ```bash
-# One-off — populate Supabase with schema + reference data
-DATABASE_URL="<DATABASE_URL_UNPOOLED value>" pnpm prisma migrate deploy --schema=db/schema.prisma
-DATABASE_URL="<DATABASE_URL_UNPOOLED value>" pnpm db:seed
+# One-off — populate Neon with schema + reference data
+DATABASE_URL="<POSTGRES_URL_NON_POOLING value>" pnpm prisma migrate deploy --schema=db/schema.prisma
+DATABASE_URL="<POSTGRES_URL_NON_POOLING value>" pnpm db:seed
 ```
 
 Expected seed output:
@@ -218,7 +219,7 @@ Walk through these in order. If any fails, fix before pointing more traffic at t
 
 Two-step gate: NextAuth session **plus** the `ADMIN_TOKEN` unlock cookie. **For day-to-day operator use of the admin panel — bootstrapping the first admin, the unlock flow, user / score / audit-log moderation, and the audit-action catalog — see [`docs/admin.md`](docs/admin.md).** This section is the post-deploy smoke test.
 
-- Sign in as your admin account (the user with `is_admin = true` in the DB — set manually via Prisma Studio or psql against the Supabase direct URL after first sign-in)
+- Sign in as your admin account (the user with `is_admin = true` in the DB — set manually via Prisma Studio or psql against the Neon direct URL after first sign-in)
 - Visit `/admin` → expect a **307 redirect to `/admin/unlock`** (signed-in admin, not yet unlocked)
 - Paste the `ADMIN_TOKEN` value into the unlock form → land on the `/admin` dashboard. Cookie is `httpOnly`, `SameSite=Strict`, `path=/`, short-lived
 - Click "Lock" in the admin nav → next `/admin` access redirects to `/admin/unlock` again
@@ -267,10 +268,10 @@ Schema changes require running `prisma migrate deploy` against the direct URL. V
 pnpm db:migrate                                                 # creates migration file
 
 # Commit + push, then after merge to main:
-DATABASE_URL="<DATABASE_URL_UNPOOLED>" pnpm prisma migrate deploy --schema=db/schema.prisma
+DATABASE_URL="<POSTGRES_URL_NON_POOLING>" pnpm prisma migrate deploy --schema=db/schema.prisma
 ```
 
-If a migration is destructive, take a Supabase snapshot first (Project → Database → Backups).
+If a migration is destructive, create a Neon branch first (console → **Branches → New branch**) as an instant restore point.
 
 ### 7.2 Env var changes
 
@@ -287,7 +288,7 @@ The validator runs at server startup, not at edit time. A bad value won't be cau
 `pnpm db:seed` is idempotent (uses upserts keyed on `slug` / `number`). Running it again after editing a `scores/*.yaml` file picks up the changes:
 
 ```bash
-DATABASE_URL="<DATABASE_URL_UNPOOLED>" pnpm db:seed
+DATABASE_URL="<POSTGRES_URL_NON_POOLING>" pnpm db:seed
 ```
 
 User-submitted scores (`UserScore`, `Vote`, etc.) are untouched — only reference data is upserted.
@@ -295,7 +296,7 @@ User-submitted scores (`UserScore`, `Vote`, etc.) are untouched — only referen
 ### 7.4 Monitoring
 
 - **Errors:** Sentry → set up alerts on new issues + frequency thresholds
-- **DB:** Supabase → Project → **Database → Pooler** (watch active connections; should sit well below the limit)
+- **DB:** Neon → Project → **Monitoring** (watch active connections + compute usage; pooled connections should sit well below the limit)
 - **Rate limits:** Upstash → request volume + key count
 - **Page traffic:** Vercel → **Analytics** tab. Cookieless aggregate views via `@vercel/analytics`, wired in [app/layout.tsx](app/layout.tsx). Enable per-environment in **Project → Analytics**.
 - **Function performance:** Vercel → **Speed Insights** / function logs
@@ -313,11 +314,11 @@ Vercel keeps every deploy. **Deployments → pick an earlier successful deploy �
 ### 8.2 Database schema
 
 Prisma migrations are **not reversible**. To roll back:
-1. Take a Supabase snapshot of current state (in case the rollback itself misbehaves)
-2. Restore from a pre-migration Supabase backup, or
+1. Create a Neon branch of the current state (in case the rollback itself misbehaves)
+2. Restore via Neon's point-in-time restore — branch from a timestamp before the migration — or
 3. Hand-write a corrective migration that undoes the change
 
-**Always snapshot before destructive migrations.** PITR on Supabase Pro gives you 7 days of point-in-time recovery; free tier gives daily snapshots.
+**Always branch before destructive migrations.** Neon's point-in-time restore covers the project's history-retention window (24h on Free; longer on paid plans).
 
 ### 8.3 Env vars
 
@@ -339,7 +340,7 @@ Both workers from the README's "Outstanding before launch" list are **not built 
 Planned Fly.io shape (when built):
 - Two `fly.toml` apps in a new `workers/` directory: `psf-worker-aggregation` and `psf-worker-url-verify`
 - Both use the **regular Redis URL** (TCP, not the REST URL the app uses for `@upstash/ratelimit`). Upstash gives both protocols on the same instance.
-- Same Supabase direct URL for DB access. Aggregation can use a read-only role; URL-verify needs writes to `UrlVerificationLog`.
+- Same Neon direct URL for DB access. Aggregation can use a read-only role; URL-verify needs writes to `UrlVerificationLog`.
 - Same `SENTRY_DSN` so worker errors surface in the same project
 
 ### 9.2 Public launch gates
@@ -358,4 +359,4 @@ Pure additions, not blockers:
 - CSP nonces in place of `'unsafe-inline'` ([next.config.js:11-15](next.config.js#L11-L15) — requires middleware)
 - CI workflow (`.github/workflows/`) running `pnpm typecheck` + `pnpm test` on PRs
 - Playwright E2E tests
-- Supabase Pro for 7-day PITR backups
+- Longer Neon history retention for a wider point-in-time-restore window
