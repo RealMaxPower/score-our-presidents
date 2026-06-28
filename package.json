@@ -27,6 +27,8 @@
     "build": "next build",
     "start": "next start",
     "postinstall": "prisma generate --schema=db/schema.prisma",
+    "prepare": "git config core.hooksPath .githooks || true",
+    "secret-scan": "bash scripts/secret-scan.sh --all",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

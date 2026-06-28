@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Shared pre-commit hook. Enabled per-clone by `core.hooksPath=.githooks`, which
+# the package.json "prepare" script sets on `pnpm install`. Runs the secret /
+# credential / PII scan over staged changes and blocks the commit on a hit.
+exec "$(git rev-parse --show-toplevel)/scripts/secret-scan.sh" --cached
