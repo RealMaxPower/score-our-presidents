@@ -26,12 +26,24 @@ function isRetryableDbError(err: unknown): boolean {
   return false;
 }
 
-// Neon resume-from-scale-to-zero typically takes 1-5s, so the retry window must
-// comfortably exceed that or every attempt exhausts before the compute wakes.
-// 5 attempts with a 250ms base spans ~3.75s of back-off (250+500+1000+2000),
-// which covers a normal resume while staying well under Vercel's SSR timeout.
-const RETRY_ATTEMPTS = 5;
+// Neon resume-from-scale-to-zero usually completes in 1-5s, but a fully cold
+// branch can take longer, so the retry budget must cover the worst case while
+// staying under Vercel's ~10s SSR function timeout. 6 attempts with a 250ms
+// base and exponential back-off capped at 2s span up to ~5.75s before the final
+// attempt — enough headroom for a slow resume, with margin left for the query.
+const RETRY_ATTEMPTS = 6;
 const RETRY_BASE_DELAY_MS = 250;
+const RETRY_MAX_DELAY_MS = 2000;
+
+// A cold page render fires several queries concurrently (generateMetadata, plus
+// the page's own Promise.all waves). With a deterministic back-off they would
+// all retry in lockstep and hammer the resuming compute at the same instants;
+// "equal jitter" (half fixed, half random) staggers them so retries arrive
+// spread out as the branch comes back online.
+function backoffDelay(attempt: number): number {
+  const exp = Math.min(RETRY_BASE_DELAY_MS * 2 ** attempt, RETRY_MAX_DELAY_MS);
+  return exp / 2 + Math.random() * (exp / 2);
+}
 
 async function runWithRetry<T>(op: () => Promise<T>): Promise<T> {
   let lastErr: unknown;
@@ -41,9 +53,7 @@ async function runWithRetry<T>(op: () => Promise<T>): Promise<T> {
     } catch (err) {
       lastErr = err;
       if (attempt === RETRY_ATTEMPTS - 1 || !isRetryableDbError(err)) throw err;
-      await new Promise((resolve) =>
-        setTimeout(resolve, RETRY_BASE_DELAY_MS * 2 ** attempt)
-      );
+      await new Promise((resolve) => setTimeout(resolve, backoffDelay(attempt)));
     }
   }
   throw lastErr;

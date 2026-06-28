@@ -28,7 +28,7 @@ import {
 
 export async function generateStaticParams() {
   // Guard the DB call so a first-deploy state (migrations not yet applied,
-  // empty Supabase schema) doesn't crash the entire build. Returning an
+  // empty database schema) doesn't crash the entire build. Returning an
   // empty array means "no pre-rendered routes" — pages render dynamically
   // on first request and cache per the page's `revalidate` setting.
   try {

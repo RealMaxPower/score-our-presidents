@@ -5,23 +5,22 @@ import "server-only";
 
 import { z } from "zod";
 
-// Vercel-Supabase integration auto-provisions POSTGRES_PRISMA_URL (pooled,
-// with ?pgbouncer=true&connection_limit=1) and POSTGRES_URL_NON_POOLING
-// (direct) into the deployment env. Alias them to the canonical names our
-// code + Prisma schema expect, so the integration "just works" without
-// requiring the user to hand-copy values in the Vercel dashboard.
+// Vercel's Neon integration provisions the pooled URL as POSTGRES_PRISMA_URL
+// (with ?pgbouncer=true&connect_timeout=15) and the direct URL as
+// POSTGRES_URL_NON_POOLING. It usually also sets DATABASE_URL directly, but
+// older setups only set POSTGRES_PRISMA_URL — so alias it to DATABASE_URL (the
+// name our Prisma schema's `url` expects) when DATABASE_URL is unset, so the
+// integration "just works" without hand-copying values in the Vercel dashboard.
 //
-// Must run BEFORE zod parses process.env below. Idempotent: only aliases
-// when the canonical name is unset, so dev/local .env values win when
-// explicitly configured.
+// The direct URL needs no alias here: the Prisma schema reads
+// `directUrl = env("POSTGRES_URL_NON_POOLING")` and the Prisma CLI resolves
+// that straight from the environment (it never imports this module), while app
+// runtime never uses directUrl.
+//
+// Must run BEFORE zod parses process.env below. Idempotent: only aliases when
+// DATABASE_URL is unset, so dev/local .env values win when explicitly set.
 if (!process.env.DATABASE_URL && process.env.POSTGRES_PRISMA_URL) {
   process.env.DATABASE_URL = process.env.POSTGRES_PRISMA_URL;
-}
-if (
-  !process.env.DATABASE_URL_UNPOOLED &&
-  process.env.POSTGRES_URL_NON_POOLING
-) {
-  process.env.DATABASE_URL_UNPOOLED = process.env.POSTGRES_URL_NON_POOLING;
 }
 
 // Known placeholder values that have shipped in .env / .env.example over
@@ -45,7 +44,7 @@ const envSchema = z
       .refine((v) => v.startsWith("postgresql://") || v.startsWith("postgres://"), {
         message: "DATABASE_URL must be a postgres connection string",
       }),
-    DATABASE_URL_UNPOOLED: z.string().optional(),
+    POSTGRES_URL_NON_POOLING: z.string().optional(),
 
     NEXTAUTH_URL: z.string().url().optional(),
     NEXTAUTH_SECRET: z.string().optional(),

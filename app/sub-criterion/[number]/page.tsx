@@ -26,7 +26,7 @@ import {
 
 export async function generateStaticParams() {
   // Guard the DB call so a first-deploy state (migrations not yet applied,
-  // empty Supabase schema) doesn't crash the build. Empty array means
+  // empty database schema) doesn't crash the build. Empty array means
   // "no pre-rendered routes" — pages render dynamically on first request.
   try {
     const numbers = await getSubCriterionNumbers();

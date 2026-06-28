@@ -11,9 +11,11 @@ datasource db {
   provider  = "postgresql"
   // Pooled connection for app runtime (Neon pooler in prod).
   url       = env("DATABASE_URL")
-  // Direct (unpooled) connection for `prisma migrate deploy` and any
-  // operation prepared statements / introspection needs. Vercel's Neon
-  // integration provisions this as POSTGRES_URL_NON_POOLING.
+  // Direct (unpooled) connection — required by `prisma migrate deploy` and
+  // introspection, which the transaction pooler can't serve. Vercel's Neon
+  // integration provisions this as POSTGRES_URL_NON_POOLING; set the same name
+  // in local .env. The Prisma CLI reads it straight from the environment (it
+  // never imports lib/env.ts), so this name must match the real env var.
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
