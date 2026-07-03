@@ -3,13 +3,15 @@
 // Emits one record per evidence entry with everything an agent needs to verify
 // the claim against its source, plus leverage tags so we can run highest-stakes
 // items first. Read-only; writes a JSON work-list to the path given by --out
-// (default: scratchpad). Prints a priority breakdown.
+// (default: a private per-run temp dir, path echoed on stderr). Prints a
+// priority breakdown.
 //
 // Usage:
 //   pnpm tsx scripts/factcheck-build-worklist.ts --out /tmp/worklist.json
 //   pnpm tsx scripts/factcheck-build-worklist.ts --priority P0   # filter
 
 import * as fs from "fs";
+import * as os from "os";
 import * as path from "path";
 import * as yaml from "yaml";
 
@@ -118,7 +120,16 @@ function main() {
   const filter = readFlag("priority");
   if (filter) items = items.filter((i) => i.priority === filter);
 
-  const out = readFlag("out") ?? "/tmp/factcheck-worklist.json";
+  // Default to a freshly created, private temp dir rather than a fixed,
+  // world-predictable path in the shared temp root: a hardcoded /tmp name lets
+  // another local user pre-create or symlink it to hijack/tamper the write
+  // (CodeQL js/insecure-temporary-file). mkdtempSync yields a unique 0700 dir.
+  const out =
+    readFlag("out") ??
+    path.join(
+      fs.mkdtempSync(path.join(os.tmpdir(), "factcheck-")),
+      "worklist.json"
+    );
   fs.writeFileSync(out, JSON.stringify(items, null, 2));
 
   const by = (pred: (i: WorkItem) => boolean) => items.filter(pred).length;

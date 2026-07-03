@@ -6,6 +6,7 @@ import "server-only";
 
 import { PrismaClient, Prisma } from "@prisma/client";
 import { env } from "./env";
+import { normalizeDatabaseUrl } from "./db-url";
 
 // Neon (and serverless Postgres generally) scales idle connections to zero,
 // so the first query after a quiet period can miss the cold-start window and
@@ -65,6 +66,7 @@ async function runWithRetry<T>(op: () => Promise<T>): Promise<T> {
 function createPrismaClient() {
   return new PrismaClient({
     log: env.NODE_ENV === "development" ? ["query", "error"] : ["error"],
+    datasources: { db: { url: normalizeDatabaseUrl(env.DATABASE_URL) } },
   }).$extends({
     query: {
       $allOperations({ args, query }) {
