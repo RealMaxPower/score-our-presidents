@@ -30,7 +30,9 @@ export async function generateStaticParams() {
   // Guard the DB call so a first-deploy state (migrations not yet applied,
   // empty database schema) doesn't crash the entire build. Returning an
   // empty array means "no pre-rendered routes" — pages render dynamically
-  // on first request and cache per the page's `revalidate` setting.
+  // on request. This page is dynamic regardless: it reads the session cookie
+  // via currentUser() (bookmark/vote state), so it can't be ISR-cached and has
+  // no `revalidate`; every request runs the live query below.
   try {
     const slugs = await getPresidentSlugs();
     return slugs.map((slug) => ({ slug }));
