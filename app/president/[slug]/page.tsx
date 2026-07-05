@@ -16,7 +16,7 @@ import { BookmarkButton } from "@/components/bookmark-button";
 import { prisma } from "@/lib/prisma";
 import { currentUser, type SessionUser } from "@/lib/auth";
 import {
-  getVoteCounts,
+  getVoteCountsForTargets,
   emptyVoteCounts,
   type VoteCounts,
 } from "@/lib/votes";
@@ -114,13 +114,23 @@ export default async function PresidentPage(props: {
   const allSubIds = president.categories.flatMap((c) =>
     c.subCriteria.map((s) => s.id)
   );
-  const [presidentVotes, categoryVotes, subVotes, communityScores] =
-    await Promise.all([
-      getVoteCounts("president", presidentTargetIds, user?.id ?? null),
-      getVoteCounts("category", categoryTargetIds, user?.id ?? null),
-      getVoteCounts("sub_criterion", subTargetIds, user?.id ?? null),
-      getCommunityScoresForPresident(president.id, allSubIds),
-    ]);
+  // Batch all vote counts into one query pair (see getVoteCountsForTargets):
+  // three separate getVoteCounts calls here previously fanned out to six
+  // concurrent connections and exhausted the pool (P2024) under load/cold start.
+  const [votes, communityScores] = await Promise.all([
+    getVoteCountsForTargets(
+      {
+        president: presidentTargetIds,
+        category: categoryTargetIds,
+        sub_criterion: subTargetIds,
+      },
+      user?.id ?? null
+    ),
+    getCommunityScoresForPresident(president.id, allSubIds),
+  ]);
+  const presidentVotes = votes.president;
+  const categoryVotes = votes.category;
+  const subVotes = votes.sub_criterion;
 
   const totalColor =
     president.weightedTotalDefault >= 0 ? "text-good-700" : "text-rust-700";
