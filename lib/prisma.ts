@@ -17,7 +17,19 @@ import { normalizeDatabaseUrl } from "./db-url";
 // database server") or one of the P100x connection request codes. All of these
 // fail *before* the query reaches the server, so retrying is safe even for
 // writes — the operation never executed.
-const RETRYABLE_DB_CODES = new Set(["P1001", "P1002", "P1008", "P1017"]);
+//
+// P2024 ("Timed out fetching a new connection from the pool") is included as a
+// backstop: it also fires before the query executes (no connection was ever
+// acquired), and it's transient — a busy connection frees up, or a cold one
+// finishes establishing. lib/db-url.ts and the /president/[slug] query batching
+// are the real fixes; this just absorbs a residual spike instead of 500ing.
+const RETRYABLE_DB_CODES = new Set([
+  "P1001",
+  "P1002",
+  "P1008",
+  "P1017",
+  "P2024",
+]);
 
 function isRetryableDbError(err: unknown): boolean {
   if (err instanceof Prisma.PrismaClientInitializationError) return true;
