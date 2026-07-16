@@ -5,5 +5,11 @@
     "app/api/**/route.ts": {
       "maxDuration": 10
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/kv-heartbeat",
+      "schedule": "0 6 * * *"
+    }
+  ]
 }

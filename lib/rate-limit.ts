@@ -73,6 +73,19 @@ function getRedis(): Redis | null {
   return redis;
 }
 
+// Liveness check for the rate-limiter backend. Returns "ok" on PONG,
+// "not-configured" when Upstash env is absent (dev/in-memory mode), or
+// throws if Upstash is configured but unreachable. Used by the KV heartbeat
+// cron to keep the DB from being archived for inactivity.
+export async function pingRateLimitBackend(): Promise<
+  "ok" | "not-configured"
+> {
+  const r = getRedis();
+  if (!r) return "not-configured";
+  await r.ping();
+  return "ok";
+}
+
 function getUpstashLimiter(config: RateLimitConfig): Ratelimit | null {
   const r = getRedis();
   if (!r) return null;

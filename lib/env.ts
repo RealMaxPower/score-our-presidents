@@ -68,6 +68,11 @@ const envSchema = z
     UPSTASH_REDIS_REST_URL: z.string().optional(),
     UPSTASH_REDIS_REST_TOKEN: z.string().optional(),
 
+    // Shared secret Vercel Cron sends as `Authorization: Bearer <secret>`.
+    // When set, /api/cron/kv-heartbeat rejects unauthenticated callers.
+    // Generate via `openssl rand -base64 32`. Vercel-managed env only.
+    CRON_SECRET: z.string().optional(),
+
     SENTRY_DSN: z.string().optional(),
     NEXT_PUBLIC_SENTRY_DSN: z.string().optional(),
 
