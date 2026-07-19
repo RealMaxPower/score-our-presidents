@@ -64,12 +64,28 @@ export const AUTH_PER_HOUR: RateLimitConfig = {
 let redis: Redis | null = null;
 const limiterCache = new Map<string, Ratelimit>();
 
+// Upstash REST credentials reach us under two different naming schemes:
+//   - UPSTASH_REDIS_REST_URL / _TOKEN — manual setup; what @upstash/redis's
+//     fromEnv() and our .env.example use.
+//   - KV_REST_API_URL / _TOKEN — what the Upstash *Vercel Marketplace*
+//     integration (and legacy Vercel KV) inject automatically.
+// Vercel's integration sets only the KV_* names, so reading just UPSTASH_*
+// yields no client in production — silently disabling BOTH the rate limiter
+// and the keepalive cron (returns 200, pings nothing). Resolve from either.
+export function resolveRedisCreds(
+  env: Record<string, string | undefined> = process.env
+): { url: string; token: string } | null {
+  const url = env.UPSTASH_REDIS_REST_URL ?? env.KV_REST_API_URL;
+  const token = env.UPSTASH_REDIS_REST_TOKEN ?? env.KV_REST_API_TOKEN;
+  if (!url || !token) return null;
+  return { url, token };
+}
+
 function getRedis(): Redis | null {
   if (redis) return redis;
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
-  redis = new Redis({ url, token });
+  const creds = resolveRedisCreds();
+  if (!creds) return null;
+  redis = new Redis(creds);
   return redis;
 }
 
