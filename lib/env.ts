@@ -68,6 +68,12 @@ const envSchema = z
     UPSTASH_REDIS_REST_URL: z.string().optional(),
     UPSTASH_REDIS_REST_TOKEN: z.string().optional(),
 
+    // Alternate names the Upstash Vercel Marketplace integration injects for
+    // the SAME credentials. lib/rate-limit.ts resolveRedisCreds() falls back
+    // to these when the UPSTASH_* names are absent (the usual case on Vercel).
+    KV_REST_API_URL: z.string().optional(),
+    KV_REST_API_TOKEN: z.string().optional(),
+
     // Shared secret Vercel Cron sends as `Authorization: Bearer <secret>`.
     // When set, /api/cron/kv-heartbeat rejects unauthenticated callers.
     // Generate via `openssl rand -base64 32`. Vercel-managed env only.
@@ -138,13 +144,18 @@ const envSchema = z
     // Upstash is required in production. Without it `lib/rate-limit.ts`
     // falls back to a per-process in-memory Map — on Vercel each cold
     // invocation may get a fresh process, so limits effectively don't
-    // enforce. Both REST URL and token must be set.
-    if (!env.UPSTASH_REDIS_REST_URL || !env.UPSTASH_REDIS_REST_TOKEN) {
+    // enforce. Accept EITHER naming scheme (manual UPSTASH_* or the Vercel
+    // Marketplace KV_* names), matching resolveRedisCreds() in rate-limit.ts.
+    const hasRedisUrl =
+      env.UPSTASH_REDIS_REST_URL || env.KV_REST_API_URL;
+    const hasRedisToken =
+      env.UPSTASH_REDIS_REST_TOKEN || env.KV_REST_API_TOKEN;
+    if (!hasRedisUrl || !hasRedisToken) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ["UPSTASH_REDIS_REST_URL"],
         message:
-          "UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN are required in production. Without Upstash, rate limits fall back to a per-process in-memory map and don't enforce reliably on serverless.",
+          "Upstash REST credentials are required in production — set UPSTASH_REDIS_REST_URL/_TOKEN, or the KV_REST_API_URL/_TOKEN pair the Vercel Marketplace integration injects. Without them, rate limits fall back to a per-process in-memory map and don't enforce reliably on serverless.",
       });
     }
 

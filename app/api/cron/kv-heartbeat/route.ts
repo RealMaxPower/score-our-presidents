@@ -27,9 +27,24 @@ export async function GET(request: Request) {
 
   try {
     const status = await pingRateLimitBackend();
+
+    // A production cron that can't reach Redis must NOT report success — a
+    // green 200 here is exactly what masked the rate limiter being disabled.
+    // If CRON_SECRET is set, this env expects Redis, so fail loud (503).
+    // Without it (local/preview), a skip is fine.
+    if (status === "not-configured") {
+      if (process.env.CRON_SECRET) {
+        return NextResponse.json(
+          { ok: false, error: "REDIS_NOT_CONFIGURED" },
+          { status: 503 }
+        );
+      }
+      return NextResponse.json({ ok: true, skipped: "upstash_not_configured" });
+    }
+
     return NextResponse.json({
       ok: true,
-      status, // "ok" (Upstash reached) | "not-configured" (in-memory mode)
+      status, // "ok" — Upstash reached and PINGed
       pingedAt: new Date().toISOString(),
     });
   } catch (err) {
