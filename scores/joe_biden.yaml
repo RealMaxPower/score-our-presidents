@@ -1144,3 +1144,8 @@ calibration_summary:
   insufficient_time_elapsed: true
   cat_10_dropped: true
   pattern_notes: "Biden is the 'restoration with significant constraints' anchor. Strong domestic legislation (IRA, ARP, Infrastructure, CHIPS, Respect for Marriage), restoration of institutional norms, Ukraine coalition leadership. Constraints: Afghanistan withdrawal, Israel-Hamas, inflation, cognitive decline late-term, Hunter Biden pardon. Lens divergence: Progressive ranks high (climate, LGBTQ, labor, civil rights restoration); Internationalist high (NATO, Ukraine); Conservative low (immigration, spending, climate spending); Realist mixed (Ukraine good, Afghanistan execution bad); Communitarian moderate. Cat 10 dropped per v1.2 §9.4."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: corrected
+    note: "Progressive (+2.09) is his best score, carried by Cat 6 at +5.2 under an 11% weight — but his rank drops from 9th to 10th, because LBJ gains more under the same lens. Internationalist (+1.98) is within 0.07 of Default (+1.91), so 'high' overstates it. Conservative (+1.84) is low but not his lowest: Populist (+1.51) and Realist (+1.64) are, and neither was mentioned — Populist puts 13% on Cat 1 (+1.5, inflation-suppressed) and 11% on Cat 12 (+0.2), Realist 21% on Cat 2 (+0.2, Ukraine offset by Afghanistan and Gaza). Score spread 0.57, 12th of 16. Note Cat 10 is dropped, which removes one of the two categories where lenses differ most (3%–13%) and further flattens his spread."

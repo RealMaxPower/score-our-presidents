@@ -50,11 +50,11 @@ Each lens re-weights the *identical* per-president evidence. Switch lenses on an
 - **§4.6 multi-attribution cap** limits cross-category attribution to ≤2 sub-criteria per event (handles Watergate, January 6, Iran-Contra, Japanese internment cleanly).
 - **Category 10 (long-tail effects) dropped** for in-office and ≤5-years-post-term presidents (Trump T2, Biden), since the verdict isn't in yet.
 
-The scores live in [`scores/*.yaml`](scores) — one human-readable file per president, with every sub-criterion judgment and its sources. Full methodology: [`docs/methodology/spec-v1.2-redlined.md`](docs/methodology).
+The scores live in [`scores/*.yaml`](scores) — one human-readable file per president, with every sub-criterion judgment and its sources. Full methodology: [`docs/methodology/spec-v1.2-redlined.md`](docs/methodology/spec-v1.2-redlined.md).
 
 [![A president scorecard — 13 categories, each with its good/harm net, expandable to the sub-criteria and evidence](docs/screenshots/president-scorecard.png)](https://www.scoreourpresidents.org/president/franklin_d_roosevelt)
 
-*Every scorecard breaks down to 13 categories and 56 sub-criteria — each number traces to cited evidence you can expand.*
+*Every scorecard breaks down to the 13 categories and up to 56 sub-criteria — each number traces to cited evidence you can expand. Presidents score 52–56 of them: era-inapplicable criteria (LGBTQ+ rights before Stonewall, climate posture before it was a policy question) are marked not-scored rather than scored zero, and Category 10 is dropped for Biden and Trump T2.*
 
 ## Quickstart
 
@@ -84,8 +84,14 @@ See [SETUP.md](SETUP.md) for prerequisites, Neon setup, and troubleshooting.
 The rankings aren't a black box — recompute them yourself from the YAML and weight vectors:
 
 ```bash
-pnpm verify-rankings       # python3 scripts/compute_rankings.py
+pnpm verify-rankings           # python3 scripts/compute_rankings.py — all 16 presidents × 9 lenses
+python3 scripts/lens_audit.py  # what each lens actually does to each president, and how much
 ```
+
+The second one exists because reweighting moves less than you might expect: eight of the nine
+orderings correlate with the default at ρ ≥ 0.93, and three presidents hold the same rank under every
+lens. [`docs/methodology/lens-accuracy-audit-v1.3.md`](docs/methodology/lens-accuracy-audit-v1.3.md)
+reports the per-president figures and why.
 
 ## Stack
 
@@ -110,8 +116,12 @@ lib/              lens-presets.ts (the 9 weight vectors), scoring, auth, env,
                   prisma, rate-limit — env/auth/prisma marked server-only
 db/               Prisma schema, migrations, seed scripts, outlier detection
 scores/           16 YAML files — one per president, scores + evidence + sources
-scripts/          compute_rankings.py (reproducibility)
-docs/             methodology/ (spec, era benchmarks, weight validation), admin.md
+scripts/          compute_rankings.py + lens_audit.py (reproducibility), evidence
+                  verification (verify-urls, fact-check worklist/writeback),
+                  screenshot + GIF capture, secret-scan
+docs/             methodology/ (spec, era benchmarks, weight validation,
+                  cross-president calibration, lens accuracy audit),
+                  admin.md, verification-status.md, screenshots/
 ```
 
 ## Documentation

@@ -1268,5 +1268,29 @@ reviewer_notes: |
   - Populist: MIXED-HIGH (tax cuts + Reagan Democrats appeal vs. PATCO firing)
   - Internationalist: MIXED (Cold War end good, Central American civil wars bad)
 
-  If lens variance for Reagan is not the largest of any anchor, the framework's dual-axis design
-  is not producing the value-pluralism signal that the project's primary insight depends on.
+  CALIBRATION TEST (restated 2026-08-15 — directional form).
+  Reagan passes as a lens anchor if the *ordering* of his lens totals matches the value conflict the
+  scoring pattern encodes: Conservative must be his highest-scoring lens and Progressive his lowest.
+  That is the substantive claim — that Cold War endgame and restored morale pull against the
+  HIV/AIDS response, inequality and environmental rollback, so which lens a reader holds decides
+  whether he nets positive. It does not require the pull to be large.
+  Result: PASSES. Conservative +0.02 (his only positive total), Progressive −1.04 (his lowest).
+
+  PRIOR FORMULATION (superlative form — retired 2026-08-15 after failing):
+  "If lens variance for Reagan is not the largest of any anchor, the framework's dual-axis design
+  is not producing the value-pluralism signal that the project's primary insight depends on."
+  Retired because it is zero-sum — only one of the 16 presidents can hold the largest variance, so
+  the condition is decided by the rest of the score set rather than by anything about this anchor.
+  Nixon holds it at 2.37. Reagan's 1.06 is 7th of 16, just above the set median of ~1.03.
+
+  RESULT UNDER THE PRIOR FORMULATION (v1.3 weights, checked 2026-08-15 — FAILED).
+  Reagan's cross-lens score spread is 1.06, 7th of 16; his rank spread is 1 (13th under Default,
+  Progressive, Populist and Internationalist; 12th under the other five) — tied for the smallest in
+  the set. The largest spreads belong to Nixon (2.37) and LBJ (2.35), not Reagan.
+  Of the eight expectations above, Progressive LOW holds (−1.04, his worst lens) and Conservative
+  HIGH holds only in sign (+0.02, his single positive total, worth one rank). Realist (−0.14) and
+  Populist (−0.26) land mid-pack rather than high: the Conservative and Populist vectors each put
+  13% on Cat 1, and Reagan's Cat 1 net of −2.2 cancels the Cold War (Cat 2 +2.8) and morale
+  (Cat 12 +4.0) strength those lenses are meant to reward. Those two expectations are withdrawn.
+  See docs/methodology/lens-accuracy-audit-v1.3.md §4 for why the single good/harm valence caps
+  achievable divergence, and §5 for the options considered before restating.

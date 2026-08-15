@@ -1226,3 +1226,10 @@ reviewer_notes: |
   calibration test: the dual-axis scoring should show high good AND high harm without collapsing to a
   midpoint. If a lens (e.g., Libertarian on 4.3, or Progressive on 13.3) significantly reweights this
   pattern, the framework is working as designed.
+
+  CALIBRATION TEST RESULT (v1.3 weights, checked 2026-08-15 — passed). Libertarian reweights the
+  pattern as predicted: +2.06 against a Default of +3.53, dropping him from 1st to 6th, the largest
+  single-lens rank fall from 1st in the set (19% on Cat 4, net −2.2, plus 3% rather than 7% on
+  Cat 10, net +5.0). Progressive also costs him the top spot (+2.89, 2nd), on 12% Cat 13 against a
+  net of −3.2. He holds 1st under Default, Conservative, Communitarian, Realist, Populist and
+  Internationalist. Score spread 1.62, 3rd of 16.

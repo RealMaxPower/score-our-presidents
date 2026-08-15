@@ -1187,3 +1187,8 @@ calibration_summary:
   harm_average_across_categories: 5.9
   net_average_across_categories: -2.5
   pattern_notes: "GW Bush is the principal post-2000 high-harm anchor. Iraq War, surveillance state, torture, Great Recession dominate. PEPFAR is the major good outlier. Across most lenses GW Bush should rank near the bottom of all 16 presidents. Limited lens divergence: Realist may rank lower than Conservative (Iraq strategic failure dominant); Libertarian and Progressive both rank low (surveillance + Iraq + civil liberties failures); PEPFAR may lift slightly in Internationalist."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: corrected
+    note: "Near-bottom across lenses confirmed — rank 14 under all nine, score spread 1.25. Realist (−3.52) below Conservative (−2.82) confirmed: Realist's 21% on Cat 2 (−5.0) and 13% on Cat 10 (−5.2) make Iraq dominant. Libertarian low confirmed (−3.28, his worst, on 19% Cat 4 against −6.8). Two claims do not hold. Progressive (−2.28) is his second-best lens, not low: it puts only 7% on Cat 4 and 3% on Cat 10, and its heaviest weights (Cat 3 and Cat 5 at 14%) land on nets of 0.0. And Internationalist (−2.99) is below Default (−2.86), so PEPFAR produces no lift — it is one sub-criterion inside Cat 5, whose net is 0.0, while the lens's 13% on Cat 2 carries Iraq."

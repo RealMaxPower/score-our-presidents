@@ -1265,3 +1265,13 @@ reviewer_notes: |
   (China + SALT I weighted heavily), Conservative may rank moderate (mixed), Progressive moderate
   (environmental + civil rights vs. Cambodia + civil liberties), Classical Liberal and Libertarian
   should rank very low (institutional integrity + civil liberties failures dominate).
+
+  CALIBRATION TEST RESULT (v1.3 weights, checked 2026-08-15 — passed on variance, one claim
+  corrected). Nixon's cross-lens score spread is 2.37, the largest of the 16, as required.
+  Classical Liberal (−1.03) and Libertarian (−1.43) are his two lowest lenses, as expected.
+  The Realist claim is wrong: Realist gives him −0.23, marginally below his Default −0.29 in score
+  but rank 13 against a Default rank of 12. The China opening does not carry the lens because
+  Realist's 21% on Cat 2 applies to a category net of only +1.8 (Cambodia and the secret bombing
+  offset China and SALT I within the same category), while its 15% on Cat 7 applies to −2.8.
+  Progressive is in fact his best lens (+0.94, his only clearly positive total), carried by
+  Cat 6 at +6.8 (EPA, ESA, clean-air/water) at an 11% weight — stronger than the "moderate" above.

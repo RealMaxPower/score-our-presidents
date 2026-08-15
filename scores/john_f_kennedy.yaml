@@ -1232,3 +1232,9 @@ calibration_summary:
   harm_average_across_categories: 2.7
   net_average_across_categories: 2.9
   partial_term_caveat: "2.8-year term; Cat 10 sub-criteria 10.3 and 10.4 tagged low_confidence per v1.1 §9.4."
+  pattern_notes: "Kennedy is a 'compressed-term moderate-high' anchor: 2.8 years produce a narrow score band (most sub-criteria 4-7 good, 2-4 harm) with no era-defining anchor in either direction — the Cuban Missile Crisis good and the Bay of Pigs / early-Vietnam harms sit inside the same categories and partly cancel. Lens divergence expected to be minimal, and the file previously recorded no lens claim; this is the addition."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: added
+    note: "Confirmed lens-invariant: score spread 0.51, 15th of 16, and rank spread 2 (2nd–4th). Communitarian (+3.20) and Conservative (+3.14) rank him highest, Libertarian (+2.69) lowest — the only category net far enough from his mean to matter is Cat 11 at +6.2, which Conservative weights at 7% and Libertarian at 1%. Worth flagging separately from the lens question: a Default rank of 3rd sits above where C-SPAN/Siena place Kennedy (typically 6th-10th), which is a scoring-calibration question for cross-president-rankings.md, not a lens defect."

@@ -1233,3 +1233,12 @@ reviewer_notes: |
   tests whether the framework can capture different *patterns* of presidency, not just different
   net scores. Eisenhower should land mid-to-high across most lenses without dramatic divergence,
   in contrast to the high-divergence Reagan anchor.
+
+  CALIBRATION TEST RESULT (v1.3 weights, checked 2026-08-15 — passed, with the Reagan contrast
+  withdrawn). Eisenhower lands between 3rd and 8th under the nine lenses with a score spread of
+  0.56, 13th of 16 — mid-to-high and low-divergence, as expected. Populist ranks him highest (3rd,
+  +2.60) and Progressive lowest (8th, +2.30, on Cat 3 at −1.2 under a 14% weight).
+  The contrast with Reagan no longer holds and is withdrawn: Reagan's rank spread is 1 against
+  Eisenhower's 5, and Reagan's score spread of 1.06 is not the largest in the set either. The
+  low-variance-moderate-high pattern is confirmed on its own terms, not by comparison — see
+  docs/methodology/lens-accuracy-audit-v1.3.md.
