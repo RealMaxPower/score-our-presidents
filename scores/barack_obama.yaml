@@ -1196,3 +1196,8 @@ calibration_summary:
   net_average_across_categories: 2.2
   tentative_long_tail: true
   pattern_notes: "Obama is a 'strong personal-conduct + mixed substantive' anchor. ACA, LGBTQ rights advances, Paris Agreement, JCPOA define positives. Drone program, surveillance state continuation, deportations, polarization define harms. Lens divergence: Progressive ranks high (ACA, LGBTQ, climate, racial-equity firsts); Libertarian/Classical Liberal mixed (surveillance state, drone program negatives); Conservative low (ACA, executive action); Realist mixed (good on diplomacy, weak on Russia/China)."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: corrected
+    note: "Directionally right, magnitudes overstated. Progressive (+2.33) is his second-best score but leaves his rank at 7, unchanged from Default — Communitarian (+2.50) is his actual best. Conservative (+2.15) is only 0.11 below Default (+2.26) and costs one rank, so 'low' overstates it. The genuinely low lenses are Libertarian (+1.30, worst) and Classical Liberal (+1.58), which is stronger than 'mixed': both concentrate on Cat 4 (net −1.5, drone program and surveillance continuation) at 19% and 15%, and on Cat 9 (net −1.0). Score spread 1.20, rank spread 2 (7–9)."

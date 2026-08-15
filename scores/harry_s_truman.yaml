@@ -1230,3 +1230,11 @@ reviewer_notes: |
   test: Realist will weight 2.x heavily (lifting Truman); Libertarian will weight 4.x heavily
   (lowering); Progressive will weight 3.1 + 5.3 heavily (mixed). If all three produce different
   rankings of Truman relative to FDR/Eisenhower, the framework is working.
+
+  CALIBRATION TEST RESULT (v1.3 weights, checked 2026-08-15 — passed, with one caveat).
+  All three lenses move as predicted: Realist lifts him to 7th (+2.36, from 8th under Default),
+  Libertarian drops him to 10th (+1.18, his worst by 0.32, on 19% Cat 4 against a net of −3.8),
+  Progressive is mixed at 9th (+2.21). Score spread 1.20, 5th of 16.
+  Caveat on the stated pass condition: the *gap* to FDR and Eisenhower varies substantially by lens,
+  but the *ordering* does not — Truman sits below both under all nine vectors. The three lenses
+  produce different distances, not different rankings, so the test passes only on the weaker reading.

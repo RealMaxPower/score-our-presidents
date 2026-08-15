@@ -1189,3 +1189,8 @@ calibration_summary:
   harm_average_across_categories: 3.0
   net_average_across_categories: 3.0
   pattern_notes: "Bush 41 is the 'foreign-policy excellence with domestic limits' anchor. Era-defining strength in Cold War endgame and Gulf War; ADA 1990 and CAA Amendments 1990 strong domestic record. Iran-Contra pardons (1992) principal harm. Should rank high on Realist and Internationalist lenses, moderate on others."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: passed
+    note: "Both predictions hold. Realist lifts him three ranks, 6th to 3rd (+2.79), on 21% Cat 2 against a net of +5.0 — his strongest category and the largest Cat 2 net of any post-1945 president in the set. Internationalist gives his highest score (+2.84, 5th). Moderate elsewhere as expected, ranks 5–6, except Libertarian (+2.10, his worst) where 19% on Cat 4 at +0.8 underuses his foreign-policy record. Score spread 0.75, 9th of 16."

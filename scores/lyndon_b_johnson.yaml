@@ -1174,3 +1174,8 @@ calibration_summary:
   high_harm_sub_criteria_count: 5   # 2.1 Vietnam; 2.4 civilian impact; 4.4 transparency; 10.4 geopolitical; 12.3/12.4 international
   era_contexts_invoked: ["E2.3", "E3.2", "E4.2", "E6.1", "E6.2", "E9.1", "E11.1", "E13"]
   pattern_notes: "LBJ is the framework's other 'high variance both directions' test alongside Nixon. Civil rights and welfare-state legacy among highest of any president; Vietnam among most damaging. Lens divergence should be substantial: Progressive ranks high (3.1, 5.1-5.3, 13.1 dominant); Realist ranks low (Vietnam dominant); Conservative mixed (welfare expansion negative, civil rights legacy contested)."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: passed
+    note: "The strongest lens case in the set. Progressive lifts him five ranks, 11th to 6th (+2.40 against Default +0.91), on Cat 5 at +8.5 and Cat 3 at +3.6 under 14% weights each. Realist is his worst lens at +0.06, effectively zeroing him out — 21% on Cat 2 at −5.0 (Vietnam) plus 15% on Cat 7 at −0.8. Conservative (+0.75) is mixed as expected. Score spread 2.35, second-largest of 16 behind Nixon; only LBJ and Nixon show the divergence the framework's value-pluralism claim depends on."

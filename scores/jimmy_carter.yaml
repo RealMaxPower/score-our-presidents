@@ -1189,3 +1189,8 @@ calibration_summary:
   harm_average_across_categories: 2.8
   net_average_across_categories: 3.2
   pattern_notes: "Carter is the 'high-integrity low-effectiveness' anchor. Strong institutional reform, environmental, ethics records balanced against stagflation and Iran failures. Lens divergence: Progressive ranks high (3.4, 6.3, civil rights); Communitarian high (ethics); Classical Liberal/Libertarian high (institutional restraint); Realist low (Iran failure); Conservative low (perceived weakness)."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: corrected
+    note: "The three 'high' lenses land exactly: Libertarian (+3.35), Classical Liberal (+3.33) and Progressive (+3.15) each rank him 1st, up from 2nd under Default — Cat 4 at +5.2 and Cat 8 at +5.4 carry the first two, Cat 6 at +5.5 and Cat 3 at +4.2 the third. Two claims need softening and one addition. Communitarian (+3.12) is middling, 4th of his nine lens totals, not 'high' — the ethics record sits in Cat 8, which that vector weights at only 9%. Conservative (+2.93) costs him one rank, not a large drop. The unmentioned outlier is Populist (+2.35), his worst lens by 0.41 and a five-rank fall to 7th: 13% on Cat 1 (−0.2, stagflation) and 11% on Cat 12 (+0.2, malaise) is the sharpest single-lens penalty any president in the set receives. Score spread 1.00; rank spread 6, the largest in the set."

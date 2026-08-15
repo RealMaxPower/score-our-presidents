@@ -1193,3 +1193,15 @@ calibration_summary:
   insufficient_time_elapsed: true
   cat_10_dropped: true
   pattern_notes: "Trump T2 is the framework's other high-harm contemporary anchor alongside T1. Many sub-criteria carry low_confidence given short observation window. Pattern continues T1 era-defining harms with intensification: 4.3 executive restraint (court defiance, Schedule F), 9.4 polarization, 11.x decorum, 13.x immigration enforcement. Lens divergence expected similar to T1: Conservative and Populist relatively higher (tariffs, immigration enforcement weighted positively); Progressive, Libertarian, Classical Liberal, Internationalist lower (civil rights, civil liberties, alliance management failures dominant). Cat 10 dropped entirely per v1.2 §9.4."
+  anchor_role:
+    restated_at: 2026-08-15
+    role: uniform_harm
+    prior_role: lens_divergence_similar_to_t1
+    test: "Trump T2 passes as a uniform-harm anchor if he holds rank 15 or 16 under all nine lens vectors and his cross-lens score spread stays below 1.0. Result: PASSES — rank 16 under all nine, spread 0.74."
+    rationale: "Restated for the same reason as T1, whose role this file inherited: all 12 of T2's scored category nets are negative, from −2.0 (Cat 1) to −7.2 (Cat 3 and Cat 13), so no non-negative weight vector can generate large divergence. Cat 10 being dropped per v1.2 §9.4 removes one of the two categories the lens vectors spread most widely on (3%–13%), narrowing the achievable range further."
+    note: "Restates the calibration expectation only; no scores changed and computed totals are unaffected."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: partial
+    note: "Conservative (−5.07) is indeed his second-best lens, above Default (−5.22). Populist is not: at −5.26 it sits below Default, for the same reason as T1 — the Populist vector's 14% on Cat 13 and 11% on Cat 12 multiply nets of −7.2 and −6.8. Libertarian (−5.35), Classical Liberal (−5.33) and Internationalist (−5.35) are lower as expected, but Progressive (−5.25) is within 0.03 of Default rather than distinctly lower. Realist (−4.73) is his best lens by 0.34 and was unmentioned — Cat 2 at 21% on a net of −3.5 is milder than the Cat 3/4/11/13 nets the other lenses concentrate on. Rank is 16 under all nine lenses; score spread 0.74, 10th of 16."

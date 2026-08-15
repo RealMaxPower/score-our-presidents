@@ -1186,3 +1186,8 @@ calibration_summary:
   harm_average_across_categories: 3.9
   net_average_across_categories: 1.6
   pattern_notes: "Clinton is a 'strong economic record with personal-conduct catastrophe' anchor. Era-defining fiscal record and economic growth balanced against Lewinsky/impeachment and contested mass-incarceration / financial-deregulation legacy. Lens divergence: Default and Internationalist rank high (economic, foreign policy moderate); Progressive mixed (good on EITC, FMLA, but bad on welfare reform, Crime Bill, DOMA/DADT); Conservative low (personal conduct, expanded government); Libertarian mixed (NAFTA good, Crime Bill bad)."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: corrected
+    note: "Clinton is the most lens-invariant president in the set: score spread 0.23, smallest of 16, with every lens total between +1.28 and +1.51. 'Default and Internationalist rank high' is misleading — he places 10th under both, and 10th under Conservative too, so 'Conservative low' does not hold either (+1.41 vs Default +1.37). Accurate restatement: best score is Populist (+1.51, Cat 1 at +5.2 under a 13% weight), worst is Classical Liberal (+1.28); best rank is Libertarian (8th, up two on Cat 1 at 13% and Cat 4 at 19% against a mildly positive +0.5). No lens moves him out of the 8–11 band."

@@ -1169,3 +1169,8 @@ calibration_summary:
   harm_average_across_categories: 2.5
   net_average_across_categories: 3.0
   pattern_notes: "Ford is a 'short-term restoration' anchor: post-Watergate institutional repair, moderate competence across most categories, no major harm anchors. East Timor approval is the principal harm outlier. Ford should score moderately well across most lenses without dramatic divergence."
+  lens_check:
+    checked_at: 2026-08-15
+    weights: v1.3
+    result: passed
+    note: "Confirmed: every lens total falls between +2.46 and +2.99 (spread 0.52, 14th of 16), ranks 2nd–5th. Classical Liberal and Libertarian rank him 2nd on Cat 4 at +2.0 and Cat 8 at +4.9 — the post-Watergate institutional repair the anchor was built to test. Populist (+2.46) is his weakest, on 13% Cat 1 against a net of +0.2 (1974-75 recession and WIN). No dramatic divergence, as expected."
