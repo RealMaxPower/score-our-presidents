@@ -1,5 +1,5 @@
 import type { Metadata, Route } from "next";
-import { Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { Logo } from "@/components/logo";
@@ -14,11 +14,22 @@ import {
 } from "@/lib/site-config";
 import "./globals.css";
 
-const display = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
+// Self-hosted (was next/font/google). Google Fonts intermittently returns
+// /l/font?kit=…&skey=… URLs, which Turbopack's Google font loader can't
+// parse, so builds failed at random. This is the exact latin variable woff2
+// next/font/google bundled (one file covers weights 400–900); license in
+// ./fonts/OFL.txt.
+const display = localFont({
+  src: [
+    {
+      path: "./fonts/playfair-display-latin.woff2",
+      weight: "400 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-playfair",
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
 const ROOT_DESCRIPTION =
