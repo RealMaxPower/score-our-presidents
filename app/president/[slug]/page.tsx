@@ -236,7 +236,7 @@ export default async function PresidentPage(props: {
               key={cat.number}
               className="bg-cream-100 border border-stone-300/60 rounded-xs open:border-stone-400/60 transition-colors"
             >
-              <summary className="cursor-pointer list-none p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-cream-200/60 rounded-xs">
+              <summary className="cursor-pointer list-none p-4 sm:p-5 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 hover:bg-cream-200/60 rounded-xs">
                 <div className="min-w-0 flex items-baseline gap-3 flex-1">
                   <span className="font-mono text-xs text-stone-400 w-8 shrink-0">
                     C{cat.number}
@@ -252,13 +252,18 @@ export default async function PresidentPage(props: {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 shrink-0">
-                  <VoteWidget
-                    targetType="category"
-                    targetId={catTargetId}
-                    initial={categoryVotes.get(catTargetId) ?? emptyVoteCounts()}
-                    authed={!!user}
-                  />
+                {/* On phones the vote widget is too wide to share the row:
+                    it wraps onto its own line (aligned with the name) and the
+                    net score stays beside the name. */}
+                <div className="contents sm:flex sm:items-center sm:gap-3 sm:shrink-0">
+                  <div className="flex order-last basis-full pl-11 sm:order-none sm:basis-auto sm:pl-0">
+                    <VoteWidget
+                      targetType="category"
+                      targetId={catTargetId}
+                      initial={categoryVotes.get(catTargetId) ?? emptyVoteCounts()}
+                      authed={!!user}
+                    />
+                  </div>
                   <span
                     className={`font-display font-bold text-2xl tabular-nums ${
                       cat.net === null
