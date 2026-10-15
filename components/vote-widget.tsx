@@ -92,14 +92,14 @@ export function VoteWidget({
   if (!authed) {
     return (
       <div
-        className={`inline-flex items-center uppercase tracking-[0.14em] text-stone-400 ${dims}`}
+        className={`inline-flex flex-wrap items-center gap-y-1 uppercase tracking-[0.14em] text-stone-400 ${dims}`}
       >
-        <span>
+        <span className="whitespace-nowrap">
           {state.agree} agree · {state.disagree} disagree
         </span>
         <a
           href="/sign-in"
-          className="ml-2 text-rust-700 hover:text-rust-800 underline underline-offset-2"
+          className="ml-2 whitespace-nowrap text-rust-700 hover:text-rust-800 underline underline-offset-2"
         >
           Sign in to react
         </a>
