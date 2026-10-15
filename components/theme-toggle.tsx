@@ -1,26 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
 
-function readInitialTheme(): Theme {
-  if (typeof document === "undefined") return "light";
+// The theme lives on <html class="dark"> (set before hydration by the
+// no-flash init script), so read it as an external store rather than
+// mirroring it into state from an effect.
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+}
+
+function getSnapshot(): Theme | null {
   return document.documentElement.classList.contains("dark") ? "dark" : "light";
 }
 
-export function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState<Theme>("light");
+// null on the server and during hydration, so the first client render
+// matches the server-rendered icon.
+function getServerSnapshot(): Theme | null {
+  return null;
+}
 
-  useEffect(() => {
-    setTheme(readInitialTheme());
-    setMounted(true);
-  }, []);
+export function ThemeToggle() {
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function toggle() {
     const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
     try {
       localStorage.setItem("theme", next);
@@ -39,13 +49,9 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={label}
       title={label}
-      // suppressHydrationWarning: the no-flash init script may have flipped
-      // .dark before React hydrates, so the initial server-rendered icon
-      // can legitimately differ from the client's first paint.
-      suppressHydrationWarning
       className="inline-flex items-center justify-center w-8 h-8 rounded-full text-charcoal-700 hover:text-rust-700 hover:bg-cream-200/60 transition-colors"
     >
-      {mounted && isDark ? <SunIcon /> : <MoonIcon />}
+      {isDark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }

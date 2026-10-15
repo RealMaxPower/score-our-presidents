@@ -31,6 +31,7 @@ export function UserMenu({ email, displayName }: Props) {
       // race with NextAuth's Set-Cookie response and re-render the server
       // layout before the JWT cookie is actually cleared. A hard nav
       // guarantees the next request sees the cleared cookie state.
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hard nav is intentional (see above)
       window.location.assign("/");
     });
   }

@@ -29,7 +29,7 @@
     "postinstall": "prisma generate --schema=db/schema.prisma",
     "prepare": "git config core.hooksPath .githooks || true",
     "secret-scan": "bash scripts/secret-scan.sh --all",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -63,8 +63,8 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.18",
+    "eslint": "^10.12.0",
+    "eslint-config-next": "16.4.0",
     "postcss": "^8.5.23",
     "prisma": "^5.20.0",
     "tailwindcss": "^3.4.0",
@@ -93,6 +93,13 @@
       "baseline-browser-mapping": ">=2.11.0 <3",
       "postcss-selector-parser": ">=7.1.6 <8",
       "source-map-js": ">=1.2.2 <2"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint-plugin-import>eslint": "10",
+        "eslint-plugin-jsx-a11y>eslint": "10",
+        "eslint-plugin-react>eslint": "10"
+      }
     }
   }
 }

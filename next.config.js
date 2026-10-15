@@ -62,6 +62,8 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
+  // CI runs `pnpm lint` (ESLint CLI); Next 16 drops build-time linting anyway.
+  eslint: { ignoreDuringBuilds: true },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },

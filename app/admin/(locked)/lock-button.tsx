@@ -15,6 +15,7 @@ export function LockButton() {
       }).catch(() => undefined);
       // Hard nav so the locked layout re-runs server-side and the cookie
       // clearance is visible to the next request.
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hard nav is intentional (see above)
       window.location.assign("/admin/unlock");
     });
   }
