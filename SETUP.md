@@ -4,7 +4,7 @@ How to go from "open this folder in VS Code" to a running app at localhost:3000.
 
 ## Prerequisites
 
-- **Node 20 or higher** (`node --version`). Install via [nvm](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/).
+- **Node 24** (`node --version`; pinned via `engines` in `package.json`). Install via [nvm](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/).
 - **pnpm 9+** (`pnpm --version`). Install via `corepack enable && corepack prepare pnpm@9.10.0 --activate` or `npm install -g pnpm`.
 - **Docker** (for the local Postgres). Or use Neon — see Option B below.
 - **Python 3.10+** (optional — only if you want to verify rankings via `scripts/compute_rankings.py`).
