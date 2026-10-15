@@ -124,7 +124,7 @@ export function VoteWidget({
           disabled={pending}
           aria-pressed={agreeActive}
           aria-label="Agree"
-          className={`inline-flex items-center font-mono tabular-nums rounded-sm border transition ${dims} ${
+          className={`inline-flex items-center font-mono tabular-nums rounded-xs border transition ${dims} ${
             agreeActive
               ? "bg-good-500/20 border-good-500/60 text-good-700 font-semibold"
               : "border-stone-300/60 text-stone-600 hover:border-good-500/60 hover:text-good-700"
@@ -139,7 +139,7 @@ export function VoteWidget({
           disabled={pending}
           aria-pressed={disagreeActive}
           aria-label="Disagree"
-          className={`inline-flex items-center font-mono tabular-nums rounded-sm border transition ${dims} ${
+          className={`inline-flex items-center font-mono tabular-nums rounded-xs border transition ${dims} ${
             disagreeActive
               ? "bg-rust-700/15 border-rust-700/60 text-rust-700 font-semibold"
               : "border-stone-300/60 text-stone-600 hover:border-rust-700/60 hover:text-rust-700"

@@ -47,7 +47,7 @@ export default async function CommunityWeightsPage() {
       </header>
 
       {!agg.shouldDisplay ? (
-        <section className="bg-cream-100 border border-stone-300/60 rounded-sm p-6 max-w-3xl">
+        <section className="bg-cream-100 border border-stone-300/60 rounded-xs p-6 max-w-3xl">
           <div className="text-[11px] uppercase tracking-[0.18em] text-rust-700 mb-2">
             Unlocks at N ≥ {DISPLAY_MIN_USERS}
           </div>

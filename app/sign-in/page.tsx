@@ -64,7 +64,7 @@ export default async function SignInPage({
       </h1>
 
       {!anyProvider ? (
-        <div className="rounded-sm border border-stone-300/60 bg-cream-100 p-4 text-sm text-charcoal-700 leading-relaxed">
+        <div className="rounded-xs border border-stone-300/60 bg-cream-100 p-4 text-sm text-charcoal-700 leading-relaxed">
           Sign-in is temporarily unavailable. Please try again later or{" "}
           <Link
             href="/methodology"
@@ -89,7 +89,7 @@ export default async function SignInPage({
           {errorMessage && (
             <div
               role="alert"
-              className="mb-6 rounded-sm border border-rust-700/30 bg-rust-700/5 p-3 text-xs text-rust-700 leading-relaxed"
+              className="mb-6 rounded-xs border border-rust-700/30 bg-rust-700/5 p-3 text-xs text-rust-700 leading-relaxed"
             >
               {errorMessage}
             </div>

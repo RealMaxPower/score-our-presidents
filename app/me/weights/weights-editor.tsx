@@ -255,7 +255,7 @@ export function WeightsEditor({
             type="button"
             onClick={save}
             disabled={pending || sumRaw <= 0}
-            className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm disabled:opacity-50"
+            className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs disabled:opacity-50"
           >
             {pending ? "Saving…" : hasSaved ? "Update weights" : "Save weights"}
           </button>

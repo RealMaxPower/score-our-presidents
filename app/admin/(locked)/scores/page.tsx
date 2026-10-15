@@ -39,7 +39,7 @@ export default async function AdminScoresPage({
         <code className="text-xs font-mono">user_score.delete.admin</code>{" "}
         to the audit log with the original owner&apos;s ID.
       </p>
-      <div className="border border-stone-300/60 rounded-sm overflow-x-auto">
+      <div className="border border-stone-300/60 rounded-xs overflow-x-auto">
         <table className="w-full text-sm">
           <thead className="bg-cream-100 text-[10px] uppercase tracking-[0.14em] text-charcoal-700">
             <tr>

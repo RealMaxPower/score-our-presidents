@@ -235,7 +235,7 @@ function Row({
           />
         </div>
       </div>
-      <div className="col-span-12 sm:col-span-4 order-last sm:order-none">
+      <div className="col-span-12 sm:col-span-4 order-last sm:order-0">
         {s.notes && (
           <p className="text-sm text-charcoal-700 leading-snug">{s.notes}</p>
         )}
@@ -246,7 +246,7 @@ function Row({
           <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.14em]">
             {s.scoreStatus === "provisional" && (
               <span
-                className="inline-flex items-center gap-1 border border-rust-700/70 bg-rust-700/10 text-rust-800 rounded-sm px-1.5 py-0.5 font-medium"
+                className="inline-flex items-center gap-1 border border-rust-700/70 bg-rust-700/10 text-rust-800 rounded-xs px-1.5 py-0.5 font-medium"
                 title="Score is materially based on a matter currently in litigation or otherwise unadjudicated; it may change as the underlying matter resolves."
               >
                 <span aria-hidden>§</span> Provisional — pending adjudication

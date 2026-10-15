@@ -218,7 +218,7 @@ export default async function HomePage() {
             Read the methodology <span aria-hidden>→</span>
           </Link>
         </div>
-        <div className="bg-cream-100 border border-stone-300/60 rounded-sm p-6">
+        <div className="bg-cream-100 border border-stone-300/60 rounded-xs p-6">
           <div className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700 mb-4">
             Default category weights
           </div>

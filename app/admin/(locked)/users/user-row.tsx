@@ -100,7 +100,7 @@ export function UserRow({
             max="5"
             value={repInput}
             onChange={(e) => setRepInput(e.target.value)}
-            className="w-16 bg-cream-100 border border-stone-300/60 rounded-sm px-1.5 py-1 text-xs font-mono tabular-nums"
+            className="w-16 bg-cream-100 border border-stone-300/60 rounded-xs px-1.5 py-1 text-xs font-mono tabular-nums"
             disabled={pending || user.isDeleted}
           />
           <button
@@ -130,7 +130,7 @@ export function UserRow({
             })
           }
           disabled={pending || isSelf || user.isDeleted}
-          className={`text-[10px] uppercase tracking-[0.14em] px-2 py-1 rounded-sm border ${
+          className={`text-[10px] uppercase tracking-[0.14em] px-2 py-1 rounded-xs border ${
             user.isAdmin
               ? "bg-rust-700/10 border-rust-700/30 text-rust-800"
               : "bg-stone-100 border-stone-300/60 text-stone-600"
