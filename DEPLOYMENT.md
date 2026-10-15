@@ -63,6 +63,9 @@ Do these in any order. All are independent.
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
 
+   If you connect Upstash through the Vercel Marketplace instead, it injects `KV_REST_API_URL` / `KV_REST_API_TOKEN`. The app accepts either pair (see `resolveRedisCreds` in [lib/rate-limit.ts](lib/rate-limit.ts)).
+4. **Keepalive:** Upstash archives free-tier databases after a period of inactivity, and before launch the rate limiter barely touches Redis. The daily Vercel Cron in [vercel.json](vercel.json) calls `/api/cron/kv-heartbeat`, which writes and reads back a `psf-heartbeat:last` key with a 30-day TTL. It has to be a data command, because Upstash doesn't count `PING` as activity. Set `CRON_SECRET` in Vercel so the endpoint rejects unauthenticated callers.
+
 ### 2.3 Resend (skip if not using magic-link auth)
 
 1. Create an API key. Name it exactly `AUTH_RESEND_KEY` — Auth.js's Resend provider auto-detects this name. Save the value.
