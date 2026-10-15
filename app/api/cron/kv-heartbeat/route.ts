@@ -3,16 +3,18 @@
 //
 // The limiter (lib/rate-limit.ts) only issues commands on rate-limited traffic;
 // pre-launch that's near-zero, so the idle DB gets flagged and archived. This
-// route issues a PING on a schedule (see `crons` in vercel.json) to reset
-// Upstash's inactivity clock. It reuses the Upstash env already present in
-// Vercel — no new secret store, unlike an external CI heartbeat.
+// route writes and reads back a heartbeat key on a schedule (see `crons` in
+// vercel.json) to reset Upstash's inactivity clock. It must be a data command:
+// Upstash doesn't count PING as activity (see touchRateLimitBackend). It reuses
+// the Upstash env already present in Vercel — no new secret store, unlike an
+// external CI heartbeat.
 //
 // Auth: Vercel Cron sends `Authorization: Bearer $CRON_SECRET` when CRON_SECRET
 // is set. We require it so the endpoint isn't a public, unauthenticated way to
 // drive Upstash/Vercel usage.
 
 import { NextResponse } from "next/server";
-import { pingRateLimitBackend } from "@/lib/rate-limit";
+import { touchRateLimitBackend } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -26,7 +28,7 @@ export async function GET(request: Request) {
   }
 
   try {
-    const status = await pingRateLimitBackend();
+    const status = await touchRateLimitBackend();
 
     // A production cron that can't reach Redis must NOT report success — a
     // green 200 here is exactly what masked the rate limiter being disabled.
@@ -44,14 +46,14 @@ export async function GET(request: Request) {
 
     return NextResponse.json({
       ok: true,
-      status, // "ok" — Upstash reached and PINGed
-      pingedAt: new Date().toISOString(),
+      status, // "ok" — heartbeat key written to Upstash and read back
+      touchedAt: new Date().toISOString(),
     });
   } catch (err) {
     return NextResponse.json(
       {
         ok: false,
-        error: "PING_FAILED",
+        error: "HEARTBEAT_FAILED",
         message: err instanceof Error ? err.message : String(err),
       },
       { status: 502 }

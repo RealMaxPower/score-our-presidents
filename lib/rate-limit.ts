@@ -89,16 +89,31 @@ function getRedis(): Redis | null {
   return redis;
 }
 
-// Liveness check for the rate-limiter backend. Returns "ok" on PONG,
-// "not-configured" when Upstash env is absent (dev/in-memory mode), or
-// throws if Upstash is configured but unreachable. Used by the KV heartbeat
-// cron to keep the DB from being archived for inactivity.
-export async function pingRateLimitBackend(): Promise<
+// Keepalive for the rate-limiter backend, used by the KV heartbeat cron to
+// keep the Upstash free-tier DB from being archived for inactivity.
+//
+// Upstash only counts data commands (SET/GET/EXPIRE…) as activity — PING does
+// not. The original PING heartbeat returned 200 every day while the DB was
+// still flagged "inactive for over eight weeks" (Oct 2026). So write a
+// short-lived key and read it back instead. The 30-day TTL means the key
+// cleans itself up if the cron ever stops.
+//
+// Returns "ok" on a successful write + read, "not-configured" when Upstash env
+// is absent (dev/in-memory mode), or throws if Upstash is configured but the
+// round-trip fails.
+export const HEARTBEAT_KEY = "psf-heartbeat:last";
+export const HEARTBEAT_TTL_SECONDS = 60 * 60 * 24 * 30;
+
+export async function touchRateLimitBackend(): Promise<
   "ok" | "not-configured"
 > {
   const r = getRedis();
   if (!r) return "not-configured";
-  await r.ping();
+  await r.set(HEARTBEAT_KEY, Date.now(), { ex: HEARTBEAT_TTL_SECONDS });
+  const stored = await r.get(HEARTBEAT_KEY);
+  if (stored === null) {
+    throw new Error(`heartbeat key ${HEARTBEAT_KEY} missing after SET`);
+  }
   return "ok";
 }
 
