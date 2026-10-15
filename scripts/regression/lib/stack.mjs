@@ -7,9 +7,9 @@
 // 127.0.0.1:5435, and Redis, Resend, Google and Sentry are left unset, so a
 // run cannot reach a hosted database or send email.
 import { execFileSync, spawn } from "node:child_process";
-import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { randomBytes } from "node:crypto";
-import { tmpdir } from "node:os";
+import { homedir, tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -17,7 +17,14 @@ export const REPO_ROOT = execFileSync("git", ["rev-parse", "--show-toplevel"], {
   cwd: dirname(fileURLToPath(import.meta.url)),
   encoding: "utf8",
 }).trim();
-export const WORK_ROOT = join(tmpdir(), "sop-regress");
+// Worktrees, builds and reports live in a per-user cache dir, not the shared
+// OS temp dir: on Linux that is /tmp, where another user could pre-create
+// this path and have the harness install and build whatever they planted.
+export const WORK_ROOT = join(
+  process.env.XDG_CACHE_HOME || join(homedir(), ".cache"),
+  "score-our-presidents-regress"
+);
+mkdirSync(WORK_ROOT, { recursive: true, mode: 0o700 });
 
 const DB_CONTAINER = "presidential-scoring-db";
 

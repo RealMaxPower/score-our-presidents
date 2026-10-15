@@ -45,7 +45,7 @@ The report shows base, head and a pixel diff side by side for every screenshot t
 
 The harness can't reach hosted data or send email:
 
-- **Separate checkouts.** Each ref is checked out into its own git worktree under the OS temp dir. Worktrees never contain your untracked `.env`.
+- **Separate checkouts.** Each ref is checked out into its own git worktree under `~/.cache/score-our-presidents-regress` (or `$XDG_CACHE_HOME`), a per-user directory rather than the shared OS temp dir. Worktrees never contain your untracked `.env`.
 - **Allowlisted environment.** Child processes get an environment built from an allowlist in `lib/stack.mjs`, not your shell's environment.
 - **Local databases only.** The only database is the repo's Docker Postgres on `127.0.0.1:5435`. Each ref gets its own database (`regress_base`, `regress_head`), recreated and seeded on every run. Your `presidential_scoring` database is never touched.
 - **No external services.** Redis, Resend, Google and Sentry are left unset. Rate limits fall back to in-memory, and sign-in providers are off.
