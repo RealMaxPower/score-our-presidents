@@ -295,13 +295,15 @@ export async function getSubCriterionByNumber(
     };
   });
 
-  // Sort: real nets descending, then nulls (n/a) last in chronological order
+  // Sort: real nets descending (ties chronological, since the query has no
+  // ORDER BY and row order is otherwise arbitrary), then nulls (n/a) last in
+  // chronological order
   scores.sort((a, b) => {
     if (a.net === null && b.net === null)
       return a.termStart.getTime() - b.termStart.getTime();
     if (a.net === null) return 1;
     if (b.net === null) return -1;
-    return b.net - a.net;
+    return b.net - a.net || a.termStart.getTime() - b.termStart.getTime();
   });
 
   return {
