@@ -98,7 +98,7 @@ export default async function RootLayout({
               {/* Hidden on phones: the logo already links home, and without it
                   the header fits from 360px up instead of scrolling sideways. */}
               <Link href="/" className="hidden sm:inline hover:text-rust-700">
-                The Index
+                <span className="hidden sm:inline">The </span>Index
               </Link>
               <Link href="/methodology" className="hover:text-rust-700">
                 Methodology
