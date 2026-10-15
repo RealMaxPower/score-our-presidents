@@ -92,7 +92,7 @@ export function VoteWidget({
   if (!authed) {
     return (
       <div
-        className={`inline-flex items-center text-[10px] uppercase tracking-[0.14em] text-stone-400 ${dims}`}
+        className={`inline-flex items-center uppercase tracking-[0.14em] text-stone-400 ${dims}`}
       >
         <span>
           {state.agree} agree · {state.disagree} disagree

@@ -150,7 +150,7 @@ export default async function PresidentPage(props: {
             {formatTerm(president.termStart, president.termEnd)}
             {president.inOffice && " · in office"}
           </div>
-          <h1 className="font-display font-bold text-4xl sm:text-6xl leading-[1.05] tracking-tight">
+          <h1 className="font-display font-bold text-4xl sm:text-6xl leading-[1.05] sm:leading-none tracking-tight">
             {president.displayName}
           </h1>
           <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.16em]">
@@ -212,7 +212,7 @@ export default async function PresidentPage(props: {
             Click a category to expand
           </span>
         </div>
-        <div className="bg-cream-100 border border-stone-300/60 rounded-xs p-4 text-xs sm:text-sm text-charcoal-700 leading-relaxed">
+        <div className="bg-cream-100 border border-stone-300/60 rounded-xs p-4 text-xs sm:text-sm text-charcoal-700 leading-relaxed sm:leading-5">
           <span className="text-[11px] uppercase tracking-[0.18em] text-charcoal-900 font-medium mr-2">
             How to read the numbers
           </span>

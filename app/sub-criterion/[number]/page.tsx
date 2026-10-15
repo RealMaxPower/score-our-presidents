@@ -124,7 +124,7 @@ export default async function SubCriterionPage(
           <span className="font-mono text-stone-400 text-3xl sm:text-4xl">
             {sub.number}
           </span>
-          <h1 className="font-display font-bold text-3xl sm:text-5xl leading-tight tracking-tight">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl leading-tight sm:leading-none tracking-tight">
             {sub.name}
           </h1>
         </div>
@@ -207,7 +207,7 @@ function Row({
       <div className="col-span-10 sm:col-span-4 min-w-0">
         <Link
           href={`/president/${s.slug}` as `/president/${string}`}
-          className="font-display font-bold text-xl sm:text-2xl leading-tight tracking-tight hover:text-rust-700 transition block"
+          className="font-display font-bold text-xl sm:text-2xl leading-tight sm:leading-8 tracking-tight hover:text-rust-700 transition block"
         >
           {s.displayName}
         </Link>

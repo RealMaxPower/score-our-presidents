@@ -132,6 +132,18 @@
   }
 }
 
+/*
+  Next's built-in 404/error pages inject an unlayered
+  `body { color; background }` (black under prefers-color-scheme: dark).
+  Tailwind 4 utilities live in @layer utilities, and unlayered CSS always
+  beats layered CSS, so the body's bg-cream-50/text-charcoal-900 would lose
+  there. Restore them unlayered, one notch more specific than Next's `body`.
+*/
+:root body {
+  background-color: var(--color-cream-50);
+  color: var(--color-charcoal-900);
+}
+
 @layer components {
   /* Editorial drop-cap on the hero intro paragraph */
   .drop-cap::first-letter {
