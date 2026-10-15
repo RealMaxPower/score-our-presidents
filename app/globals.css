@@ -125,18 +125,19 @@
 
   /* Tailwind v3 compatibility (from the v4 upgrade guide), so the upgrade
      doesn't change how existing elements look: */
-  /* v4's default border color is currentColor; v3's was gray-200. */
+  /* v4's default border color is currentColor; v3's was gray-200. v3's
+     hex values, since v4's gray scale is a slightly different (oklch) color. */
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: #e5e7eb;
   }
   /* v4's default placeholder is the text color at 50%; v3's was gray-400. */
   input::placeholder,
   textarea::placeholder {
-    color: var(--color-gray-400);
+    color: #9ca3af;
   }
   /* v4 preflight dropped the pointer cursor on buttons. */
   button:not(:disabled),
