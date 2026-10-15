@@ -30,6 +30,7 @@ export function UnlockForm() {
       }
       // Hard nav so the locked layout re-runs server-side and picks up
       // the new cookie state, identical to the sign-in / sign-out fix.
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hard nav is intentional (see above)
       window.location.assign("/admin");
     });
   }

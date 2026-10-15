@@ -53,6 +53,7 @@ export default async function AdminUsersPage() {
                   reputationScore: Number(u.reputationScore),
                   emailVerified: u.emailVerified,
                   accountAgeDays: Math.floor(
+                    // eslint-disable-next-line react-hooks/purity -- async Server Component, rendered once per request
                     (Date.now() - u.accountCreatedAt.getTime()) / 86400000
                   ),
                   isDeleted: u.deletedAt !== null,

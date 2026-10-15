@@ -18,6 +18,7 @@ export default async function AdminDashboard() {
         take: 10,
       }),
       prisma.auditLog.count({
+        // eslint-disable-next-line react-hooks/purity -- async Server Component, rendered once per request
         where: { occurredAt: { gte: new Date(Date.now() - 86400000) } },
       }),
     ]);

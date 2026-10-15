@@ -41,6 +41,7 @@ export function DeleteAccount({ email }: { email: string }) {
           headers: { "Content-Type": "application/json" },
         }).catch(() => undefined),
       ]);
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hard nav is intentional (see above)
       window.location.assign("/");
     });
   }
