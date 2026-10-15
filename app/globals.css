@@ -42,6 +42,19 @@
 
   --font-serif: Georgia, Cambria, "Times New Roman", serif;
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  /* v3's line-heights. v4 defines them as unitless ratios, which inherit as
+     a factor: a text-[11px] label inside a text-sm block gets ~15.7px
+     instead of v3's 20px. The same rem values keep every such label (and
+     everything below it) where it was. */
+  --text-xs--line-height: 1rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl--line-height: 2.5rem;
 }
 
 /* next/font sets --font-playfair on <html>; inline so font-display resolves it there. */
