@@ -7,7 +7,7 @@ export const metadata = {
     "What we collect, what we don't, and how we handle the few things we do.",
 };
 
-const LAST_UPDATED = "2026-05-17";
+const LAST_UPDATED = "2026-10-15";
 
 export default function PrivacyPage() {
   return (
@@ -66,9 +66,14 @@ export default function PrivacyPage() {
         <p className="text-charcoal-700 leading-relaxed mb-4">
           <strong>Operational logs.</strong> Our servers record request
           metadata (URL, status code, response time, IP, user agent) for
-          security, abuse mitigation, and debugging. Application errors are
-          forwarded to Sentry. Cookies and authorization headers are redacted
-          before logs leave our infrastructure.
+          security, abuse mitigation, and debugging. Cookies and authorization
+          headers are redacted before logs leave our infrastructure.
+          Application errors are reported to Sentry, both from our servers and
+          from your browser when a page fails to load or run. A browser error
+          report contains the error itself, the address of the page without
+          its query string, and your browser type. It does not include
+          cookies, account details, or the contents of the page, and we do not
+          record sessions.
         </p>
         <p className="text-charcoal-700 leading-relaxed">
           <strong>Editorial contact.</strong> If you write to the editorial
