@@ -63,7 +63,7 @@ export function ConfirmDialog({
       onClick={handleBackdropClick}
       // Positioned via :modal selector below; reset the user-agent margin
       // and let the inner div carry styling.
-      className="p-0 m-auto max-w-md w-[calc(100%-2rem)] rounded-sm border border-stone-300/60 bg-cream-50 text-charcoal-900 shadow-lg backdrop:bg-charcoal-900/40"
+      className="p-0 m-auto max-w-md w-[calc(100%-2rem)] rounded-xs border border-stone-300/60 bg-cream-50 text-charcoal-900 shadow-lg backdrop:bg-charcoal-900/40"
     >
       <div className="p-5 sm:p-6">
         <h2 className="font-display font-bold text-lg sm:text-xl tracking-tight">
@@ -79,7 +79,7 @@ export function ConfirmDialog({
             type="button"
             onClick={onCancel}
             disabled={pending}
-            className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700 hover:text-rust-700 px-3 py-1.5 rounded-sm disabled:opacity-50"
+            className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700 hover:text-rust-700 px-3 py-1.5 rounded-xs disabled:opacity-50"
           >
             {cancelLabel}
           </button>
@@ -90,7 +90,7 @@ export function ConfirmDialog({
             // autoFocus is intentional on the confirm button so ENTER
             // confirms; ESC always cancels via the dialog's native behavior.
             autoFocus
-            className={`text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm border-2 transition disabled:opacity-50 ${
+            className={`text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs border-2 transition disabled:opacity-50 ${
               destructive
                 ? "bg-rust-700 border-rust-700 text-cream-50 hover:bg-rust-800 hover:border-rust-800"
                 : "bg-charcoal-900 border-charcoal-900 text-cream-50 hover:bg-rust-700 hover:border-rust-700"

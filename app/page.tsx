@@ -145,7 +145,7 @@ export default async function HomePage() {
         <span className="inline-flex items-center gap-2 border border-rust-700/70 text-rust-700 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-[0.18em]">
           <span aria-hidden>⚖</span> Historical Analysis
         </span>
-        <h1 className="font-display font-bold text-[2.25rem] sm:text-6xl lg:text-7xl mt-7 leading-[1.05] tracking-tight">
+        <h1 className="font-display font-bold text-[2.25rem] sm:text-6xl lg:text-7xl mt-7 leading-[1.05] sm:leading-none tracking-tight">
           {SITE_NAME}
         </h1>
         <p className="mt-4 font-display text-lg sm:text-2xl text-charcoal-700 tracking-tight">
@@ -218,7 +218,7 @@ export default async function HomePage() {
             Read the methodology <span aria-hidden>→</span>
           </Link>
         </div>
-        <div className="bg-cream-100 border border-stone-300/60 rounded-sm p-6">
+        <div className="bg-cream-100 border border-stone-300/60 rounded-xs p-6">
           <div className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700 mb-4">
             Default category weights
           </div>

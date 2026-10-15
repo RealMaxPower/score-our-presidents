@@ -81,7 +81,7 @@ export function UserScoreForm({
   return (
     <form
       onSubmit={submit}
-      className="mt-3 space-y-4 bg-cream-50 border border-stone-300/60 rounded-sm p-4"
+      className="mt-3 space-y-4 bg-cream-50 border border-stone-300/60 rounded-xs p-4"
     >
       <div className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700">
         {existing ? "Edit your score" : "Submit your score"} ·{" "}
@@ -127,7 +127,7 @@ export function UserScoreForm({
           maxLength={500}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
-          className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-rust-700"
+          className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm focus:outline-hidden focus:border-rust-700"
           rows={3}
           placeholder="In your own words: why does this score reflect their record?"
         />
@@ -148,7 +148,7 @@ export function UserScoreForm({
               value={sourceUrl}
               onChange={(e) => setSourceUrl(e.target.value)}
               placeholder="https://…"
-              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm font-mono focus:outline-none focus:border-rust-700"
+              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm font-mono focus:outline-hidden focus:border-rust-700"
             />
           </label>
           <label className="block">
@@ -158,7 +158,7 @@ export function UserScoreForm({
             <select
               value={sourceType}
               onChange={(e) => setSourceType(e.target.value as SourceType)}
-              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-rust-700"
+              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm focus:outline-hidden focus:border-rust-700"
             >
               {SOURCE_TYPES.map((t) => (
                 <option key={t} value={t}>
@@ -178,7 +178,7 @@ export function UserScoreForm({
             maxLength={500}
             value={claim}
             onChange={(e) => setClaim(e.target.value)}
-            className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-rust-700"
+            className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm focus:outline-hidden focus:border-rust-700"
             rows={2}
             placeholder="What does this source say that supports your score?"
           />
@@ -210,7 +210,7 @@ export function UserScoreForm({
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm disabled:opacity-50"
+          className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs disabled:opacity-50"
         >
           {pending ? "Submitting…" : existing ? "Save changes" : "Submit score"}
         </button>

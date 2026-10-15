@@ -64,7 +64,7 @@ export function BookmarkButton({
         onClick={toggle}
         disabled={pending}
         aria-pressed={bookmarked}
-        className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-sm border text-[11px] uppercase tracking-[0.18em] transition disabled:opacity-50 ${
+        className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xs border text-[11px] uppercase tracking-[0.18em] transition disabled:opacity-50 ${
           bookmarked
             ? "border-rust-700 text-rust-700 bg-rust-700/10 font-semibold"
             : "border-stone-300/60 text-charcoal-700 hover:border-rust-700/60 hover:text-rust-700"

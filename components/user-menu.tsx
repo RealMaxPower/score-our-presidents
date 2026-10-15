@@ -51,7 +51,7 @@ export function UserMenu({ email, displayName }: Props) {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 mt-2 w-56 bg-cream-50 border border-stone-300/60 rounded-sm shadow-lg z-50 text-sm"
+          className="absolute right-0 mt-2 w-56 bg-cream-50 border border-stone-300/60 rounded-xs shadow-lg z-50 text-sm"
           onMouseLeave={() => setOpen(false)}
         >
           <div className="px-3 py-2 border-b border-stone-200/60">

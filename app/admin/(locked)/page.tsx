@@ -44,7 +44,7 @@ export default async function AdminDashboard() {
             Full log →
           </Link>
         </div>
-        <ul className="divide-y divide-stone-300/40 border border-stone-300/60 rounded-sm">
+        <ul className="divide-y divide-stone-300/40 border border-stone-300/60 rounded-xs">
           {recentEvents.length === 0 && (
             <li className="px-4 py-3 text-sm text-stone-500 italic">
               No audit events yet.
@@ -87,7 +87,7 @@ function Stat({
   href?: Route;
 }) {
   const body = (
-    <div className="border border-stone-300/60 rounded-sm p-4 bg-cream-100 hover:bg-cream-200/60 transition-colors">
+    <div className="border border-stone-300/60 rounded-xs p-4 bg-cream-100 hover:bg-cream-200/60 transition-colors">
       <div className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700">
         {label}
       </div>

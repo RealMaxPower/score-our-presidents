@@ -136,7 +136,7 @@ export function SignInForm({ hasGoogle, hasEmail, hasDev, callbackUrl }: Props) 
           type="button"
           onClick={signInWithGoogle}
           disabled={googleLeaving || pending}
-          className="w-full inline-flex items-center justify-center gap-3 bg-white text-[#3c4043] text-sm font-medium px-4 py-2.5 rounded-sm border border-stone-300 shadow-sm hover:bg-stone-50 hover:shadow transition disabled:opacity-60 disabled:cursor-wait"
+          className="w-full inline-flex items-center justify-center gap-3 bg-white text-[#3c4043] text-sm font-medium px-4 py-2.5 rounded-xs border border-stone-300 shadow-xs hover:bg-stone-50 hover:shadow-sm transition disabled:opacity-60 disabled:cursor-wait"
         >
           <GoogleGLogo />
           {googleLeaving ? "Redirecting to Google…" : "Sign in with Google"}
@@ -164,7 +164,7 @@ export function SignInForm({ hasGoogle, hasEmail, hasDev, callbackUrl }: Props) 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={pending}
-              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm font-mono focus:outline-none focus:border-rust-700 disabled:opacity-60"
+              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm font-mono focus:outline-hidden focus:border-rust-700 disabled:opacity-60"
               placeholder="you@example.com"
             />
           </label>
@@ -172,7 +172,7 @@ export function SignInForm({ hasGoogle, hasEmail, hasDev, callbackUrl }: Props) 
             <button
               type="submit"
               disabled={pending || resendIn > 0 || email.length === 0}
-              className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm disabled:opacity-50"
+              className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs disabled:opacity-50"
             >
               {pending
                 ? "Sending…"
@@ -204,14 +204,14 @@ export function SignInForm({ hasGoogle, hasEmail, hasDev, callbackUrl }: Props) 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={pending}
-              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm font-mono focus:outline-none focus:border-rust-700 disabled:opacity-60"
+              className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm font-mono focus:outline-hidden focus:border-rust-700 disabled:opacity-60"
               placeholder="you@example.com"
             />
           </label>
           <button
             type="submit"
             disabled={pending || email.length === 0}
-            className="inline-flex items-center border-2 border-rust-700 text-rust-700 hover:bg-rust-700/10 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm disabled:opacity-50"
+            className="inline-flex items-center border-2 border-rust-700 text-rust-700 hover:bg-rust-700/10 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs disabled:opacity-50"
           >
             {pending ? "Signing in…" : "Sign in (dev)"}
           </button>

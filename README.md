@@ -98,7 +98,7 @@ reports the per-president figures and why.
 | Layer | Technology |
 |---|---|
 | App | Next.js 15.5 (App Router) · React 19 · TypeScript strict |
-| Styling | Tailwind 3 · custom palette (cream/charcoal/rust — deliberately not partisan red/blue) |
+| Styling | Tailwind 4 · custom palette (cream/charcoal/rust — deliberately not partisan red/blue) |
 | Data | Prisma 5 → Postgres 16 (Docker locally; Neon in prod via its transaction pooler) |
 | Auth | NextAuth.js v5 — Credentials (dev) / Google / Resend; JWT sessions |
 | Rate limit | Upstash Redis sliding window (in-process fallback in dev) |

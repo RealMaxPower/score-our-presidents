@@ -35,7 +35,7 @@ A ledger tally: four vertical strokes plus a diagonal fifth slash. The universal
 
 ## 3. Color Palette
 
-All brand surfaces use the existing Tailwind tokens defined in [tailwind.config.ts](tailwind.config.ts). Do not introduce new brand colors.
+All brand surfaces use the existing Tailwind tokens defined in the `@theme` block of [app/globals.css](app/globals.css). Do not introduce new brand colors.
 
 | Token | Hex | Role |
 |---|---|---|
@@ -52,7 +52,7 @@ All brand surfaces use the existing Tailwind tokens defined in [tailwind.config.
 
 ## 4. Typography
 
-- **Display, wordmark, headings:** Playfair Display — loaded via `next/font/google` in [app/layout.tsx](app/layout.tsx), exposed as `--font-display` and the `font-display` Tailwind utility. Weights 400 / 500 / 700 / 800.
+- **Display, wordmark, headings:** Playfair Display — loaded via `next/font/google` in [app/layout.tsx](app/layout.tsx), exposed as `--font-playfair` and the `font-display` Tailwind utility. Weights 400 / 500 / 700 / 800.
 - **Body & UI:** system sans stack (`ui-sans-serif, system-ui, sans-serif`).
 - **Editorial eyebrow / label:** uppercase, 10–11px, letter-spacing `0.16em`–`0.18em`, color `charcoal-700`.
 - **Drop-cap (hero intro):** Playfair Display, `rust-700`, ~4.5rem — see `.drop-cap` in [app/globals.css](app/globals.css).
@@ -101,5 +101,5 @@ Component: [components/logo.tsx](components/logo.tsx). Exports `Logo` (composed)
 | React component | [components/logo.tsx](components/logo.tsx) |
 | Favicon (SVG) | [app/icon.svg](app/icon.svg) |
 | Apple touch icon (dynamic PNG) | [app/apple-icon.tsx](app/apple-icon.tsx) |
-| Color tokens & type config | [tailwind.config.ts](tailwind.config.ts) |
+| Color tokens & type config | [app/globals.css](app/globals.css) (`@theme`) |
 | Editorial CSS accents | [app/globals.css](app/globals.css) |

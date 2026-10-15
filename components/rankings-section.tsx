@@ -82,11 +82,11 @@ export function RankingsSection({
           </div>
           <div className="flex items-center gap-6 text-[11px] uppercase tracking-[0.18em] text-charcoal-700">
             <span className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-sm bg-good-500" />
+              <span className="w-3 h-3 rounded-xs bg-good-500" />
               Positive Impact
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-sm bg-harm-500" />
+              <span className="w-3 h-3 rounded-xs bg-harm-500" />
               Measured Harm
             </span>
           </div>
@@ -109,7 +109,7 @@ export function RankingsSection({
                   className={
                     "shrink-0 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] uppercase tracking-[0.14em] transition border-2 " +
                     (active
-                      ? "bg-rust-700 text-cream-50 border-rust-700 font-semibold shadow-sm"
+                      ? "bg-rust-700 text-cream-50 border-rust-700 font-semibold shadow-xs"
                       : "bg-cream-100 text-charcoal-700 border-transparent hover:border-rust-700/40 hover:text-rust-700")
                   }
                 >
@@ -180,7 +180,7 @@ function RankingRow({
       <Link
         href={`/president/${p.slug}` as `/president/${string}`}
         aria-label={`View ${p.displayName}'s full scorecard`}
-        className="block transition-colors hover:bg-cream-100 focus-visible:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rust-700/40 focus-visible:ring-inset"
+        className="block transition-colors hover:bg-cream-100 focus-visible:bg-cream-100 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-rust-700/40 focus-visible:ring-inset"
       >
         <article className="grid grid-cols-12 gap-x-4 sm:gap-x-6 gap-y-3 items-center py-10 sm:py-12 px-2 sm:px-4 -mx-2 sm:-mx-4">
           <div className="col-span-2 sm:col-span-1 font-display italic text-stone-400 group-hover:text-rust-700/60 text-3xl sm:text-4xl tabular-nums transition-colors">
@@ -198,7 +198,7 @@ function RankingRow({
               View scorecard →
             </div>
           </div>
-          <div className="col-span-12 sm:col-span-6 order-last sm:order-none">
+          <div className="col-span-12 sm:col-span-6 order-last sm:order-0">
             <ImpactBar
               meanGood={p.meanGood}
               meanHarm={p.meanHarm}
@@ -256,14 +256,14 @@ function ImpactBar({
       <div className="flex items-center">
         <div className="flex-1 flex justify-end pr-1">
           <div
-            className="h-2.5 bg-good-500 rounded-l-sm transition-all duration-300"
+            className="h-2.5 bg-good-500 rounded-l-xs transition-all duration-300"
             style={{ width: `${goodPct}%` }}
           />
         </div>
         <div className="w-2 shrink-0" />
         <div className="flex-1 flex justify-start pl-1">
           <div
-            className="h-2.5 bg-harm-500 rounded-r-sm transition-all duration-300"
+            className="h-2.5 bg-harm-500 rounded-r-xs transition-all duration-300"
             style={{ width: `${harmPct}%` }}
           />
         </div>

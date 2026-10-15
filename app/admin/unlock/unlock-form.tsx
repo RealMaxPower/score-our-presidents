@@ -48,14 +48,14 @@ export function UnlockForm() {
           autoFocus
           value={token}
           onChange={(e) => setToken(e.target.value)}
-          className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-sm px-3 py-2 text-sm font-mono focus:outline-none focus:border-rust-700"
+          className="mt-1 w-full bg-cream-100 border border-stone-300/60 rounded-xs px-3 py-2 text-sm font-mono focus:outline-hidden focus:border-rust-700"
           placeholder="paste token"
         />
       </label>
       <button
         type="submit"
         disabled={pending || token.length === 0}
-        className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm disabled:opacity-50"
+        className="inline-flex items-center bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs disabled:opacity-50"
       >
         {pending ? "Unlocking…" : "Unlock"}
       </button>

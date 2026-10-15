@@ -150,17 +150,17 @@ export default async function PresidentPage(props: {
             {formatTerm(president.termStart, president.termEnd)}
             {president.inOffice && " · in office"}
           </div>
-          <h1 className="font-display font-bold text-4xl sm:text-6xl leading-[1.05] tracking-tight">
+          <h1 className="font-display font-bold text-4xl sm:text-6xl leading-[1.05] sm:leading-none tracking-tight">
             {president.displayName}
           </h1>
           <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.16em]">
             {president.calibrationAnchor && (
-              <span className="bg-stone-100 text-charcoal-700 px-2.5 py-1 rounded-sm border border-stone-300/60">
+              <span className="bg-stone-100 text-charcoal-700 px-2.5 py-1 rounded-xs border border-stone-300/60">
                 Calibration anchor
               </span>
             )}
             {president.catTenDropped && (
-              <span className="bg-rust-700/10 text-rust-800 px-2.5 py-1 rounded-sm border border-rust-700/30">
+              <span className="bg-rust-700/10 text-rust-800 px-2.5 py-1 rounded-xs border border-rust-700/30">
                 Cat 10 dropped — insufficient time elapsed
               </span>
             )}
@@ -172,7 +172,7 @@ export default async function PresidentPage(props: {
             />
           </div>
         </div>
-        <div className="text-right sm:min-w-[12rem]">
+        <div className="text-right sm:min-w-48">
           <div className="text-[11px] uppercase tracking-[0.18em] text-charcoal-700">
             Default weighted total
           </div>
@@ -212,7 +212,7 @@ export default async function PresidentPage(props: {
             Click a category to expand
           </span>
         </div>
-        <div className="bg-cream-100 border border-stone-300/60 rounded-sm p-4 text-xs sm:text-sm text-charcoal-700 leading-relaxed">
+        <div className="bg-cream-100 border border-stone-300/60 rounded-xs p-4 text-xs sm:text-sm text-charcoal-700 leading-relaxed sm:leading-5">
           <span className="text-[11px] uppercase tracking-[0.18em] text-charcoal-900 font-medium mr-2">
             How to read the numbers
           </span>
@@ -234,9 +234,9 @@ export default async function PresidentPage(props: {
           return (
             <details
               key={cat.number}
-              className="bg-cream-100 border border-stone-300/60 rounded-sm open:border-stone-400/60 transition-colors"
+              className="bg-cream-100 border border-stone-300/60 rounded-xs open:border-stone-400/60 transition-colors"
             >
-              <summary className="cursor-pointer list-none p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-cream-200/60 rounded-sm">
+              <summary className="cursor-pointer list-none p-4 sm:p-5 flex items-center justify-between gap-3 hover:bg-cream-200/60 rounded-xs">
                 <div className="min-w-0 flex items-baseline gap-3 flex-1">
                   <span className="font-mono text-xs text-stone-400 w-8 shrink-0">
                     C{cat.number}
@@ -351,7 +351,7 @@ function SubCriterionRow({
         </Link>
         <Link
           href={`/sub-criterion/${sub.number}` as `/sub-criterion/${string}`}
-          className="font-medium text-sm flex-1 min-w-[10rem] hover:text-rust-700"
+          className="font-medium text-sm flex-1 min-w-40 hover:text-rust-700"
         >
           {sub.name}
         </Link>
@@ -370,7 +370,7 @@ function SubCriterionRow({
         <div className="pl-12 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.14em]">
           {sub.scoreStatus === "provisional" && (
             <span
-              className="inline-flex items-center gap-1 border border-rust-700/70 bg-rust-700/10 text-rust-800 rounded-sm px-1.5 py-0.5 font-medium"
+              className="inline-flex items-center gap-1 border border-rust-700/70 bg-rust-700/10 text-rust-800 rounded-xs px-1.5 py-0.5 font-medium"
               title="Score is materially based on a matter currently in litigation or otherwise unadjudicated; it may change as the underlying matter resolves."
             >
               <span aria-hidden>§</span> Provisional — pending adjudication

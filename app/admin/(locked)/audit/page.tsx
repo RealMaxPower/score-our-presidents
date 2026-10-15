@@ -65,7 +65,7 @@ export default async function AdminAuditPage({
           <select
             name="action"
             defaultValue={sp.action ?? ""}
-            className="block mt-1 bg-cream-100 border border-stone-300/60 rounded-sm px-2 py-1.5 text-xs font-mono"
+            className="block mt-1 bg-cream-100 border border-stone-300/60 rounded-xs px-2 py-1.5 text-xs font-mono"
           >
             <option value="">— all —</option>
             {KNOWN_ACTIONS.map((a) => (
@@ -84,12 +84,12 @@ export default async function AdminAuditPage({
             name="actor"
             defaultValue={sp.actor ?? ""}
             placeholder="UUID prefix or full"
-            className="block mt-1 bg-cream-100 border border-stone-300/60 rounded-sm px-2 py-1.5 text-xs font-mono w-72"
+            className="block mt-1 bg-cream-100 border border-stone-300/60 rounded-xs px-2 py-1.5 text-xs font-mono w-72"
           />
         </label>
         <button
           type="submit"
-          className="bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-3 py-2 rounded-sm"
+          className="bg-rust-700 hover:bg-rust-800 text-cream-50 text-[11px] uppercase tracking-[0.18em] font-semibold px-3 py-2 rounded-xs"
         >
           Filter
         </button>
@@ -106,7 +106,7 @@ export default async function AdminAuditPage({
         </span>
       </form>
 
-      <div className="border border-stone-300/60 rounded-sm overflow-x-auto">
+      <div className="border border-stone-300/60 rounded-xs overflow-x-auto">
         <table className="w-full text-xs font-mono tabular-nums">
           <thead className="bg-cream-100 text-[10px] uppercase tracking-[0.14em] text-charcoal-700">
             <tr>

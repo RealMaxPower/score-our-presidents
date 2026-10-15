@@ -17,7 +17,7 @@ import "./globals.css";
 const display = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700", "800"],
-  variable: "--font-display",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -75,7 +75,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="bg-cream-50 text-charcoal-900 antialiased min-h-screen">
-        <header className="sticky top-0 z-30 bg-cream-50/90 backdrop-blur supports-[backdrop-filter]:bg-cream-50/70 border-b border-stone-200/60">
+        <header className="sticky top-0 z-30 bg-cream-50/90 backdrop-blur-sm supports-backdrop-filter:bg-cream-50/70 border-b border-stone-200/60">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
             <Link href="/" aria-label={`${SITE_NAME} — home`}>
               <Logo variant="lockup" />
@@ -93,7 +93,7 @@ export default async function RootLayout({
               ) : (
                 <Link
                   href={"/sign-in" as Route}
-                  className="bg-charcoal-900 text-cream-50 px-3 py-1.5 rounded-sm hover:bg-rust-700 transition-colors"
+                  className="bg-charcoal-900 text-cream-50 px-3 py-1.5 rounded-xs hover:bg-rust-700 transition-colors"
                 >
                   Sign in
                 </Link>

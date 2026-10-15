@@ -47,7 +47,7 @@ export function DeleteAccount({ email }: { email: string }) {
   }
 
   return (
-    <div className="rounded-sm border-2 border-rust-700/40 bg-rust-700/[0.03] p-5 sm:p-6">
+    <div className="rounded-xs border-2 border-rust-700/40 bg-rust-700/3 p-5 sm:p-6">
       <h2 className="font-display font-bold text-lg sm:text-xl tracking-tight text-rust-800">
         Delete account
       </h2>
@@ -75,7 +75,7 @@ export function DeleteAccount({ email }: { email: string }) {
         value={typed}
         onChange={(e) => setTyped(e.target.value)}
         disabled={pending}
-        className="mt-2 w-full max-w-sm rounded-sm border border-stone-300/80 bg-cream-50 px-3 py-2 text-sm text-charcoal-900 focus:border-rust-700 focus:outline-none disabled:opacity-50"
+        className="mt-2 w-full max-w-sm rounded-xs border border-stone-300/80 bg-cream-50 px-3 py-2 text-sm text-charcoal-900 focus:border-rust-700 focus:outline-hidden disabled:opacity-50"
         placeholder={email}
       />
 
@@ -84,7 +84,7 @@ export function DeleteAccount({ email }: { email: string }) {
           type="button"
           onClick={() => setOpen(true)}
           disabled={!armed || pending}
-          className="text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-sm border-2 bg-rust-700 border-rust-700 text-cream-50 hover:bg-rust-800 hover:border-rust-800 transition disabled:opacity-40 disabled:cursor-not-allowed"
+          className="text-[11px] uppercase tracking-[0.18em] font-semibold px-4 py-2 rounded-xs border-2 bg-rust-700 border-rust-700 text-cream-50 hover:bg-rust-800 hover:border-rust-800 transition disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Delete my account
         </button>

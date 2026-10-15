@@ -90,7 +90,7 @@ export default async function MethodologyPage() {
         <span className="inline-flex items-center gap-2 border border-rust-700/70 text-rust-700 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-[0.18em]">
           <span aria-hidden>§</span> How We Score
         </span>
-        <h1 className="font-display font-bold text-4xl sm:text-6xl mt-7 leading-[1.05] tracking-tight">
+        <h1 className="font-display font-bold text-4xl sm:text-6xl mt-7 leading-[1.05] sm:leading-none tracking-tight">
           The Methodology
         </h1>
         <div className="rust-rule" />
