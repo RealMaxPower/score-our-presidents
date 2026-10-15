@@ -57,6 +57,17 @@
   --text-4xl--line-height: 2.5rem;
 }
 
+/* Size-adjusted Times New Roman used while Playfair loads and for glyphs it
+   lacks (e.g. arrows): the exact metrics next/font/google generated. */
+@font-face {
+  font-family: "Playfair Display Fallback";
+  src: local("Times New Roman");
+  ascent-override: 97.25%;
+  descent-override: 22.56%;
+  line-gap-override: 0%;
+  size-adjust: 111.26%;
+}
+
 /* next/font sets --font-playfair on <html>; inline so font-display resolves it there. */
 @theme inline {
   --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
