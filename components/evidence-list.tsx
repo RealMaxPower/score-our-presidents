@@ -53,7 +53,7 @@ function EvidenceCard({ e }: { e: EvidenceItem }) {
   const sourceTypeLabel = SOURCE_TYPE_LABELS[e.sourceType] ?? e.sourceType;
 
   return (
-    <li className="text-xs leading-relaxed">
+    <li className="text-xs leading-relaxed break-words">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.14em] mb-1.5">
         <span className={`font-medium ${directionColor}`}>
           {directionLabel}
