@@ -5,7 +5,9 @@ import * as Sentry from "@sentry/nextjs";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
-  environment: process.env.NODE_ENV,
+  // Vercel's environment (preview vs production); NODE_ENV is "production"
+  // on every Vercel build, which tagged preview errors as production.
+  environment: process.env.VERCEL_ENV ?? process.env.NODE_ENV,
   tracesSampleRate: process.env.NODE_ENV === "production" ? 0.1 : 0,
   // Don't send PII; this app's audit log already records actor identity
   // server-side with explicit consent semantics.
