@@ -1,5 +1,5 @@
 import type { Metadata, Route } from "next";
-import { Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import { Logo } from "@/components/logo";
@@ -14,11 +14,25 @@ import {
 } from "@/lib/site-config";
 import "./globals.css";
 
-const display = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
+// Self-hosted (was next/font/google). Google Fonts intermittently returns
+// /l/font?kit=…&skey=… URLs, which Turbopack's Google font loader can't
+// parse, so builds failed at random. This is the exact latin variable woff2
+// next/font/google bundled (one file covers weights 400–900); license in
+// ./fonts/OFL.txt.
+const playfairDisplay = localFont({
+  src: [
+    {
+      path: "./fonts/playfair-display-latin.woff2",
+      weight: "400 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-playfair",
   display: "swap",
+  // next/font/local would compute its own Times New Roman metrics, which
+  // differ slightly from Google's; use Google's, declared in globals.css.
+  adjustFontFallback: false,
+  fallback: ["Playfair Display Fallback"],
 });
 
 const ROOT_DESCRIPTION =
@@ -64,7 +78,7 @@ export default async function RootLayout({
 }>) {
   const user = await currentUser();
   return (
-    <html lang="en" className={display.variable} suppressHydrationWarning>
+    <html lang="en" className={playfairDisplay.variable} suppressHydrationWarning>
       <head>
         {/* No-flash theme init: runs before paint so the .dark class is on
             <html> before any CSS-variable-backed colors render. */}
