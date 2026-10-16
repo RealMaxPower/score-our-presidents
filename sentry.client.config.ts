@@ -6,7 +6,8 @@
 // Privacy (see app/privacy): no PII, no session replay, no tracing, no
 // release-health sessions; nothing is sent unless an error occurs. Reports
 // carry the error, page and in-site request paths without query strings,
-// and the browser.
+// and the browser, and are relayed via our server, never sent to Sentry
+// from the visitor's browser directly.
 
 import * as Sentry from "@sentry/nextjs";
 
@@ -16,6 +17,9 @@ const dsn = process.env.NEXT_PUBLIC_SENTRY_DSN;
 if (dsn) {
   Sentry.init({
     dsn,
+    // Relay through our own server (app/api/sentry-tunnel) so Sentry never
+    // receives the visitor's IP address or the location derived from it.
+    tunnel: "/api/sentry-tunnel",
     environment: process.env.NODE_ENV,
     tracesSampleRate: 0,
     // Session replay disabled — extra CSP surface (`worker-src 'self' blob:`,

@@ -75,8 +75,9 @@ export default function PrivacyPage() {
           page plus the pages and requests within this site just before the
           error, all without query strings. It does not include cookies,
           account details, or the contents of the page, and we do not record
-          sessions. Sentry receives your IP address as part of the connection
-          but is configured not to store it.
+          sessions. Browser error reports are relayed through our own server,
+          so Sentry never receives your IP address or the location it
+          reveals.
         </p>
         <p className="text-charcoal-700 leading-relaxed">
           <strong>Editorial contact.</strong> If you write to the editorial
