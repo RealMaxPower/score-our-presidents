@@ -7,7 +7,7 @@ export const metadata = {
     "What we collect, what we don't, and how we handle the few things we do.",
 };
 
-const LAST_UPDATED = "2026-05-17";
+const LAST_UPDATED = "2026-10-15";
 
 export default function PrivacyPage() {
   return (
@@ -66,9 +66,18 @@ export default function PrivacyPage() {
         <p className="text-charcoal-700 leading-relaxed mb-4">
           <strong>Operational logs.</strong> Our servers record request
           metadata (URL, status code, response time, IP, user agent) for
-          security, abuse mitigation, and debugging. Application errors are
-          forwarded to Sentry. Cookies and authorization headers are redacted
-          before logs leave our infrastructure.
+          security, abuse mitigation, and debugging. Cookies and authorization
+          headers are redacted before logs leave our infrastructure.
+          Application errors are reported to Sentry, both from our servers and
+          from your browser when a page fails to load or run; nothing is sent
+          from your browser when no error occurs. A browser error report
+          contains the error itself, your browser type, and the address of the
+          page plus the pages and requests within this site just before the
+          error, all without query strings. It does not include cookies,
+          account details, or the contents of the page, and we do not record
+          sessions. Browser error reports are relayed through our own server,
+          so Sentry never receives your IP address or the location it
+          reveals.
         </p>
         <p className="text-charcoal-700 leading-relaxed">
           <strong>Editorial contact.</strong> If you write to the editorial
@@ -95,7 +104,8 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>Legitimate interest</strong> — for aggregate analytics,
-            operational logging, security and abuse prevention, and the
+            operational logging and error monitoring, security and abuse
+            prevention, and the
             community-aggregate computation. We have weighed these
             interests against your rights and consider them proportionate
             to the limited data involved.

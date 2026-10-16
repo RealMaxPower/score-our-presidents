@@ -60,6 +60,15 @@ export const AUTH_PER_HOUR: RateLimitConfig = {
   name: "auth-hr",
 };
 
+// Per-IP cap on the browser error-report relay (app/api/sentry-tunnel). A
+// visitor hitting real errors sends a handful; this only stops someone
+// using the endpoint to flood our Sentry quota.
+export const SENTRY_TUNNEL_PER_MINUTE: RateLimitConfig = {
+  windowMs: 60_000,
+  max: 30,
+  name: "sentry-tunnel-min",
+};
+
 // ── Upstash backend ──────────────────────────────────────────────
 let redis: Redis | null = null;
 const limiterCache = new Map<string, Ratelimit>();
