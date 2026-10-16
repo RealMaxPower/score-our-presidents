@@ -28,7 +28,8 @@ export default async function AdminLayout({
     actorId: admin.id,
     ipAddress: h.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null,
     userAgent: h.get("user-agent") ?? null,
-    metadata: { path: h.get("x-invoke-path") ?? null },
+    // Set by proxy.ts for every /admin request.
+    metadata: { path: h.get("x-admin-path") ?? null },
   });
 
   return (
