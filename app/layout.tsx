@@ -94,8 +94,10 @@ export default async function RootLayout({
             <Link href="/" aria-label={`${SITE_NAME} — home`}>
               <Logo variant="lockup" />
             </Link>
-            <nav className="flex items-center gap-3 sm:gap-6 text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-charcoal-700 shrink-0">
-              <Link href="/" className="hover:text-rust-700">
+            <nav className="flex items-center gap-2 sm:gap-6 text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-charcoal-700 shrink-0">
+              {/* Hidden on phones: the logo already links home, and without it
+                  the header fits from 360px up instead of scrolling sideways. */}
+              <Link href="/" className="hidden sm:inline hover:text-rust-700">
                 <span className="hidden sm:inline">The </span>Index
               </Link>
               <Link href="/methodology" className="hover:text-rust-700">

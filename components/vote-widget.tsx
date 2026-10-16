@@ -90,16 +90,19 @@ export function VoteWidget({
   }
 
   if (!authed) {
+    // Same spacing as the old gap + ml-2 (12px / 14px), but as a column gap
+    // so a wrapped "Sign in to react" starts flush with the line above.
+    const anonGapX = size === "md" ? "gap-x-3.5" : "gap-x-3";
     return (
       <div
-        className={`inline-flex items-center uppercase tracking-[0.14em] text-stone-400 ${dims}`}
+        className={`inline-flex flex-wrap items-center uppercase tracking-[0.14em] text-stone-400 ${dims} gap-y-1 ${anonGapX}`}
       >
-        <span>
+        <span className="whitespace-nowrap">
           {state.agree} agree · {state.disagree} disagree
         </span>
         <a
           href="/sign-in"
-          className="ml-2 text-rust-700 hover:text-rust-800 underline underline-offset-2"
+          className="whitespace-nowrap text-rust-700 hover:text-rust-800 underline underline-offset-2"
         >
           Sign in to react
         </a>

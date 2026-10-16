@@ -93,7 +93,9 @@ export function Logo({
         className="h-5 w-[25px] sm:h-6 sm:w-[30px] shrink-0"
         aria-hidden="true"
       />
-      <span className="flex flex-col leading-tight">
+      {/* Below 360px (e.g. first-gen iPhone SE) the wordmark doesn't fit
+          beside the nav; the header link keeps the name as its aria-label. */}
+      <span className="flex flex-col leading-tight max-[360px]:hidden">
         <span className="font-display text-base sm:text-xl tracking-tight">
           {SITE_NAME}
         </span>
