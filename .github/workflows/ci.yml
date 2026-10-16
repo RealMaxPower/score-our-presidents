@@ -37,6 +37,44 @@ jobs:
       - name: Test
         run: pnpm test
 
+  # `next build` prerenders president/sub-criterion pages from the database,
+  # so build against a throwaway Postgres seeded from scores/*.yaml. Local
+  # default credentials only; nothing here reaches a hosted service.
+  build:
+    name: Production build
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: presidential_scoring
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d presidential_scoring"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/presidential_scoring
+      POSTGRES_URL_NON_POOLING: postgresql://postgres:postgres@localhost:5432/presidential_scoring
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Migrate and seed
+        run: pnpm exec prisma migrate deploy && pnpm db:seed
+      - name: Build
+        run: pnpm build
+
   rankings:
     name: Verify rankings integrity
     runs-on: ubuntu-latest
