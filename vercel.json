@@ -4,6 +4,9 @@
   "functions": {
     "app/api/**/route.ts": {
       "maxDuration": 10
+    },
+    "app/api/**/route.tsx": {
+      "maxDuration": 10
     }
   },
   "crons": [
