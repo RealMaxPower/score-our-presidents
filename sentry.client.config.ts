@@ -3,8 +3,10 @@
 // (not SENTRY_DSN) so browser reporting stays off unless explicitly opted in
 // with Vercel env.
 //
-// Privacy (see app/privacy): no PII, no session replay, no tracing; reports
-// carry the error, the page path without its query string, and the browser.
+// Privacy (see app/privacy): no PII, no session replay, no tracing, no
+// release-health sessions; nothing is sent unless an error occurs. Reports
+// carry the error, page and in-site request paths without query strings,
+// and the browser.
 
 import * as Sentry from "@sentry/nextjs";
 
@@ -21,6 +23,12 @@ if (dsn) {
     replaysSessionSampleRate: 0,
     replaysOnErrorSampleRate: 0,
     sendDefaultPii: false,
+    // Send nothing unless an error happens: drop release-health sessions
+    // (an envelope on every page load) and the locale/timezone context.
+    integrations: (defaults) =>
+      defaults.filter(
+        (i) => i.name !== "BrowserSession" && i.name !== "CultureContext"
+      ),
     beforeSend(event) {
       if (event.request) {
         if (event.request.url) event.request.url = stripQuery(event.request.url);

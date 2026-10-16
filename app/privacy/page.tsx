@@ -69,11 +69,14 @@ export default function PrivacyPage() {
           security, abuse mitigation, and debugging. Cookies and authorization
           headers are redacted before logs leave our infrastructure.
           Application errors are reported to Sentry, both from our servers and
-          from your browser when a page fails to load or run. A browser error
-          report contains the error itself, the address of the page without
-          its query string, and your browser type. It does not include
-          cookies, account details, or the contents of the page, and we do not
-          record sessions.
+          from your browser when a page fails to load or run; nothing is sent
+          from your browser when no error occurs. A browser error report
+          contains the error itself, your browser type, and the address of the
+          page plus the pages and requests within this site just before the
+          error, all without query strings. It does not include cookies,
+          account details, or the contents of the page, and we do not record
+          sessions. Sentry receives your IP address as part of the connection
+          but is configured not to store it.
         </p>
         <p className="text-charcoal-700 leading-relaxed">
           <strong>Editorial contact.</strong> If you write to the editorial
@@ -100,7 +103,8 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>Legitimate interest</strong> — for aggregate analytics,
-            operational logging, security and abuse prevention, and the
+            operational logging and error monitoring, security and abuse
+            prevention, and the
             community-aggregate computation. We have weighed these
             interests against your rights and consider them proportionate
             to the limited data involved.
