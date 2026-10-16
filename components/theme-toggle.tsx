@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useLayoutEffect, useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
 
@@ -26,8 +26,28 @@ function getServerSnapshot(): Theme | null {
   return null;
 }
 
+// Same decision as the inline no-flash script in app/layout.tsx.
+function shouldBeDark(): boolean {
+  try {
+    const saved = localStorage.getItem("theme");
+    return saved
+      ? saved === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  } catch {
+    return false;
+  }
+}
+
 export function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  // The inline script never runs when React renders the document itself
+  // (pages served as Next's error shell, e.g. after notFound()), and React
+  // then sets <html>'s class from its props. Re-apply the theme after
+  // commit, before paint; on normal pages the class is already right.
+  useLayoutEffect(() => {
+    if (shouldBeDark()) document.documentElement.classList.add("dark");
+  }, []);
 
   function toggle() {
     const next: Theme = theme === "dark" ? "light" : "dark";
