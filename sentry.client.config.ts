@@ -20,7 +20,9 @@ if (dsn) {
     // Relay through our own server (app/api/sentry-tunnel) so Sentry never
     // receives the visitor's IP address or the location derived from it.
     tunnel: "/api/sentry-tunnel",
-    environment: process.env.NODE_ENV,
+    // Vercel's environment (preview vs production); NODE_ENV is "production"
+    // on every Vercel build, which tagged preview errors as production.
+    environment: process.env.NEXT_PUBLIC_VERCEL_ENV ?? process.env.NODE_ENV,
     tracesSampleRate: 0,
     // Session replay disabled — extra CSP surface (`worker-src 'self' blob:`,
     // `media-src`) and ongoing cost. Enable per-page later if needed.
